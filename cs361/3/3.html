@@ -1,0 +1,306 @@
+
+<HTML>
+<HEAD>
+<TITLE>CS 361 Fall 2009</TITLE>
+<META name="KeyWords" content="CS 361 Fall 2009">
+
+</HEAD>
+<BODY>
+
+<H3>CS361 Assignment 3 </H3>
+
+<P><B>Last modified:</B> Mon Sep 28 12:05:31 CDT 2009, changed due
+date to Monday from Friday.
+
+<P><B>Due:</B> Monday, October 5, by midnight<P>  
+
+<B>Deliverables:</B> You will be submitting your code electronically
+to the TA.  Submission instructions are on the class website. Make
+sure that you clearly identify the members of your team (one or two
+people).  Include a README file so that the TA will understand clearly
+how to compile and run your code. 
+
+<P><I>Make sure that all members of your team understand the code and
+contribute equally, as much as possible, to its development.</I><P>
+
+Information on how to submit your assignment is available at
+<A HREF="http://www.cs.utexas.edu/~ctlight/cs361/how_to_submit.html">How
+to submit</A><P>
+
+For this assignment: <OL> <LI> The primary file name should be
+<TT>Biba.java</TT>.  Students are welcome to organize their
+assignments into multiple files and must submit those files as well.
+However, the main method must be in <TT>Biba.java</TT> and the
+TA should be able to compile your program with <TT>javac
+*.java</TT>.<BR><BR>
+
+<LI>Students should submit to the TA a comma-separated file called
+<TT>names.txt</TT> as in Assignment 1.<BR><BR>
+
+<LI>The program should be executed via the following command:
+<PRE> 
+java Biba mode inputfilename
+</PRE>
+Here mode can be either "biba" or "library" and should not be case
+sensitive.  Instructions should be read from the input file named on the command
+line. Filenames on the command line are case sensitive. 
+</OL>
+
+<H3>Background</H3>
+
+A question that often arises in secure system design is whether a
+particular collection of security mechanisms is sufficient to
+implement a given policy.  For example, if you had a Bell and LaPadula
+system, could you use it to enforce Biba integrity by a clever
+assignment of labels? (The answer is yes; think about how you'd do
+that.) This is essentially the problem that Lipner considered in his
+system: given BLP and Biba rules that were designed for military
+security, can we use that to enforce a policy designed for a
+commercial environment?  <P>
+
+In your career, you could be asked to implement a policy on top of
+some existing security mechanisms.  This assignment gives you the
+opportunity to practice doing this in a benign setting. <P>
+
+This is a two part assignment.  In part I, you will be implementing a
+basic Biba Strict Integrity system, where the hierarchical levels and
+categories are arbitrary.  In part II, you'll build upon part I to
+implement a secure lending library.  Build your system such that you
+can run in either BIBA mode or LIBRARY mode according to a flag that
+can be entered at the command level.<P>
+
+<H3>Part I: Basic Biba</H3>
+
+Emulate a Biba Strict Integrity system.  Your system should accept the
+following commands from a file whose name is specified on the command
+line.  No commands are case sensitive.
+
+<PRE>
+   LEVELS  L1 L2 ... Lk
+   CATEGORIES C1 C2 ... Cj
+   OBJECT obj_name obj_level
+   SUBJECT subj_name subj_level
+   ADD-CAT obj_name cat_name
+   REMOVE-CAT obj_name cat_name
+   READ subj_name obj_name
+   WRITE subj_name obj_name val
+</PRE>
+(Here "..." just indicates an arbitrary list of items; it's not a
+construct that you have to implement.) A level, such as subj_level or
+obj_level in the examples above, is 
+input as K + 1 separate fields, where the first is the 
+hierarchical component and the others are the need-to-know categories,  
+e.g., "(L1, {A, B, C})" should be entered as "L1 A B C" A level is
+always the last thing on a line to make it easier to parse.<P>
+
+The intended semantics of these commands is as follows: 
+
+<IL>
+<LI> LEVELS introduces a linearly ordered set of hierarchical labels,
+ordered from low to high.  There should be only one of these
+commands.  If there is more than one, ignore all but the first one.
+Example: LEVELS LOW MED HIGH
+
+<LI> CATEGORIES introduces an unordered set of need-to-know
+categories.  Multiple CATEGORIES lines are allowed, and introduce additional
+categories. If a category is introduced multiple times, that's OK. 
+Example: CATEGORIES A B C
+
+<LI> OBJECT introduces a new object into the system at the given
+level.  The level should have both a hierarchical component and a set
+(which may be empty) of need-to-know categories.  We don't enforce
+strong tranquility (on objects) in this system.  Executing another OBJECT command
+for the same obj_name just replaces the old level by the new level.
+All components of level must have been previously introduced.
+Example: OBJECT O1 LOW A B
+
+<LI> SUBJECT introduces a new subject into the system at the given
+level. Executing another SUBJECT command on the same subj_name is an
+error. We do enforce strong tranquility for subjects.
+All components of level must have been previously introduced.
+
+<LI> READ indicates an attempt by the named subject to read the named
+object.  The READ method can return a boolean indicating whether the
+access is permitted or denied.  <I>There is no need to actually
+implement the functionality of READ.  I.e., no value need be returned
+to the subject.</I>
+
+<LI> WRITE indicates an attempt by the named subject to write to the
+named object.  The WRITE method can return a boolean indicating
+whether the access is permitted or denied.  <I>There is no need to
+actually store any values.  That is, you're not emulating the system
+operation; only emulating the security checks.</I> The val argument
+must be present, but can be ignored.
+
+<LI> ADD-CAT and REMOVE-CAT change the level of the indicated object
+to add/remove the indicated category from the list of need-to-know
+categories associated with that object.  Note that these operations
+are merely a convenience since we already have this functionality
+using the OBJECT command.  The supplied category must have been
+previously introduced in a CATEGORIES statement.
+
+</IL>
+<P>
+
+As usual, commands, including names, are not case sensitive.  Enforce
+reasonable rules.  In particular, a subject or object's level should
+not refer to hierarchical levels or categories that have not been
+previously introduced.  There is no problem with having the same name
+used in multiple ways.  For example, you could have a subject named
+FRED, an object named FRED, and a category FRED. <P>
+
+The idea is that the LEVELS, CATEGORIES, SUBJECT, OBJECT, ADD-CAT, and
+REMOVE-CAT commands build up the basic infrastructure for your secure
+system.  Then the system should check whether READ and WRITE
+operations are permitted using the Biba Strict Integity rules.  <P>
+
+When run in BIBA mode, your system should be able to process an
+arbitrary list of commands, reject any that are illegal, and process
+all the legal ones.  Print a nice audit log of the execution of
+successive commands.  In particular, for each READ or WRITE, print out
+whether or not the operation is allowed.
+<P>
+
+
+<H3>Part II: Lending Library</H3>
+
+Assume that someone has delivered to you the basic Biba integrity
+system in Part I.  Your task is to use this existing security system
+to construct a secure on-line lending library.<P>
+
+The idea is as follows.  The library contains various read-only
+documents (objects): D1, ..., Dm.  There is also a pool of potential
+borrowers (subjects): B1, ..., Bn.  Each document has an associated
+list of allowed borrowers, which is an arbitrary subset of the pool of
+subjects.  For example, it might be that document D19 is only
+accessible by B3, B7 and B12, while D82 might be accessible only by B7
+and B15.  The idea of Part II is to implement a system that provides
+this functionality.  Don't implement this from scratch, but use your
+existing Biba integrity system (Part I) as your implementation platform. <P>
+
+Your library system will have the following commands, read from
+your input file. 
+<PRE>
+   READER reader_name
+   DOCUMENT doc_name reader_namei reader_namej reader_namek
+   CHECKOUT doc_name reader_name
+   RETURN doc_name reader_name
+   REVOKE doc_name reader_name
+</PRE>
+There can be any number of readers listed in the DOCUMENT command.<P>
+
+These commands have the following interpretation:
+<IL>
+
+<LI> READER introduces a new potential borrower (subject) into the system. 
+
+<LI> DOCUMENT introduces a new document (object) into the system and
+authorizes the listed readers to have access to it.  Multiple DOCUMENT
+commands for the same doc_name may augment the permission list with
+additional readers.  They do not revoke any permissions.
+
+<LI> CHECKOUT delivers the document to the requesting reader if
+permitted (if the requesting reader is on the list of allowed readers
+for the document).  Otherwise, it does nothing.  Your system should
+keep a record of which documents are checked out to which readers.
+Multiple readers can have a document checked out at the same time. 
+No reader may check out a document he already holds.
+
+<LI> RETURN removes the book from the reader's record of items checked
+out.
+
+<LI> REVOKE removes the reader's permission to check out that item in
+the future.  However, it does not do anything to seize the item if it
+is currently checked out by that subject. 
+</IL>
+
+Keep a record of which documents are checked out to which readers.
+This is an electronic system so a given document can be checked out to
+multiple readers at the same time.  <P>
+
+My intention for the way to implement this is as follows.  Let's refer
+to our two systems as "Biba" and "Library".  We'll implement the
+Library system by "compiling" commands into programs for the
+underlying Biba system.  Emulate each Library mode command, by running
+series of commands at the Biba system level. You may have to run
+several Biba commands to initialize the system. 
+<P>
+
+Each document/borrower at the Library level will be implemented as an
+object/subject in the Biba level.  Each will have a label that will
+permit exactly the accesses required.  Let's say that document
+GoneWithTheWind can only be checked out by Fred and Ethel.  Then we
+give the document the label (low, {fred, ethel}).  Fred has label
+(low, {fred}) and Ethel has label (low, {ethel}).  Notice that the
+object level dominates the subject level for Fred and for Ethel, but
+for <I>no other possible subjects.</I> Following this scheme and the
+Biba rules, only Fred and Ethel could ever successfully execute a READ
+instruction on this document.<P>
+
+To get the Library system started, initialize by executing the
+following command on the underlying BIBA system: 
+<PRE> LEVELS low </PRE> 
+This is the only hierarchical level required.  The work is all done
+with need-to-know categories.  <P>
+
+Then, each command in the Library system is "compiled" into commands
+for the underlying Biba system along with some additional
+recordkeeping.  For example, the Library system command
+<PRE>
+   READER fred
+</PRE>
+is implemented by the Biba commands:
+<PRE>
+   CATEGORIES fred
+   SUBJECT fred low fred
+</PRE>
+This creates a subject named Fred at the Biba level and gives it the
+appropriate level (low, {fred}). 
+
+<P>
+The library system commands: 
+<PRE>
+   DOCUMENT MobyDick fred ethel ricky
+   DOCUMENT MobyDick lucy
+</PRE>
+are implemented by the Biba commands:
+<PRE>
+   OBJECT MobyDick low fred ethel ricky
+   ADD-CAT MobyDick lucy
+</PRE>
+This creates an object named MobyDick at the Biba level and gives it
+the integrity label (low, {fred, ethel, ricky, lucy}). 
+
+<P>
+The library system command: 
+<PRE>
+   CHECKOUT MobyDick ethel
+</PRE>
+is implemented by invoking the Biba command
+<PRE>
+   READ ethel MobyDick
+</PRE>
+and recording that Ethel has this document checked-out (assuming that
+the current permissions allow this READ). <P>
+
+Your task is to devise implementations for the other commands and to
+implement this system.  You will need to maintain a database of the subjects
+and objects of the system.  For a subject, you'll store the name,
+level, and documents checked out.  For an object you'll store the name
+and level. Note that the labels of objects change over time.  The
+levels of subjects should not change, once established.<P>
+
+Design your Library system to be useful and fairly user-friendly.
+Print out a reasonable commentary on what's happening with each
+instruction executed.  Don't worry about covert channels. <P>
+
+Construct your system such that it can be run in either BIBA mode or
+LIBRARY mode.  In BIBA mode, it accepts only Biba commands; in LIBRARY
+mode it accepts only Library commands.  In Library mode, the BIBA
+interaction is hidden from the user by the Library command interface.
+Note that no command in your LIBRARY implementation should ever invoke
+the BIBA WRITE command.  That is the way that you enforce the
+read-only nature of all the documents.
+
+</BODY>
+</HTML>

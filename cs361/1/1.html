@@ -1,0 +1,461 @@
+<HTML>
+<HEAD>
+<TITLE>CS 361 Fall 2009</TITLE>
+<META name="KeyWords" content="CS 361 Fall 2009">
+
+</HEAD>
+<BODY>
+
+<H2>CS361 Assignment 1 </H2>
+
+<P><B>Last updated:</B> Thu Sep  3 10:11:31 CDT 2009
+
+<P><B>Due:</B> Friday, September 11 by the end of the day.  This means that
+your submission must be dated on or before that date.<P>
+
+Each assignment is graded on a 10 point scale.  Note that it is
+possible to get up to 2 extra credit points on this assignment.  That
+info is at the bottom.<P>
+
+<B>Deliverables:</B> You will be submitting your code electronically
+to the TA.  Make sure that you clearly identify the members of your
+team (one or two people).  Your program must be able to run on the UT
+Linux machines, so if you develop on Windows, make sure it runs on Linux.<P>
+
+Information on how to submit your assignment is available at
+<A HREF="http://www.cs.utexas.edu/~ctlight/cs361/how_to_submit.html">How
+to submit</A><P>
+
+For this assignment: <OL> <LI> The primary file name should be
+<TT>SecureSystem.java</TT>.  Students are welcome to organize their
+assignments into multiple files and must submit those files as well.
+However, the main method must be in <TT>SecureSystem.java</TT> and the
+TA should be able to compile your program with <TT>javac
+*.java</TT>.<BR><BR>
+
+<LI>The program should be executed via the command:
+<TT>java SecureSystem instructionList</TT><BR><BR>
+
+<LI>Students should also submit to the TA a comma-separated file called
+<TT>names.txt</TT> with file format is as follows:
+<PRE>
+UTCS ID, email, Name(First Name followed by Last Name), UTEID
+</PRE>
+For example, 
+<PRE>
+butch, butch@somemail.site , Butch Cassidy, butch0303
+sundance, sundance@othermail.site, Sundance Kid, sundance0707
+</PRE>
+See also the more detailed submission instructions from the link
+above.
+</OL>
+
+<P><I>Make sure that all members of your team understand the code and
+contribute equally, as much as possible, to its development. If anyone
+gets a free ride, they'll be disadvantaged later.</I>
+
+<H3>The Assignment</H3>
+
+<P> Your assignment is to implement in Java a simple "secure" system
+following the Bell and LaPadula (BLP) security rules--simple security,
+the *-property, and strong tranquility (meaning that no levels change
+over the course of the assignment).  Take care with this assignment,
+because it will form the basis of at least one subsequent assignment.
+
+<P>I broke the assignment into two parts for your convenience, but it's
+really one big assignment.  You don't have to separate or identify the
+parts in your deliverables, but you may want to do Part 1 first, and then
+incrementally add the functionality of Part 2.
+
+<H3>Part 1 (of 2):</H3>
+
+<P>
+The input for your secure system will be a file of <I>commands</I>. 
+For the current assignment, legal commands are of the form:
+
+<PRE>
+   READ subject_name object_name 
+   WRITE subject_name object_name value 
+</PRE>
+
+<P>
+All fields of the instruction are Strings except the value, 
+which is an integer. 
+
+<P>
+Write a utility that reads successive lines from the file and parses
+each line into an Instruction class object, then prints from the
+Instruction object to standard output.  (I.e., don't just print the
+input line.) <I>Commands are not case-sensitive, even object and
+subject names.</I> Also, arbitrary whitespace is allowed in commands.
+
+<P>
+Here is a possible schema for the Instruction class.
+
+<PRE>
+class Instruction {
+
+    // private fields to contain the fields of the instruction
+
+    // constructors for Instruction objects
+
+    // Accessors  / setters for the instruction fields
+
+    public void printInstruction () {
+        // utility to print the instruction to the output stream
+	...
+    } 
+
+} // class Instruction
+</PRE>
+
+<P>
+Be sure to deal with the possibility of errors in the instructions.
+In particular, how do you deal with instructions that do not match
+either of the legal formats?  Be sure to reject instructions that
+don't have the appropriate number of fields.  I'd suggest that you
+generate a BadInstruction object for those cases.  There is (possible)
+sample output below.
+
+<P>Your primary class should be called SecureSystem.  Below is a
+possible template (for Part 1).  In Part 2, you'll add additional
+methods. 
+
+<PRE>
+public class SecureSystem {
+
+    public Instruction parseInstruction (String line) {
+        // passed a line of text, parse it into an Instruction
+	// object and return that object.  Deal with instructions
+	// that are ill-formed. 
+	...
+    } 
+    
+    public static void main (String args[]) throws IOException {
+        // Read lines from the input file, parse them as instructions
+	// and print the instruction.
+	// Be sure to deal with exceptional situations appropriately.
+	...	
+    }
+
+} // class SecureSystem
+</PRE>
+
+Input is a file <TT>instructionList</TT> containing instructions.  For
+example: 
+
+<PRE>
+write Hal HObj 
+read Hal 
+write Lyle LObj 10
+read Hal LObj 
+write Lyle HObj 20
+write Hal LObj 200
+read Hal HObj
+read Lyle LObj
+read Lyle HObj
+foo Lyle LObj
+Hi Lyle,This is Hal
+The missile launch code is 1234567
+</PRE>
+
+Below is the output of a sample execution of my Part 1 solution.  Yours
+doesn't have to match this exactly, but should convey roughly the same
+information.  On a Linux system I executed the following command and
+obtained the indicated output:
+
+<PRE>
+> java SecureSystem instructionList 
+
+Reading from file: instructionList
+
+Bad Instruction
+Bad Instruction
+lyle writes value 10 to lobj
+hal reads lobj
+lyle writes value 20 to hobj
+hal writes value 200 to lobj
+hal reads hobj
+lyle reads lobj
+lyle reads hobj
+Bad Instruction
+Bad Instruction
+Bad Instruction
+</PRE>
+
+<P>Notice that you're not checking security attributes or definedness
+of the subjects/objects in Part 1, merely the syntactic
+well-formedness of the commands.
+
+<H3>Part 2 (of 2):</H3>
+
+<P>
+
+Your system state is populated by SecureSubjects and SecureObjects.
+These are each represented by a class.  Each SecureSubject has an
+associated name, security level, and a "most recent value read"
+variable that can hold a single int.  (The security level should not
+be stored in the SecureSubject itself, but maintained by the Reference
+Monitor; see below.)  Whether you store the subject's name in the
+subject itself or just as a key into a mapping is up to you.
+
+<P>
+Each SecureObject instance has a name, security level, and int current
+value.  SecureObject's should be managed by the ObjectManager (see
+below), which in turn in managed by the Reference Monitor.  
+
+<P>
+You should have a SecurityLevel class that models security levels with
+a defined "dominates" relation.  For the current system your levels
+can be hierarchically (linearly) ordered.  That is, you don't have to
+worry about need-to-know categories.  That means that you can just
+have a local int constant that stores the level and define "dominates"
+as "less than or equal" on the stored int value. Define two
+SecurityLevel constants (final values) that represent the levels HIGH
+and LOW.  For the current assignment, this is enough.
+
+<P> Your system state should contain structures for accessing the
+existing subjects and objects.  For example, defining<BR>
+<PRE>
+    Map secureSubjects = new HashMap();
+</PRE>
+would allow you to store subjects and access them by name.  The map
+for subjects should probably be in the SecureSystem class.  The map
+for objects likely will be in the ObjectManager class, which is inside
+the ReferenceMonitor.  There may also be mappings from subject/object
+names to SecurityLevels; these mappings are managed by the
+ReferenceMonitor.<P> 
+ 
+<P> SecureObjects in the system store a single integer value
+(initially 0).  The ObjectManager maintains the objects and has
+methods to create a new object and set and retrieve an object's value.
+Think of the ObjectManager as a simple unsecure file system.  The
+ObjectManager need not maintain security attributes for the objects.
+That is done by the ReferenceMonitor, which mediates all accesses to
+the ObjectManager.
+
+<P> The ReferenceMonitor maintains the security information for the
+system and acts as a security guard or firewall for the ObjectManager.
+It maintains the mappings from subject/object names to SecurityLevel.
+Whenever it receives an instruction from a subject, it must see if the
+instruction is allowed according to the BLP rules.  If so, invoke the
+ObjectManager to perform the appropriate operation.  If not, do nothing
+except return a 0 value (see below).  Legal instructions and their
+semantics are defined below.
+
+<P> For this first assignment there are the two instructions defined
+above.  An Instruction object is what the subject passes to the
+ReferenceMonitor for execution.  
+
+<P> If allowed, a READ operation returns the current value of the
+named object to the subject.  A WRITE operation stores the indicated
+value into the named object.  I'd suggest that ReferenceMonitor have
+an executeInstruction method that returns an int value.  The value
+returned is always 0 except in the case of a successful, legal READ
+where the object's current value is returned.  (Of course, that could
+also be a 0.)
+
+<P>Write a debugging method printState in the SecureSystem class that
+prints out the values of the objects and the most recent value read by
+each subject.  See the example below for what the output of this could
+look like.  Ideally, you should be able to iterate over your data
+structures to handle an arbitrary number of subjects/objects, but for
+this assignment you can assume that you know the names of the two
+subjects/objects.  (Note: printing this kind of information is not
+something that a typical system user should be able to do.)
+
+<P>The main function in your SecureSystem class should perform the
+following tasks: 
+<OL>
+<LI>Create two new subjects: Lyle of security level LOW, and Hal of
+security level HIGH.  Initially the "value read" variable should
+contain 0.  Store these subjects into the state and inform the
+reference monitor about them.<BR><BR>
+
+<LI>Create two new objects: LObj of security level LOW, and HObj of
+security level HIGH.  Store these into the state and inform the
+reference monitor about them.  The initial value of each should be
+0. <BR><BR>
+
+<LI>Read successive instructions from the input file and execute them,
+following the Bell and LaPadula constraints on reading and writing.
+You should have methods executeRead and executeWrite within your
+SecureSystem class that check access requests and perform the
+appropriate update (if any) on the state.  A READ instruction, if
+permitted, should deliver the value of the object to the "value read"
+field of the subject.  A WRITE instruction, if permitted, should
+replace the value field of the object with the value in the
+instruction. <BR><BR>
+
+<LI>After each instruction, call printState to display the state change,
+if any, from the instruction execution.
+</OL>
+
+
+<P>Below is a snippet of code from my main function.  You don't have
+to follow this model, but you're welcome to.
+
+<PRE> 
+
+	SecurityLevel low  = SecurityLevel.LOW;
+	SecurityLevel high = SecurityLevel.HIGH;
+
+	// We add two subjects, one high and one low.
+
+	sys.createSubject("Lyle", low);
+	sys.createSubject("Hal", high);
+
+	// We add two objects, one high and one low.
+
+	sys.getReferenceMonitor().createNewObject("Lobj", low);
+	sys.getReferenceMonitor().createNewObject("Hobj", high);
+
+	...
+
+
+</PRE>
+
+
+
+<P> Scrutinize the output of your system execution and convince
+yourself that you are actually following the BLP rules.  How do you
+handle instructions that are not well-formed?  How do you handle
+instructions that are not permissible according to the security
+policy?  Make sure that your treatment of instructions is "robust" in
+that you catch as many errors as possible.  For example, does the
+subject exist?  Does the object exist?  
+
+<P> While designing your system consider the following questions: <I>Are
+there security flaws in this design?  What are they?  How might you go
+about fixing them?</I>
+
+<P>As an example of the execution, given the instruction list from Part 1 of this
+assignment, my implementation gives the following output.  (Note that
+none of this output should necessarily be visible to Hal and Lyle.)<BR>
+
+<PRE>
+> java SecureSystem instructionList
+
+Reading from file: instructionList
+
+Bad Instruction
+The current state is: 
+   LObj has value: 0
+   HObj has value: 0
+   Lyle has recently read: 0
+   Hal has recently read: 0
+
+Bad Instruction
+The current state is: 
+   LObj has value: 0
+   HObj has value: 0
+   Lyle has recently read: 0
+   Hal has recently read: 0
+
+lyle writes value 10 to lobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 0
+   Lyle has recently read: 0
+   Hal has recently read: 0
+
+hal reads lobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 0
+   Lyle has recently read: 0
+   Hal has recently read: 10
+
+lyle writes value 20 to hobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 10
+
+hal writes value 200 to lobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 10
+
+hal reads hobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 20
+
+lyle reads lobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 10
+   Hal has recently read: 20
+
+lyle reads hobj
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 20
+
+Bad Instruction
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 20
+
+Bad Instruction
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 20
+
+Bad Instruction
+The current state is: 
+   LObj has value: 10
+   HObj has value: 20
+   Lyle has recently read: 0
+   Hal has recently read: 20
+
+</PRE>
+
+<H2>Extra Credit </H2>
+
+You can get up to 2 points extra credit on this assignment.  Since
+it's extra credit, I'm not going to give you detailed instructions on
+this part. If you want to do this one, you will have to use some
+ingenuity, though I'm happy to help you individually. <P>
+
+The assignment above is unrealistic in that the actions of subjects
+Lyle and Hal are synchronized according to the ordering of
+instructions in the input.  Reimplement this assignment so that Lyle
+and Hal run as separate processes (threads), each reads from its own
+instruction file (remove the subject name argument to each
+instruction), and they share the reference monitor.  <P>
+
+If you do this in the most straightforward way, they will run in an
+arbitrarily interleaved fashion depending on the OS scheduling.  If
+the instruction lists are short, whichever one gets the processor
+first likely will just blow through his instruction list, finishing
+before the other thread ever runs.  Add an additional SLEEP instruction
+that relinguishes the processor.  I.e., if Hal is running and executes
+a SLEEP instruction, then the processor should be handed to Lyle, etc.
+That way you can force interesting interleavings.   Note that this may
+not work as expected on multi-processor systems where the threads are
+scheduled on separate processors.  Also, printing of the output may be
+oddly interleaved.<P>
+
+If you're having problems with the threads programming, these may
+help.  Here is an excellent description of Java Synchronization by Ron
+Rockhold: <A HREF="JavaSynchronization.pdf">Java Synchronization</A>,
+and a link to helpful short paper by Prof. Mike Dahlin: <A
+HREF="programming-with-threads.pdf"> Threads Programming</A>.
+
+</BODY>
+</HTML>
+

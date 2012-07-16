@@ -1,0 +1,261 @@
+<HTML>
+<HEAD>
+<TITLE>CS 361 Fall 2009</TITLE>
+<META name="KeyWords" content="CS 361 Fall 2009">
+
+</HEAD>
+<BODY>
+
+<H2>CS361 Assignment 2 </H2>
+
+<P><B>Last modified:</B> Thu Sep 10 15:00:22 CDT 2009
+
+<P><B>Due:</B> Monday, September 21, 2009 by midnight.<P>  
+
+Your assignment is to update your secure system from Assignment 1 and
+add three new operations designed to introduce a covert channel into
+the system.  You will implement the channel and use it to signal
+information from a high level user to a low level user.  Finally, you
+will measure and report the bandwidth of the channel.<P>
+
+<H3>Deliverables:</H3>
+
+You will be submitting your code electronically to the TA.  Make sure
+that your code is well-annotated (commented) and follows good coding
+style. Clearly identify the members of your team (one or two people).
+Include a README file explaining how to run your program and the
+timing information requested below.
+
+<P><I>Make sure that all members of your group understand the code and
+contribute equally, as much as possible, to its development. If anyone
+gets a free ride, they'll be very disadvantaged later.</I>
+
+Information on how to submit your assignment is available at
+<A HREF="http://www.cs.utexas.edu/~ctlight/cs361/how_to_submit.html">How
+to submit</A><P>
+
+For this assignment: <OL> <LI> The primary file name should be
+<TT>CovertChannel.java</TT>.  Students are welcome to organize their
+assignments into multiple files and must submit those files as well.
+However, the main method must be in <TT>CovertChannel.java</TT> and the
+TA should be able to compile your program with <TT>javac
+*.java</TT>.<BR><BR>
+
+<LI>Students should submit to the TA a comma-separated file called
+<TT>names.txt</TT> as in Assignment 1.<BR><BR>
+
+<LI>The program should be executed via one of the following commands: 
+<PRE> 
+java CovertChannel v inputfilename 
+java CovertChannel inputfilename 
+</PRE>
+
+Your output file should be named inputfilename.out.  That is, take the
+supplied input filename and append ".out" to it.  If the call has the "v" (for
+"verbose") option, you should also output to a file called "log" the
+instructions that you generate.  (See below.)<BR><BR>
+
+<LI>Submit a README file with your program, including any information
+you'd like the TA to know.  Also, record the bandwidth information for
+several runs of your program on different files, compute the average,
+and include that information along with the machine type and clock
+speed in the README file for your program.
+
+</OL>
+
+
+<H3>The Assignment</H3>
+
+Update your secure system from Assignment 1 to add three new instructions: 
+<PRE>
+   CREATE  subject_name object_name 
+   DESTROY subject_name object_name
+   RUN     subject_name
+</PRE>
+Again, instructions are NOT case-sensitive.<P>
+
+The intended semantics of CREATE is that a new object is added to the
+state with SecurityLevel equal to the level of the creating subject.
+It is given an initial value of 0.  If there already exists an object
+with that name <I>at any level</I>, the operation is a no-op.<P>
+
+DESTROY will eliminate the designated object from the state, assuming
+that the object exists and the subject has WRITE access to the object
+according to the *-property of BLP.  Otherwise, the operation is a
+no-op.<P>
+
+RUN allows the named subject to execute some arbitrary private code.
+It has no access to any of the state objects, and so <I>should</I> be
+irrelevant to the security of the system.  It models whatever
+processing the subject may do with the value it has just read.  You
+should code this as a method within your SecureSubject class.<P>
+
+Note that calls to RUN will do different things, depending on the
+value of the local state, particularly the executing subject.  That
+is, RUN does very different things for Lyle than for Hal.
+The code that RUN executes can do anything to the local state of the
+running Subject but must not access any of the system objects.  That
+is, you can have local variables and manipulate those as you like, but
+cannot access any of the SecureObjects.  <P>
+
+As with the previous assignment, you will define two subjects Hal and
+Lyle, but no objects.  You will generate the instructions necessary to
+pass information from Hal to Lyle using the covert channel we
+described in class. (See below.)  However, generate the instructions
+to be executed on the fly rather than reading them from an external
+file.  (If you generated them, wrote them to a file, and then read
+them back in your performance would suffer quite badly from the extra
+IO.)  The execution of the instructions you generate should implement
+a covert channel passing information one bit at a time from Hal to
+Lyle.  You can assume that Hal and Lyle are the only two subjects and
+have those names.  Also note that you can eliminate most parsing and
+syntax checking since you'll be generating only correct instructions. <P>
+
+If your program is running with the "v" parameter, you should log
+the instructions that you generate one per line to a file called
+"log".  This will allow the TA to ensure that you are actually using
+the covert channel to transfer the information.  For your timing runs,
+don't use the "v" parameter.<P>
+
+Implement the following covert channel. (If you think you have a
+better channel that you'd like to implement, please discuss it with me
+first.)  For this channel, to send a 0 bit Hal executes:
+<PRE>
+  RUN HAL
+  CREATE HAL OBJ
+</PRE>
+
+To send a 1 bit, Hal just does a RUN HAL.  (Note: You may not need for
+HAL to do RUN.  It depends on how you structure your code.)  Lyle
+senses the bit (the presence or absence of the object) by executing:
+
+<PRE>
+  CREATE LYLE OBJ
+  WRITE LYLE OBJ 1
+  READ LYLE OBJ
+  DESTROY LYLE OBJ
+  RUN LYLE
+</PRE>
+
+If Lyle sees a value of 1 returned from the READ, then his CREATE
+succeeded, and Hal has not previously created the object (sending a 1
+bit).  If Lyle sees a value of 0 returned from the READ, then Hal has
+previously created the object, Lyle's CREATE has failed, and Hal has
+sent a 0 bit.  (Notice that the value of 1 in the WRITE could have
+been any non-zero value.)<P>
+
+The goal is to send an arbitrary stream of bits (actually a complete
+ASCII file) over this channel.  I advise getting your program running
+by sending some small fixed number of bits and making sure they arrive
+correctly.  However, the version you will submit will take a filename
+parameter on the command line.  Your program will read the file
+contents (probably one byte at a time using a ByteArrayInputStream),
+convert each byte to 8 bits, send them through the covert channel,
+reconstruct the byte on the receiving side and write it out to a file.
+The idea is to transfer the contents of an arbitrary ASCII file over
+the channel. <P>
+
+As an alternative to using a ByteArrayInputStream, you can read a line
+in the file into a String and access the bits from there. <I>Don't
+read the entire file into a String.</I> That's not scalable.<P>
+
+Your program may work for non-ASCII file types, but doesn't have to.
+In a realistic system where the subjects were running as concurrent
+threads, that would be very useful because Lyle would have to know
+when he can stop receiving.  If you only worry about ASCII files, you
+can assume that only ASCII characters appear in the file.  That means
+you can use a non-ASCII character to signal the end of the
+input. E.g., if Lyle receives a null byte 00000000, then he knows he
+can stop receiving.  But for this version, your main program probably
+knows when Hal is out of bits to send and just stops generating
+instructions for Lyle.  That is, you probably don't have to worry
+about sending an end byte from Hal to Lyle. <I>I think that's true, but
+I'm not absolutely certain!</I>  <P>
+
+Ideally, reading bytes from the file, breaking them into bits,
+etc. should be done by the subjects themselves using their RUN
+operation.  But you can use your main function to handle that kind of
+thing if you need to.  That is, you can treat the entire program as a
+big covert channel engine as long as you implement the covert channel
+according to the directions above and don't cheat.<P>
+
+The output file should be essentially identical to the input
+file. Make sure to check that you preserve the first and last
+characters in the file. I suggest using the Linux diff utility to
+compare the files.<P>
+
+Note that line endings are represented differently in different
+systems.  Early teletype printers used the CR and LF control
+characters, respectively, to move the print head left and then scroll
+down one line.  But line termination is treated differently by
+different modern operating system: Macintosh uses a CR (ASCII 13);
+Linux uses a LF (ASCII 10); Windows uses both.  Most FTP programs
+substitute appropriate line endings if transferring in ``text mode.''
+If in ``binary mode'' no translations occur.  This shouldn't matter to
+you unless you transferred your input file onto a different system in
+binary mode.  In that case, your program might not recognize the end
+of lines correctly.  <P>
+
+Finally, time your program execution on several different input files
+and compute the channel's average bandwidth in bits / second.  Your
+program should compute and write to standard output the timing and
+bandwidth for a given run.  Record that information for several runs,
+compute the average, and include that information along with the
+machine type and clock speed in the README file for your program.  You
+won't be graded on the bandwidth, but we'll collect the results and
+see which group's program was the most efficient.
+
+<H2>Extra Credit </H2>
+
+If anyone is interested in getting extra credit by recoding this such
+that Lyle and Hal run in separate threads, contact me individually.
+It's pretty challenging. 
+
+</BODY>
+</HTML>
+
+
+
+<!-- 
+
+These are the guidelines that Vacha set up for grading this one:
+
+Assignment 2 grades are up on blackboard. As usual, the marking is
+from 10 points. Following are the reasons for which points have been
+deducted with respective deductions:
+
+1. If the program fails to print statistics enough to calculate
+throughput (-0.5) This means that only timing info(bytes can be
+obtained from output file size), or throughput, timing info + bits
+transferred is ok and did not cost points.
+
+2. If the input and output file differ slightly (1-2 bytes) -0.5
+points (Mostly first or last chars were missing). If more bytes than
+this are missing, -1 point.
+
+3.If no output file is created, but the output is printed on terminal
+and can be verified as correct, -1 points. If no output file is
+created and no information is available to ensure correct transfer -3
+points.
+
+4. If the output file was not written to properly (i.e writing 1's and
+0's (as bytes) instead of bits - (-2) points
+
+5. Finally if program did not run, caused exceptions, hung,p rinted
+nothing useful etc, -4 points flat (i.e. points for not printing the
+throughput and other mistakes were not cut in this case)
+
+I would like to remind everyone to please state clearly, the
+instructions for executing their code. This would mean a statement
+like
+
+java exampleprog
+and the meaning of each of the arguments included.
+
+Also, make sure that when code is submitted, it is execute
+ready. Remove any packages that you might have in your code.
+
+Thanks!
+Vacha
+ 
+ -->
