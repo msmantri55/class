@@ -1,0 +1,81 @@
+- Austin to Muleshoe -----------------------------------------------------------
+
+Dijkstra's algorithm
+	Number of nodes searched: 69
+	Path length: 452
+
+Prim's algorithm
+	Number of nodes searched: ? (likely to be 69, i.e. all of them)
+	Path length: 501
+
+A* algorithm (dist)
+	Number of nodes searched: 56
+	Path length: 452
+
+A* algorithm (halfass)
+	Number of nodes searched: 56
+	Path length: 452
+
+A* algorithm (zip)
+	Number of nodes searched: 85
+	Path length: 556
+
+A* algorithm (randombs)
+	Number of nodes searched: 61
+	Path length: 452
+
+A* algorithm (randomlies)
+	Number of nodes searched: 57
+	Path length: 452
+
+- Laredo to Haskell ------------------------------------------------------------
+
+Dijkstra's algorithm
+	Number of nodes searched: 69
+	Path length: 482
+
+A* algorithm (dist)
+	Number of nodes searched: 37
+	Path length: 482
+
+A* algorithm (halfass)
+	Number of nodes searched: 35
+	Path length: 482
+
+A* algorithm (zip)
+	Number of nodes searched: 26
+	Path length: 482
+
+A* algorithm (randombs)
+	Number of nodes searched: 37
+	Path length: 482
+
+A* algorithm (randomlies)
+	Number of nodes searched: 35
+	Path length: 482
+
+- Dumas to Corsicana -----------------------------------------------------------
+
+Dijkstra's algorithm
+	Number of nodes searched: 67
+	Path length: 467
+
+A* algorithm (dist)
+	Number of nodes searched: 31
+	Path length: 467
+
+A* algorithm (halfass)
+	Number of nodes searched: 31
+	Path length: 467
+
+A* algorithm (zip)
+	Number of nodes searched: 33
+	Path length: 467
+
+A* algorithm (randombs)
+	Number of nodes searched: 33
+	Path length: 467
+
+A* algorithm (randomlies)
+	Number of nodes searched: 31
+	Path length: 467

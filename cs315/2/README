@@ -1,0 +1,19 @@
+CS 315 Assignment 2: Recursion and Lists
+
+Taylor Fausak
+tdf268
+9 February 2009
+
+2.	An invariant of peanoplus is that peanoplus(x, 0) always equals 0.
+	The Big O of peanoplus is O(n).
+
+3.	The Big O of peanotimes is O(n^2).
+
+8.	The binomial coefficients for the power n (that is, binomial(n)) are
+	identical to the values of n choose k for k = 0, ..., n.
+	ex:	binomial(4):	1 4 6 4 1
+		choose(4, 0):	1
+		choose(4, 1):	4
+		choose(4, 2):	6
+		choose(4, 3):	4
+		choose(4, 4):	1

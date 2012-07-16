@@ -1,0 +1,204 @@
+<HTML>
+<!--  cs315.html          G. Novak           08 Apr 09    -->
+<!--    -->
+<HEAD>
+  <TITLE>CS 315 Assignment 9: Memos and Drums</TITLE>
+</HEAD>
+<BODY>
+
+<H2>CS 315 Assignment 9: Memos and Drums</H2>
+
+<H3>Due: April 21, 2009.</H3>
+
+<B>Files:</B> <tt>Cons.java</tt> &nbsp <tt>Event.java</tt> &nbsp
+<tt>patmatch.lsp</tt> &nbsp <tt>patterns.lsp</tt> &nbsp <tt>patm.lsp</tt>
+
+<P>
+Some functions that you may need are provided in the file
+<tt>Cons.java</tt>, and you will need some of your functions from the
+last assignment.  Question 1 may be done in Java or in Lisp; the rest
+should be done in Java.
+
+<OL>
+
+<P><LI> Write a recursive function <tt>Object solve(Object e, String v)</tt> that
+attempts to solve the equation <tt>e</tt> for variable <tt>v</tt>,
+which we assume occurs at most once in <tt>e</tt>.
+<P>
+This function will do the same thing as the earlier version of
+<tt>solve</tt>; in this version, use patterns to rewrite the given
+expression.  The three base cases are the same as before, and you
+can copy your earlier code for those cases.
+<OL>
+<LI> If the left-hand side (lhs) of <tt>e</tt> is <tt>v</tt>, return <tt>e</tt>.
+<PRE>
+   (solve '(= f (* m a)) 'f)  =>  (= f (* m a))
+</PRE>
+
+<LI> If the right-hand side (rhs) of <tt>e</tt> is <tt>v</tt>, return <tt>e</tt>
+with its arguments reversed.
+<PRE>
+   (solve '(= (* m a) f) 'f)  =  (= f (* m a))
+</PRE>
+
+<LI> If the rhs is not <tt>v</tt> and not a Cons, return <tt>null</tt>.
+
+<P><LI> If the rhs of <tt>e</tt> is a Cons (i.e. an operation), try to
+solve the equation by applying algebraic transformations from a list
+of patterns, <tt>algpats</tt>.  For each pattern in the list, try
+to <tt>transform</tt> the expression <tt>e</tt> using the pattern.
+If the transformation works (is not <tt>null</tt>), call <tt>solve</tt>
+recursively on the transformed version of <tt>e</tt>; if the result of
+<tt>solve</tt> is not <tt>null</tt>,
+return that result.  Otherwise, continue through the list of patterns.
+If all patterns have been tried, return <tt>null</tt>.
+</OL>
+<P>
+An initial list of patterns is provided; add patterns to complete the set.
+
+
+<P><LI> Write a method <tt>hashCode()</tt> for the class <tt>Cons</tt>.
+The <tt>hashCode</tt> of a Cons should be the XOR of the
+<tt>hashCode</tt> of the <tt>first</tt> times <tt>17</tt> and the
+<tt>hashCode</tt> of the <tt>rest</tt> times <tt>127</tt>.
+The <tt>hashCode</tt> of <tt>null</tt> should be 0; use an
+auxiliary function to make sure that you do not try to call
+<tt>hashCode()</tt> on <tt>null</tt>, which would cause a runtime
+exception.
+
+
+<P><LI> Write a class <tt>Memoizer</tt> (in a file <tt>Memoizer.java</tt>)
+that implements memoization of a function call.  Memoization is a
+technique for wrapping an expensive function with a memory structure
+that remembers previously computed values of the function.  If the
+function is called again with the same argument value, it will be
+cheaper to look up the saved value than to recompute it.
+<P>
+The class should be created using <tt>new Memoizer(Functor f)</tt>
+where <tt>f</tt> is a functor that wraps the function associated
+with the memoizer.
+<P>
+Use a <tt>HashMap</tt> within the <tt>Memoizer</tt> to associate
+function values with argument values.  You can Google "java hashmap"
+to get documentation of a <tt>HashMap</tt>.
+<P>
+<tt>Memoizer</tt> should have a method <tt>Object call(Object x)</tt>
+to perform the wrapped function call.
+The <tt>call</tt> method should operate as follows:
+<OL>
+<LI> First, <tt>call</tt> should look up the parameter <tt>x</tt>
+in the <tt>HashMap</tt>; if it is present, return the value associated
+with <tt>x</tt> (without calling the <tt>Functor</tt>).
+
+<P><LI> Otherwise,
+<OL><LI> Call the <tt>Functor</tt> to compute the value of <tt>fn(x)</tt>.
+    <LI> Add the value <tt>fn(x)</tt> to the <tt>HashMap</tt> for the
+     key <tt>x</tt>.
+    <LI> Return the value <tt>fn(x)</tt>.
+</OL>
+</OL>
+<P>
+Reference: <A href="http://en.wikipedia.org/wiki/Memoization">
+ <tt>http://en.wikipedia.org/wiki/Memoization</tt> </A>
+
+<P><LI> An Austin company is making a digital drum and percussion
+synthesizer, and they have hired you to write the software.  Since
+musicians are not always good programmers, the input language
+that is used to specify a drum pattern needs to be simple.  The
+software needs to convert the specified drum pattern into a time
+sequence of I/O commands to drive the drum synthesizer units.
+Since music is a language, we expect that a drum program will be
+structured as a tree.
+<P>
+The drum synthesizer driver program is implemented as a
+discrete-event simulator, based on a <tt>PriorityQueue</tt>.
+You can Google "java priorityqueue"
+to get documentation of a <tt>PriorityQueue</tt>.
+<P>
+A discrete-event simulator processes a sequence of <I>events</I>
+which are scheduled at particular clock times.  The
+<tt>PriorityQueue</tt> is used to hold the pending events, with the
+priority being the time at which an event is scheduled to occur.
+In operation, the simulator removes the highest-priority
+(smallest time value) event from the queue, sets the current time
+to the time of the event, and executes it;
+the event will typically perform some action, and it may schedule
+other events for the future.  The simulation stops if the queue
+becomes empty.
+<P>
+We will assume that time values are integers.  Events that occur
+at the same integer time are considered to be simultaneous,
+regardless of their order, since the computer is much faster
+than the drum units.
+<P>
+An <tt>Event</tt> has a scheduled <tt>.time()</tt> and an
+<tt>.action()</tt>; this class is provided.  An action is a list,
+consisting of a command followed by a parameter, which is usually
+the length of time the command lasts.  Execution of a command returns
+a String, which represents an I/O command to the drum unit; an
+empty string represents a null command.  Write a function
+<tt>String execute(PriorityQueue pq, Cons act, int time)</tt>
+that executes an action and returns an appropriate String.
+Commands are as follows, with <tt>d</tt> representing the duration
+of the action:
+<UL>
+<LI> <tt>(delay d)</tt> returns ""
+<LI> <tt>(moo d)</tt> returns "moo"
+<LI> <tt>(cowbell d)</tt> returns "ding"
+<LI> <tt>(cymbal d)</tt> returns "cym"
+<LI> <tt>(boom d)</tt> returns "boom"
+<LI> <tt>(chucka d)</tt> returns "chucka"
+<LI> <tt>(boomchucka d)</tt> schedules <tt>(chucka d/2)</tt> at half of
+its duration past the current time, and returns "boom".
+<LI> <tt>(tambourine d)</tt> multiplies its duration by a random number,
+obtained by calling <tt>random.nextDouble()</tt> ;
+if the result is &gt 1, it schedules <tt>tambourine</tt> again with
+that amount as its duration, at the current time plus current duration
+minus that amount.  It returns "jingle".  (This random behavior simulates
+a tambourine player who smokes way too much weed.)
+<LI> <tt>(seq action<SUB>1</SUB> ... action<SUB>n</SUB>)</tt> schedules each of its actions
+to execute in sequence, one after the other.  seq thus makes a sequence
+of multiple actions look like a single action.  seq could either
+schedule all of its actions at once, starting with the current time
+and adding the time of each action, or it could schedule the first
+action and schedule a seq for the rest of the actions.
+<LI> <tt>(sync action<SUB>1</SUB> ... action<SUB>n</SUB>)</tt> schedules each of its actions
+for the current time, then returns "".  <tt>sync</tt>
+represents synchronized execution of multiple subprograms.
+<LI> <tt>(repeat n action)</tt> schedules n events with the specified
+action.  The first of these n events will happen at the same time
+that repeat executes (i.e. simultaneously with repeat).  One way to
+accomplish this is to schedule the action immediately;
+then if n &gt 1, schedule <tt>(repeat n-1 action)</tt> for the current
+time plus the time of the action.  Alternatively, repeat could simply
+schedule all n events at once; this would use more queue space if n
+is large.  <tt>repeat</tt> returns "".
+</UL>
+<P>
+<PRE>
+(seq (boom 4) (cowbell 2))
+
+(seq (repeat 2 (boomchucka 4)) (repeat 3 (cymbal 2)))
+
+(sync (repeat 2 (seq (repeat 2 (boomchucka 4)) (repeat 3 (cymbal 2))))
+      (repeat 4 (cowbell 2))
+      (repeat 5 (tambourine 5))
+      (seq (delay 10) (moo 2)))
+</PRE>
+
+<P>
+Write a function <tt>int totaltime(Cons action)</tt> that calculates
+the total time required for an action.  For most actions, the time is
+simply the duration of the action.  A <tt>repeat</tt> action has a time
+that is the repeat count times the time of the sub-action.
+A <tt>seq</tt> action takes the sum of the times of its sub-actions.
+A <tt>sync</tt> action takes the maximum time of its sub-actions.
+
+<P>
+Reference: <A href="http://en.wikipedia.org/wiki/Discrete_event_simulation">
+ <tt>http://en.wikipedia.org/wiki/Discrete_event_simulation</tt> </A>
+
+
+</OL>
+</BODY>
+</HTML>
