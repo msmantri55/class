@@ -1,0 +1,5 @@
+Implement the previous machine (item 4) as a Mealy machine. Output
+a ‘1’ when the substring “olivia” is detected; otherwise output a
+‘0’.
+
+/^[^o]*olivia.*$/

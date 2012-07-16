@@ -1,0 +1,4 @@
+Accept a string of digits if they are strictly decreasing. 543, 4,
+and 960 are accepted, but 012, 23 and 22 are rejected.
+
+/^9?8?7?6?5?4?3?2?1?0?$/

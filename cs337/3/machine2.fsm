@@ -1,0 +1,7 @@
+Accept only comma-separated integers (use integer as defined above
+in item 1) An example of a comma-separated integer would be 2,000
+or 6,500,000. But 3000 and 3,00,0 must be rejected. Notice that the
+commas must be in the thousandth, millionth, billionth, etc.
+positions. If the number is 999 or less it should be accepted.
+
+/^0|[1-9][0-9]{,2}(,[0-9]{3})*$/

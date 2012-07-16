@@ -1,0 +1,4 @@
+Accept only integers, where integers are defined as either a single
+0, or a nonzero digit followed by any number of digits.
+
+/^0|[1-9][0-9]*$/

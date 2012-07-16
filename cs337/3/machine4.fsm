@@ -1,0 +1,5 @@
+Find the substring “olivia” in any string that uses the defined
+alphabet. So “mylovelyolivia!!” would return true, but “oliva”
+or “olvia” would fail. Note: spaces are not part of the alphabet.
+
+/^[^o]*olivia.*$/

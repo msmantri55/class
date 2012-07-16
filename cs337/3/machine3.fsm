@@ -1,0 +1,5 @@
+Accept signed and unsigned integers (use integer as defined above
+in item 1) 5 is valid, as is +45, 45, and 0. But +0, 45.5, and 0.3
+must be rejected.
+
+/^0|[-+]?[1-9][0-9]*$/

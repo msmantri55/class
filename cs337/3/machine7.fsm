@@ -1,0 +1,8 @@
+Accept a string with up to 3 levels of parentheses, ignoring the
+characters between, before, or after the parentheses. Reject the
+string if the parentheses are unbalanced, if there are no parentheses
+in the string, or if the nesting is deeper than three. You should
+accept compute((1+2)+((5+2*8+2))), and ((())) but reject ((((4)))),
+(()())), and 4+3.
+
+/^[^()]*(\([^()]*\))+[^()]*$/

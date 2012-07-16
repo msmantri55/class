@@ -1,0 +1,7 @@
+Accept unsigned floating point numbers which MUST contain a decimal
+point in the number. With floating point numbers, a 0 can be the
+leading digit but only if it is the only digit before the decimal.
+0.003, 0.20, 0.000, 3.54 are all correct, but 0..03, 1., 55, and
+01.33 are not.
+
+/^(0|[1-9][0-9]*)?.[0-9]+$/
