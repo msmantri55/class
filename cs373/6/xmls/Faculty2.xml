@@ -1,0 +1,3197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- some fake entries we've used to satisfy restrictions:
+1.	...
+	<degree>
+		...
+		<specialization>UNKNOWN</specialization>
+	<degree>
+
+2.	...
+	<staff>
+		...
+		<last_name>NOT_LISTED</last_name>
+
+3.	...
+	<staff>
+		<first_name>NO_TA</first_name>
+		<last_name>NO_TA</last_name>
+	...
+
+4. all months and days for books -> '01'
+
+5. all days for journals (and some conferences)-> '01'
+-->
+
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Faculty1.xsd">
+	<faculty> <!-- 1. Lorenzo Alvisi -->
+		<name>
+			<first_name>Lorenzo</first_name>
+			<last_name>Alvisi</last_name>
+		</name>
+		<username>lorenzo</username>
+		<email>lorenzo@cs.utexas.edu</email>
+
+		<!-- above is required info in person-->		
+
+		<website>
+			<url>http://userweb.cs.utexas.edu/~lorenzo/</url>
+			<group></group>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</website>
+		
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4719792</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>2327886</number>
+		</phone_number>
+
+		<research_area>Distributed Computing</research_area>
+		
+		<degree>
+			<date_awarded>1996</date_awarded>
+			<institution>Cornell</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1994</date_awarded>
+			<institution>Cornell</institution>
+			<degree_t>Master's Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1987</date_awarded>
+			<institution>Università di Bologna, Italy</institution>
+			<degree_t>Laurea</degree_t>
+			<specialization>Physics</specialization>
+		</degree>
+		
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>16:00:00</start_time>
+				<end_time>17:00:00</end_time>
+				<day>Tuesday</day>
+				<day>Thursday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>ACES</building_abbr>
+					<building_name>Applied Computational Engineering and Sciences Building</building_name>
+				</building>
+				<floor>6</floor>
+				<room>6.244</room>
+			</location>
+		</office_hours>
+
+		<class>
+			<unique_number>54375</unique_number>
+			<name>Distributed Computing</name>
+			<description>Models of distributed systems; language issues, proving properties of distributed systems; time, clocks, partial ordering of events; deadlock and termination detection; diffusing computations; computing in hostile environments; distributed resource management.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>380D</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Apurv</first_name>
+					<last_name>Bhartia</last_name>
+				</person>
+			</staff>
+			<schedule> <!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>17:00:00</start_time>
+					<end_time>18:30:00</end_time>
+					<day>Tuesday</day>
+					<day>Thursday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RLM</building_abbr>
+						<building_name>Robert Lee Moore</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.126</room>
+				</location>
+			</schedule>
+		</class>
+
+		<writing>
+			<title>Zyzzyva: Speculative Byzantine Fault Tolerance</title>
+			<publish_info>
+				<publisher>ACM Transactions on Computer Systems</publisher>
+				<publish_date>2009-12-01</publish_date>
+				<article>
+					<journal>ACM Transactions on Computer Systems</journal>
+					<edition>2009-12-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>R.</first_name>
+				<last_name>Kotla</last_name>
+			</author>
+			<author>
+				<first_name>A.</first_name>
+				<last_name>Clement</last_name>
+			</author>
+			<author>
+				<first_name>E.</first_name>
+				<last_name>Wong</last_name>
+			</author>
+			<author>
+				<first_name>M.</first_name>
+				<last_name>Dahlin</last_name>
+			</author>
+		</writing>
+
+		<conference>
+			<conference>
+				<date>2009-11-03</date>
+				<name>The 11th International Symposium on Stabilization, Safety, and Security of Distributed Systems (SSS 2009)</name>
+				<conf_location>Lyon, France</conf_location>
+			</conference>
+			<presentation_title>Model Checking Coalition Nash Equilibria in MAD Distributed Systems</presentation_title>		
+		</conference>
+
+		<advisee>
+			<name>
+				<first_name>Amitanand</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Aiyer</last_name>
+			</name>
+			<username>anand</username>
+			<email>anand@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+
+		<office>
+			<building>
+				<building_abbr>ACES</building_abbr>
+				<building_name>Applied Computational Engineering and Sciences Building</building_name>
+			</building>
+			<floor>6</floor>
+			<room>6.244</room>
+		</office>
+		<title>Professor</title>
+	</faculty>
+	<faculty> <!-- 2. Inderjit S. Dhillon -->
+		<name>
+			<first_name>Inderjit</first_name>
+			<middle_name>S.</middle_name>
+			<last_name>Dhillon</last_name>
+		</name>
+
+		<email>inderjit@cs.utexas.edu</email>
+
+		<website>
+			<url>http://userweb.cs.utexas.edu/~inderjit/</url>
+			<group></group>
+			<author>
+				<first_name>Inderjit</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Dhillon</last_name>
+			</author>
+		</website>
+
+		<phone_number>
+			<phone_t>work</phone_t>
+			<area_code>512</area_code>
+			<number>4719725</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+
+		<research_area>Data mining</research_area>
+		<research_area>Machine learning</research_area>
+		<research_area>Numerical linear algebra</research_area>
+		<research_area>Scientific computing</research_area>
+		<research_area>Numerical Optimization</research_area>
+		<research_area>Bioinformatics</research_area>
+
+		<degree>
+			<date_awarded>1997</date_awarded>
+			<institution>University of California at Berkeley</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+
+		<class>
+			<unique_number>54340</unique_number>
+			<name>Introduction to Data Mining</name>
+			<description>Only one of the following may be counted unless the topics vary: Computer Sciences 178, 378, 178H, 378H.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>378</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<!-- staff goes here if required -->
+
+			<staff>
+				<person>
+					<first_name>Inderjit</first_name>
+					<middle_name>S.</middle_name>
+					<last_name>Dhillon</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>09:30:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<day>Thursday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>TAY</building_abbr>
+						<building_name>Taylor Hall</building_name>
+					</building>
+					<room>3.144</room>
+					<floor>3</floor>
+				</location>
+			</schedule>
+		</class>
+		<writing>
+			<title>ScaLAPACK Users’ Guide</title>
+			<publish_info>
+				<publisher>SIAM</publisher>
+				<publish_date>1997-01-01</publish_date>
+			</publish_info>
+			<writing>book</writing>
+			<author>
+				<first_name>Inderjit</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Dhillon</last_name>
+			</author>			
+			<author>
+				<first_name>L.</first_name>
+				<last_name>Blackford</last_name>
+			</author>
+			<author>
+				<first_name>J.</first_name>
+				<last_name>Choi</last_name>
+			</author>
+			<author>
+				<first_name>A.</first_name>
+				<last_name>Cleary</last_name>
+			</author>
+			<author>
+				<first_name>E.</first_name>
+				<last_name>D'Azevedo</last_name>
+			</author>
+			<author>
+				<first_name>J.</first_name>
+				<last_name>Demmel</last_name>
+			</author>
+			<author>
+				<first_name>J.</first_name>
+				<last_name>Dongarra</last_name>
+			</author>
+			<author>
+				<first_name>S.</first_name>
+				<last_name>Hammarling</last_name>
+			</author>
+			<author>
+				<first_name>G.</first_name>
+				<last_name>Henry</last_name>
+			</author>
+			<author>
+				<first_name>A.</first_name>
+				<last_name>Petitet</last_name>
+			</author>
+			<author>
+				<first_name>K.</first_name>
+				<last_name>Stanley</last_name>
+			</author>
+			<author>
+				<first_name>R.</first_name>
+				<last_name>Whaley</last_name>
+			</author>
+			<author>
+				<first_name>D.</first_name>
+				<last_name>Walker</last_name>
+			</author>
+		</writing>
+
+		<writing>
+			<title>Low-Rank Kernel Learning with Bregman Matrix Divergences</title>
+			<publish_info>
+				<publisher>Journal of Machine Learning Research(JMLR)</publisher>
+				<publish_date>2009-02-01</publish_date>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Inderjit</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Dhillon</last_name>
+			</author>
+			<author>
+				<first_name>B.</first_name>
+				<last_name>Kuhlis</last_name>
+			</author>
+			<author>
+				<first_name>M.</first_name>
+				<last_name>Sustik</last_name>
+			</author>
+		</writing>
+		
+		<conference>
+			<conference>
+				<date>2009-12-01</date>
+				<name>Neural Information Processing Systems Conference (NIPS)</name>
+				<conf_location>Vancouver, Canada</conf_location>
+			</conference>
+			<presentation_title>Matrix Completion from Power-Law Distributed Samples</presentation_title>
+		</conference>
+
+		<advisee>
+			<name>
+				<first_name>Dongmin</first_name>
+				<last_name>Kim</last_name>
+			</name>
+			<email>dmkim@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<office>
+			<building>
+				<building_abbr>ACES</building_abbr>
+				<building_name>Applied Computational Engineering and Sciences Building</building_name>
+			</building>
+			<floor>2</floor>
+			<room>2.332</room>
+		</office>	
+		<title>Professor</title>
+	</faculty>
+
+	<faculty> <!-- 3. Warren A. Hunt, Jr. -->
+		<name>
+			<first_name>Warren</first_name>
+			<middle_name>A.</middle_name>
+			<last_name>Hunt</last_name>
+			<suffix>Jr.</suffix>
+		</name>
+
+		<email>hunt@cs.utexas.edu</email>
+
+		<website>
+			<url>http://userweb.cs.utexas.edu/~hunt/</url>
+			<group></group>
+			<author>
+				<first_name>Warren</first_name>
+				<middle_name>A.</middle_name>
+				<last_name>Hunt</last_name>
+				<suffix>Jr.</suffix>				
+			</author>
+		</website>
+		
+		<phone_number>
+			<phone_t>work</phone_t>
+			<area_code>512</area_code>
+			<number>4719748</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+
+		<research_area>Computer Architecture</research_area>
+		<research_area>Low-power Computing</research_area>
+		<research_area>Garbage Collection</research_area>
+		<research_area>Parallel Computing</research_area>
+		<research_area>Formal Hardware Description Languages</research_area>
+
+		<degree>
+			<date_awarded>1985</date_awarded>
+			<institution>The University of Texas at Austin</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>UNKNOWN</specialization>
+		</degree>
+
+		<writing>
+			<title>Connecting pre-silicon and post-silicon verification.</title>
+			<publish_info>
+				<publisher>Formal Methods in Computer Aided Design (FMCAD)</publisher>
+				<publish_date>2009-11-01</publish_date>
+				<article>
+					<journal>Formal Methods in Computer Aided Design (FMCAD)</journal>
+					<edition>2009-11-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Warren</first_name>
+				<middle_name>A.</middle_name>
+				<last_name>Hunt</last_name>
+				<suffix>Jr.</suffix>
+			</author>			
+			<author>
+				<first_name>Sandip</first_name>
+				<last_name>Ray</last_name>
+			</author>
+		</writing>
+
+		<conference>
+			<conference>
+				<date>2009-06-01</date>
+				<name>Computer Aided Verification (CAV)</name>
+				<conf_location>Grenoble, France</conf_location>
+			</conference>
+			<presentation_title>Centaur Technology Media Unit Verification</presentation_title>
+		</conference>
+
+		<advisee>
+			<name>
+				<first_name>Robert</first_name>
+				<last_name>Krug</last_name>
+			</name>
+			<email>rkrug@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+
+		<advisee>
+			<name>
+				<first_name>Jun</first_name>
+				<last_name>Sawada</last_name>
+			</name>
+			<email>sawada@cs.utexas.edu</email>
+
+			<writing>
+				<title>Formal Verification of an Advanced Pipeline Machine</title>
+				<writing>thesis</writing>
+				<!-- nowhere to put this w/o publisher info	
+				<issue_date>1999-12</issue_date>
+				-->
+				<author>
+					<first_name>Jun</first_name>
+					<last_name>Sawada</last_name>				
+				</author>
+			</writing>
+			<status>PhD Student</status>
+		</advisee>
+
+		<office>
+			<building>
+				<building_abbr>MAI</building_abbr>
+				<building_name>Main Building</building_name>
+			</building>
+			<room>2014</room>
+			<floor>20</floor>
+		</office>
+
+		<title>Professor</title>
+	</faculty>
+
+	<faculty> <!-- 4. Donald S. Fussell -->
+		<name>
+			<first_name>Donald</first_name>
+			<middle_name>S.</middle_name>
+			<last_name>Fussell</last_name>
+		</name>
+
+		<email>fussell@cs.utexas.edu</email>
+
+		<website>
+			<url>http://www.cs.utexas.edu/users/fussell</url>
+			<group></group>
+			<author>
+				<first_name>Donald</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Fussell</last_name>
+			</author>
+		</website>
+
+		<phone_number>
+			<phone_t>work</phone_t>
+			<area_code>512</area_code>
+			<number>4719719</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+
+		<research_area>Computer Architecture</research_area>
+		<research_area>Computer Graphics</research_area>
+		<research_area>Networking</research_area>
+		<research_area>Digital Arts</research_area>
+
+		<degree>
+			<date_awarded>1973</date_awarded>
+			<institution>Dartmouth College</institution>
+			<degree_t>Bachelor's Degree</degree_t>
+			<specialization>Mathematics and Social Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1977</date_awarded>
+			<institution>The University of Texas at Dallas</institution>
+			<degree_t>Master's Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1980</date_awarded>
+			<institution>The University of Texas at Dallas</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>11:00:00</start_time>
+				<end_time>12:00:00</end_time>
+				<day>Monday</day>
+				<day>Wednesday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>ACES</building_abbr>
+					<building_name>Applied Computational Engineering and Sciences Building</building_name>
+				</building>
+				<floor>2</floor>
+				<room>2.120</room>
+			</location>
+		</office_hours>
+
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>14:30:00</start_time>
+				<end_time>15:30:00</end_time>
+				<day>Tuesday</day>
+				<day>Thursday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>ACES</building_abbr>
+					<building_name>Applied Computational Engineering and Sciences Building</building_name>
+				</building>
+				<floor>2</floor>
+				<room>2.120</room>
+			</location>
+		</office_hours>
+
+		<class>
+			<unique_number>54395</unique_number>
+			<name>Computer Graphics</name>
+			<description>Models of distributed systems; language issues, proving properties of distributed systems; time, clocks, partial ordering of events; deadlock and termination detection; diffusing computations; computing in hostile environments; distributed resource management.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>384G</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Peter</first_name>
+					<last_name>Djeu</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Donald</first_name>
+					<middle_name>S.</middle_name>
+					<last_name>Fussell</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>14:00:00</start_time>
+					<end_time>15:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>RLM</building_abbr>
+						<building_name>Robert Lee Moore</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.118</room>
+				</location>
+
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54080</unique_number>
+			<name>Computer Organization and Programming: Honors</name>
+			<description>Basic computer organization; machine representation of instructions and data; hardware/software interface. Computer Sciences 310 and 310H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>310H</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Aditya</first_name>
+					<last_name>Rawal</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>RLM</building_abbr>
+						<building_name>Robert Lee Moore</building_name>
+					</building>
+					<floor>6</floor>
+					<room>6.116</room>
+				</location>
+			</schedule>
+		</class>
+
+<!-- same class, again for discussion... -->
+
+		<class>
+			<unique_number>54080</unique_number>
+			<name>Computer Organization and Programming: Honors</name>
+			<description>Basic computer organization; machine representation of instructions and data; hardware/software interface. Computer Sciences 310 and 310H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>310H</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Aditya</first_name>
+					<last_name>Rawal</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>09:00:00</start_time>
+					<end_time>10:00:00</end_time>
+					<day>Thursday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+	
+				<location>
+					<building>
+						<building_abbr>GAR</building_abbr>
+						<building_name>Garrison</building_name>
+					</building>
+					<floor>1</floor>
+					<room>1.134</room>
+				</location>
+			</schedule>
+		</class>
+
+<!-- -->
+			
+		<class>
+			<unique_number>54080</unique_number>
+			<name>Computer Organization and Programming: Honors</name>
+			<description>Basic computer organization; machine representation of instructions and data; hardware/software interface. Computer Sciences 310 and 310H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>310H</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Aditya</first_name>
+					<last_name>Rawal</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+						
+				<location>
+					<building>
+						<building_abbr>RLM</building_abbr>
+						<building_name>Robert Lee Moore</building_name>
+					</building>
+					<floor>6</floor>
+					<room>6.116</room>
+				</location>
+			</schedule>
+		</class>
+
+<!-- same class, again for discussion -->
+
+		<class>
+			<unique_number>54080</unique_number>
+			<name>Computer Organization and Programming: Honors</name>
+			<description>Basic computer organization; machine representation of instructions and data; hardware/software interface. Computer Sciences 310 and 310H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>310H</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Aditya</first_name>
+					<last_name>Rawal</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Thursday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>PAR</building_abbr>
+						<building_name>Parlin</building_name>
+					</building>
+					<floor>2</floor>
+					<room>204</room>
+				</location>
+			</schedule>
+		</class>
+
+		<writing>
+			<title>A line-space analysis of light-field representations</title>
+			<publish_info>
+				<publisher>Graphical Models</publisher>
+				<publish_date>2009-09-01</publish_date>
+				<article>
+					<journal>Graphical Models</journal>
+					<edition>2009-09-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Donald</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Fussell</last_name>			
+			</author>
+			<author>
+				<first_name>Emilio</first_name>
+				<last_name>Camahort</last_name>
+			</author>		
+			<author>
+				<first_name>Francisco</first_name>
+				<last_name>Abad</last_name>
+			</author>
+		</writing>
+		
+		<conference>
+			<conference>
+				<date>2009-02-01</date>
+				<name>The Symposium on Interactive 3D Graphics and Games</name>
+				<conf_location>Boston, Massachusetts</conf_location>
+			</conference>
+			<presentation_title>Frankenrigs: Building Character Rigs From Multiple Sources</presentation_title>
+		</conference>
+
+		<office>
+			<building>
+				<building_abbr>ACES</building_abbr>
+				<building_name>Applied Computational Engineering and Sciences Building</building_name>
+			</building>
+			<floor>2</floor>
+			<room>2.120</room>			
+		</office>
+		<!-- won't work <title>Trammell Crow Regents' Professor</title> -->
+		<title>Professor</title>
+	</faculty>
+	
+	<faculty> <!-- 5. Gordan S. Novak, Jr. -->
+		<name>
+			<first_name>Gordon</first_name>
+			<middle_name>S.</middle_name>
+			<last_name>Novak</last_name>
+			<suffix>Jr.</suffix>
+		</name>
+		<email>novak@cs.utexas.edu</email>
+
+		<website>
+			<url>http://www.cs.utexas.edu/users/novak</url>
+			<group></group>
+			<author>
+				<first_name>Gordon</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Novak</last_name>
+				<suffix>Jr.</suffix>				
+			</author>
+		</website>
+
+		<phone_number>
+			<phone_t>work</phone_t>
+			<area_code>512</area_code>
+			<number>4719569</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+
+		<research_area>Artificial intelligence</research_area>
+		<research_area>automatic programming</research_area>
+		<research_area>physics problem solving</research_area>
+		<research_area>expert systems</research_area>
+		<research_area>compilers</research_area>
+
+		<degree>
+			<date_awarded>1976</date_awarded>
+			<institution>The University of Texas at Austin</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>UNKNOWN</specialization>
+		</degree>
+
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>10:00:00</start_time>
+				<end_time>11:00:00</end_time>
+				<day>Monday</day>
+				<day>Wednesday</day>
+				<day>Friday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+
+			<location>
+				<building>
+					<building_abbr>TAY</building_abbr>
+					<building_name>Taylor Hall</building_name>
+				</building>
+				<floor>4</floor>
+				<room>4.140C</room>
+			</location>
+		</office_hours>
+
+		<class>
+			<unique_number>54125</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+		</class>
+
+		<!-- same class, but with discussion group -->
+
+		<class>
+			<unique_number>54125</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>09:00:00</start_time>
+					<end_time>10:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>BUR</building_abbr>
+						<building_name>Burdine</building_name>
+					</building>
+					<floor>1</floor>
+					<room>128</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class>
+			<unique_number>54130</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>								
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+	
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+	
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+		</class>
+		
+<!-- same class, with disc group schedule-->			
+
+		<class>
+			<unique_number>54130</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>BUR</building_abbr>
+						<building_name>Burdine</building_name>
+					</building>
+					<floor>1</floor>
+					<room>128</room>
+				</location>
+			</schedule>
+		</class>
+		
+<!-- new class -->
+		<class>
+			<unique_number>54135</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+	
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+
+		</class>
+
+		<!-- -->
+		
+		<class>
+			<unique_number>54135</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>ECJ</building_abbr>
+						<building_name>Ernest Cockrell Jr. Hall</building_name>
+					</building>
+					<floor>1</floor>
+					<room>1.214</room>
+				</location>
+			</schedule>
+		</class>
+
+<!-- new class -->
+
+		<class>
+			<unique_number>54140</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+		</class>
+
+<!-- same class, with discussion section schedule-->
+
+		<class>
+			<unique_number>54140</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+
+				<location>
+					<building>
+						<building_abbr>PHR</building_abbr>
+						<building_name>Pharmacy Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.114</room>
+				</location>
+			</schedule>
+		</class>
+		
+<!-- new class -->
+		<class>
+			<unique_number>54145</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>					
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+		</class>
+<!-- same class, with discussion section schedule -->			
+		<class>
+			<unique_number>54145</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>13:00:00</start_time>
+					<end_time>14:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>CBA</building_abbr>
+						<building_name>McCombs School of Business</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.326</room>
+				</location>
+			</schedule>
+		</class>
+		
+<!-- new class -->
+		<class>
+			<unique_number>54150</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>JGB</building_abbr>
+						<building_name>Jackson Geological Sciences Building</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.216</room>
+				</location>
+			</schedule>
+		</class>
+<!-- same class, different schedule (discussion)-->			
+		<class>
+			<unique_number>54150</unique_number>
+			<name>Algorithms and Data Structures</name>
+			<description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs. Computer Sciences 315 and 315H may not both be counted.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>315</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Yulin</first_name>
+					<last_name>Li</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Wei</first_name>
+					<last_name>Dong</last_name>
+				</person>
+			</staff>				
+			<staff>				
+				<person>
+					<first_name>Hrishikesh</first_name>
+					<middle_name>B.</middle_name>
+					<last_name>Acharya</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>13:00:00</start_time>
+					<end_time>14:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>					
+				<location>
+					<building>
+						<building_abbr>MEZ</building_abbr>
+						<building_name>Mezes Hall</building_name>
+					</building>
+					<floor>2</floor>
+					<room>2.118</room>
+				</location>
+			</schedule>
+		</class>
+
+		<writing>
+			<title>Computer aided software design via inference and constraint propagation</title>
+			<publish_info>
+				<publisher>Integrated Computer-Aided Engineering</publisher>
+				<publish_date>2009-06-01</publish_date>
+				<article>
+					<journal>Integrated Computer-Aided Engineering</journal>
+					<edition>2009-06</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Gordon</first_name>
+				<middle_name>S.</middle_name>
+				<last_name>Novak</last_name>
+				<suffix>Jr.</suffix>				
+			</author>
+		</writing>
+
+		<conference>
+			<conference>
+				<date>2008-07-01</date>
+				<name>2008 IEEE International Conference on Information Reuse and Integration (IRI-2008)</name>
+				<conf_location>Las Vegas, Nevada</conf_location>
+			</conference>			
+			<presentation_title>Coupling Data Understanding with Software Reuse</presentation_title>
+		</conference>
+
+		<office>
+			<building>
+				<building_abbr>TAY</building_abbr>
+				<building_name>Taylor Hall</building_name>
+			</building>
+			<floor>4</floor>
+			<room>4.140C</room>
+		</office>
+		<title>Professor</title>
+	</faculty>
+
+	<faculty> <!-- 6. Kathryn S. McKinley -->
+		<name>
+			<first_name>Kathryn</first_name>
+			<middle_name>S</middle_name>
+			<last_name>McKinley</last_name>
+		</name>
+		<username>mckinley</username>
+		<email>mckinley@cs.utexas.edu</email>
+		
+		<website>
+			<url>http://www.cs.utexas.edu/~mckinley/</url>
+			<group></group>
+			<author>
+				<first_name>Kathryn</first_name>
+				<middle_name>S</middle_name>
+				<last_name>McKinley</last_name>	
+			</author>
+		</website>
+		
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>2327467</number>
+		</phone_number>
+
+		<research_area>Programming language implementation</research_area>
+		<research_area>compilers</research_area>
+		<research_area>cache and memory management</research_area>
+		<research_area>garbage collection</research_area>
+		<research_area>architecture</research_area>
+
+		<degree>
+			<date_awarded>1992</date_awarded>
+			<institution>Rice University</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization></specialization>
+		</degree>
+
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>13:30:00</start_time>
+				<end_time>14:30:00</end_time>
+				<day>Tuesday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>ACE</building_abbr>
+					<building_name>Applied Computational Engineering and Sciences Building</building_name>
+				</building>
+				<floor>3</floor>
+				<room>3.420</room>
+			</location>
+		</office_hours>
+		
+		<advisee>
+			<name>
+				<first_name>Michael</first_name>
+				<last_name>Bond</last_name>
+			</name>
+			<username>mikebond</username>
+			<email>mikebond@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+
+		<advisee>
+			<name>
+				<first_name>Katie</first_name>
+				<last_name>Coons</last_name>
+			</name>
+			<username>coonske</username>
+			<email>coonske@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+
+		<advisee>
+			<name>
+				<first_name>Byeong-cheol</first_name>
+				<last_name>Lee</last_name>
+			</name>
+			<username>bclee</username>
+			<email>bclee@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Dimitrios</first_name>
+				<last_name>Prountzos</last_name>
+			</name>
+			<username>dprountz</username>
+			<email>dprountz@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Jennifer</first_name>
+				<last_name>Sartor</last_name>
+			</name>
+			<username>jbsartor</username>
+			<email>jbsartor@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Suriya</first_name>
+				<last_name>Subramanian</last_name>
+			</name>
+			<username>suriya</username>
+			<email>firstname@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		
+		<office>
+			<building>
+				<building_abbr>ACE</building_abbr>
+				<building_name>Applied Computational Engineering and Sciences Building</building_name>
+			</building>
+			<floor>4</floor>
+			<room>4.420</room>
+		</office>
+		
+		<title>Professor</title>
+	</faculty>	
+	
+	<faculty> <!-- 7. Glenn Downing -->
+		<name>
+			<first_name>Glenn</first_name>
+			<middle_name>P</middle_name>
+			<last_name>Downing</last_name>
+		</name>
+		<username>downing</username>
+		<email>downing@cs.utexas.edu</email>
+		
+		<website>
+			<url>http://www.cs.utexas.edu/~downing/</url>
+			<group></group>
+			<author>
+				<first_name>Glenn</first_name>
+				<middle_name>P</middle_name>
+				<last_name>Downing</last_name>
+			</author>
+		</website>
+
+		<phone_number>
+			<phone_t>home</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>3381858</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4717316</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+		
+
+		<research_area>Algorithms</research_area>
+		<research_area>Data structures</research_area>
+		<research_area>Generic and object-oriented programming in C++ and Java</research_area>
+
+		<degree>
+			<date_awarded>1977</date_awarded>
+			<institution>Massachusetts Institute of Technology</institution>
+			<degree_t>Master's Degree</degree_t>
+			<specialization></specialization>
+		</degree>
+
+		<award>
+			<name>Advisory Council Teaching Excellence Award</name>
+			<date_awarded>2002</date_awarded>
+		</award>
+		<award>
+			<name>Advisory Council Teaching Excellence Award</name>
+			<date_awarded>2006</date_awarded>
+		</award>
+		
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>12:00:00</start_time>
+				<end_time>13:00:00</end_time>
+				<day>Monday</day>
+				<day>Friday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>PAI</building_abbr>
+					<building_name>T. S. Painter Hall</building_name>
+				</building>
+				<floor>5</floor>
+				<room>5.60</room>
+			</location>
+		</office_hours>
+
+		<class>
+			<unique_number>54280</unique_number>
+			<name>Object-Oriented Programming</name>
+			<description>Programming using class derivation, inheritance, and dynamic polymorphism. Application of a simple object-oriented design methodology to several software development problems. </description>
+
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>371P</short_number>
+			</course_number>
+
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Jaeyoun</first_name>
+					<last_name>Kim</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-09</start_date>
+
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>PAI</building_abbr>
+						<building_name>T. S. Painter Hall</building_name>
+					</building>
+					<floor>3</floor>
+					<room>3.14</room>
+				</location>
+			</schedule>
+
+		</class>
+
+		<class>
+			<unique_number>54300</unique_number>
+			<name>Software Engineering</name>
+			<description>Introduction to current knowledge, techniques, and theories in large software system design and development.</description>
+
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>373</short_number>
+			</course_number>
+
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Isaac</first_name>
+					<last_name>Levy</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Shruthi</first_name>
+					<last_name>Viswanath</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-09</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>PAI</building_abbr>
+						<building_name>T. S. Painter Hall</building_name>
+					</building>
+					<floor>3</floor>
+					<room>3.14</room>
+				</location>
+			</schedule>
+
+		</class>
+
+		<class>
+			<unique_number>54305</unique_number>
+			<name>Software Engineering</name>
+			<description>Introduction to current knowledge, techniques, and theories in large software system design and development.</description>
+
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>373</short_number>
+			</course_number>
+
+			<semester>Spring</semester>
+			<year>2010</year>
+
+			<staff>
+				<person>
+					<first_name>Isaac</first_name>
+					<last_name>Levy</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Shruthi</first_name>
+					<last_name>Viswanath</last_name>
+				</person>
+			</staff>
+
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>13:00:00</start_time>
+					<end_time>14:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>GAR</building_abbr>
+						<building_name>Garrison Hall</building_name>
+					</building>
+					<floor>0</floor>
+					<room>0.132</room>
+				</location>
+			</schedule>
+		</class>
+
+		<office>
+			<building>
+				<building_abbr>TAY</building_abbr>
+				<building_name>T.U. Taylor Hall</building_name>
+			</building>
+			<floor>2</floor>
+			<room>2.124</room>
+		</office>
+
+		<title>Lecturer</title>
+	</faculty>
+
+	<faculty> <!-- 8. Jayadev Misra -->
+		<name>
+			<first_name>Jayadev</first_name>
+			<last_name>Misra</last_name>
+		</name>
+		<username>misra</username>
+		<email>misra@cs.utexas.edu</email>
+		
+		<!-- above is required info of that person -->
+		
+		<website>
+			<url>http://www.cs.utexas.edu/users/misra</url>
+			<group></group>
+			<author>
+				<first_name>Jayadev</first_name>
+				<last_name>Misra</last_name>
+			</author>
+		</website>
+		
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4719550</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+		
+		<research_area>Application of formal methods in practice, particularly in the specifications and designs of synchronous and asynchronous systems</research_area>
+		
+		<degree>
+			<date_awarded>1972</date_awarded>
+			<institution>John Hopkins</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1969</date_awarded>
+			<institution>Indian Institute of Technology</institution>
+			<degree_t>Bachelor's Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		
+		<writing>
+			<title>A Theory of Hints in Modeling checking</title>
+			<publish_info>
+				<publisher>Formal Methods at the Crossroads: From Panacea to Foundational Support</publisher>
+				<publish_date>2003-01-01</publish_date>
+				<article>
+					<journal>Formal Methods at the Crossroads: From Panacea to Foundational Support</journal>
+					<edition>2003-01-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Markus</first_name>
+				<last_name>Kaltenbach</last_name>
+			</author>
+		</writing>
+		
+		<writing>
+			<title>Derivation of a Parallel String Matching Algorithm</title>
+			<publish_info>
+				<publisher>Information Processing Letters</publisher>
+				<publish_date>2003-01-01</publish_date>
+				<article>
+					<journal>Information Processing Letters</journal>
+					<edition>2003-01-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Jayadev</first_name>
+				<last_name>Misra</last_name>
+			</author>
+		</writing>
+		
+		<writing>
+			<title>A Reduction Theorem for Concurrent Object-Oriented Programs</title>
+			<publish_info>
+				<publisher>Programming Methodology</publisher>
+				<publish_date>2002-01-01</publish_date>
+				<article>
+					<journal>Programming Methodology</journal>
+					<edition>2002-01-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Jayadev</first_name>
+				<last_name>Misra</last_name>
+			</author>
+		</writing>
+		
+		<writing>
+			<title>Orchestrating Computations on the World-wide Web</title>
+			<publish_info>
+				<publisher>Proceedings of the Euro-Par 2002</publisher>
+				<publish_date>2002-08-01</publish_date>
+				<article>
+					<journal>Proceedings of the Euro-Par 2002</journal>
+					<edition>2002-08-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Young-ri</first_name>
+				<last_name>Choi</last_name>
+			</author>
+			<author>
+				<first_name>Amit</first_name>
+				<last_name>Garg</last_name>
+			</author>
+			<author>
+				<first_name>Siddhartha</first_name>
+				<last_name>Rai</last_name>
+			</author>
+			<author>
+				<first_name>Harrick</first_name>
+				<last_name>Vin</last_name>
+			</author>
+		</writing>
+		
+		<writing>
+			<title>A Simple, Object-based View of Multiprogramming</title>
+			<publish_info>
+				<publisher>Formal Methods in System Design, Vol. 20</publisher>
+				<publish_date>2002-01-01</publish_date>
+				<article>
+					<journal>Formal Methods in System Design, Vol. 20</journal>
+					<edition>2002-01-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Jayadev</first_name>
+				<last_name>Misra</last_name>
+			</author>
+		</writing>
+		
+		<writing>
+			<title>A Simple, Object-based View of Multiprogramming</title>
+			<publish_info>
+				<publisher>American Mathematical Monthly</publisher>
+				<publish_date>2001-05-01</publish_date>
+				<article>
+					<journal>American Mathematical Monthly</journal>
+					<edition>2001-05-01</edition>
+				</article>
+			</publish_info>
+			<writing>article</writing>
+			<author>
+				<first_name>Edsger</first_name>
+				<middle_name>W.</middle_name>
+				<last_name>Djikstra</last_name>
+			</author>
+		</writing>
+			
+		
+		<conference>
+			<conference>
+				<date>2009-01-01</date>
+				<name>NOT_LISTED</name>
+				<conf_location>Lisbon, Portugal</conf_location>
+			</conference>
+			<presentation_title>Structured Application Development over Wide-Area Networks</presentation_title>
+		</conference>
+		
+		<conference>
+			<conference>
+				<date>2006-01-01</date>
+				<name>NOT_LISTED</name>
+				<conf_location>Bonn, Germany</conf_location>
+			</conference>
+			<presentation_title>A Language for Task Orchestration and its Semantic Properties</presentation_title>
+		</conference>
+		
+		<conference>
+			<conference>
+				<date>2009-01-01</date>
+				<name>NOT_LISTED</name>
+				<conf_location>Lake Placid, New York</conf_location>
+			</conference>
+			<presentation_title>Describing Simulations in the Orc Programming Language</presentation_title>
+		</conference>
+		
+		<conference>
+			<conference>
+				<date>2006-01-01</date>
+				<name>NOT_LISTED</name>
+				<conf_location>Linthicum Heights, Maryland</conf_location>
+			</conference>
+			<presentation_title>Verified Software: the next step</presentation_title>
+		</conference>
+		
+		<conference>
+			<conference>
+				<date>2004-01-01</date>
+				<name>NOT_LISTED</name>
+				<conf_location>Beijing, China</conf_location>
+			</conference>
+			<presentation_title>Wide-Area Computing</presentation_title>
+		</conference>
+		
+		<office>
+			<building>
+				<building_abbr>TAY</building_abbr>
+				<building_name>Taylor Hall</building_name>
+			</building>
+			<floor>3</floor>
+			<room>3.102</room>
+		</office>
+		
+		<title>Professor</title>
+	</faculty>
+
+        <faculty> <!-- 9. Michael D. Scott -->
+		<name>
+			<first_name>Michael</first_name>
+			<middle_name>D</middle_name>
+			<last_name>Scott</last_name>
+		</name>
+		<username>scottm</username>
+		<email>scottm@cs.utexas.edu</email>
+		
+		<!--above is the required info in person-->
+		
+		<website>
+			<url>http://www.cs.utexas.edu/~scottm/</url>
+			<group></group>
+			<author>
+				<first_name>Michael</first_name>
+				<middle_name>D</middle_name>
+				<last_name>Scott</last_name>
+			</author>		
+		</website>
+		
+		<phone_number>
+			<phone_t>home</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>3885282</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>home</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>2174325</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4718885</number>
+		</phone_number>
+		
+		<research_area>Computer science education</research_area>
+		
+		<degree>
+			<date_awarded>1998</date_awarded>
+			<institution>Rennselaer Polytechnic Institute</institution>
+			<degree_t>Master's Degree</degree_t>
+			<specialization></specialization>
+		</degree>
+		
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>15:15:00</start_time>
+				<end_time>16:45:00</end_time>
+				<day>Monday</day>
+				<day>Wednesday</day>
+				<day>Friday</day>
+				<start_date>2010-01-19</start_date>
+			</schedule>
+			
+			<location>
+				<building>
+					<building_abbr>PAI</building_abbr>
+					<building_name>T. S. Painter Hall</building_name>
+				</building>
+				<floor>5</floor>
+				<room>5.38</room>
+			</location>
+		</office_hours>
+		
+		<class>
+			<unique_number>54005</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule> <!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>14:00:00</start_time>
+					<end_time>15:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.134</room>
+				</location>
+			</schedule>
+			
+		</class>
+		
+		<class> <!-- TA Discussion -->
+			<unique_number>54005</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule> 
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>11:00:00</start_time>
+					<end_time>12:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>PAI</building_abbr>
+						<building_name>T. S. Painter Hall</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.38</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54010</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule> <!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>14:00:00</start_time>
+					<end_time>15:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.134</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class> <!-- TA Discussion -->
+			<unique_number>54010</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>12:00:00</start_time>
+					<end_time>13:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>PAI</building_abbr>
+						<building_name>T. S. Painter Hall</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.38</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class>
+			<unique_number>54015</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>14:00:00</start_time>
+					<end_time>15:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.134</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class> <!-- TA Discussion -->
+			<unique_number>54015</unique_number>
+			<name>Introduction to Computing</name>
+			<description>Introduction to computer science concepts. Programming in a modern object-oriented programming language. Computer Sciences 303E and 305J may not both be counted. Credit for Computer Sciences 305J may not be earned after a student has received credit for Computer Sciences 307.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>305J</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Ron</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Rohit</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Brian</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>13:00:00</start_time>
+					<end_time>14:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>PAI</building_abbr>
+						<building_name>T. S. Painter Hall</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.38</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class>
+			<unique_number>54020</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class> <!-- TA Discussion -->
+			<unique_number>54020</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RAS</building_abbr>
+						<building_name>Russell A. Steindam Hall</building_name>
+					</building>
+					<floor>2</floor>
+					<room>211A</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54025</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class> <!-- TA Discussion -->
+			<unique_number>54025</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>13:00:00</start_time>
+					<end_time>14:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RAS</building_abbr>
+						<building_name>Russell A. Steindam Hall</building_name>
+					</building>
+					<floor>3</floor>
+					<room>313B</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54030</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+				
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class> <!-- TA Discussion -->
+			<unique_number>54030</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>14:00:00</start_time>
+					<end_time>15:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RAS</building_abbr>
+						<building_name>Russell A. Steindam Hall</building_name>
+					</building>
+					<floor>2</floor>
+					<room>215</room>
+				</location>	
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>					
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class><!-- TA Discussion -->
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>					
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>ECJ</building_abbr>
+						<building_name>Ernest Cockrell Jr. Hall</building_name>
+					</building>
+					<floor>1</floor>
+					<room>1.214</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class>
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+
+		<class> <!-- TA Discussion -->
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RAS</building_abbr>
+						<building_name>Russell A. Steindam Hall</building_name>
+					</building>
+					<floor>3</floor>
+					<room>313B</room>
+				</location>
+			</schedule>
+		</class> 
+		
+		<class>
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<schedule><!-- event_t -->
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Monday</day>
+					<day>Wednesday</day>
+					<day>Friday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>UTC</building_abbr>
+						<building_name>University Teaching Center</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.112</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<class> <!-- TA Discussion -->
+			<unique_number>54035</unique_number>
+			<name>Foundations of Computer Science</name>
+			<description>Fundamental computer science concepts: data types, data structures, algorithms, and programming; functions and recursion; abstraction and encapsulation. Correctness: specification, testing, and proving. Simple sorting and searching algorithms. Introduction to analysis of algorithms.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>307</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			
+			<staff>
+				<person>
+					<first_name>Shyamala</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Guillermo</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			<staff>
+				<person>
+					<first_name>Reza</first_name>
+					<last_name>NOT_LISTED</last_name>
+				</person>
+			</staff>
+			
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>10:00:00</start_time>
+					<end_time>11:00:00</end_time>
+					<day>Tuesday</day>
+					<start_date>2010-01-19</start_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>CBA</building_abbr>
+						<building_name>McCombs School of Business</building_name>
+					</building>
+					<floor>4</floor>
+					<room>4.344</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<office>
+			<building>
+				<building_abbr>TAY</building_abbr>
+				<building_name>T.U. Taylor Hall</building_name>
+			</building>
+			<floor>2</floor>
+			<room>2.124</room>
+		</office>
+		<title>Senior Lecturer</title>
+	</faculty>
+	
+	<faculty> <!-- 10. Vitaly Shmatikov -->
+		<name>
+			<first_name>Vitaly</first_name>
+			<last_name>Shmatikov</last_name>
+		</name>
+		<username>shmat</username>
+		<email>shmat@cs.utexas.edu</email>
+		<website>
+			<url>http://www.cs.utexas.edu/~shmat</url>
+			<group></group>
+			<author>
+				<first_name>Vitaly</first_name>
+				<last_name>Shmatikov</last_name>			
+			</author>
+		</website>
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4719530</number>
+		</phone_number>
+
+		<research_area>Computer security and privacy</research_area>
+		<research_area>Verification of distributed systems and Electronic commerce</research_area>
+
+		<degree>
+			<date_awarded>2000</date_awarded>
+			<institution>Stanford</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+
+
+		<advisee>
+			<name>
+				<first_name>Arvind</first_name>
+				<last_name>Narayan</last_name>
+			</name>
+			<email>arvindn@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+
+		<advisee>
+			<name>
+				<first_name>Justin</first_name>
+				<last_name>Brickell</last_name>
+			</name>
+			<email>jlbrick@cs.utexas.edu</email>
+			<status>PhD Student</status>			
+		</advisee>
+		
+		
+		<office>
+			<building>
+				<building_abbr>TAY</building_abbr>
+				<building_name>Taylor Hall</building_name>
+			</building>
+			<floor>4</floor>
+			<room>4.115C</room>
+		</office>
+		
+		<title>Associate Professor</title>
+	</faculty>
+</people>

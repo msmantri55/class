@@ -1,0 +1,190 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ person.name.first }} {{ person.name.last }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<h2>{{ person.name.first }} {{ person.name.middle|default:"" }} {{ person.name.last }} {{ person.name.suffix|default:"" }}</h2>
+<h3>{{ person.title|default:"" }} {{ person.status|default:"" }}</h3>
+
+<p>
+	<a href="/edit/person?key={{ person.key }}">Edit this person.</a>
+</p>
+
+<dl>
+	{% if person.username %}
+		<dt>UT CS username</dt>
+		<dd>{{ person.username }}</dd>
+	{% endif %}
+	
+	<dt>Email address{{ person.emails|pluralize:"es" }}</dt>
+	<dd>
+		<ul>
+			{% for email in person.emails %}
+				<li>
+					<a href="mailto:{{ email }}">{{ email }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</dd>
+	
+	{% if phone_numbers %}
+		<dt>Phone number{{ phone_numbers|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for phone_number in phone_numbers %}
+					<li>
+						<dl>
+							<dt>Type</dt>
+							<dd>{{ phone_number.type }}</dd>
+							
+							<dt>Number</dt>
+							<dd>+{{ phone_number.country_code|default:"1" }} ({{ phone_number.area_code|default:"512" }}) {{ phone_number.number }}</dd>
+						</dl>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if degrees %}
+		<dt>Degree{{ degrees|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for degree in degrees %}
+				<li>
+					<a href="/view/degree?key={{ degree.key }}">
+						<span>{{ degree.type }}</span>
+						<span>in {{ degree.specialization }}</span>
+						<span>from {{ degree.institution }}</span>
+						<span>({{ degree.year }})</span>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if websites %}
+		<dt>Website{{ websites|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for website in websites %}
+					<li>
+						<a href="{{ website.address }}">{{ website.address }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if research_areas %}
+		<dt>Research Area{{ research_areas|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for research_area in research_areas %}
+					<li>
+						<a href="/view/research_area?key={{ research_area.key }}">{{ research_area.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if research_groups %}
+		<dt>Research Group{{ research_groups|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for research_group in research_groups %}
+					<li>
+						<a href="/view/research_group?key={{ research_group.key }}">{{ research_group.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if awards %}
+		<dt>Award{{ awards|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for award in awards %}
+					<li>
+						<a href="/view/award?key={{ award.key }}">{{ award.name }} ({{ award.year }})</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if courses %}
+		<dt>Course{{ courses.pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for course in courses %}
+					<li>
+						<a href="/view/course?key={{ course.key }}">{{ course.name }} ({{ course.unique_id }})</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if offices %}
+		<dt>Office{{ offices.pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for office in offices %}
+					<li>{{ office.location.building.name }} {{ office.location.floor }} {{ office.location.room }}</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if office_hours %}
+		<dt>Office Hour{{ office_hours|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for office_hour in office_hours %}
+					<li>
+						<dl>
+							<dt>{{ office_hour.type }}</dt>
+							<dd>
+								{% for day in office_hour.schedule.days %}
+									{{ day }}
+								{% endfor %}
+								{{ office_hour.schedule.start_time }} {{ office_hour.schedule.end_time }}
+							</dd>
+						</dl>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if presentations %}
+		<dt>Presentation{{ presentations|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for presentation in presentations %}
+					<li>
+						<a href="/view/presentation?key={{ presentation.key }}">{{ presentation.name }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+	
+	{% if writings %}
+		<dt>Writing{{ writings|pluralize }}</dt>
+		<dd>
+			<ul>
+				{% for writing in writings %}
+					<li>
+						<a href="/view/publication?key={{ writing.key }}">{{ writing.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+</dl>
+{% endspaceless %}{% endblock %}

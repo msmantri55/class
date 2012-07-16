@@ -1,0 +1,2392 @@
+<people>
+     <!--J Strother Moore-->
+     <faculty>
+         <name>
+      		<first_name>J</first_name>
+        	<middle_name>Strother</middle_name>
+      		<last_name>Moore</last_name>
+         </name>
+         <username>moore</username>
+         <email>moore@cs.utexas.edu</email>
+         <website>
+               <url>http://userweb.cs.utexas.edu/~moore/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+      			<first_name>J</first_name>
+        		<middle_name>Strother</middle_name>
+      			<last_name>Moore</last_name>
+               </author>
+         </website>
+     	 <phone_number> 
+        	<phone_t>work</phone_t> 
+       	 	<country_code>1</country_code> 
+       		 <area_code>512</area_code> 
+        	<number>4719590</number> 
+      	</phone_number> 
+      	<phone_number> 
+        	<phone_t>fax</phone_t> 
+       		<country_code>1</country_code> 
+      		<area_code>512</area_code> 
+       		<number>4718885</number> 
+      	</phone_number>
+      	<research_area>mechanical theorem proving</research_area> 
+      	<research_area>verifying computing systems</research_area>
+	<degree> 
+        	<date_awarded>1973</date_awarded> 
+        	<institution>University of Edinburgh</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Computational Logic</specialization> 
+      	</degree> 
+        <degree> 
+        	<date_awarded>1970</date_awarded> 
+        	<institution>Massachusetts Institute of
+Technology</institution> 
+        	<degree_t>Bachelor's Degree</degree_t> 
+        	<specialization>Mathematics</specialization> 
+      	</degree>
+        <award> 
+        	<name>Fellow of the American Association for Artificial
+Intelligence</name> 
+        	<date_awarded>1991</date_awarded> 
+     	</award> 
+        <award> 
+       	 	<name>John McCarthy Prize for Program Verification</name> 
+        	<date_awarded>1983</date_awarded> 
+        </award>
+        <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>14:00:00</start_time>
+                   <end_time>15:00:00</end_time>
+		   <day>Wednesday</day>
+                   <day>Thursday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>TAY</building_abbr>
+                        <building_name>Taylor</building_name>
+                   </building>
+                   <floor>4</floor>
+                   <room>4.140A</room>
+              </location>
+       </office_hours>
+       <class>
+        	<unique_number>54095</unique_number> 
+        	<name>Logic, Sets, and Functions</name> 
+        	<description>Propositional and predicate logic; proof
+techniques, including induction, sets, relations, and functions.</description> 
+        	<course_number> 
+          		<field_of_study>CS</field_of_study> 
+          		<short_number>313K</short_number> 
+        	</course_number> 
+        	<semester>Spring</semester> 
+        	<year>2010</year> 
+               <staff>
+                    <person>
+            		<first_name>Behnam</first_name> 
+           		<last_name>Robatmili</last_name> 
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+            		<first_name>Vinod</first_name> 
+            		<last_name>Venkataraman</last_name> 
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+            		<first_name>Xu</first_name> 
+            		<last_name>Wang</last_name> 
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>15:30:00</start_time>
+                         <end_time>17:00:00</end_time>
+                         <day>Tuesday</day>
+                         <day>Thursday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>WEL</building_abbr>
+                             <building_name>Welch</building_name>
+                        </building>
+                        <floor>2</floor>
+                        <room>246</room>
+                    </location>
+               </schedule>
+       </class>
+       <writing>
+               <title>Computer-Aided Reasoning: An Approach</title>
+               <publish_info>
+                    <publisher>Kluwer Academic Publishers</publisher>
+		    <!-- Need to find actual date (Year = 2000)-->
+                    <publish_date>2000-01-01</publish_date>
+                    <ISBN>0792377443</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>J</first_name>
+                         <middle_name>Strother</middle_name>
+                         <last_name>Moore</last_name>
+               </author>
+               <author>
+            		<first_name>Matt</first_name> 
+            		<last_name>Kaufmann</last_name> 
+               </author>
+	       <author>
+            		<first_name>Panagiotis</first_name> 
+            		<last_name>Manolios</last_name> 
+               </author>
+       </writing>
+       <writing>
+               <title>Computer-Aided Reasoning: ACL2 Case Studies</title>
+               <publish_info>
+                    <publisher>Kluwer Academic Publishers</publisher>
+		    <!-- Need to find actual date (Year = 2000)-->
+                    <publish_date>2000-01-01</publish_date>
+                    <ISBN>0792378490</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>J</first_name>
+                         <middle_name>Strother</middle_name>
+                         <last_name>Moore</last_name>
+               </author>
+               <author>
+            		<first_name>Matt</first_name> 
+            		<last_name>Kaufmann</last_name> 
+               </author>
+	       <author>
+            		<first_name>Panagiotis</first_name> 
+            		<last_name>Manolios</last_name> 
+               </author>
+       </writing>
+       <writing>
+               <title>Automatically Computing Functional Instantiations</title>
+               <publish_info>
+                    <publisher>ACL2</publisher>
+                    <publish_date>2009-01-01</publish_date>
+                    <article>
+                         <journal>Proceedings of the ACL2 Workshop 2009</journal>
+                         <edition>2009</edition>
+                    </article>
+               </publish_info>
+       	       <writing>article</writing>
+               <author>
+                         <first_name>J</first_name>
+                         <middle_name>Strother</middle_name>
+                         <last_name>Moore</last_name>
+               </author>
+       </writing>
+       <writing>
+               <title>Rewriting with Equivalence Relations in ACL2</title>
+               <publish_info>
+                    <publisher>Journal of Automated Reasoning</publisher>
+		    <publish_date>2008-01-01</publish_date>
+                    <article>
+                         <journal>Journal of Automated Reasoning</journal>
+                         <edition>2008</edition>
+                    </article>
+               </publish_info>
+       	       <writing>article</writing>
+               <author>
+                         <first_name>J</first_name>
+                         <middle_name>Strother</middle_name>
+                         <last_name>Moore</last_name>
+               </author>
+       </writing>
+       <conference>
+               <conference>
+		    <date>2006-01-01</date>
+                    <name>3rd International Joint Conference on Automated Reasoning</name>
+                    <conf_location>Seattle, WA, USA</conf_location>
+               </conference>
+               <presentation_title>Proceedings of the FLoC'06 Workshop on Empirically Successful Computerized Reasoning</presentation_title>
+       </conference>
+       <title>Professor</title>
+     </faculty>
+     <!-- Peter Stone -->
+     <faculty>
+          <name>
+               <first_name>Peter</first_name>
+               <last_name>Stone</last_name>
+          </name>
+          <username>pstone</username>
+          <email>pstone@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/users/pstone</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Peter</first_name>
+                         <last_name>Stone</last_name>
+               </author>
+          </website>
+          <phone_number>
+     		<phone_t>work</phone_t> 
+       		<country_code>1</country_code> 
+        	<area_code>512</area_code> 
+        	<number>4719796</number> 
+          </phone_number>
+          <research_area>Artificial Intelligence</research_area>
+      	  <degree> 
+        	<date_awarded>1998</date_awarded> 
+        	<institution>CMU</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Computer Science</specialization> 
+      	  </degree> 
+          <degree> 
+       	 	<date_awarded>1995</date_awarded> 
+        	<institution>CMU</institution> 
+        	<degree_t>Master's Degree</degree_t> 
+        	<specialization>Computer Science</specialization> 
+      	  </degree> 
+          <degree> 
+        	<date_awarded>1993</date_awarded> 
+        	<institution>CMU</institution> 
+        	<degree_t>Bachelor's Degree</degree_t> 
+        	<specialization>Mathematics</specialization> 
+          </degree> 
+      <award> 
+        <name>Fulbright Award</name> 
+        <date_awarded>2008</date_awarded> 
+      </award> 
+      <award> 
+        <name>Alfred P. Sloan Research Fellow</name> 
+        <date_awarded>2004</date_awarded> 
+      </award>
+          <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>11:00:00</start_time>
+                   <end_time>12:00:00</end_time>
+                   <day>Tuesday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>CSA</building_abbr>
+                        <building_name>Computer Science Annex</building_name>
+                   </building>
+                   <floor>1</floor>
+                   <room>1.140</room>
+              </location>
+          </office_hours>
+          <class>
+               <unique_number>54220</unique_number>
+               <name>Artificial Intelligence</name>
+               <description>A broad introduction to artificial intelligence.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>343</short_number>
+               </course_number>
+               <semester>Fall</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Peter</first_name>
+                         <last_name>Stone</last_name>
+                    </person>
+               </staff>
+               <staff>
+                    <person>
+                         <first_name>Daniel</first_name>
+                         <last_name>Urieli</last_name>
+                    </person>
+               </staff>	       
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>12:30:00</start_time>
+                         <end_time>14:00:00</end_time>
+                         <day>Tuesday</day>
+                         <day>Thursday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>CBA</building_abbr>
+                             <building_name>College of Business Administration</building_name>
+                        </building>
+                        <floor>4</floor>
+                        <room>348</room>
+                    </location>
+               </schedule>
+          </class>
+          <writing>
+               <title>Autonomous Bidding Agents</title>
+               <publish_info>
+                    <publisher>MIT Press</publisher>
+                    <publish_date>2007-01-01</publish_date>
+                    <ISBN>026223260X</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Peter</first_name>
+                         <last_name>Stone</last_name>
+               </author>
+               <author>
+            		<first_name>Michael</first_name> 
+            		<last_name>Wellman</last_name> 
+               </author>
+	       <author> 
+            		<first_name>Amy</first_name> 
+            		<last_name>Greenwald</last_name> 
+               </author>
+          </writing>
+	  <writing>
+               <title>Color Learning and Illumination Invariance on Mobile Robots: A Survey</title>
+               <publish_info>
+                    <publisher>Robotics and Autonomous Systems</publisher>
+                    <publish_date>2009-06-01</publish_date>
+                    <article>
+                         <journal>Robotics and Autonomous Systems</journal>
+                         <edition>June 2009</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Peter</first_name>
+                         <last_name>Stone</last_name>
+               </author>
+               <author>
+            		<first_name>Mohan</first_name> 
+            		<last_name>Sridharana</last_name> 
+               </author>
+          </writing>
+          <conference>
+               <conference>
+                    <date>2010-05-01</date>
+                    <name>IEEE International Conference on Robotics and Automation</name>
+                    <conf_location>Anchorage, AK, USA</conf_location>
+               </conference>
+               <presentation_title>Generalized Model Learning for Reinforcement Learning on a Humanoid Robot</presentation_title>
+          </conference>     
+          <advisee>   
+                    <name>
+                         <first_name>Gregory</first_name>
+                         <last_name>Kuhlmann</last_name>
+                    </name>
+		    <email>kuhlmann@cs.utexas.edu</email>
+                    <writing>
+               		<title>Reinforcement Learning for RoboCup-Soccer Keepaway</title>
+               		<publish_info>
+                    		<publisher>Adaptive Behavior</publisher>
+                    		<publish_date>2005-01-01</publish_date>
+                    		<article>
+                         		<journal>Adaptive Behavior</journal>
+                         		<edition>January 2005</edition>
+                    		</article>
+               		</publish_info>
+               	 	<writing>article</writing>
+               		<author>
+                         	<first_name>Gregory</first_name>
+                         	<last_name>Kuhlmann</last_name>
+               		</author>
+			<author>
+                         	<first_name>Peter</first_name>
+                         	<last_name>Stone</last_name>
+               		</author>
+               		<author>
+            			<first_name>Richard</first_name> 
+            			<last_name>Sutton</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+               			<first_name>Peter</first_name>
+               			<last_name>Stone</last_name>
+          		</name>
+          		<username>pstone</username>
+          		<email>pstone@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+          <office>
+               <building>
+                    <building_abbr>CSA</building_abbr>
+                         <building_name>Computer Science Annex</building_name>
+               </building>
+               <floor>1</floor>
+                <room>1.140</room>
+          </office>
+          <title>Professor</title>
+     </faculty>
+          <!-- Kristen Grauman -->
+     <faculty>
+          <name>
+               <first_name>Kristen</first_name>
+               <last_name>Grauman</last_name>
+          </name>
+          <username>grauman</username>
+          <email>grauman@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~grauman/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719521</number>
+          </phone_number>
+          <research_area>Computer Vision</research_area>
+      <degree> 
+        <date_awarded>2006</date_awarded> 
+        <institution>MIT</institution> 
+        <degree_t>Doctoral Degree</degree_t> 
+        <specialization>Computer Science</specialization> 
+      </degree> 
+      <degree> 
+        <date_awarded>2003</date_awarded> 
+        <institution>MIT</institution> 
+        <degree_t>Master's Degree</degree_t> 
+        <specialization>Computer Science</specialization> 
+      </degree> 
+      <degree> 
+        <date_awarded>2001</date_awarded> 
+        <institution>Boston College</institution> 
+        <degree_t>Bachelor's Degree</degree_t> 
+        <specialization>Computer Science</specialization> 
+      </degree>
+      <award> 
+        <name>National Science Foundation Faculty Early Career Development Award</name> 
+        <date_awarded>2008</date_awarded> 
+      </award> 
+      <award> 
+        <name>Microsoft Research New Faculty Fellow</name> 
+        <date_awarded>2008</date_awarded> 
+      </award> 
+          <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>15:30:00</start_time>
+                   <end_time>18:30:00</end_time>
+                   <day>Wednesday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>CSA</building_abbr>
+                        <building_name>Computer Science Annex</building_name>
+                   </building>
+                   <floor>1</floor>
+                   <room>114</room>
+              </location>
+          </office_hours>
+          <class>
+               <unique_number>54220</unique_number>
+               <name>Special Topics in Computer Vision</name>
+               <description>Survey and discuss current vision papers relating to object recognition, auto-annotation of images, and scene understanding.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>395T</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Daniel</first_name>
+                         <last_name>Urieli</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>15:30:00</start_time>
+                         <end_time>18:30:00</end_time>
+                         <day>Wednesday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>ACES</building_abbr>
+                             <building_name>Applied Computational and Engineering Sciences</building_name>
+                        </building>
+                        <floor>3</floor>
+                        <room>3.408</room>
+                    </location>
+               </schedule>
+          </class>
+          <writing>
+               <title>Foreground Focus: Unsupervised Learning from Partially Matching Images</title>
+               <publish_info>
+                    <publisher>Journal of Computer Vision</publisher>
+                    <publish_date>2009-01-01</publish_date>
+                    <article>
+                         <journal>Journal of Computer Vision</journal>
+                         <edition>2009</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+               </author>
+               <author>
+                         <first_name>Y</first_name>
+                         <last_name>Lee</last_name>
+               </author>
+          </writing>
+          <conference>
+               <conference>
+                    <date>2010-05-01</date>
+                    <name>Foreground Focus: Finding Meaningful Features in Unlabeled Images</name>
+                    <conf_location>Leeds, U.K.</conf_location>
+               </conference>
+               <presentation_title>Foreground Focus: Finding Meaningful Features in Unlabeled Images</presentation_title>
+          </conference>     
+          <advisee>   
+                    <name>
+          		<first_name>Sudheendra</first_name> 
+          		<last_name>Vijayanarasimhan</last_name> 
+                    </name>
+                    <username>svnaras</username>
+                    <email>svnaras@cs.utexas.edu</email>
+		    <writing>
+               		<title>Far-Sighted Active Learning on a Budget for Image and Video Recognition</title>
+               		<publish_info>
+                   		<publisher>CVPR</publisher>
+                    		<publish_date>2010-01-01</publish_date>
+                    		<article>
+                         		<journal>CVPR</journal>
+                         		<edition>2010</edition>
+                    		</article>
+               		</publish_info>
+               		<writing>article</writing>
+			<author>
+          			<first_name>Sudheendra</first_name> 
+          			<last_name>Vijayanarasimhan</last_name> 
+               		</author>
+               		<author>
+                         	<first_name>Kristen</first_name>
+                         	<last_name>Grauman</last_name>
+               		</author>
+               		<author>
+                        	<first_name>P</first_name>
+                         	<last_name>Jain</last_name>
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Kristen</first_name>
+         	      		<last_name>Grauman</last_name>
+          		</name>
+          		<username>grauman</username>
+          		<email>grauman@cs.utexas.edu</email>
+			<title>Assistant Professor</title>
+		    </advisor>
+          </advisee>
+          <office>
+               <building>
+                    <building_abbr>CSA</building_abbr>
+                         <building_name>Computer Science Annex</building_name>
+               </building>
+               <floor>1</floor>
+                <room>114</room>
+          </office>
+          <title>Assistant Professor</title>
+     </faculty>
+     
+     <!-- Michael Scott -->
+     <faculty>
+          <name>
+               <first_name>Michael</first_name>
+	       <middle_name>D.</middle_name>
+               <last_name>Scott</last_name>
+          </name>
+          <username>scottm</username>
+          <email>scottm@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~scottm/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Michael</first_name>
+			 <middle_name>D.</middle_name>
+                         <last_name>Scott</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719785</number>
+          </phone_number>
+	  <phone_number> 
+        	<phone_t>fax</phone_t> 
+        	<country_code>1</country_code> 
+       	 	<area_code>512</area_code> 
+        	<number>4718885</number> 
+      	  </phone_number> 
+	  <research_area>computer science education</research_area> 
+          <research_area>introductory computer programming</research_area> 
+	  <research_area>computer science at the high school level</research_area>
+          <degree> 
+        	<date_awarded>1998</date_awarded> 
+        	<institution>Rensselaer Polytechnic Institute</institution> 
+        	<degree_t>Master's Degree</degree_t> 
+        	<specialization>Computer Science</specialization> 
+      	 </degree>
+         <degree> 
+        	<date_awarded>1990</date_awarded> 
+        	<institution>Stanford University</institution> 
+        	<degree_t>Bachelor's Degree</degree_t> 
+        	<specialization>Industrial Engineering</specialization> 
+         </degree> 
+	 <award> 
+        	<name>College of Natural Sciences 2007 � 2008 Sustained Outreach Award</name> 
+        	<date_awarded>2009</date_awarded> 
+      </award> 
+      <award> 
+        <name>Promoted to Senior Lecturer</name> 
+        <date_awarded>2007</date_awarded> 
+      </award> 
+	  <award> 
+        <name>College of Natural Sciences 2005 � 2006 Sustained Outreach Award</name> 
+        <date_awarded>2006</date_awarded> 
+      </award> 
+	  <award> 
+        <name>College of Natural Sciences 2004 � 2005 Advisory Council Teaching Excellence Award</name> 
+        <date_awarded>2005</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Natural Sciences Council 2005 Faculty Service Award</name> 
+        <date_awarded>2005</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Navy Commendation Medal</name> 
+        <date_awarded>1997</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Navy Achievement Medals</name> 
+        <date_awarded>1993</date_awarded> 
+      </award>
+	  <award> 
+        <name>Navy Achievement Medals</name> 
+        <date_awarded>1994</date_awarded> 
+      </award>
+	  <award> 
+        <name>Navy Achievement Medals</name> 
+        <date_awarded>1995</date_awarded> 
+      </award>
+	  <award> 
+        <name>Phi Beta Kappa, academic honor society</name> 
+        <date_awarded>1990</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Tau Beta Pi, engineering honor society</name> 
+        <date_awarded>1989</date_awarded> 
+      </award> 
+          <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>15:15:00</start_time>
+                   <end_time>16:45:00</end_time>
+		   <day>Monday</day>
+                   <day>Wednesday</day>
+		   <day>Friday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>PAI</building_abbr>
+                        <building_name>Painter</building_name>
+                   </building>
+                   <floor>5</floor>
+                   <room>5.38</room>
+              </location>
+          </office_hours>
+          <class>
+               <unique_number>54020</unique_number>
+               <name>Foundations of Computer Science</name>
+               <description>The purposes of the course are to learn fundamental computer science concepts.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>307</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Michael</first_name>
+			 <middle_name>D.</middle_name>
+                         <last_name>Grauman</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+            		<first_name>Guillermo</first_name> 
+            		<last_name>Cabrera</last_name> 
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+            		<first_name>Shyamala</first_name> 
+            		<last_name>Lakshminarasimhan</last_name> 
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+            		<first_name>Reza</first_name> 
+            		<last_name>Mahjourian</last_name> 
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>10:00:00</start_time>
+                         <end_time>11:00:00</end_time>
+                         <day>Tuesday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>RAS</building_abbr>
+                             <building_name>Russell A. Steindam Hall</building_name>
+                        </building>
+                        <floor>2</floor>
+                        <room>211A</room>
+                    </location>
+               </schedule>
+          </class>
+          <office>
+               <building>
+                    <building_abbr>PAI</building_abbr>
+                         <building_name>Painter</building_name>
+               </building>
+               <floor>5</floor>
+                <room>5.68</room>
+          </office>
+          <title>Lecturer</title>
+     </faculty>
+     <!-- Boyer -->
+     <faculty>
+          <name>
+               <first_name>Robert</first_name>
+	       <middle_name>Stephen</middle_name>
+               <last_name>Boyer</last_name>
+          </name>
+          <username>boyer</username>
+          <email>boyer@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~boyer/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                        <first_name>Robert</first_name>
+	       		<middle_name>Stephen</middle_name>
+               		<last_name>Boyer</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719745</number>
+          </phone_number>
+          <research_area>program verification</research_area> 
+      	  <research_area>automatic theorem proving</research_area> 
+	  <research_area>artificial intelligence</research_area>
+	  <award> 
+        <name>NASA Fellowship, Mathematics Department, University of Texas at Austin</name> 
+        <date_awarded>1967</date_awarded> 
+      </award> 
+      <award> 
+        <name>Member of the Editorial Board of the Journal of Artificial Intelligence</name> 
+        <date_awarded>1977</date_awarded> 
+      </award> 
+	  <award> 
+        <name>IBM Chaire Internationale d'Informatique, Universite de Liege, Belgium, (32 lectures)</name> 
+        <date_awarded>1980</date_awarded> 
+      </award> 
+	  <award> 
+        <name>John McCarthy Prize for Program Verification</name> 
+        <date_awarded>1983</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Member of the Editorial Board of the Journal of Symbolic Computation</name> 
+        <date_awarded>1984</date_awarded> 
+      </award> 
+	  <award> 
+        <name>General Chairman, 1984 Conference on Lisp and Functional Programming</name> 
+        <date_awarded>1984</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Member of the Editorial Board of the Journal of Automated Reasoning</name> 
+        <date_awarded>1989</date_awarded> 
+      </award>
+	  <award> 
+        <name>Skolem Lecture, University of Oslo</name> 
+        <date_awarded>1989</date_awarded> 
+      </award>
+	  <award> 
+        <name>Keynote Address, Tenth Conference on Automated Deduction</name> 
+        <date_awarded>1990</date_awarded> 
+      </award>
+	  <award> 
+        <name>Keynote Address, North American Conference on Logic Programming</name> 
+        <date_awarded>1990</date_awarded> 
+      </award> 
+	  <award> 
+        <name>Member of the Editorial Board of the Journal of Logic and Computation</name> 
+        <date_awarded>1991</date_awarded> 
+      </award>
+      <writing>
+               <title>A Computational Logic Handbook</title>
+               <publish_info>
+                    <publisher>Morgan Kaufmann</publisher>
+                    <publish_date>1997-01-01</publish_date>
+		    <ISBN>0121229556</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Robert</first_name>
+			 <middle_name>Stephen</middle_name>
+                         <last_name>Boyer</last_name>
+               </author>
+               <author>
+                        <first_name>J</first_name> 
+            		<middle_name>Strother</middle_name> 
+            		<last_name>Moore</last_name>
+               </author>
+      </writing>
+      <writing>
+               <title>The Correctness Problem in Computer Science</title>
+               <publish_info>
+                    <publisher>Academic Pr</publisher>
+                    <publish_date>1982-01-01</publish_date>
+		    <ISBN>0121229203</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Robert</first_name>
+			 <middle_name>Stephen</middle_name>
+                         <last_name>Boyer</last_name>
+               </author>
+               <author>
+                        <first_name>J</first_name> 
+            		<middle_name>Strother</middle_name> 
+            		<last_name>Moore</last_name>
+               </author>
+       </writing>
+       <writing>
+               <title>Toward Automating the Discovery of Decreasing Measures</title>
+               <publish_info>
+                    <publisher>Journal of Automated Reasoning</publisher>
+                    <publish_date>2005-01-01</publish_date>
+                    <article>
+                         <journal>Journal of Automated Reasoning</journal>
+                         <edition>2005</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Robert</first_name>
+			 <middle_name>Stephen</middle_name>
+                         <last_name>Boyer</last_name>
+               </author>
+               <author>
+                        <first_name>Wilfred</first_name> 
+            		<middle_name>J.</middle_name> 
+            		<last_name>Legato</last_name>
+               </author>
+          </writing>
+          <writing>
+               <title>Automated Proofs of Object Code for a Widely Used Microprocessor</title>
+               <publish_info>
+                    <publisher>ACM</publisher>
+                    <publish_date>1996-01-01</publish_date>
+                    <article>
+                         <journal>Journal of the ACM</journal>
+                         <edition>1996</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+	       <author>
+                         <first_name>Robert</first_name>
+			 <middle_name>Stephen</middle_name>
+                         <last_name>Boyer</last_name>
+               </author>
+               <author>
+                        <first_name>Yuan</first_name> 
+            		<last_name>Yu</last_name>
+               </author>
+          </writing>	  
+          <conference>
+               <conference>
+                    <date>2010-05-01</date>
+                    <name>Foreground Focus: Finding Meaningful Features in Unlabeled Images</name>
+                    <conf_location>Leeds, U.K.</conf_location>
+               </conference>
+               <presentation_title>Foreground Focus: Finding Meaningful Features in Unlabeled Images</presentation_title>
+          </conference>     
+          <advisee>   
+                    <name>
+          		<first_name>Shang-Ching</first_name> 
+          		<last_name>Chou</last_name> 
+                    </name>
+                    <email>shangchingchou@yahoo.com</email>
+		    <writing>
+               		<title>Proving and discovering geometry theorems using Wu's method</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1985-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Shang-Ching</first_name> 
+          			<last_name>Chou</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Robert</first_name>
+				<middle_name>Stephen</middle_name>
+         	      		<last_name>Boyer</last_name>
+          		</name>
+          		<username>boyer</username>
+          		<email>boyer@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          		<first_name>Warren</first_name> 
+          		<last_name>Hunt</last_name> 
+                    </name>
+                    <email>warrenhunt@yahoo.com</email>
+		    <writing>
+               		<title>FM8501 : a verified microprocessor</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1985-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Warren</first_name> 
+          			<last_name>Hunt</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Robert</first_name>
+				<middle_name>Stephen</middle_name>
+         	      		<last_name>Boyer</last_name>
+          		</name>
+          		<username>boyer</username>
+          		<email>boyer@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+          <title>Professor</title>
+     </faculty>
+     <!-- Tandy Warnow -->
+     <faculty>
+          <name>
+               <first_name>Tandy</first_name>
+               <last_name>Warnow</last_name>
+          </name>
+          <username>tandy</username>
+          <email>tandy@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~tandy/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Tandy</first_name>
+                         <last_name>Warnow</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719724</number>
+          </phone_number>
+	  <phone_number> 
+        	<phone_t>fax</phone_t> 
+        	<country_code>1</country_code> 
+       	 	<area_code>512</area_code> 
+        	<number>4718885</number> 
+      	  </phone_number>
+	  <research_area>Phylogenetic tree inference in biology and historical linguistics</research_area> 
+     	  <research_area>Combinatorial and graph-theoretic algorithms</research_area>
+     	  <research_area>Statistical inference</research_area> 
+      	  <research_area>Experimental performance studies of algorithms</research_area>
+      	<degree> 
+        	<date_awarded>1991</date_awarded> 
+    	    	<institution>Berkeley</institution> 
+    	    	<degree_t>Doctoral Degree</degree_t> 
+    	    	<specialization>Mathematics</specialization> 
+   	</degree> 
+        <degree> 
+        	<date_awarded>1984</date_awarded> 
+        	<institution>Berkeley</institution> 
+        	<degree_t>Bachelor's Degree</degree_t> 
+        	<specialization>Mathematics</specialization> 
+        </degree>
+       <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1994</date_awarded> 
+      </award>  
+      <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1995</date_awarded> 
+      </award>  
+      <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1996</date_awarded> 
+      </award>  
+      <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1997</date_awarded> 
+      </award>  
+      <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1998</date_awarded> 
+      </award>  
+      <award> 
+        <name>NSF National Young Investigator Award</name> 
+        <date_awarded>1999</date_awarded> 
+      </award>
+          <class>
+               <unique_number>54755</unique_number>
+               <name>Analysis of Programs</name>
+               <description>Proofs of program correctness and a survey of mathematical techniques useful in the analysis and verification of programs.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>336</short_number>
+               </course_number>
+               <semester>Fall</semester>
+               <year>2009</year>
+               <staff>
+                    <person>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Ken</first_name>
+                         <last_name>Rice</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>14:00:00</start_time>
+                         <end_time>15:30:00</end_time>
+                         <day>Tuesday</day>
+                          <day>Thursday</day>
+                        <start_date>2009-08-26</start_date>
+                         <end_date>2009-12-04</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>BUR</building_abbr>
+                             <building_name>Burdine</building_name>
+		    	</building>
+			<floor>1</floor>
+                        <room>130</room>
+                    </location>
+               </schedule>
+          </class>
+	  <writing>
+               <title>Handbook of Computational Biology</title>
+               <publish_info>
+                    <publisher>Chapman and Hall</publisher>
+                    <publish_date>2005-01-01</publish_date>
+		    <ISBN>1584884061</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Tandy</first_name>
+                         <last_name>Warnow</last_name>
+               </author>
+               <author>
+                         <first_name>C.</first_name>
+                         <middle_name>Randall</middle_name>
+			 <last_name>Linder</last_name>
+               </author>
+          </writing>
+          <writing>
+               <title>Kaikoura Tree Theorems: The Maximum Agreement Subtree Problem.</title>
+               <publish_info>
+                    <publisher>Information Processing Letters</publisher>
+                    <publish_date>1993-01-01</publish_date>
+                    <article>
+                         <journal>Information Processing Letters</journal>
+                         <edition>1993</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Tandy</first_name>
+                         <last_name>Warnow</last_name>
+               </author>
+               <author>
+                         <first_name>M.</first_name>
+                         <last_name>Steel</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Constructing phylogenetic trees efficiently using compatibility criteria.</title>
+               <publish_info>
+                    <publisher>New Zealand Journal of Botany</publisher>
+                    <publish_date>1993-01-01</publish_date>
+                    <article>
+                         <journal>New Zealand Journal of Botany</journal>
+                         <edition>1993</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Tandy</first_name>
+                         <last_name>Warnow</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Tree Compatibility and Inferring Evolutionary History.</title>
+               <publish_info>
+                    <publisher>Journal of Algorithms</publisher>
+                    <publish_date>1994-01-01</publish_date>
+                    <article>
+                         <journal>Journal of Algorithms</journal>
+                         <edition>1994</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Tandy</first_name>
+                         <last_name>Warnow</last_name>
+               </author>
+          </writing>
+          <conference>
+               <conference>
+                    <date>2006-01-01</date>
+                    <name>Symposium on Languages and Genes</name>
+                    <conf_location>The University of California at Santa Barbara</conf_location>
+               </conference>
+               <presentation_title>Symposium on Languages and Genes</presentation_title>
+          </conference>
+	  <conference>
+               <conference>
+                    <date>2007-01-01</date>
+                    <name>Talk at Department of Computer Science</name>
+                    <conf_location>UC Davis</conf_location>
+               </conference>
+               <presentation_title>Distinguished Lecture</presentation_title>
+          </conference>
+          <office>
+               <building>
+                    <building_abbr>TAY</building_abbr>
+                         <building_name>Taylor</building_name>
+               </building>
+               <floor>2</floor>
+                <room>2.124</room>
+          </office>
+          <title>Professor</title>
+     </faculty>    
+     <!-- Mary Eberlein -->
+     <faculty>
+          <name>
+               <first_name>Mary</first_name>
+               <last_name>Eberlein</last_name>
+          </name>
+          <username>eberlein</username>
+          <email>eberlein@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~eberlein/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Mary</first_name>
+                         <last_name>Eberlein</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719722</number>
+          </phone_number>
+          <research_area>Genetics</research_area>
+          <degree> 
+        	<date_awarded>1996</date_awarded> 
+        	<institution>University of Tennessee</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Mathematics</specialization> 
+      	  </degree>
+          <class>
+               <unique_number>54185</unique_number>
+               <name>Theory in Programming Practice</name>
+               <description>Application of program-analysis theory to program design. Methodologies for large-scale program design. Designed to help students bring together theoretical and programming skills.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>337</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Andrew</first_name>
+                         <last_name>Dreher</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Nam</first_name>
+                         <last_name>Nguyen</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>12:30:00</start_time>
+                         <end_time>14:30:00</end_time>
+			 <day>Monday</day>
+                         <day>Wednesday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>UTC</building_abbr>
+                             <building_name>University Teaching Center</building_name>
+                        </building>
+                        <floor>3</floor>
+                        <room>3.134</room>
+                    </location>
+               </schedule>
+          </class>
+          <class>
+               <unique_number>54190</unique_number>
+               <name>Theory in Programming Practice</name>
+               <description>Application of program-analysis theory to program design. Methodologies for large-scale program design. Designed to help students bring together theoretical and programming skills.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>337</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Kristen</first_name>
+                         <last_name>Grauman</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Andrew</first_name>
+                         <last_name>Dreher</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Nam</first_name>
+                         <last_name>Nguyen</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>12:30:00</start_time>
+                         <end_time>14:30:00</end_time>
+			 <day>Monday</day>
+                         <day>Wednesday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>UTC</building_abbr>
+                             <building_name>University Teaching Center</building_name>
+                        </building>
+                        <floor>3</floor>
+                        <room>3.134</room>
+                    </location>
+               </schedule>
+          </class>	  
+          <office>
+               <building>
+                    <building_abbr>PAI</building_abbr>
+                         <building_name>Painter</building_name>
+               </building>
+               <floor>5</floor>
+                <room>5.44</room>
+          </office>
+          <title>Professor</title>
+     </faculty>
+     <!-- Vijaya Ramachandran-->
+     <faculty>
+          <name>
+               <first_name>Vijaya</first_name>
+               <last_name>Ramachandran</last_name>
+          </name>
+          <username>vlr</username>
+          <email>vlr@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~vlr/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Vijaya</first_name>
+                         <last_name>Ramachandran</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719554</number>
+          </phone_number>
+	  <phone_number> 
+        	<phone_t>fax</phone_t> 
+        	<country_code>1</country_code> 
+        	<area_code>512</area_code> 
+        	<number>4718885</number> 
+      	  </phone_number> 
+          <research_area>Theoretical computer science</research_area> 
+      	  <research_area>Graph algorithms and data structures</research_area>
+     	  <research_area>Parallel computation</research_area>
+          <degree> 
+        	<date_awarded>1983</date_awarded> 
+       	 	<institution>Princeton University</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Electrical Engineering</specialization> 
+      	  </degree> 
+          <award> 
+        	<name>National Science Foundation Grant CCF-0514876</name> 
+        	<date_awarded>2005</date_awarded> 
+      	  </award> 
+          <award> 
+        	<name>IBM Faculty Development Award</name> 
+        	<date_awarded>1983</date_awarded> 
+          </award> 
+          <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>10:30:00</start_time>
+                   <end_time>11:30:00</end_time>
+                   <day>Tuesday</day>
+		   <day>Thursday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>TAY</building_abbr>
+                        <building_name>Taylor</building_name>
+                   </building>
+                   <floor>3</floor>
+                   <room>3.152</room>
+              </location>
+          </office_hours>
+          <class>
+               <unique_number>54265</unique_number>
+               <name>Algorithms</name>
+               <description>This course will cover the theoretical aspects of algorithm design and analysis.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>357</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Vijaya</first_name>
+                         <last_name>Ramachandran</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Aibo</first_name>
+                         <last_name>Tian</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>14:00:00</start_time>
+                         <end_time>15:30:00</end_time>
+                         <day>Tuesday</day>
+			 <day>Thursday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>WEL</building_abbr>
+                             <building_name>Welch</building_name>
+                        </building>
+                        <floor>2</floor>
+                        <room>2.256</room>
+                    </location>
+               </schedule>
+          </class>
+          <class>
+               <unique_number>54945</unique_number>
+               <name>Parallel Algorithms</name>
+               <description>This is a graduate diversity course in a theory thread.</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>388P</short_number>
+               </course_number>
+               <semester>Fall</semester>
+               <year>2009</year>
+               <staff>
+                    <person>
+                         <first_name>Vijaya</first_name>
+                         <last_name>Ramachandran</last_name>
+                    </person>
+               </staff>
+	       <staff>
+                    <person>
+                         <first_name>Thomas</first_name>
+                         <last_name>Finsterbusch</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>15:30:00</start_time>
+                         <end_time>17:00:00</end_time>
+                         <day>Monday</day>
+			 <day>Wednesday</day>
+                         <start_date>2009-08-26</start_date>
+                         <end_date>2009-12-04</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>WEL</building_abbr>
+                             <building_name>Welch</building_name>
+                        </building>
+                        <floor>2</floor>
+                        <room>2.256</room>
+                    </location>
+               </schedule>
+          </class>	  
+          <writing>
+               <title>Cache-oblivious Dynamic Programming for Bioinformatics</title>
+               <publish_info>
+                    <publisher>IEEE</publisher>
+                    <publish_date>2008-01-01</publish_date>
+                    <article>
+                         <journal>IEEE/ACM Transactions on Computational Biology and Bioinformatics</journal>
+                         <edition>2008</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Vijaya</first_name>
+                         <last_name>Ramachandran</last_name>
+               </author>
+	       <author>
+                         <first_name>Rezaul</first_name>
+			 <middle_name>Alam</middle_name>
+                         <last_name>Chowdhury</last_name>
+               </author>
+               <author>
+                         <first_name>H</first_name>
+                         <last_name>Lee</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>New randomized minimum spanning tree algorithms using exponentially fewer random bits</title>
+               <publish_info>
+                    <publisher>ACM</publisher>
+                    <publish_date>2008-01-01</publish_date>
+                    <article>
+                         <journal>ACM Transactions on Algorithms</journal>
+                         <edition>2008</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Vijaya</first_name>
+                         <last_name>Ramachandran</last_name>
+               </author>
+               <author>
+                         <first_name>Seth</first_name>
+                         <last_name>Pettie</last_name>
+               </author>
+          </writing>
+          <conference>
+               <conference>
+                    <date>2008-01-01</date>
+                    <name>ACM Symposium on Parallelism in Algorithms and Architectures</name>
+                    <conf_location>Munich, Germany</conf_location>
+               </conference>
+               <presentation_title>Cache-efficient dynamic programming algorithms for multicores</presentation_title>
+          </conference>
+	  <conference>
+               <conference>
+                    <date>2008-01-01</date>
+                    <name>International Symposium on Computer Architecture</name>
+                    <conf_location>Beijing, China</conf_location>
+               </conference>
+               <presentation_title>Flexible hardware acceleration for instruction-grain program monitoring</presentation_title>
+          </conference>
+          <advisee>   
+                    <name>
+          		<first_name>Rezaul</first_name>
+          		<middle_name>Alam</middle_name>  
+          		<last_name>Chowdhury</last_name> 
+                    </name>
+                    <username>shaikat</username>
+                    <email>shaikat@cs.utexas.edu</email>
+		    <writing>
+               		<title>Cache-efficient Algorithms and Data Structures: Theory and Experimental Evaluation</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2007-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Rezaul</first_name>
+          			<middle_name>Alam</middle_name>  
+          			<last_name>Chowdhury</last_name>
+		        </author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Vijaya</first_name>
+         	      		<last_name>Ramachandran</last_name>
+          		</name>
+          		<username>vlr</username>
+          		<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          		<first_name>Daniel</first_name>
+          		<last_name>Fernholz</last_name> 
+                    </name>
+                    <username>fernholz</username>
+                    <email>fernholz@cs.utexas.edu</email>
+		    <writing>
+               		<title>Sparse Random Graphs: Methods, Structure, and Heuristics</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2007-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Daniel</first_name> 
+          			<last_name>Fernholz</last_name>
+		        </author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Vijaya</first_name>
+         	      		<last_name>Ramachandran</last_name>
+          		</name>
+          		<username>vlr</username>
+          		<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          	          <first_name>Ganeshkumar</first_name>
+          		  <last_name>Ganapathy</last_name>  
+                    </name>
+                    <email>ganeshkumarganapathy@yahoo.com</email>
+		    <writing>
+               		<title>Algorithms and Heuristics for Combinatorial Optimization in Phylogeny</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2006-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Ganeshkumar</first_name>
+          			<last_name>Ganapathy</last_name> 
+		        </author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Vijaya</first_name>
+         	      		<last_name>Ramachandran</last_name>
+          		</name>
+          		<username>vlr</username>
+          		<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          	          <first_name>Seth</first_name>
+          		  <last_name>Pettie</last_name>  
+                    </name>
+                    <email>sethpettie@yahoo.com</email>
+		    <writing>
+               		<title>On the Shortest Path and Minimum Spanning Tree Problems</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2003-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Seth</first_name>
+          			<last_name>Pettie</last_name> 
+		        </author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Vijaya</first_name>
+         	      		<last_name>Ramachandran</last_name>
+          		</name>
+          		<username>vlr</username>
+          		<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          	          <first_name>Tsan-sheng</first_name>
+          		  <last_name>Hsu</last_name>  
+                    </name>
+                    <email>tsanshenghsu@yahoo.com</email>
+		    <writing>
+               		<title>Graph Augmentation and Related Problems: Theory and Practice</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1993-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Tsan-sheng</first_name>
+          			<last_name>Hsu</last_name> 
+		        </author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Vijaya</first_name>
+         	      		<last_name>Ramachandran</last_name>
+          		</name>
+          		<username>vlr</username>
+          		<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+          <office>
+               <building>
+                    <building_abbr>TAY</building_abbr>
+                         <building_name>Taylor</building_name>
+               </building>
+               <floor>3</floor>
+                <room>3.152</room>
+          </office>
+          <title>Professor</title>
+     </faculty>
+     <!-- Emerson -->
+     <faculty>
+          <name>
+               <first_name>Ernest</first_name>
+	       <middle_name>Allen</middle_name>
+               <last_name>Emerson</last_name>
+          </name>
+          <username>emerson</username>
+          <email>emerson@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~emerson/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+               		<first_name>Ernest</first_name>
+	       		<middle_name>Allen</middle_name>
+               		<last_name>Emerson</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719537</number>
+          </phone_number>
+	  <phone_number> 
+        	<phone_t>fax</phone_t> 
+       	 	<country_code>1</country_code> 
+        	<area_code>512</area_code> 
+        	<number>4718885</number> 
+          </phone_number>
+          <research_area>formal methods</research_area> 
+          <research_area>logics and semantics of programs</research_area> 
+          <research_area>concurrent and distributed computing</research_area> 
+          <degree> 
+        	<date_awarded>1976</date_awarded> 
+        	<institution>University of Texas at Austin</institution> 
+        	<degree_t>Bachelor's Degree</degree_t> 
+        	<specialization>Mathematics</specialization> 
+      	  </degree> 
+          <degree> 
+        	<date_awarded>1981</date_awarded> 
+        	<institution>Harvard University</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Applied Mathematics</specialization> 
+          </degree>
+          <award> 
+        	<name>A.M. Turing Award</name> 
+        	<date_awarded>2007</date_awarded> 
+          </award>
+          <award> 
+		<name>ACM Paris Kanellakis Theory and Practice Award</name> 
+        	<date_awarded>1998</date_awarded> 
+          </award>  
+          <award> 
+        	<name>The Allen Newell Award for Research Excellence</name> 
+        	<date_awarded>1999</date_awarded> 
+          </award> 
+          <award> 
+        	<name>IEEE LICS Test-of-Time Award</name> 
+        	<date_awarded>2006</date_awarded> 
+          </award>
+          <class>
+               <unique_number>54325</unique_number>
+               <name>Debugging and Verifying Programs-W</name>
+               <description>Survey of the basic theory of Computer Aided Verification </description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>378</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>17:00:00</start_time>
+                         <end_time>18:30:00</end_time>
+			 <day>Tuesday</day>
+                         <day>Thursday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>RLM</building_abbr>
+                             <building_name>Robert Lee Moore</building_name>
+                        </building>
+                        <floor>6</floor>
+                        <room>6.124</room>
+                    </location>
+               </schedule>
+          </class>
+	  <class>
+               <unique_number>54415</unique_number>
+               <name>Formal Verification and Semantics</name>
+               <description>Survey of the classic theory of Formal Verification, including the work of Floyd, Hoare, and Dijkstra</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>388s</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>18:30:00</start_time>
+                         <end_time>20:00:00</end_time>
+                         <day>Tuesday</day>
+                         <day>Thursday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>TAY</building_abbr>
+                             <building_name>Taylor</building_name>
+                        </building>
+                        <floor>3</floor>
+                        <room>3.144</room>
+                    </location>
+               </schedule>
+          </class>
+	  <writing>
+               <title>Model Checking and the Mu-calculus</title>
+               <publish_info>
+                    <publisher>American Mathematical Society Press</publisher>
+                    <publish_date>1997-01-01</publish_date>
+		    <ISBN>0821805177</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Methods for Mu-calculus model checking: A tutorial</title>
+               <publish_info>
+                    <publisher>Springer Berlin / Heidelberg</publisher>
+                    <publish_date>1996-01-01</publish_date>
+		    <ISBN>9783540600459</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Model checking and efficient automation of temporal reasoning</title>
+               <publish_info>
+                    <publisher>Springer Berlin / Heidelberg</publisher>
+                    <publish_date>1996-01-01</publish_date>
+		    <ISBN>9783540602187</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Automated Temporal Reasoning about Reactive Systems</title>
+               <publish_info>
+                    <publisher>Springer</publisher>
+                    <publish_date>1996-01-01</publish_date>
+		    <ISBN>3540609156</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Temporal and Modal Logic</title>
+               <publish_info>
+                    <publisher>MIT Press</publisher>
+                    <publish_date>1990-01-01</publish_date>
+		    <ISBN>0444880747</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+          </writing>
+          <writing>
+               <title>Synthesis of Fault-Tolerant Concurrent Programs</title>
+               <publish_info>
+                    <publisher>ACM</publisher>
+                    <publish_date>2004-01-01</publish_date>
+                    <article>
+                         <journal>ACM TOPLAS</journal>
+                         <edition>2004</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+	       <author>
+                         <first_name>Paul</first_name>
+			 <middle_name>C</middle_name>
+                         <last_name>Attie</last_name>
+               </author>
+               <author>
+                         <first_name>Anish</first_name>
+                         <last_name>Arora</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>On Reasoning about Rings</title>
+               <publish_info>
+                    <publisher>IJFCS</publisher>
+                    <publish_date>2003-01-01</publish_date>
+                    <article>
+                         <journal>IJFCS</journal>
+                         <edition>2003</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Ernest</first_name>
+			 <middle_name>Allen</middle_name>
+                         <last_name>Emerson</last_name>
+               </author>
+	       <author>
+                         <first_name>Kedar</first_name>
+			 <middle_name>S</middle_name>
+                         <last_name>Namjoshi</last_name>
+               </author>
+          </writing>
+          <conference>
+               <conference>
+                    <date>2003-01-01</date>
+                    <name>CHARME</name>
+                    <conf_location>L'Aquila, Italy</conf_location>
+               </conference>
+               <presentation_title>On Combining Symmetry Reduction and Symbolic Representation for Efficient Model Checking</presentation_title>
+          </conference>
+	  <conference>
+               <conference>
+                    <date>2003-01-01</date>
+                    <name>CONCUR</name>
+                    <conf_location>Marseille, France</conf_location>
+               </conference>
+               <presentation_title>Abstract Patterns of Compositional Reasoning</presentation_title>
+          </conference>
+          <advisee>   
+                    <name>
+          		<first_name>Nina</first_name> 
+          		<last_name>Amla</last_name> 
+                    </name>
+                    <email>ninaamla@yahoo.com</email>
+		    <writing>
+               		<title>Efficient Model Checking for Timing Diagrams</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2001-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Nina</first_name> 
+          			<last_name>Amla</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Ernest</first_name>
+				<middle_name>Allen</middle_name>
+         	      		<last_name>Emerson</last_name>
+          		</name>
+          		<username>emerson</username>
+          		<email>emerson@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          		<first_name>Richard</first_name> 
+          		<last_name>Trefler</last_name> 
+                    </name>
+                    <email>richardtrefler@yahoo.com</email>
+		    <writing>
+               		<title>Expressive and Efficient Model Checking</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1999-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Richard</first_name> 
+          			<last_name>Trefler</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Ernest</first_name>
+				<middle_name>Allen</middle_name>
+         	      		<last_name>Emerson</last_name>
+          		</name>
+          		<username>emerson</username>
+          		<email>emerson@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          		<first_name>Kedar</first_name> 
+          		<last_name>Namjoshi</last_name> 
+                    </name>
+                    <email>kedarnamjoshi@yahoo.com</email>
+		    <writing>
+               		<title>Ameliorating the State-Explosion Problem</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1998-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Kedar</first_name> 
+          			<last_name>Namjoshi</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Ernest</first_name>
+				<middle_name>Allen</middle_name>
+         	      		<last_name>Emerson</last_name>
+          		</name>
+          		<username>emerson</username>
+          		<email>emerson@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+                    	<first_name>Giacomo</first_name> 
+          		<last_name>Lenzi</last_name> 
+                    </name>
+                    <email>giacomolenzi@yahoo.com</email>
+		    <writing>
+               		<title>The Mu-calculus Alternation Hierarchy is Strict</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1997-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Giacomo</first_name> 
+          			<last_name>Lenzi</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Ernest</first_name>
+				<middle_name>Allen</middle_name>
+         	      		<last_name>Emerson</last_name>
+          		</name>
+          		<username>emerson</username>
+          		<email>emerson@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+                    	<first_name>Markus</first_name> 
+          		<last_name>Kaltenbach</last_name> 
+                    </name>
+                    <email>markuskaltenbach@yahoo.com</email>
+		    <writing>
+               		<title>Interactive Verification Exploiting Program Design Knowledge: A Model-Checker for UNITY</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>1996-01-01</publish_date>
+               		</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Markus</first_name> 
+          			<last_name>Kaltenbach</last_name>
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Ernest</first_name>
+				<middle_name>Allen</middle_name>
+         	      		<last_name>Emerson</last_name>
+          		</name>
+          		<username>emerson</username>
+          		<email>emerson@cs.utexas.edu</email>
+			<title>Professor</title>
+		    </advisor>
+          </advisee>
+          <office>
+               <building>
+                    <building_abbr>TAY</building_abbr>
+                    <building_name>Taylor</building_name>
+               </building>
+               <floor>2</floor>
+                <room>2.124</room>
+          </office>
+          <title>Professor</title>
+     </faculty>
+     <!-- Lin -->
+     <faculty>
+          <name>
+               <first_name>Calvin</first_name>
+               <last_name>Lin</last_name>
+          </name>
+          <username>lin</username>
+          <email>lin@cs.utexas.edu</email>
+          <website>
+               <url>http://userweb.cs.utexas.edu/~lin/</url>
+               <group>Department of Computer Sciences</group>
+               <author>
+                         <first_name>Calvin</first_name>
+                         <last_name>Lin</last_name>
+               </author>
+          </website>
+          <phone_number>
+               <phone_t>work</phone_t>
+               <country_code>1</country_code>
+               <area_code>512</area_code>
+               <number>4719560</number>
+          </phone_number>
+      	  <phone_number> 
+        	<phone_t>fax</phone_t> 
+        	<country_code>1</country_code> 
+        	<area_code>512</area_code> 
+        	<number>2321413</number> 
+      	  </phone_number> 	  
+          <research_area>Compilers and languages for parallel computing</research_area> 
+      	  <research_area>Parallel performance analysis</research_area> 
+      	  <research_area>Scientific computing</research_area> 
+    	  <degree> 
+        	<date_awarded>1992</date_awarded> 
+        	<institution>University of Washington</institution> 
+        	<degree_t>Doctoral Degree</degree_t> 
+        	<specialization>Computer Science</specialization> 
+          </degree>
+      	  <award> 
+        	<name>Conference on Programming Language Design and Implementation: Best Paper Award</name> 
+        	<date_awarded>2007</date_awarded> 
+          </award> 
+          <award> 
+       	 	<name>37th International Symposium on Microarchitecture: Best Paper Award</name> 
+       	 	<date_awarded>2004</date_awarded> 
+          </award>
+          <office_hours>
+              <event_type>Office Hours</event_type>
+              <schedule>
+                   <start_time>15:30:00</start_time>
+                   <end_time>16:30:00</end_time>
+                   <day>Wednesday</day>
+		   <day>Friday</day>
+                   <start_date>2010-01-19</start_date>
+                   <end_date>2010-05-07</end_date>
+              </schedule>
+              <location>
+                   <building>
+                        <building_abbr>ACES</building_abbr>
+                        <building_name>Applied Computational and Engineering Sciences</building_name>
+                   </building>
+                   <floor>3</floor>
+                   <room>3.424</room>
+              </location>
+          </office_hours>
+          <class>
+               <unique_number>54360</unique_number>
+               <name>Introduction to CS Research</name>
+               <description>Introduction to CS Research</description>
+               <course_number>
+                    <field_of_study>CS</field_of_study>
+                    <short_number>178H</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                    <person>
+                         <first_name>Calvin</first_name>
+                         <last_name>Lin</last_name>
+                    </person>
+               </staff>
+               <schedule>
+                    <event_type>Meeting</event_type>
+                    <schedule>
+                         <start_time>13:00:00</start_time>
+                         <end_time>14:00:00</end_time>
+                         <day>Wednesday</day>
+                         <start_date>2010-01-19</start_date>
+                         <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                             <building_abbr>WEL</building_abbr>
+                             <building_name>Welch</building_name>
+                        </building>
+                        <floor>2</floor>
+                        <room>2.256</room>
+                    </location>
+               </schedule>
+          </class>
+	  <writing>
+               <title>Principles of Parallel Programming</title>
+               <publish_info>
+                    <publisher>Addison Wesley</publisher>
+                    <publish_date>2008-01-01</publish_date>
+		    <ISBN>0321487907</ISBN>
+               </publish_info>
+               <writing>book</writing>
+               <author>
+                         <first_name>Calvin</first_name>
+                         <last_name>Lin</last_name>
+               </author>
+          </writing>
+          <writing>
+               <title>Memory Scheduling for Modern Microprocessors</title>
+               <publish_info>
+                    <publisher>ACM</publisher>
+                    <publish_date>2007-01-01</publish_date>
+                    <article>
+                         <journal>ACM Transactions on Computer Systems</journal>
+                         <edition>2007</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Calvin</first_name>
+                         <last_name>Lin</last_name>
+               </author>
+               <author>
+                         <first_name>I</first_name>
+                         <last_name>Hur</last_name>
+               </author>
+          </writing>
+	  <writing>
+               <title>Scaling to the End of Silicon with EDGE Architectures</title>
+               <publish_info>
+                    <publisher>IEEE</publisher>
+                    <publish_date>2004-01-01</publish_date>
+                    <article>
+                         <journal>IEEE Computer</journal>
+                         <edition>2004</edition>
+                    </article>
+               </publish_info>
+               <writing>article</writing>
+               <author>
+                         <first_name>Calvin</first_name>
+                         <last_name>Lin</last_name>
+               </author>
+               <author> 
+            		<first_name>David</first_name>
+           		 <last_name>Burger</last_name> 
+          	</author> 
+         	 <author> 
+           	 	<first_name>Steve</first_name>
+           	 	<last_name>Keckler</last_name> 
+          	</author> 
+          	<author> 
+            		<first_name>Michael</first_name>
+            		<last_name>Dahlin</last_name> 
+          	</author> 
+          </writing>
+          <conference>
+               <conference>
+                    <date>2009-01-01</date>
+                    <name>Symposium on Principles of Programming Languagess</name>
+                    <conf_location>Savannah, Georgia, USA</conf_location>
+               </conference>
+               <presentation_title>Semi-Sparse Flow-Sensitive Pointer Analysis</presentation_title>
+          </conference>
+	  <conference>
+               <conference>
+                    <date>2009-01-01</date>
+                    <name>International Symposium on High-Performance Computer Architecture</name>
+                    <conf_location>Raleigh, North Carolina, USA</conf_location>
+               </conference>
+               <presentation_title>Feedback Mechanisms for Improving Probabilistic Memory Prefetching</presentation_title>
+          </conference>
+          <advisee>   
+                    <name>
+          		<first_name>Ben</first_name> 
+          		<last_name>Hardekopf</last_name> 
+                    </name>
+                    <email>benh@cs.ucsb.edu</email>
+		    <writing>
+               		<title>Pointer Analysis: Building a Foundation for Effective Program Analysis</title>
+               		<publish_info>
+                   		<publisher>University of Texas at Austin</publisher>
+                    		<publish_date>2009-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Ben</first_name> 
+          			<last_name>Hardekopf</last_name> 
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Calvin</first_name>
+         	      		<last_name>Lin</last_name>
+          		</name>
+          		<username>lin</username>
+          		<email>lin@cs.utexas.edu</email>
+			<title>Associate Professor</title>
+		    </advisor>
+          </advisee>
+	  <advisee>   
+                    <name>
+          		<first_name>Teck</first_name> 
+          		<middle_name>Bok</middle_name> 
+          		<last_name>Tok</last_name>
+                    </name>
+		    <username>toktb</username>
+                    <email>toktb@cs.utexas.edu</email>
+		    <writing>
+               		<title>Removing Unimportant Computations in Interprocedural Program Analysis</title>
+               		<publish_info>
+                   		<publisher>Univeristy of Texas at Austin</publisher>
+                    		<publish_date>2007-01-01</publish_date>
+                    	</publish_info>
+               		<writing>thesis</writing>
+			<author>
+          			<first_name>Teck</first_name> 
+          			<middle_name>Bok</middle_name> 
+          			<last_name>Tok</last_name>
+               		</author>
+          	    </writing>
+                    <status>PhD Student</status>
+		    <advisor>
+			<name>
+        	     	  	<first_name>Calvin</first_name>
+         	      		<last_name>Lin</last_name>
+          		</name>
+          		<username>lin</username>
+          		<email>lin@cs.utexas.edu</email>
+			<title>Associate Professor</title>
+		    </advisor>
+          </advisee>
+          <office>
+               <building>
+                    <building_abbr>ACES</building_abbr>
+                         <building_name>Applied Computational Engineering and Sciences</building_name>
+               </building>
+               <floor>3</floor>
+                <room>3.424</room>
+          </office>
+          <title>Associate Professor</title>
+     </faculty>
+</people>

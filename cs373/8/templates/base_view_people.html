@@ -1,0 +1,33 @@
+{% extends "base_view.html" %}
+
+{% block title %}People{% endblock %}
+
+{% block body %}{% spaceless %}
+<h2>People</h2>
+
+{% if faculty %}
+	<h3>Faculty Member{{ faculty|pluralize }}</h3>
+	
+	<ul>
+		{% for person in faculty %}
+			<li>
+				<a href="/view/person?key={{ person.key }}">{{ person.name.first }} {{ person.name.last }}</a>
+				<a href="/edit/person?key={{ person.key }}">(edit)</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+{% if students %}
+	<h3>Student{{ students|pluralize }}</h3>
+	
+	<ul>
+		{% for person in students %}
+			<li>
+				<a href="/view/person?key={{ person.key }}">{{ person.name.first }} {{ person.name.last }}</a>
+				<a href="/edit/person?key={{ person.key }}">(edit)</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+{% endspaceless %}{% endblock %}

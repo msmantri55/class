@@ -1,0 +1,38 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ award.name }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<dd>
+	<dt>Course Name</dt>
+	<dd>{{ course.name }} </dd>
+	<dt>Course Unique ID</dt>
+	<dd>{{ course.unique_id }}</dd>
+	<dt>Course Description</dt>
+	<dd>{{ course.description }}</dd>
+	<dt>Course Number</dt>
+	<dd>{{ course.course_number.department }} {{ course.course_number.number }}</dd>
+	<dt>Course Semester</dt>
+	<dd>{{ course.semester }}</dd>
+	<dt>Course Year</dt>
+	<dd>{{ course.year }} </dd>
+
+	{% if staff_members %}
+		<dt>Staff Members</dt>
+		<dd>
+			<ul>
+				{% for staff_member in staff_members %}
+					<li>{{ staff_member }}</li>
+				{% endfor %}
+			</ul>
+		</dd>
+	{% endif %}
+
+	<dt>Course Schedule</dt>
+	<dd>{{ course.schedule.start_date }} {{ course.schedule.start_time }} </dd>
+	{% for day in days %}
+		<dd>{{ course.schedule.day }}</dd>
+	{% endfor %}
+	<dd>{{ course.schedule.end_date }} {{ course.schedule.end_time }} </dd>
+</dd>
+{% endspaceless %}{% endblock %}

@@ -1,0 +1,3460 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Faculty2.xsd">
+   <!--Warren A. Hunt -->
+  <faculty>
+       <name>
+               <first_name>Warren</first_name>
+               <last_name>Hunt</last_name>
+               <middle_name>A.</middle_name>
+       </name>
+       <username>hunt</username>
+       <email>hunt@cs.utexas.edu</email>
+       <website>
+               <url>http://www.cs.utexas.edu/users/hunt/index.html</url>
+               <group>None</group>
+               <author>
+                       <first_name>Warren</first_name>
+                       <last_name>Hunt</last_name>
+                       <middle_name>A.</middle_name>
+               </author>
+       </website>
+       <phone_number>
+               <phone_t>home</phone_t>
+               <number>4719748</number>
+               <area_code>512</area_code>
+               <country_code>1</country_code>
+       </phone_number>
+       <phone_number>
+               <phone_t>fax</phone_t>
+               <number>4718885</number><country_code>1</country_code><area_code>512</area_code>
+       </phone_number>
+       <research_area>Hardware Verification</research_area>
+       <research_area>Circuit Design</research_area>
+       <research_area>Mechanized Theorem Proofing</research_area>
+       <degree>
+       <date_awarded>1985</date_awarded>
+       <institution>The University of Texas at Austin</institution>
+       <degree_t>Doctoral Degree</degree_t>
+       <specialization>Unknown</specialization>
+     </degree>
+       <office_hours>
+               <event_type>Office Hours</event_type>
+               <schedule>
+                       <start_time>10:00:00</start_time>
+                       <end_time>11:45:00</end_time>
+                       <day>Wednesday</day>
+                       <start_date>2001-01-01</start_date>
+               </schedule>
+               <location>
+                       <building>
+                               <building_name>Main Building</building_name>
+                               <building_abbr>MAI</building_abbr>
+                       </building>
+                       <floor>20</floor>
+                       <room>14</room>
+               </location>
+       </office_hours>
+       <class>
+               <unique_number>54805</unique_number><name>Computer Architecture</name><description> COMPUTER ARCHITECTURE AND ORGANIZATIONAL ISSUES; STRUCTURAL AND BEHAVIORAL CHARACTERISTICS OF SYSTEM COMPONENTS. PROCESSOR, MEMORY HIERARCHY, AND INPUT/OUTPUT ISSUES. EVALUATION OF DESIGN ALTERNATIVES. THE RELATIONSHIP BETWEEN HARDWARE AND SOFTWARE. COMPUTER SCIENCES 352 AND 352H MAY NOT BOTH BE COUNTED.</description><course_number>
+         <field_of_study>CS</field_of_study>
+         <short_number>372</short_number>
+       </course_number><semester>Fall</semester><year>2009</year>
+               <staff>
+                       <person>
+                               <first_name>David</first_name><last_name>Rager</last_name>
+                       </person>
+               </staff>
+               <staff>
+                       <person>
+                               <first_name>Upendra</first_name><last_name>Shevade</last_name>
+                       </person>
+               </staff>
+               <schedule><event_type>Meeting</event_type>
+                       <schedule>
+                               <start_time>09:30:00</start_time>
+                               <end_time>11:00:00</end_time>
+                               <day>Tuesday</day>
+                               <day>Thursday</day>
+                               <start_date>2009-08-15</start_date>
+                       </schedule>
+                       <location>
+                               <building>
+                                       <building_name>University Teaching Center</building_name>
+                                       <building_abbr>UTC</building_abbr>
+                               </building>
+                               <floor>3</floor>
+                               <room>112</room>
+                       </location>
+               </schedule>
+       </class>
+       <class><unique_number>55009</unique_number><name>Industrial Formal Methods</name><description>How can we make sure that the systems (programs you write, circuits you design) behave in a reliable and predictable manner? In this course, we will discuss one approach to address this problem: the use of mathematical methods to provide high assurance in correct and secure executions of computing systems. This approach is called formal verification, and it is a crucial part of the industrial design validation tool flow for many critical system and security components.</description><course_number>
+           <field_of_study>CS</field_of_study>
+           <short_number>395T</short_number>
+       </course_number><semester>Fall</semester><year>2009</year>
+               <staff>
+                       <person>
+                               <first_name>No Staff</first_name>
+                               <last_name>No Staff</last_name>
+                       </person>
+               </staff>
+               <schedule>
+                       <event_type>Meeting</event_type>
+                       <schedule>
+                               <start_time>16:00:00</start_time>
+                               <end_time>19:00:00</end_time>
+                               <day>Tuesday</day>
+                               <start_date>2009-08-15</start_date>
+                       </schedule>
+                       <location>
+                               <building>
+                                       <building_name>Applied Computational Engineering</building_name>
+                                       <building_abbr>ACE</building_abbr>
+                               </building>
+                               <floor>5</floor>
+                               <room>336</room>
+                       </location>
+               </schedule>
+       </class>
+       <conference>
+               <conference>
+                       <date>2009-06-01</date><name>Computer Aided Verification 2009</name>
+                       <conf_location>Grenoble, France</conf_location>
+               </conference>
+               <presentation_title>Centaur Technology Media Unit Verification</presentation_title>
+       </conference>
+       <conference>
+               <conference>
+                       <date>2004-07-01</date>
+                       <name>Computer Aided Verification 2004</name>
+                       <conf_location>Boston, MA, USA</conf_location>
+               </conference>
+               <presentation_title>The FM9001 Microprocessor Verification and Proving Very Large Theorems</presentation_title>
+       </conference>
+       <advisee>
+               <name>
+         <first_name>David</first_name>
+         <last_name>Rager</last_name>
+       </name>
+               <email>ragerdl@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <advisee>
+               <name>
+           <first_name>Alan</first_name>
+           <last_name>Dunn</last_name>
+       </name>
+               <email>no_email@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <advisee>
+               <name>
+           <first_name>Robert</first_name>
+           <last_name>Krugg</last_name>
+       </name><email>rkrug@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <advisee><name>
+           <first_name>Oswaldo</first_name>
+           <last_name>Olivo</last_name>
+       </name>
+               <email>no_email@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <advisee>
+               <name>
+           <first_name>Nathan</first_name>
+           <last_name>Weltzer</last_name>
+       </name><email>nwetzler@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <advisee><name>
+           <first_name>Sol</first_name>
+           <last_name>Swords</last_name>
+       </name>
+               <email>no_email@cs.utexas.edu</email>
+               <status>PhD Student</status>
+       </advisee>
+       <office>
+               <building>
+                       <building_name>Main Building</building_name>
+                       <building_abbr>MAI</building_abbr>
+               </building>
+               <floor>20</floor>
+               <room>14</room>
+       </office>
+       <title>Professor</title>
+  </faculty>
+
+
+ <!-- Donald Fussel-->
+<faculty>
+    <name>
+      <first_name>Donald</first_name>
+      <middle_name>S.</middle_name>
+      <last_name>Fussel</last_name>
+    </name>
+    <username>fussell</username>
+    <email>fussell@cs.utexas.edu</email>
+    <website>
+      <url>http://www.cs.utexas.edu/users/fussell</url>
+      <group>None</group>
+      <author>
+        <first_name>Donald</first_name>
+        <middle_name>S.</middle_name>
+        <last_name>Fussel</last_name>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>home</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4719719</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>fax</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4718885</number>
+    </phone_number>
+    <research_area>Computer Architecture</research_area>
+    <research_area>Computer Graphics</research_area>
+    <research_area>VLSI Systems Design</research_area>
+    <research_area>Database Concurrency Control</research_area>
+    <degree>
+      <date_awarded>1973</date_awarded>
+      <institution>Dartmouth College</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Mathematics and Social Science</specialization>
+    </degree>
+    <degree>
+    	<date_awarded>1977</date_awarded>
+    	<institution>University of Texas at Dallas</institution>
+    	<degree_t>Master's Degree</degree_t>
+    	<specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+    	<date_awarded>1980</date_awarded>
+    	<institution>University of Texas at Dallas</institution>
+    	<degree_t>Doctoral Degree</degree_t>
+    	<specialization>Computer Science</specialization>
+    </degree>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>11:00:00</start_time>
+        <end_time>12:00:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2001-01-01</start_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>ACES</building_abbr>
+          <building_name>Applied Computational Engineering</building_name>
+        </building>
+        <floor>2</floor>
+        <room>120</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54395</unique_number>
+      <name>Computer Graphics</name>
+      <description>Advanced material in computer graphics, including in-depth treatments of techniques for realistic image synthesis, advanced geometric modeling methods, animation and dynamic simulation, scientific visualization, and high-performance graphics architectures.</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>384G</short_number>
+      </course_number>
+      <semester>Spring</semester>
+      <year>2010</year>
+      <staff>
+        <person>
+          <first_name>Peter</first_name>
+          <last_name>Djeu</last_name>
+        </person>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>14:00:00</start_time>
+          <end_time>15:00:00</end_time>
+          <day>Monday</day>
+          <day>Wednesday</day>
+          <day>Friday</day>
+          <start_date>2010-01-19</start_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>RLM</building_abbr>
+            <building_name>Robert Lee Moore Hall</building_name>
+          </building>
+          <floor>2</floor>
+          <room>118</room>
+        </location>
+      </schedule>
+    </class>
+    <class>
+    	
+    	<unique_number>54080</unique_number><name>Computer Organization and Programming (Honors)</name>
+    	<description>In this course, you will learn the basic operation of computing systems. Upon completing this course, students should have a high-level understanding of the role played by each major component of the system, including compiler, operating system, assembler, instruction set, and hardware. Programming assignments will be conducted on the departmental PCs running linux. You may also find the tools available on the departmental PCs running windows or you may install the tools on your own computer. However, you must ensure that any programming assignment you turn in functions correctly with the linux installation of the tools.</description>
+    	<course_number>
+    		<field_of_study>CS</field_of_study>
+    		<short_number>310H</short_number>
+    	</course_number>
+    	<semester>Spring</semester>
+    	<year>2010</year>
+    	<staff>
+    		<person>
+    			<first_name>Aditya</first_name>
+    			<last_name>Rawal</last_name>
+    		</person>
+    	</staff>
+    	<schedule>
+    		<event_type>Meeting</event_type>
+    		<schedule>
+    			<start_time>11:00:00</start_time>
+    			<end_time>12:00:00</end_time>
+    			<day>Monday</day>
+    			<day>Wednesday</day>
+    			<day>Friday</day>
+    			<start_date>2001-01-01</start_date>
+    		</schedule>
+    		<location>
+    			<building>
+    				<building_name>Robert Lee Moore Hall</building_name>
+    			</building>
+    			<floor>6</floor>
+    			<room>116</room>
+    		</location>
+    	</schedule>
+    </class>
+    <office>
+      <building>
+        <building_abbr>ACE</building_abbr>
+        <building_name>Applied Computational Engineering</building_name>
+      </building>
+      <floor>2</floor>
+      <room>120</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+
+  <!--Peter Stone-->
+  <faculty>
+    <name>
+      <first_name>Peter</first_name>
+      <middle_name></middle_name>
+      <last_name>Stone</last_name>
+      <suffix></suffix>
+    </name>
+    <username>pstone</username>
+    <email>pstone@cs.utexas.edu</email>
+    <website>
+      <url>http://www.cs.utexas.edu/~pstone</url>
+      <group></group>
+      <author>
+        <first_name>Peter</first_name>
+      <middle_name></middle_name>
+        <last_name>Stone</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4719796</number>
+    </phone_number>
+    <research_area>machine learning</research_area>
+    <research_area>multiagent systems</research_area>
+    <research_area>robotics</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1998</date_awarded>
+      <institution>Carnegie Mellon University</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1995</date_awarded>
+      <institution>Carnegie Mellon University</institution>
+      <degree_t>Master's Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <award>
+      <name>RoboCup US Open Champion team leader</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>William David Blunk Memorial Professorship, in recognition of undergraduate teaching</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>Fulbright Award</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>Guggenheim Fellow</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>Elected Board Member, International Foundation of Autonomous Agents and Multi-Agent Systems</name>
+      <date_awarded>2008</date_awarded>
+    </award>
+    <award>
+      <name>Austin Business Journal Tech Innovation Award</name>
+      <date_awarded>2007</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>11:00:00</start_time>
+        <end_time>12:00:00</end_time>
+        <day>Tuesday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>CSA</building_abbr>
+          <building_name>Computer Science Annex</building_name>
+        </building>
+        <floor>1</floor>
+        <room>140</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54220</unique_number>
+      <name>ARTIFICIAL INTELLIGENCE</name>
+      <description>A survey of current artificial intelligence issues, including search, production systems, knowledge representation, knowledge-based systems, planning, natural language processing, and machine learning. Artificial intelligence programming projects are required</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>343</short_number>
+      </course_number>
+      <semester>Spring</semester>
+      <year>2010</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>12:30:00</start_time>
+          <end_time>14:00:00</end_time>
+          <day>Thursday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>CBA</building_abbr>
+            <building_name>McCombs School of Business</building_name>
+          </building>
+          <floor>4</floor>
+          <room>348</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Intelligent Autonomous Robotics: A Robot Soccer Case Study</title>
+      <publish_info>
+        <publisher>Morgan and Claypool Publishers</publisher>
+        <publish_date>2007-01-01</publish_date>
+        <ISBN>9781598291262</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Peter</first_name>
+        <middle_name></middle_name>
+        <last_name>Stone</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>The Essence of Soccer: Can Robots Play Too?</title>
+      <publish_info>
+        <publisher>Soccer and Philosophy</publisher>
+        <publish_date>2010-01-01</publish_date>
+        <article>
+          <journal>Soccer and Philosophy</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Peter</first_name>
+        <middle_name></middle_name>
+        <last_name>Stone</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>2009-10-01</date>
+        <name>Proceedings of IROS 2009: 2009 IEEE/RSJ International Conference on Intelligent RObots and Systems</name>
+        <conf_location>St. Louis, USA</conf_location>
+      </conference>
+      <presentation_title>Improving Particle Filter Performance Using SSE Instructions</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2009-06-01</date>
+        <name>Proceedings of the ICML/UAI/COLT Workshop on Abstraction in Reinforcement Learning</name>
+        <conf_location>Montreal, Canada</conf_location>
+      </conference>
+      <presentation_title>An Empirical Comparison of Abstraction in Models of Markov Decision Processes</presentation_title>
+    </conference>
+    <advisee>
+      <name>
+        <first_name>Gregory</first_name>
+        <last_name>Kuhlmann</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Peter</first_name>
+          <last_name>Stone</last_name>
+        </name>
+        <username>pstone</username>
+        <email>pstone@cs.utexas.edu</email>
+        <title>Associate Professor</title>
+      </advisor>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>CSA</building_abbr>
+        <building_name>Computer Science Annex</building_name>
+      </building>
+      <floor>1</floor>
+      <room>140</room>
+    </office>
+    <title>Associate Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Risto</first_name>
+      <middle_name></middle_name>
+      <last_name>Miikkulainen</last_name>
+      <suffix></suffix>
+    </name>
+    <username>risto</username>
+    <email>risto@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~risto/</url>
+      <group></group>
+      <author>
+        <first_name>Risto</first_name>
+      <middle_name></middle_name>
+        <last_name>Miikkulainen</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>cell</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>2931168</number>
+    </phone_number>
+    <research_area>neural networks</research_area>
+    <research_area>genetic algorithms</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1990</date_awarded>
+      <institution>UCLA</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1986</date_awarded>
+      <institution>Helsinki University of Technology</institution>
+      <degree_t>Master's Degree</degree_t>
+      <specialization>Applied Mathematics</specialization>
+    </degree>
+    <award>
+      <name>Board of Governors, International Neural Network Society</name>
+      <date_awarded>2007</date_awarded>
+    </award>
+    <award>
+      <name>Computational Intelligence in Games Technical Committee, IEEE Computational Intelligence Society,Vice Chair</name>
+      <date_awarded>2007</date_awarded>
+    </award>
+    <award>
+      <name>Best Student Paper Award, IEEE Symposium on Computational Intelligence and Games (CIG-2009, Milan,Italy), for Schrum, J. and Miikkulainen, R. Evolving Multi-modal Behavior in NPCs.</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>Dean's Fellowship, College of Natural Sciences, the University of Texas at Austin, Spring 2002.</name>
+      <date_awarded>2002</date_awarded>
+    </award>
+    <award>
+      <name>Emil Aaltonen Foundation Fellowship (Finland)</name>
+      <date_awarded>1990</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>19:00:00</start_time>
+        <end_time>19:30:00</end_time>
+        <day>Wednesday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>TAY</building_abbr>
+          <building_name>Taylor Hall</building_name>
+        </building>
+        <floor>4</floor>
+        <room>142A</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54880</unique_number>
+      <name>Computational Intelligence in Game Design II</name>
+      <description>This course is a continuation of CS378 Computational Intelligence in Game Design I. Based on the proposal developed in CS378I, the students will carry out an independent research project on the OpenNERO research platform.The class will be 3 credit hours. The grade is based on the quality of your project, presented as an interactive talk in the class during the semester, and documented in a report at the end of the semester. </description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>378</short_number>
+      </course_number>
+      <semester>Fall</semester>
+      <year>2009</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>11:00:00</start_time>
+          <end_time>12:30:00</end_time>
+          <day>Thursday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>ENS</building_abbr>
+            <building_name>Engineering-Science Building</building_name>
+          </building>
+          <floor>3</floor>
+          <room>NM</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Lateral Interactions in the Cortex: Struc-ture and Function.</title>
+      <publish_info>
+        <publisher>The UTCS Neural Networks Research Group, Austin, TX</publisher>
+        <publish_date>1996-05-01</publish_date>
+        <ISBN>0964706008</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Risto</first_name>
+        <middle_name></middle_name>
+        <last_name>Miikkulainen</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Behavioral, neuroimaging, and computational evidence for perceptual caching in repetition priming</title>
+      <publish_info>
+        <publisher>Brain Research</publisher>
+        <publish_date>2010-01-01</publish_date>
+        <article>
+          <journal>Brain Research</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Risto</first_name>
+        <middle_name></middle_name>
+        <last_name>Miikkulainen</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>2008-10-01</date>
+        <name>Artificial Intelligence and Interactive Digital Entertainment Conference</name>
+        <conf_location>Stanford, CA</conf_location>
+      </conference>
+      <presentation_title>OpenNERO: a Game Platform for AI Research and Education</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-10-01</date>
+        <name>Google Zeitgeist Conference</name>
+        <conf_location>Mountain View, CA</conf_location>
+      </conference>
+      <presentation_title>The NERO Machine Learning Game</presentation_title>
+    </conference>
+    <advisee>
+      <name>
+        <first_name>Igor</first_name>
+        <last_name>Karpov</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Risto</first_name>
+          <last_name>Miikkulainen</last_name>
+        </name>
+        <username>risto</username>
+        <email>risto@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>TaylorHall</building_name>
+      </building>
+      <floor>4</floor>
+      <room>142A</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Glenn</first_name>
+      <middle_name></middle_name>
+      <last_name>Downing</last_name>
+      <suffix></suffix>
+    </name>
+    <username>downing</username>
+    <email>downing@cs.utexas.edu</email>
+    <website>
+      <url>http://blogs.utexas.edu/gpd/</url>
+      <group></group>
+      <author>
+        <first_name>Glenn</first_name>
+      <middle_name></middle_name>
+        <last_name>Downing</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>3881858</number>
+    </phone_number>
+    <research_area>Algorithms</research_area>
+    <research_area>Data Structures</research_area>
+    <research_area>Generic and object-oriented programming in C++ and Java</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1975</date_awarded>
+      <institution>University of Illinois at Urbana-Champaign</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Physics</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1977</date_awarded>
+      <institution>Massachusetts Institute of Technology</institution>
+      <degree_t>Master's Degree</degree_t>
+      <specialization>Aeronautical and Astronautical Engineering</specialization>
+    </degree>
+    <award>
+      <name>Advisory Council Teaching Excellence Award</name>
+      <date_awarded>2006</date_awarded>
+    </award>
+    <award>
+      <name>Teaching Excellence Award</name>
+      <date_awarded>2002</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>12:00:00</start_time>
+        <end_time>13:00:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>PAI</building_abbr>
+          <building_name>T. S. Painter Hall</building_name>
+        </building>
+        <floor>5</floor>
+        <room>60</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54305</unique_number>
+      <name>Software Engineering</name>
+      <description>Introduction to current knowledge, techniques, and theories in large software system design and development.</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>373</short_number>
+      </course_number>
+      <semester>Spring</semester>
+      <year>2010</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>13:00:00</start_time>
+          <end_time>14:00:00</end_time>
+          <day>Monday</day>
+          <day>Wednesday</day>
+          <day>Friday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>GAR</building_abbr>
+            <building_name>Garrison Hall</building_name>
+          </building>
+          <floor>0</floor>
+          <room>132</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Data Sharing in Scientific Simulations</title>
+      <publish_info>
+        <publisher>Computing in Science and Engineering</publisher>
+        <publish_date>2004-06-01</publish_date>
+        <article>
+          <journal>Computing in Science and Engineering</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Glenn</first_name>
+        <middle_name></middle_name>
+        <last_name>Downing</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>System and Method for Initializing Variables in an Object-Oriented Program</title>
+      <publish_info>
+        <publisher>U.S. Patent No. 6,708,181</publisher>
+        <publish_date>1998-03-01</publish_date>
+        <article>
+          <journal>U.S. Patent No. 6,708,181</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Glenn</first_name>
+        <middle_name></middle_name>
+        <last_name>Downing</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Being Lazy About Global-Object Initialization</title>
+      <publish_info>
+        <publisher>Journal of Object-Oriented Programming</publisher>
+        <publish_date>1996-09-01</publish_date>
+        <article>
+          <journal>Journal of Object-Oriented Programming</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Glenn</first_name>
+        <middle_name></middle_name>
+        <last_name>Downing</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+      </building>
+      <floor>2</floor>
+      <room>124</room>
+    </office>
+    <title>Lecturer</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Jayadev</first_name>
+      <middle_name></middle_name>
+      <last_name>Misra</last_name>
+      <suffix></suffix>
+    </name>
+    <username>misra</username>
+    <email>misra@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~misra/</url>
+      <group></group>
+      <author>
+        <first_name>Jayadev</first_name>
+      <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>home</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>3459490</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4719550</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4717316</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>fax</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4718885</number>
+    </phone_number>
+    <research_area>Distributed Computing</research_area>
+    <research_area>Formal Methods in Practice</research_area>
+    <research_area>Design of Synchronous and Asynchronous Systems</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1969</date_awarded>
+      <institution>Indian Institute of Technology</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Electrical Engineering</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1972</date_awarded>
+      <institution>Johns Hopkins University</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <award>
+      <name>John Simon Guggenheim Fellow</name>
+      <date_awarded>1989</date_awarded>
+    </award>
+    <class>
+      <unique_number>54160</unique_number>
+      <name>Theory in Programming Practice</name>
+      <description>Application of program-analysis theory to program design. Methodologies for large-scale program design. Designed to help students bring together theoretical and programming skills. Computer Sciences 337 and 337H may not both be counted.</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>337</short_number>
+      </course_number>
+      <semester>Spring</semester>
+      <year>2009</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>14:00:00</start_time>
+          <end_time>15:30:00</end_time>
+          <day>Monday</day>
+          <day>Wednesday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>UTC</building_abbr>
+            <building_name>University Teaching Center</building_name>
+          </building>
+          <floor>3</floor>
+          <room>110</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>A Discipline of Multiprogramming: Programming Theory for Distributed Applications</title>
+      <publish_info>
+        <publisher>Springer</publisher>
+        <publish_date>2001-06-01</publish_date>
+        <ISBN>0387952063</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Parallel Program Design: A Foundation</title>
+      <publish_info>
+        <publisher>Addison-Wesley Pub (Sd)</publisher>
+        <publish_date>1988-11-01</publish_date>
+        <ISBN>0201058669</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Verified software: Theories, Tools, Experiments</title>
+      <publish_info>
+        <publisher>Springer Verlag</publisher>
+        <publish_date>2005-07-01</publish_date>
+        <article>
+          <journal>Springer Verlag</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Theory of Hints in Model Checking</title>
+      <publish_info>
+        <publisher>Springer Verlag</publisher>
+        <publish_date>2003-01-01</publish_date>
+        <article>
+          <journal>Springer Verlag</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Derivation of a Parallel String Matching Algorithm</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>2003-01-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Orchestrating Computations on the World-wide Web</title>
+      <publish_info>
+        <publisher>Proceedings of the Euro-Par 2002</publisher>
+        <publish_date>2002-08-01</publish_date>
+        <article>
+          <journal>Proceedings of the Euro-Par 2002</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Simple, Object-based View of Multiprogramming</title>
+      <publish_info>
+        <publisher>Formal Methods in System Design</publisher>
+        <publish_date>2002-01-01</publish_date>
+        <article>
+          <journal>Formal Methods in System Design</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Designing a Calculational Proof of Cantor's Theorem</title>
+      <publish_info>
+        <publisher>American Mathematical Monthly</publisher>
+        <publish_date>2001-05-01</publish_date>
+        <article>
+          <journal>American Mathematical Monthly</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Walk over the Shortest Path: Dijkstra's Algorithm Viewed as Fixed-Point Computation</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>2001-02-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Maximally Concurrent Programs</title>
+      <publish_info>
+        <publisher>Formal Aspects of Computing</publisher>
+        <publish_date>2000-01-01</publish_date>
+        <article>
+          <journal>Formal Aspects of Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>An Object Model for Multiprogramming</title>
+      <publish_info>
+        <publisher>Springer-Verlag</publisher>
+        <publish_date>1998-01-01</publish_date>
+        <article>
+          <journal>Springer-Verlag</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Proof of a Real-Time Mutual-Exclusion Algorithm</title>
+      <publish_info>
+        <publisher>Parallel Processing Letters</publisher>
+        <publish_date>2000-01-01</publish_date>
+        <article>
+          <journal>Parallel Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A logic for Concurrent Programming (in two parts): Safety and Progress</title>
+      <publish_info>
+        <publisher>Journal of Computer and Software Engineering</publisher>
+        <publish_date>1995-01-01</publish_date>
+        <article>
+          <journal>Journal of Computer and Software Engineering</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Powerlist: A Structure for Parallel Recursion</title>
+      <publish_info>
+        <publisher>TOPLAS</publisher>
+        <publish_date>1994-11-01</publish_date>
+        <article>
+          <journal>TOPLAS</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Loosely Coupled Processes</title>
+      <publish_info>
+        <publisher>Future Generations Computer Systems 8</publisher>
+        <publish_date>1992-01-01</publish_date>
+        <article>
+          <journal>Future Generations Computer Systems 8</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Constructive Proof of Vizing's Theorem</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1992-01-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Phase Synchronization</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1991-01-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Equational Reasoning About Nondeterministic Processes</title>
+      <publish_info>
+        <publisher>Formal Aspects of Computing</publisher>
+        <publish_date>1990-01-01</publish_date>
+        <article>
+          <journal>Formal Aspects of Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Specifying Concurrent Objects as Communicating Processes</title>
+      <publish_info>
+        <publisher>Science of Computer Programming 14</publisher>
+        <publish_date>1990-01-01</publish_date>
+        <article>
+          <journal>Science of Computer Programming 14</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Proofs of Distributed Algorithms:  An Exercise</title>
+      <publish_info>
+        <publisher>Developments in Concurrency and Communication, U.T. Year of Programming Series</publisher>
+        <publish_date>1990-01-01</publish_date>
+        <article>
+          <journal>Developments in Concurrency and Communication, U.T. Year of Programming Series</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Specification Structuring,</title>
+      <publish_info>
+        <publisher>Proc. Belgian FNRS</publisher>
+        <publish_date>1990-01-01</publish_date>
+        <article>
+          <journal>Proc. Belgian FNRS</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Foundation of Parallel Programming</title>
+      <publish_info>
+        <publisher>NATO ASI Series</publisher>
+        <publish_date>1989-01-01</publish_date>
+        <article>
+          <journal>NATO ASI Series</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Simple Proof of a Simple Consensus Algorithm</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1989-01-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Message Based Approach to Discrete Event Simulation</title>
+      <publish_info>
+        <publisher>IEEE TSE</publisher>
+        <publish_date>1987-06-01</publish_date>
+        <article>
+          <journal>IEEE TSE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Systolic Algorithms as Programs</title>
+      <publish_info>
+        <publisher>Distributed Computing</publisher>
+        <publish_date>1986-01-01</publish_date>
+        <article>
+          <journal>Distributed Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>An Example of Stepwise Refinement of Distributed Programs: Quiescence Detection</title>
+      <publish_info>
+        <publisher>ACM Transactions on Programming Languages and Systems</publisher>
+        <publish_date>1986-07-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Programming Languages and Systems</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Axioms for Memory Access in Asynchronous Hardware</title>
+      <publish_info>
+        <publisher>ACM Transactions on Programming Languages and Systems</publisher>
+        <publish_date>1986-01-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Programming Languages and Systems</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Distributed Discrete Event Simulation </title>
+      <publish_info>
+        <publisher>Computing Surveys</publisher>
+        <publish_date>1986-03-01</publish_date>
+        <article>
+          <journal>Computing Surveys</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>How Processes Learn</title>
+      <publish_info>
+        <publisher>Journal of Distributed Computing</publisher>
+        <publish_date>1986-01-01</publish_date>
+        <article>
+          <journal>Journal of Distributed Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>The Drinking Philosophers Problem</title>
+      <publish_info>
+        <publisher>ACM Transactions on Programming Languages and Systems</publisher>
+        <publish_date>1984-10-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Programming Languages and Systems</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Detecting Termination of Distributed Computations Using Markers</title>
+      <publish_info>
+        <publisher>Proc. of PODC</publisher>
+        <publish_date>1983-08-01</publish_date>
+        <article>
+          <journal>Proc. of PODC</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Distributed Deadlock Detection</title>
+      <publish_info>
+        <publisher>ACM Transactions on Computer Systems</publisher>
+        <publish_date>1983-05-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Computer Systems</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Distributed Computation on Graphs: Shortest Path Algorithms</title>
+      <publish_info>
+        <publisher>ACM Transactions on Programming Languages and Systems</publisher>
+        <publish_date>1982-11-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Programming Languages and Systems</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Distributed Graph Algorithm: Knot Detection</title>
+      <publish_info>
+        <publisher>Communications of the ACM</publisher>
+        <publish_date>1982-10-01</publish_date>
+        <article>
+          <journal>Communications of the ACM</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Proving Safety and Liveness of Communicating Processes With Examples</title>
+      <publish_info>
+        <publisher>Proceedings of the first ACM SIGACT-SIGOPS symposium on Principles of distributed computing</publisher>
+        <publish_date>1982-08-01</publish_date>
+        <article>
+          <journal>Proceedings of the first ACM SIGACT-SIGOPS symposium on Principles of distributed computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Distributed Algorithm for Detecting Resource Deadlocks in Distributed Systems</title>
+      <publish_info>
+        <publisher>Proceedings of the first ACM SIGACT-SIGOPS symposium on Principles of distributed computing</publisher>
+        <publish_date>1986-01-01</publish_date>
+        <article>
+          <journal>Proceedings of the first ACM SIGACT-SIGOPS symposium on Principles of distributed computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Finding Repeated Elements</title>
+      <publish_info>
+        <publisher>Science of Computer Programming</publisher>
+        <publish_date>1982-01-01</publish_date>
+        <article>
+          <journal>Science of Computer Programming</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Termination Detection of Diffusing Computations in Communicating Sequential Processes</title>
+      <publish_info>
+        <publisher>CACM</publisher>
+        <publish_date>1982-01-01</publish_date>
+        <article>
+          <journal>CACM</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Proofs of Networks of Processes</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1981-07-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Asynchronous Distributed Simulation via a Sequence of Parallel Computations</title>
+      <publish_info>
+        <publisher>CACM</publisher>
+        <publish_date>1981-04-01</publish_date>
+        <article>
+          <journal>CACM</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>An Exercise in Program Explanation</title>
+      <publish_info>
+        <publisher>CACM</publisher>
+        <publish_date>1981-01-01</publish_date>
+        <article>
+          <journal>CACM</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Simple Model of Distributed Programs Based on Implementation-hiding and Process Autonomy</title>
+      <publish_info>
+        <publisher>ACM SIGPLAN Notices</publisher>
+        <publish_date>1980-07-01</publish_date>
+        <article>
+          <journal>ACM SIGPLAN Notices</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Deadlock Absence Proofs for Networks of Communicating Processes</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1979-11-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Distributed Simulation: A Case Study in Design and Verification of Distributed Programs</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1979-09-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Space-Time Trade off in Implementing Certain Set Operations</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1979-02-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Distributed Simulation of Networks</title>
+      <publish_info>
+        <publisher>Computer Networks</publisher>
+        <publish_date>1979-01-01</publish_date>
+        <article>
+          <journal>Computer Networks</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Linear Sieve Algorithm for Finding Prime Numbers</title>
+      <publish_info>
+        <publisher>CACM</publisher>
+        <publish_date>1978-12-01</publish_date>
+        <article>
+          <journal>CACM</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Some Aspects of the Verification of Loop Computations</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1978-11-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>An Approach to Formal Definitions and Proofs of Programming Principles</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1978-09-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Assertion Graphs for Verifying and Synthesizing Programs</title>
+      <publish_info>
+        <publisher>Technical Report</publisher>
+        <publish_date>1978-08-01</publish_date>
+        <article>
+          <journal>Technical Report</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Technique of Algorithm Construction on Sequences</title>
+      <publish_info>
+        <publisher>SIAM Journal on Computing</publisher>
+        <publish_date>1977-12-01</publish_date>
+        <article>
+          <journal>SIAM Journal on Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Prospects and Limitations of Automatic Assertion Generation for Loop Programs</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1978-01-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Linear Tree Partitioning Algorithm</title>
+      <publish_info>
+        <publisher>SIAM Journal on Computing</publisher>
+        <publish_date>1977-03-01</publish_date>
+        <article>
+          <journal>SIAM Journal on Computing</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Optimal Chain Partitions of Trees</title>
+      <publish_info>
+        <publisher>Information Processing Letters</publisher>
+        <publish_date>1975-09-01</publish_date>
+        <article>
+          <journal>Information Processing Letters</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Remark on Algorithm 246[Z]</title>
+      <publish_info>
+        <publisher>ACM Transactions on Mathematical Software</publisher>
+        <publish_date>1975-09-01</publish_date>
+        <article>
+          <journal>ACM Transactions on Mathematical Software</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Proving Loop Programs</title>
+      <publish_info>
+        <publisher>IEEE</publisher>
+        <publish_date>1975-03-01</publish_date>
+        <article>
+          <journal>IEEE</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Jayadev</first_name>
+        <middle_name></middle_name>
+        <last_name>Misra</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>1976-01-01</date>
+        <name>Design Automation Conference</name>
+        <conf_location>San Francisco, California</conf_location>
+      </conference>
+      <presentation_title>A Principle of Algorithm Design on Limited Problem Domain</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>1976-10-01</date>
+        <name>International Conference on Software Engineering</name>
+        <conf_location>San Francisco, California</conf_location>
+      </conference>
+      <presentation_title>Some Classes of Naturally Provable Programs</presentation_title>
+    </conference>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+      </building>
+      <floor>3</floor>
+      <room>102</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Inderjit</first_name>
+      <middle_name></middle_name>
+      <last_name>Dhillon</last_name>
+      <suffix></suffix>
+    </name>
+    <username>inderjit</username>
+    <email>inderjit@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~inderjit/index.shtml</url>
+      <group></group>
+      <author>
+        <first_name>Inderjit</first_name>
+      <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>9725</number>
+    </phone_number>
+    <research_area>Data Mining</research_area>
+    <research_area>Machine Learning</research_area>
+    <research_area>Numerical Linera Algebra</research_area>
+    <research_area>Scientific Computing</research_area>
+    <research_area>Bioinformatics</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1997</date_awarded>
+      <institution>University of California at Berkeley</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <award>
+      <name>NSF Career Award</name>
+      <date_awarded>2001</date_awarded>
+    </award>
+    <award>
+      <name>University Research Excellence Award</name>
+      <date_awarded>2005</date_awarded>
+    </award>
+    <award>
+      <name>SIAG/LA Prize</name>
+      <date_awarded>2006</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>11:00:00</start_time>
+        <end_time>12:00:00</end_time>
+        <day>Tuesday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>ACE</building_abbr>
+          <building_name>Applied Computational Engineering and Sciences</building_name>
+        </building>
+        <floor>2</floor>
+        <room>332</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54310</unique_number>
+      <name>Introduction to Data Mining</name>
+      <description>Data mining is the automated discovery of interesting patterns and relationships in massive data sets. </description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>378</short_number>
+      </course_number>
+      <semester>Fall</semester>
+      <year>2009</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>09:30:00</start_time>
+          <end_time>11:00:00</end_time>
+          <day>Tuesday</day>
+          <day>Thursday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>RLM</building_abbr>
+            <building_name>Robert Lee Moore Hall</building_name>
+          </building>
+          <floor>7</floor>
+          <room>116</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Matrix Completion from Power-Law Distributed Samples</title>
+      <publish_info>
+        <publisher>Proceedings of the Neural Information Processing Systems Conference (NIPS)</publisher>
+        <publish_date>2009-12-01</publish_date>
+        <article>
+          <journal>Proceedings of the Neural Information Processing Systems Conference (NIPS)</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Clustering with Multiple Graphs</title>
+      <publish_info>
+        <publisher>Proceedings of the IEEE International Conference on Data Mining (ICDM)</publisher>
+        <publish_date>2009-12-01</publish_date>
+        <article>
+          <journal>Proceedings of the IEEE International Conference on Data Mining (ICDM)</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Spatio-Temporal Approach to Collaborative Filtering</title>
+      <publish_info>
+        <publisher>Proceedings of the 3rd ACM Conference on Recommender Systems(RecSys)</publisher>
+        <publish_date>2009-10-01</publish_date>
+        <article>
+          <journal>Proceedings of the 3rd ACM Conference on Recommender Systems(RecSys)</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Geometry-aware Metric Learning</title>
+      <publish_info>
+        <publisher>Proceedings of the 26th International Conference on Machine Learning(ICML)</publisher>
+        <publish_date>2009-06-01</publish_date>
+        <article>
+          <journal>Proceedings of the 26th International Conference on Machine Learning(ICML)</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>A Scalable Framework for Discovering Coherent Co-clusters in Noisy Data</title>
+      <publish_info>
+        <publisher>Proceedings of the 26th International Conference on Machine Learning(ICML)</publisher>
+        <publish_date>2009-06-01</publish_date>
+        <article>
+          <journal>Proceedings of the 26th International Conference on Machine Learning(ICML)</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Convex Perturbations for Scalable Semidefinite Programming</title>
+      <publish_info>
+        <publisher>Proceedings of the 13th International Conference on Artificial Intelligence and Statistics </publisher>
+        <publish_date>2009-04-01</publish_date>
+        <article>
+          <journal>Proceedings of the 13th International Conference on Artificial Intelligence and Statistics </journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Low-Rank Kernel Learning with Bregman Matrix Divergences</title>
+      <publish_info>
+        <publisher>Journal of Machine Learning Research (JMLR), vol. 10</publisher>
+        <publish_date>2009-02-01</publish_date>
+        <article>
+          <journal>Journal of Machine Learning Research (JMLR), vol. 10</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Semi-Supervised Graph Clustering: A Kernel Approach</title>
+      <publish_info>
+        <publisher>Machine Learning, vol. 74:1</publisher>
+        <publish_date>2009-01-01</publish_date>
+        <article>
+          <journal>Machine Learning, vol. 74:1</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Inderjit</first_name>
+        <middle_name></middle_name>
+        <last_name>Dhillon</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>2007-01-01</date>
+        <name>Mathematical Programming in Data Mining and Machine Learning</name>
+        <conf_location>Banff International Research Station, Canada</conf_location>
+      </conference>
+      <presentation_title>Learning with Bregman Divergences</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-07-01</date>
+        <name>Joint GAMM-SIAM Conference on Applied Linear Algebra</name>
+        <conf_location>University of Dusseldorf, Germany</conf_location>
+      </conference>
+      <presentation_title>Orthogonal Eigenvectors and Gram-Schmidt</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2002-09-01</date>
+        <name>bla</name>
+        <conf_location>bla</conf_location>
+      </conference>
+      <presentation_title>bla</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-06-01</date>
+        <name>Workshop on Algorithms for Modern Massive Data Sets</name>
+        <conf_location>Stanford University and Yahoo! Research</conf_location>
+      </conference>
+      <presentation_title>Kernel Learning with Bregman</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2005-05-01</date>
+        <name>Householder Symposium XVI</name>
+        <conf_location>Seven Springs, PA</conf_location>
+      </conference>
+      <presentation_title>Matrix Nearness Problems using Bregman Divergences</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2004-02-01</date>
+        <name>N/A</name>
+        <conf_location>University of Illinois, Urbana-Champaign</conf_location>
+      </conference>
+      <presentation_title>Fast Eigenvalue/Eigenvector Computation for Dense Symmetric Matrices</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2004-03-01</date>
+        <name>Data Mining Seminar Series</name>
+        <conf_location>University of Texas, Austin</conf_location>
+      </conference>
+      <presentation_title>Information Theoretic Clustering, Co-clustering and Matrix Approximations</presentation_title>
+    </conference>
+    <advisee>
+      <name>
+        <first_name>Dongmin</first_name>
+        <last_name>Kim</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Inderjit</first_name>
+          <last_name>Dhillon</last_name>
+        </name>
+        <username>inderjit</username>
+        <email>inderjit@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>M</first_name>
+        <last_name>Sustik</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Inderjit</first_name>
+          <last_name>Dhillon</last_name>
+        </name>
+        <username>inderjit</username>
+        <email>inderjit@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Wei</first_name>
+        <last_name>Tang</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Inderjit</first_name>
+          <last_name>Dhillon</last_name>
+        </name>
+        <username>inderjit</username>
+        <email>inderjit@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>ACE</building_abbr>
+        <building_name>Applied Computational Engineering and Sciences</building_name>
+      </building>
+      <floor>2</floor>
+      <room>332</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Ernest</first_name>
+      <middle_name></middle_name>
+      <last_name>Emerson</last_name>
+      <suffix></suffix>
+    </name>
+    <username>ernest</username>
+    <email>emerson@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~emerson/</url>
+      <group></group>
+      <author>
+        <first_name>Ernest</first_name>
+      <middle_name></middle_name>
+        <last_name>Emerson</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>471</area_code>
+      <number>9537</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>fax</phone_t>
+      <country_code>1</country_code>
+      <area_code>471</area_code>
+      <number>8885</number>
+    </phone_number>
+    <research_area>Formal Methods</research_area>
+    <research_area>Logics and Semantics of Programs</research_area>
+    <research_area>Concurrent and Distributed Computing</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1976</date_awarded>
+      <institution>University of Texas at Austin</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Mathematics</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1981</date_awarded>
+      <institution>Harvard University</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Applied Mathematics</specialization>
+    </degree>
+    <award>
+      <name>AMC Turing Award</name>
+      <date_awarded>2007</date_awarded>
+    </award>
+    <award>
+      <name>ACM Kanellakis Prize</name>
+      <date_awarded>1998</date_awarded>
+    </award>
+    <award>
+      <name>CMU Newell Medal</name>
+      <date_awarded>1999</date_awarded>
+    </award>
+    <award>
+      <name>IEEE LICS'06 Test-of-Time Award</name>
+      <date_awarded>2006</date_awarded>
+    </award>
+    <class>
+      <unique_number>55855</unique_number>
+      <name>Formal Verification and Semantics</name>
+      <description>This course will survey the classic theory of Formal Verification, including the work of Floyd, Hoare, and Dijkstra. </description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>388S</short_number>
+      </course_number>
+      <semester>Fall</semester>
+      <year>2008</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>17:00:00</start_time>
+          <end_time>18:30:00</end_time>
+          <day>Tuesday</day>
+          <day>Thursday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>WEL</building_abbr>
+            <building_name>Welch</building_name>
+          </building>
+          <floor>3</floor>
+          <room>402</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Model Checking and the Mu-calculus</title>
+      <publish_info>
+        <publisher>American Mathematical Society Press</publisher>
+        <publish_date>1997-01-01</publish_date>
+        <ISBN>000000000X</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Ernest</first_name>
+        <middle_name></middle_name>
+        <last_name>Emerson</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Synthesis of Fault-Tolerant Concurrent Programs</title>
+      <publish_info>
+        <publisher>ACM TOPLAS. vol. 26. no. 1</publisher>
+        <publish_date>2004-01-01</publish_date>
+        <article>
+          <journal>ACM TOPLAS. vol. 26. no. 1</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Ernest</first_name>
+        <middle_name></middle_name>
+        <last_name>Emerson</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>On Combining Symmetry Reduction and Symbolic Representation for Efficient Model Checking</title>
+      <publish_info>
+        <publisher>CHARME 2003</publisher>
+        <publish_date>2003-01-01</publish_date>
+        <article>
+          <journal>CHARME 2003</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Ernest</first_name>
+        <middle_name></middle_name>
+        <last_name>Emerson</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>On Reasoning about Rings</title>
+      <publish_info>
+        <publisher>IJFCS Vol. 14, No. 4</publisher>
+        <publish_date>2003-08-01</publish_date>
+        <article>
+          <journal>IJFCS Vol. 14, No. 4</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Ernest</first_name>
+        <middle_name></middle_name>
+        <last_name>Emerson</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>1985-09-01</date>
+        <name>Conference on Logics of Programs</name>
+        <conf_location>New York, NY</conf_location>
+      </conference>
+      <presentation_title>Automata, Tableaux, and Temporal Logics</presentation_title>
+    </conference>
+    <advisee>
+      <name>
+        <first_name>Jyotirmoy</first_name>
+        <last_name>Deshmukh</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Ernest</first_name>
+          <last_name>Emerson</last_name>
+        </name>
+        <username>ernest</username>
+        <email>emerson@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Roopsha</first_name>
+        <last_name>Samanta</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Ernest</first_name>
+          <last_name>Emerson</last_name>
+        </name>
+        <username>ernest</username>
+        <email>emerson@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>Taylor Hall</building_name>
+      </building>
+      <floor>2</floor>
+      <room>124</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Mike</first_name>
+      <middle_name></middle_name>
+      <last_name>Scott</last_name>
+      <suffix></suffix>
+    </name>
+    <username>scottm</username>
+    <email>scottm@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~scottm/</url>
+      <group></group>
+      <author>
+        <first_name>Mike</first_name>
+      <middle_name></middle_name>
+        <last_name>Scott</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4719785</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>fax</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4718885</number>
+    </phone_number>
+    <research_area>Computer Science Education</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1998</date_awarded>
+      <institution>Rensselaer Polytechnic Institute</institution>
+      <degree_t>Master's Degree</degree_t>
+      <specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1990</date_awarded>
+      <institution>Stanford University</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Industrial Engineering</specialization>
+    </degree>
+    <award>
+      <name>College of Natural Sciences 2007 - 2008 Sustained Outreach Award</name>
+      <date_awarded>2009</date_awarded>
+    </award>
+    <award>
+      <name>Promoted to Senior Lecturer</name>
+      <date_awarded>2007</date_awarded>
+    </award>
+    <award>
+      <name>College of Natural Sciences 2005 - 2006 Sustained Outreach Award</name>
+      <date_awarded>2006</date_awarded>
+    </award>
+    <award>
+      <name>College of Natural Sciences 2004 - 2005 Advisory Council Teaching Excellence Award</name>
+      <date_awarded>2005</date_awarded>
+    </award>
+    <award>
+      <name>Natural Sciences Council 2005 Faculty Service Award</name>
+      <date_awarded>2005</date_awarded>
+    </award>
+    <award>
+      <name>Navy Commendation Medal</name>
+      <date_awarded>1997</date_awarded>
+    </award>
+    <award>
+      <name>Navy Achievement Medal</name>
+      <date_awarded>1993</date_awarded>
+    </award>
+    <award>
+      <name>Navy Achievement Medal</name>
+      <date_awarded>1994</date_awarded>
+    </award>
+    <award>
+      <name>Navy Achievement Medal</name>
+      <date_awarded>1995</date_awarded>
+    </award>
+    <award>
+      <name>Phi Beta Kappa, academic honor society</name>
+      <date_awarded>1990</date_awarded>
+    </award>
+    <award>
+      <name>Tau Beta Pi, engineering honor society</name>
+      <date_awarded>1989</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>15:15:00</start_time>
+        <end_time>16:45:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <day>Friday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>PAI</building_abbr>
+          <building_name>Painter Hall</building_name>
+        </building>
+        <floor>5</floor>
+        <room>38</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54735</unique_number>
+      <name>Elements of Graphics and Visualization</name>
+      <description>Basics of 2 and 3 dimensional computer graphics systems, modeling and rendering, and selected graphics software APIs.</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>324E</short_number>
+      </course_number>
+      <semester>Fall</semester>
+      <year>2009</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>11:00:00</start_time>
+          <end_time>11:50:00</end_time>
+          <day>Monday</day>
+          <day>Wednesday</day>
+          <day>Friday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>CPE</building_abbr>
+            <building_name>Chemical and Petroleum Engineering</building_name>
+          </building>
+          <floor>2</floor>
+          <room>220</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>The Limitations of Current Object Oriented Dynamic Modeling Technique</title>
+      <publish_info>
+        <publisher>Proceedings of the 14th Annual Rensselaer at Hartford Computer Science Conference</publisher>
+        <publish_date>1998-04-01</publish_date>
+        <article>
+          <journal>Proceedings of the 14th Annual Rensselaer at Hartford Computer Science Conference</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Mike</first_name>
+        <middle_name></middle_name>
+        <last_name>Scott</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>2008-02-01</date>
+        <name>Texas Computer Education Association Annual Convention, High School CS Teachers SIG</name>
+        <conf_location>Austin, Texas</conf_location>
+      </conference>
+      <presentation_title>Riding the Roller Coaster. Reflections on Ten Years of Computer Science Education</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2007-10-01</date>
+        <name>UIL Student Activities Conference</name>
+        <conf_location>University of Texas, Austin, TX</conf_location>
+      </conference>
+      <presentation_title>How to Run a Hands on Programming Contest" and "Data Structures and Algorithms"</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2007-02-01</date>
+        <name>Texas Computer Education Association Annual Convention</name>
+        <conf_location>Austin, Texas</conf_location>
+      </conference>
+      <presentation_title>AP Computer Science Update</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-07-01</date>
+        <name>Texas Lutheran University Advanced Placement Computer Science Summer Workshop</name>
+        <conf_location>Seguin, TX</conf_location>
+      </conference>
+      <presentation_title>Creating and Using Sets and Maps in Java</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-07-01</date>
+        <name>The UIL Capital Conference</name>
+        <conf_location>USA</conf_location>
+      </conference>
+      <presentation_title>Computer Science and UIL: Specifics about the contest and an overview of the field of Computer Science</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2006-02-01</date>
+        <name>Texas Computer Education Association Annual Convention</name>
+        <conf_location>Austin Texas</conf_location>
+      </conference>
+      <presentation_title>The University of Texas at Austin Computer Science Department Road Show</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2005-09-01</date>
+        <name>UIL Student Activities Conference</name>
+        <conf_location>Texas Tech University, Lubbock, TX</conf_location>
+      </conference>
+      <presentation_title>New topics in the UIL Computer Science Contest</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2003-09-01</date>
+        <name>UIL Student Activities Conference</name>
+        <conf_location>Texas Tech University, Lubbock, TX</conf_location>
+      </conference>
+      <presentation_title>Java and the UIL Computer Science Contest</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2003-02-01</date>
+        <name>Texas Computer Education Association Annual Convention</name>
+        <conf_location>Austin Texas</conf_location>
+      </conference>
+      <presentation_title>The Transition from C++ to Java in Advanced Placement Computer Science</presentation_title>
+    </conference>
+    <conference>
+      <conference>
+        <date>2002-10-01</date>
+        <name>College Board 2 Day Advanced Placement Computer Science workshop</name>
+        <conf_location>Plano High School, Plano, TX</conf_location>
+      </conference>
+      <presentation_title>"From C++ to Java" and "Object Oriented Programming: Fundamentals and Teaching the Concepts"</presentation_title>
+    </conference>
+    <office>
+      <building>
+        <building_abbr>PAI</building_abbr>
+        <building_name>Painter Hall</building_name>
+      </building>
+      <floor>5</floor>
+      <room>68</room>
+    </office>
+    <title>Senior Lecturer</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Chandrajit</first_name>
+      <middle_name></middle_name>
+      <last_name>Bajaj</last_name>
+      <suffix></suffix>
+    </name>
+    <username>bajaj</username>
+    <email>bajaj@cs.utexas.edu</email>
+    <website>
+      <url>http://userweb.cs.utexas.edu/~bajaj/</url>
+      <group></group>
+      <author>
+        <first_name>Chandrajit</first_name>
+      <middle_name></middle_name>
+        <last_name>Bajaj</last_name>
+        <suffix></suffix>
+      </author>
+    </website>
+    <phone_number>
+      <phone_t>work</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4718870</number>
+    </phone_number>
+    <phone_number>
+      <phone_t>fax</phone_t>
+      <country_code>1</country_code>
+      <area_code>512</area_code>
+      <number>4710982</number>
+    </phone_number>
+    <research_area>Computational Biology</research_area>
+    <research_area>Geometric Modeling</research_area>
+    <research_area>Image Processing</research_area>
+    <research_area>Computational Geometry</research_area>
+    <research_area>Computer Graphics</research_area>
+    <research_area>Compression</research_area>
+    <research_area>Mesh Generation</research_area>
+    <research_area>Scientific Computation</research_area>
+    <research_area>Visualization</research_area>
+    <research_group></research_group>
+    <degree>
+      <date_awarded>1984</date_awarded>
+      <institution>Cornell University</institution>
+      <degree_t>Doctoral Degree</degree_t>
+      <specialization>Computer Sciences</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1983</date_awarded>
+      <institution>Cornell University</institution>
+      <degree_t>Master's Degree</degree_t>
+      <specialization>Computer Sciences</specialization>
+    </degree>
+    <degree>
+      <date_awarded>1980</date_awarded>
+      <institution>Indian Institute of Technology</institution>
+      <degree_t>Bachelor's Degree</degree_t>
+      <specialization>Electrical Engineering</specialization>
+    </degree>
+    <award>
+      <name>National Science Talent Scholarship</name>
+      <date_awarded>1975</date_awarded>
+    </award>
+    <award>
+      <name>Dean's Honor Roll, IIT Delhi</name>
+      <date_awarded>1975</date_awarded>
+    </award>
+    <award>
+      <name>Frame Technology Excellence in Publishing Award</name>
+      <date_awarded>1993</date_awarded>
+    </award>
+    <award>
+      <name>Purdue University, Provost's Research Center Initiation Award</name>
+      <date_awarded>1994</date_awarded>
+    </award>
+    <award>
+      <name>Association of Computing Machinery, Student Chapter, Appreciation Certificate</name>
+      <date_awarded>2001</date_awarded>
+    </award>
+    <award>
+      <name>>Association of Computing Machinery, Student Chapter, Recognition of Service Award</name>
+      <date_awarded>2002</date_awarded>
+    </award>
+    <award>
+      <name>University of Texas, Faculty Research Assignment Award 2004, Dean Research Assignment Award</name>
+      <date_awarded>2004</date_awarded>
+    </award>
+    <office_hours>
+      <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>15:00:00</start_time>
+        <end_time>16:00:00</end_time>
+        <day>Wednesday</day>
+        <start_date>2001-01-01</start_date>
+        <end_date>2010-05-18</end_date>
+      </schedule>
+      <location>
+        <building>
+          <building_abbr>ACE</building_abbr>
+          <building_name>Applied Computational Engineering and Sciences</building_name>
+        </building>
+        <floor>2</floor>
+        <room>324A</room>
+      </location>
+    </office_hours>
+    <class>
+      <unique_number>54255</unique_number>
+      <name>Interactive Computer Graphics</name>
+      <description>Interactive Computer Graphics</description>
+      <course_number>
+        <field_of_study>CS</field_of_study>
+        <short_number>354</short_number>
+      </course_number>
+      <semester>Spring</semester>
+      <year>2010</year>
+      <staff>
+        <person>
+          <first_name>NA</first_name>
+          <middle_name></middle_name>
+          <last_name>NA</last_name>
+          <suffix></suffix>
+        </person>
+        <hours>
+          <event_type>Meeting</event_type>
+          <schedule>
+            <start_time>00:00:00</start_time>
+            <end_time>00:00:00</end_time>
+            <day>Monday</day>
+            <start_date>2001-01-01</start_date>
+            <end_date>2010-05-18</end_date>
+          </schedule>
+          <location>
+            <building>
+              <building_abbr>AAA</building_abbr>
+              <building_name>NA</building_name>
+            </building>
+            <floor>G</floor>
+            <room>0</room>
+          </location>
+        </hours>
+      </staff>
+      <schedule>
+        <event_type>Meeting</event_type>
+        <schedule>
+          <start_time>11:00:00</start_time>
+          <end_time>12:15:00</end_time>
+          <day>Tuesday</day>
+          <day>Thursday</day>
+          <start_date>2001-01-01</start_date>
+          <end_date>2010-05-18</end_date>
+        </schedule>
+        <location>
+          <building>
+            <building_abbr>JES</building_abbr>
+            <building_name>Jester</building_name>
+          </building>
+          <floor>3</floor>
+          <room>3A</room>
+        </location>
+      </schedule>
+    </class>
+    <writing>
+      <title>Algebraic Geometry and its Applications</title>
+      <publish_info>
+        <publisher>Springer Verlag</publisher>
+        <publish_date>1995-01-01</publish_date>
+        <ISBN>9781598291262</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Chandrajit</first_name>
+        <middle_name></middle_name>
+        <last_name>Bajaj</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Data Visualization Techniques</title>
+      <publish_info>
+        <publisher>John Wiley and Sons</publisher>
+        <publish_date>1998-01-01</publish_date>
+        <ISBN>9781598291262</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Chandrajit</first_name>
+        <middle_name></middle_name>
+        <last_name>Bajaj</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Introduction to Implicit Surfaces</title>
+      <publish_info>
+        <publisher>Morgan Kaufman Publishers Inc.</publisher>
+        <publish_date>1997-01-01</publish_date>
+        <ISBN>9781598291262</ISBN>
+        <article>
+          <journal></journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>book</writing>
+      <author>
+        <first_name>Chandrajit</first_name>
+        <middle_name></middle_name>
+        <last_name>Bajaj</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <writing>
+      <title>Cryo-Electron Microscopy Data Denoising Based on the Generalized Digitized Total Variation Method</title>
+      <publish_info>
+        <publisher>Far East Journal of Applied Mathematics</publisher>
+        <publish_date>2010-01-01</publish_date>
+        <article>
+          <journal>Far East Journal of Applied Mathematics</journal>
+          <edition></edition>
+        </article>
+      </publish_info>
+      <writing>article</writing>
+      <author>
+        <first_name>Chandrajit</first_name>
+        <middle_name></middle_name>
+        <last_name>Bajaj</last_name>
+        <suffix></suffix>
+      </author>
+    </writing>
+    <conference>
+      <conference>
+        <date>2010-01-01</date>
+        <name>CompIMAGE 2010</name>
+        <conf_location>USA</conf_location>
+      </conference>
+      <presentation_title>Surface-Based Imaging Methods for High-Resolution Functional Magnetic Resonance Imaging</presentation_title>
+    </conference>
+    <advisee>
+      <name>
+        <first_name>Radhakrishna</first_name>
+        <last_name>Bettadapura</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Shun-Chuan</first_name>
+        <last_name>Chen</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Andrew</first_name>
+        <last_name>Gillette</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Ajay</first_name>
+        <last_name>Gopinath</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Bongjune</first_name>
+        <last_name>Kwon</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Alex</first_name>
+        <last_name>Mollere</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Maysam</first_name>
+        <last_name>Moussalem</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Muhibur</first_name>
+        <last_name>Rasheed</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Wenqi</first_name>
+        <last_name>Zhao</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>PhD Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <advisee>
+      <name>
+        <first_name>Bharadwaj</first_name>
+        <last_name>Subramanian</last_name>
+      </name>
+      <username></username>
+      <email>n-a@cs.utexas.edu</email>
+      <status>Master's Student</status>
+      <advisor>
+        <name>
+          <first_name>Chandrajit</first_name>
+          <last_name>Bajaj</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        <title>Professor</title>
+      </advisor>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>ACE</building_abbr>
+        <building_name>Applied Computational Engineering and Sciences</building_name>
+      </building>
+      <floor>2</floor>
+      <room>324A</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+</people>

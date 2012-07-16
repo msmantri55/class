@@ -1,0 +1,17 @@
+<!doctype html>
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+
+		<title>{% block title %}{{ title }}{% endblock %}</title>
+	</head>
+
+	<body>
+		<marquee behavior="alternate" style="margin:0 auto;width:50%;display:block">
+			<img src="http://code.google.com/p/cs373project7/logo?logo_id=1270680276">
+		</marquee>
+		
+		{% block body %}{{ body }}{% endblock %}
+	</body>
+</html>

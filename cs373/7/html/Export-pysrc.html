@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Export</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;Export
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Export-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Export-module.html">Module Export</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">google</tt><tt class="py-op">.</tt><tt class="py-name">appengine</tt><tt class="py-op">.</tt><tt class="py-name">api</tt> <tt class="py-keyword">import</tt> <tt class="py-name">memcache</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">google</tt><tt class="py-op">.</tt><tt class="py-name">appengine</tt><tt class="py-op">.</tt><tt class="py-name">ext</tt> <tt class="py-keyword">import</tt> <tt class="py-name">db</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">google</tt><tt class="py-op">.</tt><tt class="py-name">appengine</tt><tt class="py-op">.</tt><tt class="py-name">ext</tt> <tt class="py-keyword">import</tt> <tt class="py-name">webapp</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">google</tt><tt class="py-op">.</tt><tt class="py-name">appengine</tt><tt class="py-op">.</tt><tt class="py-name">ext</tt><tt class="py-op">.</tt><tt class="py-name">webapp</tt> <tt class="py-keyword">import</tt> <tt class="py-name">template</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">google</tt><tt class="py-op">.</tt><tt class="py-name">appengine</tt><tt class="py-op">.</tt><tt class="py-name">ext</tt><tt class="py-op">.</tt><tt class="py-name">webapp</tt><tt class="py-op">.</tt><tt class="py-name">util</tt> <tt class="py-keyword">import</tt> <tt class="py-name">run_wsgi_app</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">dom</tt><tt class="py-op">.</tt><tt class="py-name">minidom</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Document</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module Faculty3=Faculty3-module.html"><a title="Faculty3" class="py-name" href="#" onclick="return doclink('link-0', 'Faculty3', 'link-0');">Faculty3</a></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cgi</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">etree</tt><tt class="py-op">.</tt><tt class="py-name">ElementTree</tt>  </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="ExportPage"></a><div id="ExportPage-def"><a name="L13"></a><tt class="py-lineno"> 13</tt> <a class="py-toggle" href="#" id="ExportPage-toggle" onclick="return toggle('ExportPage');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="Export.ExportPage-class.html">ExportPage</a> <tt class="py-op">(</tt><tt class="py-base-class">webapp</tt><tt class="py-op">.</tt><tt class="py-base-class">RequestHandler</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ExportPage-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ExportPage-expanded"><a name="ExportPage.get"></a><div id="ExportPage.get-def"><a name="L14"></a><tt class="py-lineno"> 14</tt> <a class="py-toggle" href="#" id="ExportPage.get-toggle" onclick="return toggle('ExportPage.get');">-</a><tt class="py-line">        <tt class="py-keyword">def</tt> <a class="py-def-name" href="Export.ExportPage-class.html#get">get</a> <tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ExportPage.get-collapsed" style="display:none;" pad="+++" indent="++++++++++++"></div><div id="ExportPage.get-expanded"><a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">parent_element</tt><tt class="py-op">,</tt> <tt class="py-param">this_element_name</tt><tt class="py-op">,</tt> <tt class="py-param">db_text_record</tt> <tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">                        <tt class="py-docstring">"""</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">                        creates and appends a text node called this_element_name to parent_element</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">                        with contents of db_text_record</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-docstring">                        </tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">                        Keyword arguments:</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring">                        document the xml document being built</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">                        parent_element the node to which this tag will belong</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">                        this_element_name the name of the node to be created</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">                        db_text_record text to belong with this node</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">                        </tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">                        no return</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">                        """</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">                        <tt class="py-keyword">assert</tt> <tt id="link-1" class="py-name" targets="Variable Faculty3.Degree.type=Faculty3.Degree-class.html#type,Variable Faculty3.Event.type=Faculty3.Event-class.html#type,Variable Faculty3.PhoneNumber.type=Faculty3.PhoneNumber-class.html#type,Variable Faculty3.Writing.type=Faculty3.Writing-class.html#type"><a title="Faculty3.Degree.type
+Faculty3.Event.type
+Faculty3.PhoneNumber.type
+Faculty3.Writing.type" class="py-name" href="#" onclick="return doclink('link-1', 'type', 'link-1');">type</a></tt><tt class="py-op">(</tt><tt class="py-name">this_element_name</tt><tt class="py-op">)</tt> <tt class="py-keyword">is</tt> <tt class="py-name">str</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">                         </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">                        <tt class="py-name">this_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-name">this_element_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">                        <tt class="py-name">parent_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">this_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">                        <tt class="py-name">text_node</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createTextNode</tt><tt class="py-op">(</tt><tt class="py-name">db_text_record</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">                        <tt class="py-name">this_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">text_node</tt><tt class="py-op">)</tt>                      </tt>
+</div><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">         </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_person_optionals</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">                        <tt class="py-docstring">"""</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-docstring">                        append to xml document 'document' optional properties common to </tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">                        a person</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">                        Keyword arguments:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-docstring">                        document the xml document being built</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-docstring">                        person_element the person node to which this optional tags will </tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-docstring">                                belong</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">                        person the DB object corresponding to this person</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">                        </tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">                        no return</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-docstring">                        """</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                        <tt class="py-name">append_websites</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                        <tt class="py-name">append_phones</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">                        <tt class="py-name">append_research_areas</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                        <tt class="py-name">append_research_groups</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                        <tt class="py-name">append_degrees</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                        <tt class="py-name">append_awards</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">                        <tt class="py-name">append_office_hours</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                        <tt class="py-name">append_courses</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                        <tt class="py-name">append_writings</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                        <tt class="py-name">append_conferences</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                        <tt class="py-name">append_advisees</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">                        <tt class="py-name">append_offices</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                         </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_name</tt> <tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                        <tt class="py-name">name_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'name'</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">                        <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">name_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                         </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">name_element</tt><tt class="py-op">,</tt> <tt class="py-string">'first_name'</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Variable Faculty3.Award.name=Faculty3.Award-class.html#name,Variable Faculty3.Building.name=Faculty3.Building-class.html#name,Variable Faculty3.Conference.name=Faculty3.Conference-class.html#name,Variable Faculty3.Course.name=Faculty3.Course-class.html#name,Variable Faculty3.Person.name=Faculty3.Person-class.html#name,Variable Faculty3.Presentation.name=Faculty3.Presentation-class.html#name,Variable Faculty3.ResearchArea.name=Faculty3.ResearchArea-class.html#name,Variable Faculty3.ResearchGroup.name=Faculty3.ResearchGroup-class.html#name,Variable Faculty3.StaffMember.name=Faculty3.StaffMember-class.html#name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-2', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Variable Faculty3.Name.first=Faculty3.Name-class.html#first"><a title="Faculty3.Name.first" class="py-name" href="#" onclick="return doclink('link-3', 'first', 'link-3');">first</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                        <tt id="link-4" class="py-name" targets="Variable Faculty3.Name.middle=Faculty3.Name-class.html#middle"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-4', 'middle', 'link-4');">middle</a></tt> <tt class="py-op">=</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-5', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-6', 'middle', 'link-4');">middle</a></tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt id="link-7" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-7', 'middle', 'link-4');">middle</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">name_element</tt><tt class="py-op">,</tt> <tt class="py-string">'middle_name'</tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-8', 'middle', 'link-4');">middle</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                                         </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">name_element</tt><tt class="py-op">,</tt> <tt class="py-string">'last_name'</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-9', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable Faculty3.Name.last=Faculty3.Name-class.html#last"><a title="Faculty3.Name.last" class="py-name" href="#" onclick="return doclink('link-10', 'last', 'link-10');">last</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                                                         </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                        <tt id="link-11" class="py-name" targets="Variable Faculty3.Name.suffix=Faculty3.Name-class.html#suffix"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-11', 'suffix', 'link-11');">suffix</a></tt> <tt class="py-op">=</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-12', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-13', 'suffix', 'link-11');">suffix</a></tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt id="link-14" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-14', 'suffix', 'link-11');">suffix</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">name_element</tt><tt class="py-op">,</tt> <tt class="py-string">'suffix'</tt><tt class="py-op">,</tt> <tt id="link-15" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-15', 'suffix', 'link-11');">suffix</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_email</tt> <tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">email</tt> <tt class="py-keyword">in</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Variable Faculty3.Person.emails=Faculty3.Person-class.html#emails"><a title="Faculty3.Person.emails" class="py-name" href="#" onclick="return doclink('link-16', 'emails', 'link-16');">emails</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                                <tt class="py-name">email_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'email'</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">email_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                                <tt class="py-name">email_text_node</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createTextNode</tt><tt class="py-op">(</tt><tt class="py-name">email</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                                <tt class="py-name">email_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">email_text_node</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_websites</tt> <tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">faculty</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">                        <tt class="py-name">website_query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method EditPerson.EditPersonPage.get()=EditPerson.EditPersonPage-class.html#get,Method Export.ExportPage.get()=Export.ExportPage-class.html#get,Method Import.ImportPage.get()=Import.ImportPage-class.html#get,Method RunFaculty3.MainPage.get()=RunFaculty3.MainPage-class.html#get,Method ViewPeople.ViewPeoplePage.get()=ViewPeople.ViewPeoplePage-class.html#get,Method ViewPerson.ViewPersonPage.get()=ViewPerson.ViewPersonPage-class.html#get"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-17', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">faculty</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable Faculty3.Person.websites=Faculty3.Person-class.html#websites"><a title="Faculty3.Person.websites" class="py-name" href="#" onclick="return doclink('link-18', 'websites', 'link-18');">websites</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                        <tt class="py-comment">#website_query = db.GqlQuery("SELECT * FROM Website WHERE person = :this_person", this_person=faculty.key())                    </tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-keyword">for</tt> <tt class="py-name">website</tt> <tt class="py-keyword">in</tt> <tt class="py-name">website_query</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">                                <tt class="py-comment"># main tag</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt class="py-name">website_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'website'</tt><tt class="py-op">)</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">website_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">                                <tt class="py-comment">#one url, one group, one or more author</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">website_element</tt><tt class="py-op">,</tt> <tt class="py-string">'url'</tt><tt class="py-op">,</tt> <tt class="py-name">website</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Variable Faculty3.Website.address=Faculty3.Website-class.html#address"><a title="Faculty3.Website.address" class="py-name" href="#" onclick="return doclink('link-19', 'address', 'link-19');">address</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">website_element</tt><tt class="py-op">,</tt> <tt class="py-string">'group'</tt><tt class="py-op">,</tt> <tt class="py-name">website</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Variable Faculty3.Website.group=Faculty3.Website-class.html#group"><a title="Faculty3.Website.group" class="py-name" href="#" onclick="return doclink('link-20', 'group', 'link-20');">group</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-21', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                                 </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">                                <tt class="py-keyword">for</tt> <tt class="py-name">author</tt> <tt class="py-keyword">in</tt> <tt class="py-name">website</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Variable Faculty3.Website.authors=Faculty3.Website-class.html#authors,Variable Faculty3.Writing.authors=Faculty3.Writing-class.html#authors"><a title="Faculty3.Website.authors
+Faculty3.Writing.authors" class="py-name" href="#" onclick="return doclink('link-22', 'authors', 'link-22');">authors</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">                                        <tt class="py-name">author_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'author'</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">                                        <tt class="py-name">website_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">author_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'first_name'</tt><tt class="py-op">,</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-23', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">author</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="Faculty3.Name.first" class="py-name" href="#" onclick="return doclink('link-24', 'first', 'link-3');">first</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'last_name'</tt><tt class="py-op">,</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-25', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">author</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="Faculty3.Name.last" class="py-name" href="#" onclick="return doclink('link-26', 'last', 'link-10');">last</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">                                        <tt id="link-27" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-27', 'middle', 'link-4');">middle</a></tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-28', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">author</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-29', 'middle', 'link-4');">middle</a></tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">                                        <tt class="py-keyword">if</tt> <tt id="link-30" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-30', 'middle', 'link-4');">middle</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'middle_name'</tt><tt class="py-op">,</tt> <tt id="link-31" class="py-name"><a title="Faculty3.Name.middle" class="py-name" href="#" onclick="return doclink('link-31', 'middle', 'link-4');">middle</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                                                                                 </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                                        <tt id="link-32" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-32', 'suffix', 'link-11');">suffix</a></tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-33', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">author</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-34', 'suffix', 'link-11');">suffix</a></tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line">                                        <tt class="py-keyword">if</tt> <tt id="link-35" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-35', 'suffix', 'link-11');">suffix</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">                                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'suffix'</tt><tt class="py-op">,</tt> <tt id="link-36" class="py-name"><a title="Faculty3.Name.suffix" class="py-name" href="#" onclick="return doclink('link-36', 'suffix', 'link-11');">suffix</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_phones</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">faculty</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">                        <tt class="py-name">phone_query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-37', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">faculty</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Variable Faculty3.Person.phone_numbers=Faculty3.Person-class.html#phone_numbers"><a title="Faculty3.Person.phone_numbers" class="py-name" href="#" onclick="return doclink('link-38', 'phone_numbers', 'link-38');">phone_numbers</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">                        <tt class="py-comment">#phone_query = db.GqlQuery("SELECT * FROM PhoneNumber WHERE person = :this_person", this_person=faculty.key())                  </tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-keyword">for</tt> <tt class="py-name">phone</tt> <tt class="py-keyword">in</tt> <tt class="py-name">phone_query</tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">                                <tt class="py-name">phone_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'phone_number'</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">phone_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">                                <tt class="py-comment">#phone_t</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">phone_element</tt><tt class="py-op">,</tt> <tt class="py-string">'phone_t'</tt><tt class="py-op">,</tt> <tt class="py-name">phone</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="Faculty3.Degree.type
+Faculty3.Event.type
+Faculty3.PhoneNumber.type
+Faculty3.Writing.type" class="py-name" href="#" onclick="return doclink('link-39', 'type', 'link-1');">type</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">                                <tt class="py-comment">#number</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">phone_element</tt><tt class="py-op">,</tt> <tt class="py-string">'number'</tt><tt class="py-op">,</tt> <tt class="py-name">phone</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Variable Faculty3.CourseNumber.number=Faculty3.CourseNumber-class.html#number,Variable Faculty3.PhoneNumber.number=Faculty3.PhoneNumber-class.html#number"><a title="Faculty3.CourseNumber.number
+Faculty3.PhoneNumber.number" class="py-name" href="#" onclick="return doclink('link-40', 'number', 'link-40');">number</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">                                <tt class="py-comment">#country_code</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt id="link-41" class="py-name" targets="Variable Faculty3.PhoneNumber.country_code=Faculty3.PhoneNumber-class.html#country_code"><a title="Faculty3.PhoneNumber.country_code" class="py-name" href="#" onclick="return doclink('link-41', 'country_code', 'link-41');">country_code</a></tt> <tt class="py-op">=</tt> <tt class="py-name">phone</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="Faculty3.PhoneNumber.country_code" class="py-name" href="#" onclick="return doclink('link-42', 'country_code', 'link-41');">country_code</a></tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">                                <tt class="py-keyword">if</tt> <tt id="link-43" class="py-name"><a title="Faculty3.PhoneNumber.country_code" class="py-name" href="#" onclick="return doclink('link-43', 'country_code', 'link-41');">country_code</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">phone_element</tt><tt class="py-op">,</tt> <tt class="py-string">'country_code'</tt><tt class="py-op">,</tt> <tt id="link-44" class="py-name"><a title="Faculty3.PhoneNumber.country_code" class="py-name" href="#" onclick="return doclink('link-44', 'country_code', 'link-41');">country_code</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">                                <tt class="py-comment">#area_code</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt id="link-45" class="py-name" targets="Variable Faculty3.PhoneNumber.area_code=Faculty3.PhoneNumber-class.html#area_code"><a title="Faculty3.PhoneNumber.area_code" class="py-name" href="#" onclick="return doclink('link-45', 'area_code', 'link-45');">area_code</a></tt> <tt class="py-op">=</tt> <tt class="py-name">phone</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="Faculty3.PhoneNumber.area_code" class="py-name" href="#" onclick="return doclink('link-46', 'area_code', 'link-45');">area_code</a></tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">                                <tt class="py-keyword">if</tt> <tt id="link-47" class="py-name"><a title="Faculty3.PhoneNumber.area_code" class="py-name" href="#" onclick="return doclink('link-47', 'area_code', 'link-45');">area_code</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">phone_element</tt><tt class="py-op">,</tt> <tt class="py-string">'area_code'</tt><tt class="py-op">,</tt> <tt id="link-48" class="py-name"><a title="Faculty3.PhoneNumber.area_code" class="py-name" href="#" onclick="return doclink('link-48', 'area_code', 'link-45');">area_code</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_research_areas</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">                        <tt class="py-comment">#research_area_query = db.GqlQuery("SELECT * FROM ResearchArea WHERE people = :person", person=person)  </tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">research_area_query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-49', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name" targets="Variable Faculty3.Person.research_areas=Faculty3.Person-class.html#research_areas"><a title="Faculty3.Person.research_areas" class="py-name" href="#" onclick="return doclink('link-50', 'research_areas', 'link-50');">research_areas</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">area</tt> <tt class="py-keyword">in</tt> <tt class="py-name">research_area_query</tt><tt class="py-op">:</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-string">'research_area'</tt><tt class="py-op">,</tt> <tt class="py-name">area</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-51', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_research_groups</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">                        <tt class="py-name">research_group_query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-52', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name" targets="Variable Faculty3.Person.research_groups=Faculty3.Person-class.html#research_groups"><a title="Faculty3.Person.research_groups" class="py-name" href="#" onclick="return doclink('link-53', 'research_groups', 'link-53');">research_groups</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">                        <tt class="py-comment">#research_group_query = db.GqlQuery("SELECT * FROM ResearchGroup WHERE people = :person", person=person)        </tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-keyword">for</tt> <tt id="link-54" class="py-name"><a title="Faculty3.Website.group" class="py-name" href="#" onclick="return doclink('link-54', 'group', 'link-20');">group</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">research_group_query</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-string">'research_group'</tt><tt class="py-op">,</tt> <tt id="link-55" class="py-name"><a title="Faculty3.Website.group" class="py-name" href="#" onclick="return doclink('link-55', 'group', 'link-20');">group</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-56', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">                 </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_degrees</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Degree WHERE person = :person", person=person)</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-57', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name" targets="Variable Faculty3.Person.degrees=Faculty3.Person-class.html#degrees"><a title="Faculty3.Person.degrees" class="py-name" href="#" onclick="return doclink('link-58', 'degrees', 'link-58');">degrees</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">degree</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">                                <tt class="py-name">degree_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'degree'</tt><tt class="py-op">)</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">degree_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">degree_element</tt><tt class="py-op">,</tt> <tt class="py-string">'date_awarded'</tt><tt class="py-op">,</tt> <tt class="py-name">degree</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Variable Faculty3.Award.year=Faculty3.Award-class.html#year,Variable Faculty3.Course.year=Faculty3.Course-class.html#year,Variable Faculty3.Degree.year=Faculty3.Degree-class.html#year"><a title="Faculty3.Award.year
+Faculty3.Course.year
+Faculty3.Degree.year" class="py-name" href="#" onclick="return doclink('link-59', 'year', 'link-59');">year</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">degree_element</tt><tt class="py-op">,</tt> <tt class="py-string">'institution'</tt><tt class="py-op">,</tt> <tt class="py-name">degree</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name" targets="Variable Faculty3.Degree.institution=Faculty3.Degree-class.html#institution"><a title="Faculty3.Degree.institution" class="py-name" href="#" onclick="return doclink('link-60', 'institution', 'link-60');">institution</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">degree_element</tt><tt class="py-op">,</tt> <tt class="py-string">'degree_t'</tt><tt class="py-op">,</tt> <tt class="py-name">degree</tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="Faculty3.Degree.type
+Faculty3.Event.type
+Faculty3.PhoneNumber.type
+Faculty3.Writing.type" class="py-name" href="#" onclick="return doclink('link-61', 'type', 'link-1');">type</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">degree_element</tt><tt class="py-op">,</tt> <tt class="py-string">'specialization'</tt><tt class="py-op">,</tt> <tt class="py-name">degree</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Variable Faculty3.Degree.specialization=Faculty3.Degree-class.html#specialization"><a title="Faculty3.Degree.specialization" class="py-name" href="#" onclick="return doclink('link-62', 'specialization', 'link-62');">specialization</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_awards</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Award WHERE person = :person", person=person)</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-63" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-63', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-64" class="py-name" targets="Variable Faculty3.Person.awards=Faculty3.Person-class.html#awards"><a title="Faculty3.Person.awards" class="py-name" href="#" onclick="return doclink('link-64', 'awards', 'link-64');">awards</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">award</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">                                <tt class="py-name">award_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'award'</tt><tt class="py-op">)</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">award_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">award_element</tt><tt class="py-op">,</tt> <tt class="py-string">'name'</tt><tt class="py-op">,</tt> <tt class="py-name">award</tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-65', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">award_element</tt><tt class="py-op">,</tt> <tt class="py-string">'date_awarded'</tt><tt class="py-op">,</tt>  <tt class="py-name">award</tt><tt class="py-op">.</tt><tt id="link-66" class="py-name"><a title="Faculty3.Award.year
+Faculty3.Course.year
+Faculty3.Degree.year" class="py-name" href="#" onclick="return doclink('link-66', 'year', 'link-59');">year</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">                 </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_conferences</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Presentation WHERE person = :person", person=person)</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-67" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-67', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-68" class="py-name" targets="Variable Faculty3.Person.presentations=Faculty3.Person-class.html#presentations"><a title="Faculty3.Person.presentations" class="py-name" href="#" onclick="return doclink('link-68', 'presentations', 'link-68');">presentations</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">presentation</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">                                <tt class="py-name">conference_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'conference'</tt><tt class="py-op">)</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">conference_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line">                                <tt class="py-name">conference_inner_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'conference'</tt><tt class="py-op">)</tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line">                                <tt class="py-name">conference_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">conference_inner_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">                                <tt id="link-69" class="py-name" targets="Variable Faculty3.Presentation.conference=Faculty3.Presentation-class.html#conference"><a title="Faculty3.Presentation.conference" class="py-name" href="#" onclick="return doclink('link-69', 'conference', 'link-69');">conference</a></tt> <tt class="py-op">=</tt> <tt class="py-name">presentation</tt><tt class="py-op">.</tt><tt id="link-70" class="py-name"><a title="Faculty3.Presentation.conference" class="py-name" href="#" onclick="return doclink('link-70', 'conference', 'link-69');">conference</a></tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">conference_inner_element</tt><tt class="py-op">,</tt> <tt class="py-string">'date'</tt><tt class="py-op">,</tt>  <tt id="link-71" class="py-name"><a title="Faculty3.Presentation.conference" class="py-name" href="#" onclick="return doclink('link-71', 'conference', 'link-69');">conference</a></tt><tt class="py-op">.</tt><tt id="link-72" class="py-name" targets="Variable Faculty3.Conference.date=Faculty3.Conference-class.html#date,Variable Faculty3.PublishInfo.date=Faculty3.PublishInfo-class.html#date"><a title="Faculty3.Conference.date
+Faculty3.PublishInfo.date" class="py-name" href="#" onclick="return doclink('link-72', 'date', 'link-72');">date</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">conference_inner_element</tt><tt class="py-op">,</tt> <tt class="py-string">'name'</tt><tt class="py-op">,</tt>  <tt id="link-73" class="py-name"><a title="Faculty3.Presentation.conference" class="py-name" href="#" onclick="return doclink('link-73', 'conference', 'link-69');">conference</a></tt><tt class="py-op">.</tt><tt id="link-74" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-74', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">conference_inner_element</tt><tt class="py-op">,</tt> <tt class="py-string">'conf_location'</tt><tt class="py-op">,</tt>  <tt id="link-75" class="py-name"><a title="Faculty3.Presentation.conference" class="py-name" href="#" onclick="return doclink('link-75', 'conference', 'link-69');">conference</a></tt><tt class="py-op">.</tt><tt id="link-76" class="py-name" targets="Variable Faculty3.Conference.location=Faculty3.Conference-class.html#location,Variable Faculty3.Event.location=Faculty3.Event-class.html#location,Variable Faculty3.Office.location=Faculty3.Office-class.html#location"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-76', 'location', 'link-76');">location</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">conference_element</tt><tt class="py-op">,</tt> <tt class="py-string">'presentation_title'</tt><tt class="py-op">,</tt>  <tt class="py-name">presentation</tt><tt class="py-op">.</tt><tt id="link-77" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-77', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_office_hours</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Event WHERE _ancestor = :person and type = :office", person=person, office='Office Hours')</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-78" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-78', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Variable Faculty3.Person.office_hours=Faculty3.Person-class.html#office_hours,Variable Faculty3.StaffMember.office_hours=Faculty3.StaffMember-class.html#office_hours"><a title="Faculty3.Person.office_hours
+Faculty3.StaffMember.office_hours" class="py-name" href="#" onclick="return doclink('link-79', 'office_hours', 'link-79');">office_hours</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">event</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">                                <tt class="py-name">event_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'office_hours'</tt><tt class="py-op">)</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">event_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">                                 </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-string">'event_type'</tt><tt class="py-op">,</tt>  <tt class="py-name">event</tt><tt class="py-op">.</tt><tt id="link-80" class="py-name"><a title="Faculty3.Degree.type
+Faculty3.Event.type
+Faculty3.PhoneNumber.type
+Faculty3.Writing.type" class="py-name" href="#" onclick="return doclink('link-80', 'type', 'link-1');">type</a></tt><tt class="py-op">)</tt> <tt class="py-comment">#kill me</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">                                <tt class="py-name">append_schedule</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">                                <tt class="py-name">append_location</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-name">event</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">                 </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_schedule</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">event_element</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">                        <tt class="py-name">schedule_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'schedule'</tt><tt class="py-op">)</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">                        <tt class="py-name">event_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">schedule_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line"> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">                        <tt id="link-81" class="py-name" targets="Variable Faculty3.Course.schedule=Faculty3.Course-class.html#schedule,Variable Faculty3.Event.schedule=Faculty3.Event-class.html#schedule"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-81', 'schedule', 'link-81');">schedule</a></tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-82', 'schedule', 'link-81');">schedule</a></tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_element</tt><tt class="py-op">,</tt> <tt class="py-string">'start_time'</tt><tt class="py-op">,</tt>  <tt id="link-83" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-83', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-84" class="py-name" targets="Variable Faculty3.Schedule.start_time=Faculty3.Schedule-class.html#start_time"><a title="Faculty3.Schedule.start_time" class="py-name" href="#" onclick="return doclink('link-84', 'start_time', 'link-84');">start_time</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_element</tt><tt class="py-op">,</tt> <tt class="py-string">'end_time'</tt><tt class="py-op">,</tt>  <tt id="link-85" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-85', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-86" class="py-name" targets="Variable Faculty3.Schedule.end_time=Faculty3.Schedule-class.html#end_time"><a title="Faculty3.Schedule.end_time" class="py-name" href="#" onclick="return doclink('link-86', 'end_time', 'link-86');">end_time</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line"> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">                        <tt id="link-87" class="py-name" targets="Variable Faculty3.Schedule.days=Faculty3.Schedule-class.html#days"><a title="Faculty3.Schedule.days" class="py-name" href="#" onclick="return doclink('link-87', 'days', 'link-87');">days</a></tt> <tt class="py-op">=</tt> <tt id="link-88" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-88', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-89" class="py-name"><a title="Faculty3.Schedule.days" class="py-name" href="#" onclick="return doclink('link-89', 'days', 'link-87');">days</a></tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">day</tt> <tt class="py-keyword">in</tt> <tt id="link-90" class="py-name"><a title="Faculty3.Schedule.days" class="py-name" href="#" onclick="return doclink('link-90', 'days', 'link-87');">days</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_element</tt><tt class="py-op">,</tt> <tt class="py-string">'day'</tt><tt class="py-op">,</tt>  <tt class="py-name">day</tt><tt class="py-op">)</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">                                 </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_element</tt><tt class="py-op">,</tt> <tt class="py-string">'start_date'</tt><tt class="py-op">,</tt>  <tt id="link-91" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-91', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-92" class="py-name" targets="Variable Faculty3.Schedule.start_date=Faculty3.Schedule-class.html#start_date"><a title="Faculty3.Schedule.start_date" class="py-name" href="#" onclick="return doclink('link-92', 'start_date', 'link-92');">start_date</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">                        <tt id="link-93" class="py-name" targets="Variable Faculty3.Schedule.end_date=Faculty3.Schedule-class.html#end_date"><a title="Faculty3.Schedule.end_date" class="py-name" href="#" onclick="return doclink('link-93', 'end_date', 'link-93');">end_date</a></tt> <tt class="py-op">=</tt> <tt id="link-94" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-94', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="Faculty3.Schedule.end_date" class="py-name" href="#" onclick="return doclink('link-95', 'end_date', 'link-93');">end_date</a></tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt id="link-96" class="py-name"><a title="Faculty3.Schedule.end_date" class="py-name" href="#" onclick="return doclink('link-96', 'end_date', 'link-93');">end_date</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_element</tt><tt class="py-op">,</tt> <tt class="py-string">'end_date'</tt><tt class="py-op">,</tt>  <tt id="link-97" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-97', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">.</tt><tt id="link-98" class="py-name"><a title="Faculty3.Schedule.end_date" class="py-name" href="#" onclick="return doclink('link-98', 'end_date', 'link-93');">end_date</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line"> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_location</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">event_element</tt><tt class="py-op">,</tt> <tt class="py-param">event</tt><tt class="py-op">,</tt> <tt class="py-param">office</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt class="py-name">office</tt><tt class="py-op">:</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">                                <tt class="py-name">location_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'office'</tt><tt class="py-op">)</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">                        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">                                <tt class="py-name">location_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'location'</tt><tt class="py-op">)</tt>    </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">                        <tt class="py-name">event_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">location_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">                        <tt id="link-99" class="py-name"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-99', 'location', 'link-76');">location</a></tt> <tt class="py-op">=</tt> <tt class="py-name">event</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-100', 'location', 'link-76');">location</a></tt>                </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">                        <tt class="py-comment">#building</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">building_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'building'</tt><tt class="py-op">)</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">                        <tt class="py-name">location_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">building_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">                        <tt id="link-101" class="py-name" targets="Variable Faculty3.Location.building=Faculty3.Location-class.html#building"><a title="Faculty3.Location.building" class="py-name" href="#" onclick="return doclink('link-101', 'building', 'link-101');">building</a></tt> <tt class="py-op">=</tt> <tt id="link-102" class="py-name"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-102', 'location', 'link-76');">location</a></tt><tt class="py-op">.</tt><tt id="link-103" class="py-name"><a title="Faculty3.Location.building" class="py-name" href="#" onclick="return doclink('link-103', 'building', 'link-101');">building</a></tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">                        <tt class="py-keyword">if</tt> <tt id="link-104" class="py-name"><a title="Faculty3.Location.building" class="py-name" href="#" onclick="return doclink('link-104', 'building', 'link-101');">building</a></tt><tt class="py-op">.</tt><tt id="link-105" class="py-name" targets="Variable Faculty3.Building.abbreviation=Faculty3.Building-class.html#abbreviation"><a title="Faculty3.Building.abbreviation" class="py-name" href="#" onclick="return doclink('link-105', 'abbreviation', 'link-105');">abbreviation</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">building_element</tt><tt class="py-op">,</tt> <tt class="py-string">'building_abbr'</tt><tt class="py-op">,</tt>  <tt id="link-106" class="py-name"><a title="Faculty3.Location.building" class="py-name" href="#" onclick="return doclink('link-106', 'building', 'link-101');">building</a></tt><tt class="py-op">.</tt><tt id="link-107" class="py-name"><a title="Faculty3.Building.abbreviation" class="py-name" href="#" onclick="return doclink('link-107', 'abbreviation', 'link-105');">abbreviation</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">                         </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">building_element</tt><tt class="py-op">,</tt> <tt class="py-string">'building_name'</tt><tt class="py-op">,</tt>  <tt id="link-108" class="py-name"><a title="Faculty3.Location.building" class="py-name" href="#" onclick="return doclink('link-108', 'building', 'link-101');">building</a></tt><tt class="py-op">.</tt><tt id="link-109" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-109', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">                         </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">                        <tt class="py-comment">#floor</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">location_element</tt><tt class="py-op">,</tt> <tt class="py-string">'floor'</tt><tt class="py-op">,</tt>  <tt id="link-110" class="py-name"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-110', 'location', 'link-76');">location</a></tt><tt class="py-op">.</tt><tt id="link-111" class="py-name" targets="Variable Faculty3.Location.floor=Faculty3.Location-class.html#floor"><a title="Faculty3.Location.floor" class="py-name" href="#" onclick="return doclink('link-111', 'floor', 'link-111');">floor</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">                        <tt class="py-comment">#room</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">location_element</tt><tt class="py-op">,</tt> <tt class="py-string">'room'</tt><tt class="py-op">,</tt>  <tt id="link-112" class="py-name"><a title="Faculty3.Conference.location
+Faculty3.Event.location
+Faculty3.Office.location" class="py-name" href="#" onclick="return doclink('link-112', 'location', 'link-76');">location</a></tt><tt class="py-op">.</tt><tt id="link-113" class="py-name" targets="Variable Faculty3.Location.room=Faculty3.Location-class.html#room"><a title="Faculty3.Location.room" class="py-name" href="#" onclick="return doclink('link-113', 'room', 'link-113');">room</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">                         </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_offices</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Office WHERE person = :person", person=person)</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-114" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-114', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-115" class="py-name" targets="Variable Faculty3.Person.offices=Faculty3.Person-class.html#offices"><a title="Faculty3.Person.offices" class="py-name" href="#" onclick="return doclink('link-115', 'offices', 'link-115');">offices</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">office</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">                                <tt class="py-name">append_location</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">office</tt><tt class="py-op">,</tt> <tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_staff_office_hours</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">staff_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">                        <tt class="py-docstring">"""</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-docstring">                        only for staff in a course. wow.</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-docstring">                        """</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">                        <tt class="py-name">event_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'hours'</tt><tt class="py-op">)</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">                        <tt class="py-name">staff_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">event_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">                         </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-string">'event_type'</tt><tt class="py-op">,</tt>  <tt class="py-string">'Office Hours'</tt><tt class="py-op">)</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">                        <tt class="py-name">append_schedule</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-116" class="py-name"><a title="Faculty3.Person.office_hours
+Faculty3.StaffMember.office_hours" class="py-name" href="#" onclick="return doclink('link-116', 'office_hours', 'link-79');">office_hours</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">                        <tt class="py-name">append_location</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">event_element</tt><tt class="py-op">,</tt> <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-117" class="py-name"><a title="Faculty3.Person.office_hours
+Faculty3.StaffMember.office_hours" class="py-name" href="#" onclick="return doclink('link-117', 'office_hours', 'link-79');">office_hours</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line"> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_courses</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Course WHERE person = :person", person=person)</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-118" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-118', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-119" class="py-name" targets="Variable Faculty3.Person.courses=Faculty3.Person-class.html#courses"><a title="Faculty3.Person.courses" class="py-name" href="#" onclick="return doclink('link-119', 'courses', 'link-119');">courses</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">course</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">                                <tt class="py-name">course_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'class'</tt><tt class="py-op">)</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">course_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">                 </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_element</tt><tt class="py-op">,</tt> <tt class="py-string">'unique_number'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-120" class="py-name" targets="Variable Faculty3.Course.unique_id=Faculty3.Course-class.html#unique_id"><a title="Faculty3.Course.unique_id" class="py-name" href="#" onclick="return doclink('link-120', 'unique_id', 'link-120');">unique_id</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_element</tt><tt class="py-op">,</tt> <tt class="py-string">'name'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-121" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-121', 'name', 'link-2');">name</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_element</tt><tt class="py-op">,</tt> <tt class="py-string">'description'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-122" class="py-name" targets="Variable Faculty3.Course.description=Faculty3.Course-class.html#description"><a title="Faculty3.Course.description" class="py-name" href="#" onclick="return doclink('link-122', 'description', 'link-122');">description</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line"> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">                                <tt class="py-name">course_number_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'course_number'</tt><tt class="py-op">)</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">                                <tt class="py-name">course_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">course_number_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_number_element</tt><tt class="py-op">,</tt> <tt class="py-string">'field_of_study'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-123" class="py-name" targets="Variable Faculty3.Course.course_number=Faculty3.Course-class.html#course_number"><a title="Faculty3.Course.course_number" class="py-name" href="#" onclick="return doclink('link-123', 'course_number', 'link-123');">course_number</a></tt><tt class="py-op">.</tt><tt id="link-124" class="py-name" targets="Variable Faculty3.CourseNumber.department=Faculty3.CourseNumber-class.html#department"><a title="Faculty3.CourseNumber.department" class="py-name" href="#" onclick="return doclink('link-124', 'department', 'link-124');">department</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_number_element</tt><tt class="py-op">,</tt> <tt class="py-string">'short_number'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-125" class="py-name"><a title="Faculty3.Course.course_number" class="py-name" href="#" onclick="return doclink('link-125', 'course_number', 'link-123');">course_number</a></tt><tt class="py-op">.</tt><tt id="link-126" class="py-name"><a title="Faculty3.CourseNumber.number
+Faculty3.PhoneNumber.number" class="py-name" href="#" onclick="return doclink('link-126', 'number', 'link-40');">number</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">                                 </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_element</tt><tt class="py-op">,</tt> <tt class="py-string">'semester'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-127" class="py-name" targets="Variable Faculty3.Course.semester=Faculty3.Course-class.html#semester"><a title="Faculty3.Course.semester" class="py-name" href="#" onclick="return doclink('link-127', 'semester', 'link-127');">semester</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">course_element</tt><tt class="py-op">,</tt> <tt class="py-string">'year'</tt><tt class="py-op">,</tt>  <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-128" class="py-name"><a title="Faculty3.Award.year
+Faculty3.Course.year
+Faculty3.Degree.year" class="py-name" href="#" onclick="return doclink('link-128', 'year', 'link-59');">year</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line">                                <tt class="py-name">staff</tt> <tt class="py-op">=</tt> <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-129" class="py-name" targets="Variable Faculty3.Course.staff_members=Faculty3.Course-class.html#staff_members"><a title="Faculty3.Course.staff_members" class="py-name" href="#" onclick="return doclink('link-129', 'staff_members', 'link-129');">staff_members</a></tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line">                                 </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line">                                <tt class="py-keyword">for</tt> <tt class="py-name">member</tt> <tt class="py-keyword">in</tt> <tt class="py-name">staff</tt><tt class="py-op">:</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">                                        <tt class="py-name">person</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-130" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-130', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">member</tt><tt class="py-op">)</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">                                        <tt class="py-name">staff_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'staff'</tt><tt class="py-op">)</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line">                                        <tt class="py-name">course_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">staff_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line">                                        <tt class="py-name">inner_person_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'person'</tt><tt class="py-op">)</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line">                                        <tt class="py-name">staff_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">inner_person_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">inner_person_element</tt><tt class="py-op">,</tt> <tt class="py-string">'first_name'</tt><tt class="py-op">,</tt>  <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-131" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-131', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-132" class="py-name"><a title="Faculty3.Name.first" class="py-name" href="#" onclick="return doclink('link-132', 'first', 'link-3');">first</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">inner_person_element</tt><tt class="py-op">,</tt> <tt class="py-string">'last_name'</tt><tt class="py-op">,</tt>  <tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-133" class="py-name"><a title="Faculty3.Award.name
+Faculty3.Building.name
+Faculty3.Conference.name
+Faculty3.Course.name
+Faculty3.Person.name
+Faculty3.Presentation.name
+Faculty3.ResearchArea.name
+Faculty3.ResearchGroup.name
+Faculty3.StaffMember.name" class="py-name" href="#" onclick="return doclink('link-133', 'name', 'link-2');">name</a></tt><tt class="py-op">.</tt><tt id="link-134" class="py-name"><a title="Faculty3.Name.last" class="py-name" href="#" onclick="return doclink('link-134', 'last', 'link-10');">last</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">                                        <tt class="py-comment">#if person.office_hours is not None:</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                        <tt class="py-comment">#       append_staff_office_hours(document, staff_element, person)</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">                                <tt class="py-comment">#event has type, schedule, and location, but here that's all called schedule</tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line"><tt class="py-comment"></tt>                                <tt class="py-name">schedule_outer_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'schedule'</tt><tt class="py-op">)</tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">                                <tt class="py-name">course_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">schedule_outer_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_outer_element</tt><tt class="py-op">,</tt> <tt class="py-string">'event_type'</tt><tt class="py-op">,</tt>  <tt class="py-string">'Meeting'</tt><tt class="py-op">)</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line">                                <tt class="py-name">append_schedule</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_outer_element</tt><tt class="py-op">,</tt> <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-135" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-135', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line">                                <tt class="py-name">append_location</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">schedule_outer_element</tt><tt class="py-op">,</tt> <tt class="py-name">course</tt><tt class="py-op">.</tt><tt id="link-136" class="py-name"><a title="Faculty3.Course.schedule
+Faculty3.Event.schedule" class="py-name" href="#" onclick="return doclink('link-136', 'schedule', 'link-81');">schedule</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line">                 </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_student</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">parent_element</tt><tt class="py-op">,</tt> <tt class="py-param">student</tt><tt class="py-op">,</tt> <tt class="py-param">tag_name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line">                        <tt class="py-name">student_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-name">tag_name</tt><tt class="py-op">)</tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line">                        <tt class="py-name">parent_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">student_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line"> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line">                        <tt class="py-name">append_name</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line">                        <tt class="py-name">append_email</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line"> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line">                        <tt class="py-name">append_person_optionals</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line"> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line">                        <tt class="py-name">status_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'status'</tt><tt class="py-op">)</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line">                        <tt class="py-name">student_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">status_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line">                        <tt class="py-name">status_text_node</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createTextNode</tt><tt class="py-op">(</tt><tt class="py-name">student</tt><tt class="py-op">.</tt><tt id="link-137" class="py-name" targets="Variable Faculty3.Student.status=Faculty3.Student-class.html#status"><a title="Faculty3.Student.status" class="py-name" href="#" onclick="return doclink('link-137', 'status', 'link-137');">status</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line">                        <tt class="py-name">status_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">status_text_node</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line">                         </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line"> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_advisees</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line"> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line">                        <tt class="py-comment">#query = db.GqlQuery("SELECT * FROM Student WHERE advisors = :person", person=person)</tt> </tt>
+<a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-138" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-138', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-139" class="py-name" targets="Variable Faculty3.Faculty.advisees=Faculty3.Faculty-class.html#advisees,Variable Faculty3.Student.advisees=Faculty3.Student-class.html#advisees"><a title="Faculty3.Faculty.advisees
+Faculty3.Student.advisees" class="py-name" href="#" onclick="return doclink('link-139', 'advisees', 'link-139');">advisees</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">advisee</tt> <tt class="py-keyword">in</tt> <tt class="py-name">query</tt><tt class="py-op">:</tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line">                                <tt class="py-name">append_student</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">person_element</tt><tt class="py-op">,</tt> <tt class="py-name">advisee</tt><tt class="py-op">,</tt> <tt class="py-string">'advisee'</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line">                                 </tt>
+<a name="L318"></a><tt class="py-lineno">318</tt>  <tt class="py-line">                         </tt>
+<a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line">                 </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line">                <tt class="py-keyword">def</tt> <tt class="py-def-name">append_writings</tt><tt class="py-op">(</tt><tt class="py-param">document</tt><tt class="py-op">,</tt> <tt class="py-param">person_element</tt><tt class="py-op">,</tt> <tt class="py-param">person</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line">                        <tt class="py-comment">#writings_query = db.GqlQuery("SELECT * FROM Writing WHERE authors = :name", name=person.name)</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line"><tt class="py-comment"></tt>                        <tt class="py-name">writings_query</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-140" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-140', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">person</tt><tt class="py-op">.</tt><tt id="link-141" class="py-name" targets="Variable Faculty3.Person.writings=Faculty3.Person-class.html#writings"><a title="Faculty3.Person.writings" class="py-name" href="#" onclick="return doclink('link-141', 'writings', 'link-141');">writings</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line">                        <tt class="py-keyword">for</tt> <tt class="py-name">writing</tt> <tt class="py-keyword">in</tt> <tt class="py-name">writings_query</tt><tt class="py-op">:</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line"> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line">                                <tt class="py-name">writing_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'writing'</tt><tt class="py-op">)</tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line">                                <tt class="py-name">person_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">writing_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">writing_element</tt><tt class="py-op">,</tt> <tt class="py-string">'title'</tt><tt class="py-op">,</tt> <tt class="py-name">writing</tt><tt class="py-op">.</tt><tt id="link-142" class="py-name" targets="Variable Faculty3.Faculty.title=Faculty3.Faculty-class.html#title,Variable Faculty3.Writing.title=Faculty3.Writing-class.html#title"><a title="Faculty3.Faculty.title
+Faculty3.Writing.title" class="py-name" href="#" onclick="return doclink('link-142', 'title', 'link-142');">title</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line">                                <tt id="link-143" class="py-name" targets="Variable Faculty3.Writing.publish_infos=Faculty3.Writing-class.html#publish_infos"><a title="Faculty3.Writing.publish_infos" class="py-name" href="#" onclick="return doclink('link-143', 'publish_infos', 'link-143');">publish_infos</a></tt> <tt class="py-op">=</tt> <tt class="py-name">writing</tt><tt class="py-op">.</tt><tt id="link-144" class="py-name"><a title="Faculty3.Writing.publish_infos" class="py-name" href="#" onclick="return doclink('link-144', 'publish_infos', 'link-143');">publish_infos</a></tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line">                                <tt class="py-keyword">for</tt> <tt class="py-name">info</tt> <tt class="py-keyword">in</tt> <tt id="link-145" class="py-name"><a title="Faculty3.Writing.publish_infos" class="py-name" href="#" onclick="return doclink('link-145', 'publish_infos', 'link-143');">publish_infos</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line">                                        <tt class="py-name">publish_info</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-146" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-146', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">info</tt><tt class="py-op">)</tt> </tt>
+<a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line">                                        <tt class="py-name">publish_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'publish_info'</tt><tt class="py-op">)</tt> </tt>
+<a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line">                                        <tt class="py-name">writing_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">publish_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line">                                         </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">publish_element</tt><tt class="py-op">,</tt> <tt class="py-string">'publisher'</tt><tt class="py-op">,</tt> <tt class="py-name">publish_info</tt><tt class="py-op">.</tt><tt id="link-147" class="py-name" targets="Variable Faculty3.PublishInfo.publisher=Faculty3.PublishInfo-class.html#publisher"><a title="Faculty3.PublishInfo.publisher" class="py-name" href="#" onclick="return doclink('link-147', 'publisher', 'link-147');">publisher</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">publish_element</tt><tt class="py-op">,</tt> <tt class="py-string">'publish_date'</tt><tt class="py-op">,</tt> <tt class="py-name">publish_info</tt><tt class="py-op">.</tt><tt id="link-148" class="py-name"><a title="Faculty3.Conference.date
+Faculty3.PublishInfo.date" class="py-name" href="#" onclick="return doclink('link-148', 'date', 'link-72');">date</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line">                                         </tt>
+<a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line">                                        <tt id="link-149" class="py-name" targets="Variable Faculty3.PublishInfo.isbn=Faculty3.PublishInfo-class.html#isbn"><a title="Faculty3.PublishInfo.isbn" class="py-name" href="#" onclick="return doclink('link-149', 'isbn', 'link-149');">isbn</a></tt> <tt class="py-op">=</tt> <tt class="py-name">publish_info</tt><tt class="py-op">.</tt><tt id="link-150" class="py-name"><a title="Faculty3.PublishInfo.isbn" class="py-name" href="#" onclick="return doclink('link-150', 'isbn', 'link-149');">isbn</a></tt> </tt>
+<a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line">                                        <tt class="py-keyword">if</tt> <tt id="link-151" class="py-name"><a title="Faculty3.PublishInfo.isbn" class="py-name" href="#" onclick="return doclink('link-151', 'isbn', 'link-149');">isbn</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line">                                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">publish_element</tt><tt class="py-op">,</tt> <tt class="py-string">'isbn'</tt><tt class="py-op">,</tt> <tt id="link-152" class="py-name"><a title="Faculty3.PublishInfo.isbn" class="py-name" href="#" onclick="return doclink('link-152', 'isbn', 'link-149');">isbn</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line">                                        <tt id="link-153" class="py-name" targets="Variable Faculty3.PublishInfo.article=Faculty3.PublishInfo-class.html#article"><a title="Faculty3.PublishInfo.article" class="py-name" href="#" onclick="return doclink('link-153', 'article', 'link-153');">article</a></tt> <tt class="py-op">=</tt> <tt class="py-name">publish_info</tt><tt class="py-op">.</tt><tt id="link-154" class="py-name"><a title="Faculty3.PublishInfo.article" class="py-name" href="#" onclick="return doclink('link-154', 'article', 'link-153');">article</a></tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line">                                        <tt class="py-keyword">if</tt> <tt id="link-155" class="py-name"><a title="Faculty3.PublishInfo.article" class="py-name" href="#" onclick="return doclink('link-155', 'article', 'link-153');">article</a></tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line">                                                <tt class="py-name">article_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'article'</tt><tt class="py-op">)</tt> </tt>
+<a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line">                                                <tt class="py-name">publish_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">article_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line">                                                                                         </tt>
+<a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line">                                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">article_element</tt><tt class="py-op">,</tt> <tt class="py-string">'journal'</tt><tt class="py-op">,</tt> <tt id="link-156" class="py-name"><a title="Faculty3.PublishInfo.article" class="py-name" href="#" onclick="return doclink('link-156', 'article', 'link-153');">article</a></tt><tt class="py-op">.</tt><tt id="link-157" class="py-name" targets="Variable Faculty3.Article.journal=Faculty3.Article-class.html#journal"><a title="Faculty3.Article.journal" class="py-name" href="#" onclick="return doclink('link-157', 'journal', 'link-157');">journal</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line">                                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">article_element</tt><tt class="py-op">,</tt> <tt class="py-string">'edition'</tt><tt class="py-op">,</tt> <tt id="link-158" class="py-name"><a title="Faculty3.PublishInfo.article" class="py-name" href="#" onclick="return doclink('link-158', 'article', 'link-153');">article</a></tt><tt class="py-op">.</tt><tt id="link-159" class="py-name" targets="Variable Faculty3.Article.edition=Faculty3.Article-class.html#edition"><a title="Faculty3.Article.edition" class="py-name" href="#" onclick="return doclink('link-159', 'edition', 'link-159');">edition</a></tt><tt class="py-op">)</tt>  </tt>
+<a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line">                                 </tt>
+<a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line">                                <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">writing_element</tt><tt class="py-op">,</tt> <tt class="py-string">'writing'</tt><tt class="py-op">,</tt> <tt class="py-name">writing</tt><tt class="py-op">.</tt><tt id="link-160" class="py-name"><a title="Faculty3.Degree.type
+Faculty3.Event.type
+Faculty3.PhoneNumber.type
+Faculty3.Writing.type" class="py-name" href="#" onclick="return doclink('link-160', 'type', 'link-1');">type</a></tt><tt class="py-op">)</tt>     </tt>
+<a name="L349"></a><tt class="py-lineno">349</tt>  <tt class="py-line">                                <tt id="link-161" class="py-name"><a title="Faculty3.Website.authors
+Faculty3.Writing.authors" class="py-name" href="#" onclick="return doclink('link-161', 'authors', 'link-22');">authors</a></tt> <tt class="py-op">=</tt> <tt class="py-name">writing</tt><tt class="py-op">.</tt><tt id="link-162" class="py-name"><a title="Faculty3.Website.authors
+Faculty3.Writing.authors" class="py-name" href="#" onclick="return doclink('link-162', 'authors', 'link-22');">authors</a></tt> </tt>
+<a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line">                                <tt class="py-keyword">for</tt> <tt class="py-name">a</tt> <tt class="py-keyword">in</tt> <tt id="link-163" class="py-name"><a title="Faculty3.Website.authors
+Faculty3.Writing.authors" class="py-name" href="#" onclick="return doclink('link-163', 'authors', 'link-22');">authors</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line">                                        <tt class="py-name">author</tt> <tt class="py-op">=</tt> <tt class="py-name">db</tt><tt class="py-op">.</tt><tt id="link-164" class="py-name"><a title="EditPerson.EditPersonPage.get
+Export.ExportPage.get
+Import.ImportPage.get
+RunFaculty3.MainPage.get
+ViewPeople.ViewPeoplePage.get
+ViewPerson.ViewPersonPage.get" class="py-name" href="#" onclick="return doclink('link-164', 'get', 'link-17');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">a</tt><tt class="py-op">)</tt> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line">                                        <tt class="py-name">author_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'author'</tt><tt class="py-op">)</tt> </tt>
+<a name="L353"></a><tt class="py-lineno">353</tt>  <tt class="py-line">                                        <tt class="py-name">writing_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">author_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'first_name'</tt><tt class="py-op">,</tt> <tt class="py-name">author</tt><tt class="py-op">.</tt><tt id="link-165" class="py-name"><a title="Faculty3.Name.first" class="py-name" href="#" onclick="return doclink('link-165', 'first', 'link-3');">first</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line">                                        <tt class="py-name">append_text_node</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">author_element</tt><tt class="py-op">,</tt> <tt class="py-string">'last_name'</tt><tt class="py-op">,</tt> <tt class="py-name">author</tt><tt class="py-op">.</tt><tt id="link-166" class="py-name"><a title="Faculty3.Name.last" class="py-name" href="#" onclick="return doclink('link-166', 'last', 'link-10');">last</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L356"></a><tt class="py-lineno">356</tt>  <tt class="py-line">                                         </tt>
+<a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">response</tt><tt class="py-op">.</tt><tt class="py-name">headers</tt><tt class="py-op">[</tt><tt class="py-string">'Content-Type'</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-string">'application/xml'</tt> </tt>
+<a name="L358"></a><tt class="py-lineno">358</tt>  <tt class="py-line"> </tt>
+<a name="L359"></a><tt class="py-lineno">359</tt>  <tt class="py-line">                <tt class="py-name">document</tt> <tt class="py-op">=</tt> <tt class="py-name">Document</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line">                <tt class="py-name">people_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'people'</tt><tt class="py-op">)</tt> </tt>
+<a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line">                <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">people_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line"> </tt>
+<a name="L363"></a><tt class="py-lineno">363</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">faculty</tt> <tt class="py-keyword">in</tt> <tt id="link-167" class="py-name"><a title="Faculty3" class="py-name" href="#" onclick="return doclink('link-167', 'Faculty3', 'link-0');">Faculty3</a></tt><tt class="py-op">.</tt><tt id="link-168" class="py-name" targets="Class Faculty3.Faculty=Faculty3.Faculty-class.html"><a title="Faculty3.Faculty" class="py-name" href="#" onclick="return doclink('link-168', 'Faculty', 'link-168');">Faculty</a></tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L364"></a><tt class="py-lineno">364</tt>  <tt class="py-line">                        <tt class="py-name">faculty_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'faculty'</tt><tt class="py-op">)</tt> </tt>
+<a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line">                        <tt class="py-name">people_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">faculty_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line">                        <tt class="py-name">append_name</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">faculty_element</tt><tt class="py-op">,</tt> <tt class="py-name">faculty</tt><tt class="py-op">)</tt> </tt>
+<a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line">                        <tt class="py-name">append_email</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">faculty_element</tt><tt class="py-op">,</tt> <tt class="py-name">faculty</tt><tt class="py-op">)</tt> </tt>
+<a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line">                                 </tt>
+<a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line">                        <tt class="py-name">append_person_optionals</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">faculty_element</tt><tt class="py-op">,</tt> <tt class="py-name">faculty</tt><tt class="py-op">)</tt> </tt>
+<a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line"> </tt>
+<a name="L372"></a><tt class="py-lineno">372</tt>  <tt class="py-line">                        <tt class="py-name">title_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'title'</tt><tt class="py-op">)</tt> </tt>
+<a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line">                        <tt class="py-name">faculty_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">title_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line"> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line">                        <tt class="py-name">title_text_node</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createTextNode</tt><tt class="py-op">(</tt><tt class="py-name">faculty</tt><tt class="py-op">.</tt><tt id="link-169" class="py-name"><a title="Faculty3.Faculty.title
+Faculty3.Writing.title" class="py-name" href="#" onclick="return doclink('link-169', 'title', 'link-142');">title</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L376"></a><tt class="py-lineno">376</tt>  <tt class="py-line">                        <tt class="py-name">title_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">title_text_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line"> </tt>
+<a name="L378"></a><tt class="py-lineno">378</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">student</tt> <tt class="py-keyword">in</tt> <tt id="link-170" class="py-name"><a title="Faculty3" class="py-name" href="#" onclick="return doclink('link-170', 'Faculty3', 'link-0');">Faculty3</a></tt><tt class="py-op">.</tt><tt id="link-171" class="py-name" targets="Class Faculty3.Student=Faculty3.Student-class.html"><a title="Faculty3.Student" class="py-name" href="#" onclick="return doclink('link-171', 'Student', 'link-171');">Student</a></tt><tt class="py-op">.</tt><tt class="py-name">all</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line">                        <tt class="py-name">student_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'student'</tt><tt class="py-op">)</tt> </tt>
+<a name="L380"></a><tt class="py-lineno">380</tt>  <tt class="py-line">                        <tt class="py-name">people_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">student_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line"> </tt>
+<a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line">                        <tt class="py-name">append_name</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L383"></a><tt class="py-lineno">383</tt>  <tt class="py-line">                        <tt class="py-name">append_email</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line"> </tt>
+<a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line">                        <tt class="py-name">append_person_optionals</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">,</tt> <tt class="py-name">student_element</tt><tt class="py-op">,</tt> <tt class="py-name">student</tt><tt class="py-op">)</tt> </tt>
+<a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line"> </tt>
+<a name="L387"></a><tt class="py-lineno">387</tt>  <tt class="py-line">                        <tt class="py-name">status_element</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createElement</tt><tt class="py-op">(</tt><tt class="py-string">'status'</tt><tt class="py-op">)</tt> </tt>
+<a name="L388"></a><tt class="py-lineno">388</tt>  <tt class="py-line">                        <tt class="py-name">student_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">status_element</tt><tt class="py-op">)</tt> </tt>
+<a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line"> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line">                        <tt class="py-name">status_text_node</tt> <tt class="py-op">=</tt> <tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">createTextNode</tt><tt class="py-op">(</tt><tt class="py-name">student</tt><tt class="py-op">.</tt><tt id="link-172" class="py-name"><a title="Faculty3.Student.status" class="py-name" href="#" onclick="return doclink('link-172', 'status', 'link-137');">status</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L391"></a><tt class="py-lineno">391</tt>  <tt class="py-line">                        <tt class="py-name">status_element</tt><tt class="py-op">.</tt><tt class="py-name">appendChild</tt><tt class="py-op">(</tt><tt class="py-name">status_text_node</tt><tt class="py-op">)</tt> </tt>
+<a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line"> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line">                <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">response</tt><tt class="py-op">.</tt><tt class="py-name">out</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-name">document</tt><tt class="py-op">.</tt><tt class="py-name">toprettyxml</tt><tt class="py-op">(</tt><tt class="py-string">''</tt><tt class="py-op">,</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line"> </tt>
+<a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line"><tt id="link-173" class="py-name" targets="Variable EditPerson.pages=EditPerson-module.html#pages,Variable Export.pages=Export-module.html#pages,Variable Import.pages=Import-module.html#pages,Variable RunFaculty3.pages=RunFaculty3-module.html#pages,Variable ViewPeople.pages=ViewPeople-module.html#pages,Variable ViewPerson.pages=ViewPerson-module.html#pages"><a title="EditPerson.pages
+Export.pages
+Import.pages
+RunFaculty3.pages
+ViewPeople.pages
+ViewPerson.pages" class="py-name" href="#" onclick="return doclink('link-173', 'pages', 'link-173');">pages</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line"><tt id="link-174" class="py-name"><a title="EditPerson.pages
+Export.pages
+Import.pages
+RunFaculty3.pages
+ViewPeople.pages
+ViewPerson.pages" class="py-name" href="#" onclick="return doclink('link-174', 'pages', 'link-173');">pages</a></tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'/export'</tt><tt class="py-op">,</tt> <tt id="link-175" class="py-name" targets="Class Export.ExportPage=Export.ExportPage-class.html"><a title="Export.ExportPage" class="py-name" href="#" onclick="return doclink('link-175', 'ExportPage', 'link-175');">ExportPage</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L397"></a><tt class="py-lineno">397</tt>  <tt class="py-line"><tt id="link-176" class="py-name" targets="Variable EditPerson.application=EditPerson-module.html#application,Variable Export.application=Export-module.html#application,Variable Import.application=Import-module.html#application,Variable RunFaculty3.application=RunFaculty3-module.html#application,Variable ViewPeople.application=ViewPeople-module.html#application,Variable ViewPerson.application=ViewPerson-module.html#application"><a title="EditPerson.application
+Export.application
+Import.application
+RunFaculty3.application
+ViewPeople.application
+ViewPerson.application" class="py-name" href="#" onclick="return doclink('link-176', 'application', 'link-176');">application</a></tt> <tt class="py-op">=</tt> <tt class="py-name">webapp</tt><tt class="py-op">.</tt><tt class="py-name">WSGIApplication</tt><tt class="py-op">(</tt><tt id="link-177" class="py-name"><a title="EditPerson.pages
+Export.pages
+Import.pages
+RunFaculty3.pages
+ViewPeople.pages
+ViewPerson.pages" class="py-name" href="#" onclick="return doclink('link-177', 'pages', 'link-173');">pages</a></tt><tt class="py-op">,</tt> <tt class="py-name">debug</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line"> </tt>
+<a name="real_main"></a><div id="real_main-def"><a name="L399"></a><tt class="py-lineno">399</tt> <a class="py-toggle" href="#" id="real_main-toggle" onclick="return toggle('real_main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Export-module.html#real_main">real_main</a> <tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="real_main-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="real_main-expanded"><a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line">        <tt class="py-name">run_wsgi_app</tt><tt class="py-op">(</tt><tt id="link-178" class="py-name"><a title="EditPerson.application
+Export.application
+Import.application
+RunFaculty3.application
+ViewPeople.application
+ViewPerson.application" class="py-name" href="#" onclick="return doclink('link-178', 'application', 'link-176');">application</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line"> </tt>
+<a name="profile_main"></a><div id="profile_main-def"><a name="L402"></a><tt class="py-lineno">402</tt> <a class="py-toggle" href="#" id="profile_main-toggle" onclick="return toggle('profile_main');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="Export-module.html#profile_main">profile_main</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="profile_main-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="profile_main-expanded"><a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line">    <tt class="py-comment"># This is the main function for profiling</tt> </tt>
+<a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># We've renamed our original main() above to real_main()</tt> </tt>
+<a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">import</tt> <tt class="py-name">cProfile</tt><tt class="py-op">,</tt> <tt class="py-name">pstats</tt> </tt>
+<a name="L406"></a><tt class="py-lineno">406</tt>  <tt class="py-line">    <tt class="py-name">prof</tt> <tt class="py-op">=</tt> <tt class="py-name">cProfile</tt><tt class="py-op">.</tt><tt class="py-name">Profile</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L407"></a><tt class="py-lineno">407</tt>  <tt class="py-line">    <tt class="py-name">prof</tt> <tt class="py-op">=</tt> <tt class="py-name">prof</tt><tt class="py-op">.</tt><tt class="py-name">runctx</tt><tt class="py-op">(</tt><tt class="py-string">"real_main()"</tt><tt class="py-op">,</tt> <tt class="py-name">globals</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">locals</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L408"></a><tt class="py-lineno">408</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"&lt;pre&gt;"</tt> </tt>
+<a name="L409"></a><tt class="py-lineno">409</tt>  <tt class="py-line">    <tt class="py-name">stats</tt> <tt class="py-op">=</tt> <tt class="py-name">pstats</tt><tt class="py-op">.</tt><tt class="py-name">Stats</tt><tt class="py-op">(</tt><tt class="py-name">prof</tt><tt class="py-op">)</tt> </tt>
+<a name="L410"></a><tt class="py-lineno">410</tt>  <tt class="py-line">    <tt class="py-name">stats</tt><tt class="py-op">.</tt><tt class="py-name">sort_stats</tt><tt class="py-op">(</tt><tt class="py-string">"time"</tt><tt class="py-op">)</tt>  <tt class="py-comment"># Or cumulative</tt> </tt>
+<a name="L411"></a><tt class="py-lineno">411</tt>  <tt class="py-line">    <tt class="py-name">stats</tt><tt class="py-op">.</tt><tt class="py-name">print_stats</tt><tt class="py-op">(</tt><tt class="py-number">1000</tt><tt class="py-op">)</tt>  <tt class="py-comment"># 80 = how many to print</tt> </tt>
+<a name="L412"></a><tt class="py-lineno">412</tt>  <tt class="py-line">    <tt class="py-comment"># The rest is optional.</tt> </tt>
+<a name="L413"></a><tt class="py-lineno">413</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># stats.print_callees()</tt> </tt>
+<a name="L414"></a><tt class="py-lineno">414</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># stats.print_callers()</tt> </tt>
+<a name="L415"></a><tt class="py-lineno">415</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">print</tt> <tt class="py-string">"&lt;/pre&gt;"</tt> </tt>
+</div><a name="L416"></a><tt class="py-lineno">416</tt>  <tt class="py-line"> </tt>
+<a name="L417"></a><tt class="py-lineno">417</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L418"></a><tt class="py-lineno">418</tt>  <tt class="py-line">        <tt class="py-comment">#profile_main()</tt> </tt>
+<a name="L419"></a><tt class="py-lineno">419</tt>  <tt class="py-line"><tt class="py-comment"></tt>        <tt id="link-179" class="py-name" targets="Function Export.real_main()=Export-module.html#real_main,Function Import.real_main()=Import-module.html#real_main,Function RunFaculty3.real_main()=RunFaculty3-module.html#real_main"><a title="Export.real_main
+Import.real_main
+RunFaculty3.real_main" class="py-name" href="#" onclick="return doclink('link-179', 'real_main', 'link-179');">real_main</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L420"></a><tt class="py-lineno">420</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Apr 18 19:12:22 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

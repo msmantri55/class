@@ -1,0 +1,16 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ degree.name }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<dd>
+	<dt>Date awarded</dt>
+	<dd>{{ degree.year }}</dd>
+	<dt>Institution</dt>
+	<dd>{{ degree.institution }}</dd>
+	<dt>Type</dt>
+	<dd>{{ degree.type }}</dd>
+	<dt>Specialization</dt>
+	<dd>{{ degree.specialization }}</dd>
+</dd>
+{% endspaceless %}{% endblock %}

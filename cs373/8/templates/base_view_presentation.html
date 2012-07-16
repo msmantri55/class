@@ -1,0 +1,15 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ presentation.name }}{% endblock %}
+
+{% block body %}{% spaceless %}
+	<dd>
+	<dt>Title</dt>
+	<dd>{{ presentation.name }}</dd>
+	<dt>Conference</dt>
+	<dd>{{ conference.name }}</dd>
+	<dd>{{ conference.date }}</dd>
+	<dd>{{ conference.location }}</dd>
+
+
+{% endspaceless %}{% endblock %}

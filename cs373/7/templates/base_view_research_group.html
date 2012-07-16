@@ -1,0 +1,24 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ award.name }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<dd>
+	<dt>Research Group</dt>
+	<dd>{{ research_group.name }}</dd>	
+	
+	{% if people %}
+	<dt>People</dt>
+	<dd>
+		<ul>
+			{% for person in people %}
+				<li>
+					<a href="/view/person?key={{ person.key }}">{{ person.name.first }} {{ person.name.last }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</dd>
+	{% endif %}
+</dd>
+
+{% endspaceless %}{% endblock %}

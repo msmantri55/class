@@ -1,0 +1,49 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<dd>	
+	
+	{% ifequal publication.type "thesis" %}
+	<dt>Book Title</dt>
+	<dd>{{ publication.title }}</dd>
+	{% endifequal %}
+
+	{% ifequal publication.type "article" %}
+	<dt>Article Title</dt>
+	<dd>{{ publication.title }}</dd>
+	{% endifequal %}
+
+	{% ifequal publication.type "tech report" %}
+	<dt>Technical Report Title</dt>
+	<dd>{{ publication.title }}</dd>
+	{% endifequal %}
+
+	{% ifequal publication.type "editorial" %}
+	<dt>Editorial Title</dt>
+	<dd>{{ publication.title }}</dd>
+	{% endifequal %}
+
+	{% ifequal publication.type "book" %}
+	<dt>Book Title</dt>
+	<dd>{{ publication.title }}</dd>
+	{% endifequal %}
+
+	{% if publication.publish_infos %}
+		{% for publish_info in publish_infos %}
+			<dt>Date</dt>
+			<dd>{{ publish_info.date }}</dd>
+				{% if publish_info.article %}
+					<dt>Journal</dt>
+					<dd>{{ publish_info.article.journal }}</dd>	
+				{% endif %}
+		{% endfor %}
+	{% endif %}
+	<dt>Authors</dt>
+	{% for author in authors %}
+	<dd>{{ author.first }} {{ author.last }}</dd>
+
+	{% endfor %}
+
+{% endspaceless %}{% endblock %}

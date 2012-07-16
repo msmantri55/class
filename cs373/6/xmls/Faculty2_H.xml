@@ -1,0 +1,2000 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Faculty2.xsd">
+    <faculty>
+        <name>
+            <first_name>Glenn</first_name>
+            <last_name>Downing</last_name>
+        </name>
+        <username>downing</username>
+        <email>downing@cs.utexas.edu</email>
+        <website>
+            <url>http://blogs.utexas.edu/gpd/</url>
+            <group></group>
+            <author>
+                <first_name>Chris</first_name>
+                <last_name>Pearson</last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>3881858</number>
+        </phone_number>
+        <research_area>Algorithms</research_area>
+        <research_area>Data Structures</research_area>
+        <research_area>Generic and object-oriented programming in C++ and Java</research_area>
+        <research_group></research_group>
+        <degree>
+            <date_awarded>1984</date_awarded>
+            <institution>University of Texas at Austin</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1977</date_awarded>
+            <institution>Massachusetts Institute of Technology</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1975</date_awarded>
+            <institution>University of Illinois at Urbana</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <award>
+            <name>Advisory Council Teaching Excellence Award</name>
+            <date_awarded>2006</date_awarded>
+        </award>
+        <award>
+            <name>Teaching Excellence Award</name>
+            <date_awarded>2002</date_awarded>
+        </award>
+        <office_hours>
+            <event_type>Office Hours</event_type>
+            <schedule>
+                <start_time>12:00:00</start_time>
+                <end_time>13:00:00</end_time>
+                <day>Monday</day>
+                <day>Friday</day>
+                <start_date>2010-01-20</start_date>
+                <end_date>2010-05-07</end_date>
+            </schedule>
+            <location>
+                <building>
+                    <building_abbr>PAI</building_abbr>
+                    <building_name>T. S. Painter Hall</building_name>
+                </building>
+                <floor>5</floor>
+                <room>60</room>
+            </location>
+        </office_hours>
+        <class>
+            <unique_number>54300</unique_number>
+            <name>Software Engineering</name>
+            <description>Introduction to current knowledge, techniques, and theories in large software system design and development. </description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>373</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Shruthi</first_name>
+                    <last_name>Viswanath</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>12:00:00</start_time>
+                        <end_time>15:00:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>TAY</building_abbr>
+                            <building_name>T. U. Taylor Hall</building_name>
+                        </building>
+                        <floor>B</floor>
+                        <room></room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Isaac</first_name>
+                    <last_name>Levy</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>15:30:00</start_time>
+                        <end_time>16:30:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2001-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>TAY</building_abbr>
+                            <building_name>T. U. Taylor Hall</building_name>
+                        </building>
+                        <floor>B</floor>
+                        <room></room>
+                    </location>
+                </hours>
+                 <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>17:30:00</start_time>
+                        <end_time>19:30:00</end_time>
+                        <day>Friday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2001-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>TAY</building_abbr>
+                            <building_name>T. U. Taylor Hall</building_name>
+                        </building>
+                        <floor>B</floor>
+                        <room></room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>11:00:00</start_time>
+                    <end_time>12:00:00</end_time>
+                    <day>Monday</day>
+                    <day>Wednesday</day>
+                    <day>Friday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>PAI</building_abbr>
+                        <building_name>T. S. Painter Hall</building_name>
+                    </building>
+                    <floor>3</floor>
+                    <room>14</room>
+                </location>
+            </schedule>
+        </class>
+        <writing>
+            <title>Data Sharing in Scientific Simulations</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>2005-05-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>Computing in Science and Engineering</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+                <first_name>Paul</first_name>
+                <last_name>Dubois</last_name>
+            </author>
+            <author>
+               <first_name>Teresa</first_name>
+               <last_name>Bottom</last_name>
+            </author>
+        </writing>
+        <office>
+            <building>
+                <building_abbr>PAI</building_abbr>
+                <building_name>T. S. Painter Hall</building_name>
+            </building>
+            <floor>5</floor>
+            <room>60</room>
+        </office>
+        <title>Lecturer</title>
+    </faculty>
+        <faculty>
+        <name>
+            <first_name>Donald</first_name>
+            <middle_name>S</middle_name>
+            <last_name>Fussell</last_name>
+        </name>
+        <username>fussell</username>
+        <email>fussell@cs.utexas.edu</email>
+        <website>
+            <url>http://www.cs.utexas.edu/users/fussell</url>
+            <group></group>
+            <author>
+                <first_name></first_name>
+                <last_name></last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719719</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        <research_area>Computer Graphics</research_area>
+        <research_area>Computer Architecture</research_area>
+        <research_area>Networking</research_area>
+        <research_area>Digital Arts</research_area>
+        <research_group></research_group>
+        <degree>
+            <date_awarded>1973</date_awarded>
+            <institution>Dartmouth College</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Mathematics and Social Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1977</date_awarded>
+            <institution>University of Texas at Dallas</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1980</date_awarded>
+            <institution>University of Texas at Dallas</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <office_hours>
+            <event_type>Office Hours</event_type>
+            <schedule>
+                <start_time>00:00:00</start_time>
+                <end_time>00:00:00</end_time>
+                <day>Monday</day>
+                <start_date>2010-01-20</start_date>
+                <end_date>2010-05-07</end_date>
+            </schedule>
+            <location>
+                <building>
+                    <building_abbr>NA</building_abbr>
+                    <building_name>NA</building_name>
+                </building>
+                <floor>0</floor>
+                <room>0</room>
+            </location>
+        </office_hours>
+        <class>
+            <unique_number>54395</unique_number>
+            <name>Computer Graphics</name>
+            <description>Advanced material in computer graphics, including in-depth treatments of techniques for realistic image synthesis, advanced geometric modeling methods, animation and dynamic simulation, scientific visualization, and high-performance graphics architectures.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>384G</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Peter</first_name>
+                    <last_name>Djeu</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>00:00:00</start_time>
+                        <end_time>00:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>NA</building_abbr>
+                            <building_name>NA</building_name>
+                        </building>
+                        <floor>0</floor>
+                        <room>0</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name></first_name>
+                    <last_name></last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>00:00:00</start_time>
+                        <end_time>00:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2001-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>NA</building_abbr>
+                            <building_name>NA</building_name>
+                        </building>
+                        <floor>0</floor>
+                        <room>0</room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>14:00:00</start_time>
+                    <end_time>15:00:00</end_time>
+                    <day>Monday</day>
+                    <day>Wednesday</day>
+                    <day>Friday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>5</floor>
+                    <room>118</room>
+                </location>
+            </schedule>
+        </class>
+        <writing>
+            <title></title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>2000-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal></journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+                <first_name></first_name>
+                <last_name></last_name>
+            </author>
+            <author>
+               <first_name></first_name>
+               <last_name></last_name>
+            </author>
+        </writing>
+        <office>
+            <building>
+                <building_abbr>NA</building_abbr>
+                <building_name>NA</building_name>
+            </building>
+            <floor>0</floor>
+            <room>0</room>
+        </office>
+        <title>Lecturer</title>
+    </faculty>
+   <faculty>
+        <name>
+            <first_name>Vladimir</first_name>
+            <last_name>Lifschitz</last_name>
+        </name>
+        <username>vl</username>
+        <email>vl@cs.utexas.edu</email>
+        <website>
+            <url>http://userweb.cs.utexas.edu/~vl/</url>
+            <group></group>
+            <author>
+                <first_name>Vladimir</first_name>
+                <last_name>Lifschitz</last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719564</number>
+        </phone_number>
+        <research_area>Computational logic and knowledge representation</research_area>
+        <research_group>Texas Action Group</research_group>
+        <degree>
+            <date_awarded>1968</date_awarded>
+            <institution>Leningrad State University</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Mathematics</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1969</date_awarded>
+            <institution>Steklov Institute of Mathematics</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Mathematics</specialization>
+        </degree>
+        <award>
+            <name>Publisher's Prize, Tenth International Joint Conference on Artificial Intelligence</name>
+            <date_awarded>1987</date_awarded>
+        </award>
+        <award>
+            <name>Publisher's Prize, Twelfth International Joint Conference on Artificial Intelligence</name>
+            <date_awarded>1991</date_awarded>
+        </award>
+        <award>
+            <name>Fellow, Association for the Advancement of Artificial Intelligence</name>
+            <date_awarded>1991</date_awarded>
+        </award>
+        <award>
+            <name>Teaching Excellence Award from the College of Natural Sciences, University of Texas at Austin</name>
+            <date_awarded>2000</date_awarded>
+        </award>
+        <award>
+            <name>Most Influential Paper in 20 Years Award from the Association for Logic Programming</name>
+            <date_awarded>2004</date_awarded>
+        </award>
+        <office_hours>
+            <event_type>Office Hours</event_type>
+            <schedule>
+                <start_time>11:00:00</start_time>
+                <end_time>11:45:00</end_time>
+                <day>Tuesday</day>
+                <day>Thursday</day>
+                <start_date>2010-01-20</start_date>
+                <end_date>2010-05-07</end_date>
+            </schedule>
+            <location>
+                <building>
+                    <building_abbr>TAY</building_abbr>
+                    <building_name>T. U. Taylor Hall</building_name>
+                </building>
+                <floor>3</floor>
+                <room>150B</room>
+            </location>
+        </office_hours>
+        <class>
+            <unique_number>54410</unique_number>
+            <name>Introduction to Mathematical Logic</name>
+            <description>This course is an elementary but mathematically solid introduction to propositional and first-order logic.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>388L</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Dong</first_name>
+                    <last_name>Li</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>00:00:00</start_time>
+                        <end_time>00:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>NA</building_abbr>
+                            <building_name>NA</building_name>
+                        </building>
+                        <floor>0</floor>
+                        <room></room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Yuliya</first_name>
+                    <last_name>Lierler</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>00:00:00</start_time>
+                        <end_time>00:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>NA</building_abbr>
+                            <building_name>NA</building_name>
+                        </building>
+                        <floor>0</floor>
+                        <room></room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>12:30:00</start_time>
+                    <end_time>14:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>NOA</building_abbr>
+                        <building_name>North Office Building A</building_name>
+                    </building>
+                    <floor>1</floor>
+                    <room>116</room>
+                </location>
+            </schedule>
+        </class>
+        <writing>
+            <title>On the Semantics of STRIPS</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1987-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>Reasoning about Actions and Plans</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+               <first_name>Vladimir</first_name>
+               <last_name>Lifschitz</last_name>
+            </author>
+        </writing>
+        <writing>
+            <title>Editorial</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1991-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>Journal of Logic and Computation, Vol. 2</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>editorial</writing>
+            <author>
+               <first_name>Vladimir</first_name>
+               <last_name>Lifschitz</last_name>
+            </author>
+        </writing>
+        <writing>
+            <title>Classical Negation in Logic Programs and Disjunctive Databases</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1991-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>New Generation Computing</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+               <first_name>Michael</first_name>
+               <last_name>Gelfond</last_name>
+            </author>
+        </writing>
+        <writing>
+            <title>Nested Expressions in Logic Programs</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1999-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>Annals of Mathematics and Artificial Intelligence, Vol. 25</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+               <first_name>Lappoon</first_name>
+               <middle_name>R.</middle_name>
+               <last_name>Tang</last_name>
+            </author>
+            <author>
+               <first_name>Hudson</first_name>
+               <last_name>Turner</last_name>
+            </author>
+        </writing>
+        <advisee>
+            <name>
+                <first_name>Yuliya</first_name>
+                <last_name>Lierler</last_name>
+            </name>
+            <username>yuliya</username>
+            <email>yuliya@cs.utexas.edu</email>
+            <website>
+                <url>http://userweb.cs.utexas.edu/~yuliya/</url>
+                <group></group>
+                <author>
+                   <first_name>Yuliya</first_name>
+                   <last_name>Lierler</last_name>
+                </author>
+            </website>
+            <research_area>Answer Set Programming</research_area>
+            <research_area>Knowledge Representation and Reasoning</research_area>
+            <research_area>Natural Language Understanding</research_area>
+            <research_area>Relation between Mathematical Logics and Natural Language Semantics</research_area>
+            <research_area>Planning in Logic Programming</research_area>
+            <research_area>Action Languages</research_area>
+            <research_group>Texas Action Group</research_group>
+            <degree>
+               <date_awarded>2003</date_awarded>
+               <institution>University of Texas at Austin</institution>
+               <degree_t>Bachelor's Degree</degree_t>
+               <specialization>Computer Science</specialization>
+            </degree>
+            <office_hours>
+               <event_type>Office Hours</event_type>
+               <schedule>
+                   <start_time>14:15:00</start_time>
+                   <end_time>15:00:00</end_time>
+                   <day>Tuesday</day>
+                   <start_date>2010-01-20</start_date>
+                   <end_date>2010-05-07</end_date>
+               </schedule>
+               <location>
+                   <building>
+                       <building_abbr>ENS</building_abbr>
+                       <building_name>Engineering-Science Building</building_name>
+                   </building>
+                   <floor>B1</floor>
+                   <room>31NQ</room>
+               </location>
+            </office_hours>
+            <class>
+               <unique_number>54410</unique_number>
+               <name>Introduction to Mathematical Logic TA Session</name>
+               <description>This course is an elementary but mathematically solid introduction to propositional and first-order logic.</description>
+               <course_number>
+               <field_of_study>CS</field_of_study>
+               <short_number>388L</short_number>
+               </course_number>
+               <semester>Spring</semester>
+               <year>2010</year>
+               <staff>
+                   <person>
+                   <first_name>NA</first_name>
+                   <last_name>NA</last_name>
+                   </person>
+                   <hours>
+                       <event_type>Office Hours</event_type>
+                       <schedule>
+                           <start_time>00:00:00</start_time>
+                           <end_time>00:00:00</end_time>
+                           <day>Friday</day>
+                           <start_date>2010-01-20</start_date>
+                           <end_date>2010-05-07</end_date>
+                       </schedule>
+                       <location>
+                           <building>
+                               <building_abbr>NA</building_abbr>
+                               <building_name>NA</building_name>
+                           </building>
+                           <floor>0</floor>
+                           <room></room>
+                       </location>
+                   </hours>
+               </staff>
+               <schedule>
+                   <event_type>Meeting</event_type>
+                   <schedule>
+                       <start_time>12:30:00</start_time>
+                       <end_time>14:00:00</end_time>
+                       <day>Tuesday</day>
+                       <day>Thursday</day>
+                       <start_date>2010-01-20</start_date>
+                       <end_date>2010-05-07</end_date>
+                   </schedule>
+                   <location>
+                       <building>
+                           <building_abbr>NOA</building_abbr>
+                           <building_name>North Office Building A</building_name>
+                       </building>
+                       <floor>1</floor>
+                       <room>116</room>
+                   </location>
+               </schedule>
+            </class>
+            <status>PhD Student</status>
+        </advisee>
+        <office>
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>T. U. Taylor Hall</building_name>
+            </building>
+            <floor>3</floor>
+            <room>150B</room>
+        </office>
+        <title>Professor</title>
+    </faculty>
+    <faculty>
+    <name>
+      <first_name>J</first_name>
+      <middle_name>Strother</middle_name>
+      <last_name>Moore</last_name>
+    </name>
+    <username>Moore</username>
+    <email>moore@cs.utexas.edu</email>
+    <website>
+       <url>http://userweb.cs.utexas.edu/~moore/</url>
+       <group></group>
+        <author>
+               <first_name></first_name>
+              <last_name></last_name>
+        </author>
+    </website>
+    <phone_number>
+        <phone_t>work</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4719568</number>
+      </phone_number>
+      <phone_number>
+        <phone_t>fax</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4718885</number>
+    </phone_number>
+    <research_area></research_area>
+    <research_group></research_group>
+    <degree>
+        <date_awarded>1973</date_awarded>
+        <institution>University of Edinburgh</institution>
+        <degree_t>Doctoral Degree</degree_t>
+        <specialization>Computational Logic</specialization>
+    </degree>
+    <degree>
+        <date_awarded>1970</date_awarded>
+        <institution>Massachusetts Institute of Technology</institution>
+        <degree_t>Bachelor's Degree</degree_t>
+        <specialization>Mathematics</specialization>
+    </degree>
+    <award>
+        <name>ACM Software System Award</name>
+        <date_awarded>2005</date_awarded>
+      </award>
+      <award>
+        <name>John McCarthy Prize for Program Verification</name>
+        <date_awarded>1983</date_awarded>
+      </award>
+      <award>
+        <name>Current Prize in Automatic Theorem Proving by the American Mathematical Society</name>
+        <date_awarded>1991</date_awarded>
+      </award>
+    <class>
+        <unique_number>55095</unique_number>
+        <name>A Formal Model of the Java Virtual Machine</name>
+        <description>We will study a formal specification of the Java Virtual Machine (JVM).</description>
+        <course_number>
+           <field_of_study>CS</field_of_study>
+           <short_number>378</short_number>
+        </course_number>
+        <semester>Spring</semester>
+        <year>2007</year>
+        <staff>
+        <person>
+            <first_name>Alex</first_name>
+            <last_name>Spiridonov</last_name>
+        </person>
+        <hours>
+        <event_type>Office Hours</event_type>
+        <schedule>
+        <start_time>12:30:00</start_time>
+        <end_time>13:30:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2007-01-16</start_date>
+        <end_date>2007-05-04</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+        </building>
+        <floor>4</floor>
+        <room>140A</room>
+        </location>
+        </hours>
+        </staff>
+         <schedule>
+         <event_type>Office Hours</event_type>
+        <schedule>
+        <start_time>14:30:00</start_time>
+        <end_time>15:30:00</end_time>
+        <day>Tuesday</day>
+        <day>Thursday</day>
+        <start_date>2007-01-16</start_date>
+        <end_date>2007-05-04</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+        </building>
+        <floor>4</floor>
+        <room>140A</room>
+        </location>
+    </schedule>
+    </class>
+    <class>
+            <unique_number>54095</unique_number>
+            <name>Logic, Sets, and Functions</name>
+            <description>Propositional and predicate logic; proof techniques, including induction, sets, relations, and functions.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>313K</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Vinod</first_name>
+                    <last_name>Venkataraman</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>12:00:00</start_time>
+                        <end_time>13:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+                  <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>16:30:00</start_time>
+                        <end_time>18:30:00</end_time>
+                        <day>Wednesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Behnam</first_name>
+                    <last_name>Robatmili</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>13:30:00</start_time>
+                        <end_time>15:30:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>09:00:00</start_time>
+                        <end_time>10:00:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Xu</first_name>
+                    <last_name>Wang</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>10:00:00</start_time>
+                        <end_time>12:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>10:00:00</start_time>
+                        <end_time>11:00:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>15:30:00</start_time>
+                    <end_time>17:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>WEL</building_abbr>
+                        <building_name>Robert A. Welch Hall</building_name>
+                    </building>
+                    <floor>2</floor>
+                    <room>246</room>
+                </location>
+            </schedule>
+        </class>
+    <writing>
+    <title>A Computational Logic Handbook</title>
+    <publish_info>
+    <publisher>Academic Press</publisher>
+    <publish_date>1988-01-01</publish_date>
+    <ISBN>0121229556</ISBN>
+    </publish_info>
+    <writing>book</writing>
+    <author>
+    <first_name>Robert</first_name>
+    <middle_name>Stephen</middle_name>
+    <last_name>Boyer</last_name>
+    </author>
+    </writing>
+    <writing>
+    <title>Computer-Aided Reasoning: An Approach</title>
+    <publish_info>
+    <publisher>Kluwer Academic Publisherss</publisher>
+    <publish_date>2000-01-01</publish_date>
+    <ISBN>0792377443</ISBN>
+    </publish_info>
+    <writing>book</writing>
+    <author>
+    <first_name>Matt</first_name>
+    <middle_name>Stephen</middle_name>
+    <last_name>Kaufmann</last_name>
+    </author>
+    <author>
+    <first_name>Panagiotis</first_name>
+    <last_name>Manolios</last_name>
+    </author>
+    </writing>
+    <conference>
+    <conference>
+    <date>2005-06-21</date>
+    <name>International Lisp Conference</name>
+    <conf_location>Stanford, CA</conf_location>
+    </conference>
+    <presentation_title>ACL2: A Program Verifier for Applicative Common Lisp</presentation_title>
+    </conference>
+    <conference>
+    <conference>
+    <date>2005-07-01</date>
+    <name>JENUI 03</name>
+    <conf_location>Cadiz, Spain</conf_location>
+    </conference>
+    <presentation_title>Formal Methods: Practice and Pedagogy</presentation_title>
+    </conference>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+      </building>
+      <floor>4</floor>
+      <room>140A</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+        <name>
+     <first_name>Kathryn</first_name>
+      <middle_name>S</middle_name>
+      <last_name>McKinley</last_name>
+        </name>
+        <username>mckinley</username>
+        <email>mckinley@cs.utexas.edu</email>
+        <website>
+            <url>http://userweb.cs.utexas.edu/~mckinley/</url>
+            <group>blah</group>
+            <author>
+                <first_name></first_name>
+                <last_name></last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>2327460</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718694</number>
+        </phone_number>
+        <research_area>Programming language implementation</research_area>
+        <research_area>Compilers</research_area>
+        <research_area>Cache and memory management</research_area>
+        <research_area>Garbage collection</research_area>
+        <research_area>Architecture</research_area>
+        <research_group>DaCapo: Dynamic Cooperative Performance Optimization for Java</research_group>
+        <research_group>Jikes RVM: An open-source virtual machine</research_group>
+        <research_group>TRIPS: An EDGE architecture</research_group>
+        <research_group>PASS: Perpetually Avaliable and Secure Systems</research_group>
+        <degree>
+            <date_awarded>1992</date_awarded>
+            <institution>Rice University</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <award>
+            <name>CCF-0811524</name>
+            <date_awarded>2001</date_awarded>
+        </award>
+        <award>
+            <name>CNS-0719966</name>
+            <date_awarded>2002</date_awarded>
+        </award>
+        <class>
+            <unique_number>54245</unique_number>
+            <name>Computer Systems Architecture</name>
+            <description>In this course, you will learn about the basic principles and current practices of computer architectures and organizations. At the end of this course, you will understand how and why computer hardware is organized so that it can rapidly execute a software program expressed in assembly language. You will also understand how computer hardware provides software with the illusion that fast memory and other resources are unlimited, even though they are not. Finally, you will learn how to quantitatively evaluate and improve computer system performance.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>352</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Upendra</first_name>
+                    <last_name>Shevade</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>14:00:00</start_time>
+                        <end_time>15:30:00</end_time>
+                        <day>Tuesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ACE</building_abbr>
+                            <building_name>Applied Computational Engineering and Sciences Building</building_name>
+                        </building>
+                        <floor>6</floor>
+                        <room>308</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>15:00:00</start_time>
+                        <end_time>16:30:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ACE</building_abbr>
+                            <building_name>Applied Computational Engineering and Sciences Building</building_name>
+                        </building>
+                        <floor>6</floor>
+                        <room>308</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Renee</first_name>
+                    <last_name>St. Amant</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>13:30:00</start_time>
+                        <end_time>15:00:00</end_time>
+                        <day>Monday</day>
+                        <day>Wednesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>09:30:00</start_time>
+                    <end_time>11:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>NOA</building_abbr>
+                        <building_name>North Office Building A</building_name>
+                    </building>
+                    <floor>1</floor>
+                    <room>126</room>
+                </location>
+            </schedule>
+        </class>
+        <writing>
+            <title>A Parameterized Loop Fusion Algorithm for Improving Parallelism and Cache Locality</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1997-01-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal>The Computer Journal</journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+                <first_name>Sharad</first_name>
+                <last_name>Singhai</last_name>
+            </author>
+        </writing>
+        <conference>
+            <conference>
+                <date>2007-10-01</date>
+                <name>ACM SIGPLAN Conference</name>
+                <conf_location>Montreal, Canada</conf_location>
+            </conference>
+            <presentation_title>Probabilistic Calling Context</presentation_title>
+        </conference>
+        <advisee>
+            <name>
+                <first_name>Katherine</first_name>
+                <middle_name>E.</middle_name>
+                <last_name>Coons</last_name>
+            </name>
+            <username></username>
+            <email>coonske@cs.utexas.edu</email>
+            <status>PhD Student</status>
+        </advisee>
+        <office>
+            <building>
+                <building_abbr>ACE</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences Building</building_name>
+            </building>
+            <floor>3</floor>
+            <room>420</room>
+        </office>
+        <title>Professor</title>
+    </faculty>
+        <faculty>
+        <name>
+            <first_name>Gordon</first_name>
+            <middle_name>S</middle_name>
+            <last_name>Novak</last_name>
+        </name>
+        <username>novak</username>
+        <email>novak@cs.utexas.edu</email>
+        <website>
+            <url>http://userweb.cs.utexas.edu/~novak/</url>
+            <group></group>
+            <author>
+                <first_name></first_name>
+                <last_name></last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719569</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        <research_area>ArtificiaI intelligence</research_area>
+         <research_area>Automatic programming</research_area>
+          <research_area>Physics problem solving</research_area>
+           <research_area>Expert systems</research_area>
+            <research_area>Compilers</research_area>
+        <research_group>Artificial Intelligence Laboratory</research_group>
+        <degree>
+            <date_awarded>1969</date_awarded>
+            <institution>University of Texas at Austin</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1971</date_awarded>
+            <institution>University of Texas at Austin</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1976</date_awarded>
+            <institution>University of Texas at Austin</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <award>
+            <name>Hamilton Award</name>
+            <date_awarded>1969</date_awarded>
+        </award>
+        <award>
+            <name>Teaching Excellence Award</name>
+            <date_awarded>1998</date_awarded>
+        </award>
+        <award>
+            <name>Xerox Corporation</name>
+            <date_awarded>1984</date_awarded>
+        </award>
+        <class>
+            <unique_number>54125</unique_number>
+            <name>Algorithms and Data Structures</name>
+            <description>Implementation of basic data structures, including stacks, queues, lists, priority queues, trees, binary search trees, graphs, and sets. Recursion. Efficient sorting and searching algorithms. Hashing. Multithreaded programs.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>315</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Yulin</first_name>
+                    <last_name>Li</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>14:00:00</start_time>
+                        <end_time>15:30:00</end_time>
+                        <day>Tuesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>TAY</building_abbr>
+                            <building_name>T. U. Taylor Hall</building_name>
+                        </building>
+                        <floor>5</floor>
+                        <room>142</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>10:30:00</start_time>
+                        <end_time>12:00:00</end_time>
+                        <day>Thursday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>TAY</building_abbr>
+                            <building_name>T. U. Taylor Hall</building_name>
+                        </building>
+                        <floor>5</floor>
+                        <room>142</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Wei</first_name>
+                    <last_name>Dong</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>10:00:00</start_time>
+                        <end_time>11:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>09:30:00</start_time>
+                        <end_time>11:30:00</end_time>
+                        <day>Tuesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <staff>
+                <person>
+                    <first_name>Hrishikesh</first_name>
+                    <middle_name>B.</middle_name>
+                    <last_name>Acharya</last_name>
+                </person>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>09:00:00</start_time>
+                        <end_time>11:00:00</end_time>
+                        <day>Monday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+                <hours>
+                    <event_type>Office Hours</event_type>
+                    <schedule>
+                        <start_time>09:00:00</start_time>
+                        <end_time>11:00:00</end_time>
+                        <day>Wednesday</day>
+                        <start_date>2010-01-20</start_date>
+                        <end_date>2010-05-07</end_date>
+                    </schedule>
+                    <location>
+                        <building>
+                            <building_abbr>ENS</building_abbr>
+                            <building_name>Engineering-Science Building</building_name>
+                        </building>
+                        <floor>B1</floor>
+                        <room>31NQ</room>
+                    </location>
+                </hours>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>11:00:00</start_time>
+                    <end_time>12:00:00</end_time>
+                    <day>Monday</day>
+                    <day>Wednesday</day>
+                    <day>Friday</day>
+                    <start_date>2010-01-20</start_date>
+                    <end_date>2010-05-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>JGB</building_abbr>
+                        <building_name>Jackson Geological Sciences Building</building_name>
+                    </building>
+                    <floor>2</floor>
+                    <room>216</room>
+                </location>
+            </schedule>
+        </class>
+        <writing>
+            <title>Artificial Intelligence</title>
+            <publish_info>
+                <publisher></publisher>
+                <publish_date>1985-12-01</publish_date>
+                <ISBN>0000000000000</ISBN>
+                <article>
+                    <journal></journal>
+                    <edition></edition>
+                </article>
+            </publish_info>
+            <writing>article</writing>
+            <author>
+                <first_name></first_name>
+                <last_name></last_name>
+            </author>
+        </writing>
+        <conference>
+            <conference>
+                <date>2008-07-01</date>
+                <name>2008 IEEE International Conference on Information Reuse and Integration</name>
+                <conf_location>Las Vegas NV</conf_location>
+            </conference>
+            <presentation_title>Coupling Data Understanding with Software Reuse</presentation_title>
+        </conference>
+        <advisee>
+            <name>
+                <first_name>Lipphei</first_name>
+                <middle_name>Chandra</middle_name>
+                <last_name>Adam</last_name>
+            </name>
+            <username>lipphei.ca</username>
+            <email>lipphei.ca@mail.utexas.edu</email>
+            <status>Master's Student</status>
+        </advisee>
+        <office>
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>T. U. Taylor Hall</building_name>
+            </building>
+            <floor>4</floor>
+            <room>140C</room>
+        </office>
+        <title>Professor</title>
+    </faculty>
+      <faculty>
+    <name>
+      <first_name>Tandy</first_name>
+      <last_name>Warnow</last_name>
+    </name>
+    <username>tandy</username>
+    <email>tandy@cs.utexas.edu</email>
+    <website>
+       <url>http://userweb.cs.utexas.edu/~tandy/</url>
+       <group></group>
+        <author>
+               <first_name></first_name>
+              <last_name></last_name>
+        </author>
+    </website>
+    <phone_number>
+        <phone_t>work</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4719724</number>
+      </phone_number>
+      <phone_number>
+        <phone_t>fax</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>2321413</number>
+    </phone_number>
+    <research_area>Evolutionary history methodology</research_area>
+      <research_area>Algorithms in Biology</research_area>
+      <research_area>Historical Linguistics</research_area>
+    <research_group>Cyber-Infrastructure for Phylogenetic Research</research_group>
+    <degree>
+        <date_awarded>1991</date_awarded>
+        <institution>University of California, Berkeley</institution>
+        <degree_t>Doctoral Degree</degree_t>
+        <specialization>Mathematics</specialization>
+    </degree>
+    <award>
+        <name>NSF NYI (Young Investigator Award)</name>
+        <date_awarded>2000</date_awarded>
+      </award>
+      <award>
+        <name>David and Lucile Packard Foundation Fellowship</name>
+        <date_awarded>2001</date_awarded>
+      </award>
+            <award>
+        <name>Radcliffe Fellowship</name>
+        <date_awarded>2004</date_awarded>
+      </award>
+                <award>
+        <name>Building the Tree of Life -- A National Resource for Phyloinformatics and Computational Phylogenetics</name>
+        <date_awarded>2008</date_awarded>
+      </award>
+    <writing>
+    <title>Chemical phylogenetics of histone deacetylases</title>
+    <publish_info>
+    <publisher></publisher>
+    <publish_date>2010-01-01</publish_date>
+    <ISBN>0000000000000</ISBN>
+  <article>
+  <journal>Nature Chemical Biology</journal>
+  <edition></edition>
+  </article>
+    </publish_info>
+    <writing>article</writing>
+    <author>
+    <first_name>N</first_name>
+    <last_name>West</last_name>
+    </author>
+        <author>
+    <first_name>NA</first_name>
+    <last_name>Bradner</last_name>
+    </author>
+    <author>
+    <first_name>M</first_name>
+    <middle_name>L</middle_name>
+    <last_name>Grachan</last_name>
+    </author>
+       <author>
+    <first_name>S</first_name>
+    <middle_name>J</middle_name>
+    <last_name>Haggarty</last_name>
+    </author>
+       <author>
+    <first_name>R</first_name>
+    <last_name>Mazitschek</last_name>
+    </author>
+    </writing>
+    <conference>
+    <conference>
+    <date>2009-01-01</date>
+    <name>Workshop on Algorithms in Bioinformatics</name>
+    <conf_location>NA</conf_location>
+    </conference>
+    <presentation_title>A supertree simulation study comparing supertree and combined analysis methods using SMIDGen</presentation_title>
+    </conference>
+    <advisee>
+    <name>
+    <first_name>Kevin</first_name>
+    <last_name>Liu</last_name>
+    </name>
+    <username>kliu</username>
+    <email>kliu@cs.utexas.edu</email>
+    <status>PhD Student</status>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>ACE</building_abbr>
+        <building_name>Applied Computational Engineering and Sciences Building</building_name>
+      </building>
+      <floor>3</floor>
+      <room>420</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+   <faculty>
+    <name>
+      <first_name>Phillip</first_name>
+      <middle_name>J</middle_name>
+      <last_name>Cannata</last_name>
+    </name>
+    <username>cannata</username>
+    <email>cannata@cs.utexas.edu</email>
+    <phone_number>
+        <phone_t>work</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>2317226</number>
+      </phone_number>
+    <degree>
+        <date_awarded>1980</date_awarded>
+        <institution>University of Notre Dame</institution>
+        <degree_t>Doctoral Degree</degree_t>
+        <specialization>NA</specialization>
+    </degree>
+    <award>
+        <name>bla</name>
+        <date_awarded>2002</date_awarded>
+      </award>
+      <award>
+        <name>bla</name>
+        <date_awarded>2002</date_awarded>
+      </award>
+    <class>
+        <unique_number>54225</unique_number>
+        <name>Programming Languages</name>
+        <description>Survey of significant concepts underlying modern programming languages, including syntax, functions, expressions, types, polymorphism, assignment, procedures, pointers, encapsulation, classes, and inheritance, with some discussion of implementation issues. Prominent programming paradigms, such as sequential, concurrent, object-oriented, functional, and logic programming. Illustrative examples drawn from a variety of current languages.</description>
+        <course_number>
+           <field_of_study>CS</field_of_study>
+           <short_number>345</short_number>
+        </course_number>
+        <semester>Spring</semester>
+        <year>2010</year>
+        <staff>
+        <person>
+            <first_name>Pranav</first_name>
+            <last_name>Bhandarkar</last_name>
+        </person>
+        <hours>
+        <event_type>Office Hours</event_type>
+        <schedule>
+        <start_time>14:30:00</start_time>
+        <end_time>15:30:00</end_time>
+        <day>Tuesday</day>
+        <day>Thursday</day>
+        <start_date>2010-01-20</start_date>
+        <end_date>2001-05-07</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>ENS</building_abbr>
+        <building_name>Engineering-Science Building</building_name>
+        </building>
+        <floor>B1</floor>
+        <room>31NQ</room>
+        </location>
+        </hours>
+        </staff>
+              <staff>
+        <person>
+            <first_name>Ankit</first_name>
+            <last_name>Shah</last_name>
+        </person>
+        <hours>
+        <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>14:00:00</start_time>
+        <end_time>15:00:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2010-01-20</start_date>
+        <end_date>2001-05-07</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>ENS</building_abbr>
+        <building_name>Engineering-Science Building</building_name>
+        </building>
+        <floor>B1</floor>
+        <room>31NQ</room>
+        </location>
+        </hours>
+        </staff>
+         <schedule>
+         <event_type>Meeting</event_type>
+        <schedule>
+        <start_time>16:00:00</start_time>
+        <end_time>17:30:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2010-01-20</start_date>
+        <end_date>2010-05-07</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>PAI</building_abbr>
+        <building_name>T. S. Painter Hall</building_name>
+        </building>
+        <floor>4</floor>
+        <room>42</room>
+        </location>
+    </schedule>
+    </class>
+    <title>Adjunct Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Mike</first_name>
+      <last_name>Dahlin</last_name>
+    </name>
+    <username>dahlin</username>
+    <email>dahlin@cs.utexas.edu</email>
+    <website>
+       <url>http://userweb.cs.utexas.edu/~dahlin/</url>
+       <group></group>
+        <author>
+               <first_name></first_name>
+              <last_name></last_name>
+        </author>
+    </website>
+    <phone_number>
+        <phone_t>work</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4719549</number>
+      </phone_number>
+      <phone_number>
+        <phone_t>fax</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4718885</number>
+    </phone_number>
+    <research_area>Operating systems and large-scale distributed systems</research_area>
+    <research_group>Laboratory for Advanced Systems Research</research_group>
+    <degree>
+        <date_awarded>1995</date_awarded>
+        <institution>University of California at Berkeley</institution>
+        <degree_t>Doctoral Degree</degree_t>
+        <specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+        <date_awarded>1993</date_awarded>
+        <institution>University of California at Berkeley</institution>
+        <degree_t>Master's Degree</degree_t>
+        <specialization>Computer Science</specialization>
+    </degree>
+    <degree>
+        <date_awarded>1991</date_awarded>
+        <institution>Rice University</institution>
+        <degree_t>Bachelor's Degree</degree_t>
+        <specialization>Electrical Engineering</specialization>
+    </degree>
+    <award>
+        <name>IBM Faculty Partnership award</name>
+        <date_awarded>2005</date_awarded>
+      </award>
+      <award>
+        <name>Alfred P. Sloan Research Fellowship</name>
+        <date_awarded>2002</date_awarded>
+      </award>
+    <class>
+        <unique_number>51135</unique_number>
+        <name>Web Operating Systems</name>
+        <description>This course has two goals. First, as a group, we should define a research agenda in "web operating systems." Second, as individuals, this course should equip you to do "state of the art" experimental research on topics relating to large-scale distributed systems.</description>
+        <course_number>
+           <field_of_study>CS</field_of_study>
+           <short_number>395T</short_number>
+        </course_number>
+        <semester>Spring</semester>
+        <year>2000</year>
+        <staff>
+        <person>
+            <first_name>Arunkumar</first_name>
+            <last_name>Venkataramani</last_name>
+        </person>
+        </staff>
+         <schedule>
+         <event_type>Meeting</event_type>
+        <schedule>
+        <start_time>16:00:00</start_time>
+        <end_time>17:30:00</end_time>
+        <day>Monday</day>
+        <day>Wednesday</day>
+        <start_date>2000-01-18</start_date>
+        <end_date>2000-05-05</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>GAR</building_abbr>
+        <building_name>Garrison Hall</building_name>
+        </building>
+        <floor>2</floor>
+        <room>01</room>
+        </location>
+    </schedule>
+    </class>
+    <writing>
+    <title>Interpreting Stale Load Information</title>
+    <publish_info>
+    <publisher></publisher>
+    <publish_date>2001-10-01</publish_date>
+    <ISBN>0000000000000</ISBN>
+  <article>
+  <journal>IEEE Transactions on Parallel and Distributed Systems</journal>
+  <edition></edition>
+  </article>
+    </publish_info>
+    <writing>article</writing>
+    <author>
+    <first_name></first_name>
+    <last_name></last_name>
+    </author>
+    </writing>
+    <conference>
+    <conference>
+    <date>2002-12-01</date>
+    <name>2002 USENIX Operating Systems Design and Implementation (OSDI) conference</name>
+    <conf_location>NA</conf_location>
+    </conference>
+    <presentation_title>TCP Nice: A Mechanism for Background Transfers</presentation_title>
+    </conference>
+    <advisee>
+    <name>
+    <first_name>Amit</first_name>
+    <last_name>Alyer</last_name>
+    </name>
+    <username>anand</username>
+    <email>anand@cs.utexas.edu</email>
+    <status>PhD Student</status>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>ACE</building_abbr>
+        <building_name>Applied Computational Engineering and Sciences Building</building_name>
+      </building>
+      <floor>6</floor>
+      <room>248</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+  <faculty>
+    <name>
+      <first_name>Ernest</first_name>
+      <middle_name>Allen</middle_name>
+      <last_name>Emerson</last_name>
+    </name>
+    <username>emerson</username>
+    <email>emerson@cs.utexas.edu</email>
+    <website>
+       <url>http://userweb.cs.utexas.edu/~emerson/</url>
+       <group></group>
+        <author>
+               <first_name></first_name>
+              <last_name></last_name>
+        </author>
+    </website>
+    <phone_number>
+        <phone_t>work</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4717316</number>
+      </phone_number>
+      <phone_number>
+        <phone_t>fax</phone_t>
+        <country_code>1</country_code>
+        <area_code>512</area_code>
+        <number>4718885</number>
+    </phone_number>
+    <research_area>Formal methods</research_area>
+    <research_area>logics and semantics of programs</research_area>
+    <research_area>concurrent and distributed computing</research_area>
+    <degree>
+        <date_awarded>1981</date_awarded>
+        <institution>Harvard University</institution>
+        <degree_t>Doctoral Degree</degree_t>
+        <specialization>Applied Mathematics</specialization>
+    </degree>
+    <award>
+        <name>2007 ACM A.M. Turing Award</name>
+        <date_awarded>2007</date_awarded>
+      </award>
+    <class>
+        <unique_number>55855</unique_number>
+        <name>Formal Verification and Semantics</name>
+        <description>This course will survey the classic theory of Formal Verification, including the work of Floyd, Hoare, and Dijkstra. Related work on Computer Aided Verification, including the work of Pnueli, Emerson, Clarke, Sifakis, and Milner are also addresses. The emphasis  will be on using and applying logic, lattice theory, and automata theory to program verification and semantics.</description>
+        <course_number>
+           <field_of_study>CS</field_of_study>
+           <short_number>388S</short_number>
+        </course_number>
+        <semester>Fall</semester>
+        <year>2008</year>
+         <staff>
+        <person>
+            <first_name>NA</first_name>
+            <last_name>NA</last_name>
+        </person>
+        <hours>
+        <event_type>Office Hours</event_type>
+      <schedule>
+        <start_time>09:00:00</start_time>
+        <end_time>10:00:00</end_time>
+        <day>Monday</day>
+        <start_date>2008-08-27</start_date>
+        <end_date>2008-12-05</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>PAI</building_abbr>
+        <building_name>Painter</building_name>
+        </building>
+        <floor>0</floor>
+        <room></room>
+        </location>
+        </hours>
+        </staff>
+         <schedule>
+         <event_type>Meeting</event_type>
+        <schedule>
+        <start_time>17:00:00</start_time>
+        <end_time>18:30:00</end_time>
+        <day>Tuesday</day>
+        <day>Thursday</day>
+        <start_date>2008-08-27</start_date>
+        <end_date>2008-12-05</end_date>
+        </schedule>
+        <location>
+        <building>
+        <building_abbr>WEL</building_abbr>
+        <building_name>Robert A. Welch Hall</building_name>
+        </building>
+        <floor>3</floor>
+        <room>402</room>
+        </location>
+    </schedule>
+    </class>
+    <writing>
+    <title>On Model Checking for Non-Deterministic Infinite-State Systems</title>
+    <publish_info>
+    <publisher></publisher>
+    <publish_date>1998-01-01</publish_date>
+    <ISBN>0000000000000</ISBN>
+  <article>
+  <journal>LICS 1998</journal>
+  <edition></edition>
+  </article>
+    </publish_info>
+    <writing>article</writing>
+    <author>
+    <first_name>Kedar</first_name>
+    <middle_name>S.</middle_name>
+    <last_name>Namjoshi</last_name>
+    </author>
+    </writing>
+    <advisee>
+    <name>
+    <first_name>Jyotirmoy</first_name>
+    <middle_name>V.</middle_name>
+    <last_name>Deshmukh</last_name>
+    </name>
+    <username>jyotirmoy</username>
+    <email>jyotirmoy@cerc.utexas.edu</email>
+    <status>PhD Student</status>
+    </advisee>
+    <office>
+      <building>
+        <building_abbr>TAY</building_abbr>
+        <building_name>T. U. Taylor Hall</building_name>
+      </building>
+      <floor>2</floor>
+      <room>124</room>
+    </office>
+    <title>Professor</title>
+  </faculty>
+</people>

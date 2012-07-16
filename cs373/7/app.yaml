@@ -1,0 +1,38 @@
+application: rlindsey373
+version: 4
+runtime: python
+api_version: 1
+
+handlers:
+- url: /edit/person
+  script: EditPerson.py
+- url: /view/people
+  script: ViewPeople.py
+- url: /view/person
+  script: ViewPerson.py
+- url: /view/degree
+  script: ViewDegree.py
+- url: /view/award
+  script: ViewAward.py
+- url: /view/research_area
+  script: ViewResearchArea.py
+- url: /view/research_group
+  script: ViewResearchGroup.py
+- url: /view/publication
+  script: ViewPublication.py  
+- url: /view/presentation
+  script: ViewPresentation.py 
+- url: /view/course
+  script: ViewCourse.py
+- url: /view/article
+  script: ViewArticle.py  
+- url: /admin
+  script: Admin.py
+- url: /import
+  script: Import.py
+- url: /export
+  script: Export.py
+- url: /unittest
+  script: TestFaculty.py
+- url: /.*
+  script: RunFaculty3.py

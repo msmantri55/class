@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="faculty_members" type="faculty_members_type"/>
+
+	<xs:complexType name="faculty_members_type">
+		<xs:sequence>
+			<xs:element name="faculty_member" type="faculty_member_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="faculty_member_type">
+		<xs:all>
+			<xs:element name="name" type="name_type"/>
+			<xs:element name="username" type="username_type" minOccurs="0"/>
+			<xs:element name="faculty_type" type="xs:normalizedString"/>
+			<xs:element name="office" type="location_type"/>
+			<xs:element name="email_addresses" type="email_addresses_type"/>
+			<xs:element name="websites" type="websites_type" minOccurs="0"/>
+			<xs:element name="phone_numbers" type="phone_numbers_type" minOccurs="0"/>
+			<xs:element name="research_areas" type="research_areas_type" minOccurs="0"/>
+			<xs:element name="degrees" type="degrees_type" minOccurs="0"/>
+			<xs:element name="awards" type="awards_type" minOccurs="0"/>
+			<xs:element name="office_hours" type="meeting_times_and_places_type" minOccurs="0"/>
+			<xs:element name="classes" type="classes_type" minOccurs="0"/>
+			<xs:element name="published_books" type="published_books_type" minOccurs="0"/>
+			<xs:element name="journal_articles" type="journal_articles_type" minOccurs="0"/>
+			<xs:element name="conferences" type="conferences_type" minOccurs="0"/>
+			<xs:element name="grad_students" type="grad_students_type" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="name_type">
+		<xs:all>
+			<xs:element name="first_name" type="xs:normalizedString"/>
+			<xs:element name="middle_name" type="xs:normalizedString" minOccurs="0"/>
+			<xs:element name="last_name" type="xs:normalizedString"/>
+			<xs:element name="suffix" type="xs:normalizedString" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="username_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[a-z_][a-z0-9_-]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="location_type">
+		<xs:all>
+			<xs:element name="building" type="building_type"/>
+			<xs:element name="room" type="xs:normalizedString"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="building_type">
+		<xs:all>
+			<xs:element name="abbreviation" type="building_abbreviation_type"/>
+			<xs:element name="long_name" type="xs:normalizedString"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="building_abbreviation_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[A-Z]{2,5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="email_addresses_type">
+		<xs:sequence>
+			<xs:element name="email" type="email_type" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="email_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+([A-Z]{2}|edu|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="websites_type">
+		<xs:sequence>
+			<xs:element name="website" type="website_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="website_type">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="(http|https|shttp)://.*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="phone_numbers_type">
+		<xs:sequence>
+			<xs:element name="phone_number" type="phone_number_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="phone_number_type">
+		<xs:all>
+			<xs:element name="phone_type" type="phone_type_type"/>
+			<xs:element name="country_code" type="country_code_type" minOccurs="0"/>
+			<xs:element name="area_code" type="area_code_type" minOccurs="0"/>
+			<xs:element name="number" type="number_type"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="phone_type_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="home"/>
+			<xs:enumeration value="department"/>
+			<xs:enumeration value="work"/>
+			<xs:enumeration value="cell"/>
+			<xs:enumeration value="fax"/>
+			<xs:enumeration value="pager"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="country_code_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d{1,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="area_code_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="number_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d{7}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="research_areas_type">
+		<xs:sequence>
+			<xs:element name="research_area" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="degrees_type">
+		<xs:sequence>
+			<xs:element name="degree" type="degree_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="degree_type">
+		<xs:all>
+			<xs:element name="date_awarded" type="xs:gYear"/>
+			<xs:element name="institution" type="xs:normalizedString"/>
+			<xs:element name="degree_type" type="xs:normalizedString"/>
+			<xs:element name="specialization" type="xs:normalizedString" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="awards_type">
+		<xs:sequence>
+			<xs:element name="award" type="award_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="award_type">
+		<xs:all>
+			<xs:element name="name" type="xs:normalizedString"/>
+			<xs:element name="date_awarded" type="xs:gYear"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="meeting_times_and_places_type">
+		<xs:sequence>
+			<xs:element name="meeting_time_and_place" type="meeting_time_and_place_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="meeting_time_and_place_type">
+		<xs:all>
+			<xs:element name="start_time" type="xs:time"/>
+			<xs:element name="end_time" type="xs:time"/>
+			<xs:element name="location" type="location_type"/>
+			<xs:element name="days" type="days_type"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="days_type">
+		<xs:sequence>
+			<xs:element name="day" type="day_type" maxOccurs="5"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="day_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
+			<xs:enumeration value="Saturday"/>
+			<xs:enumeration value="Sunday"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="classes_type">
+		<xs:sequence>
+			<xs:element name="class" type="class_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="class_type">
+		<xs:all>
+			<xs:element name="unique_number" type="unique_number_type"/>
+			<xs:element name="name" type="xs:normalizedString"/>
+			<xs:element name="description" type="xs:normalizedString"/>
+			<xs:element name="course_number" type="course_number_type"/>
+			<xs:element name="semester" type="semester_type"/>
+			<xs:element name="year" type="xs:gYear"/>
+			<xs:element name="teaching_assistants" type="names_type" minOccurs="0"/>
+			<xs:element name="meeting_times_and_places" type="meeting_times_and_places_type"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="unique_number_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="course_number_type">
+		<xs:all>
+			<xs:element name="field_of_study" type="field_of_study_type"/>
+			<xs:element name="number" type="course_three_digit_number_type"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="field_of_study_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="[A-Z]{1,3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="course_three_digit_number_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:pattern value="\d{3}[A-Z]?"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="semester_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="Fall"/>
+			<xs:enumeration value="Spring"/>
+			<xs:enumeration value="Summer First Term"/>
+			<xs:enumeration value="Summer Second Term"/>
+			<xs:enumeration value="Summer Whole Term"/>
+			<xs:enumeration value="Summer Nine Week Term"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="names_type">
+		<xs:sequence>
+			<xs:element name="name" type="name_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="published_books_type">
+		<xs:sequence>
+			<xs:element name="book" type="book_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="book_type">
+		<xs:all>
+			<xs:element name="title" type="xs:normalizedString"/>
+			<xs:element name="publisher" type="xs:normalizedString"/>
+			<xs:element name="date_published" type="xs:gYear"/>
+			<xs:element name="other_authors" type="names_type" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="journal_articles_type">
+		<xs:sequence>
+			<xs:element name="article" type="article_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="article_type">
+		<xs:all>
+			<xs:element name="journal" type="xs:normalizedString"/>
+			<xs:element name="title" type="xs:normalizedString"/>
+			<xs:element name="issue_date" type="xs:gYearMonth"/>
+			<xs:element name="other_authors" type="names_type" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="conferences_type">
+		<xs:sequence>
+			<xs:element name="conference" type="conference_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="conference_type">
+		<xs:all>
+			<xs:element name="date" type="xs:gYearMonth"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="location" type="xs:string"/>
+			<xs:element name="presentation_title" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="grad_students_type">
+		<xs:sequence>
+			<xs:element name="grad_student" type="grad_student_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="grad_student_type">
+		<xs:all>
+			<xs:element name="name" type="name_type"/>
+			<xs:element name="type" type="grad_degree_type"/>
+			<xs:element name="writings" type="grad_articles_type" minOccurs = "0"/>
+			<xs:element name="date" type="xs:gYear" minOccurs = "0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="grad_degree_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="Master's"/>
+			<xs:enumeration value="Ph.D."/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="grad_articles_type">
+		<xs:sequence>
+			<xs:element name="writing" type="grad_article_type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="grad_article_type">
+		<xs:all>
+			<xs:element name="type" type="writing_type"/>
+			<xs:element name="journal" type="xs:normalizedString" minOccurs="0"/>
+			<xs:element name="title" type="xs:normalizedString"/>
+			<xs:element name="issue_date" type="xs:gYearMonth"/>
+			<xs:element name="other_authors" type="names_type" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:simpleType name="writing_type">
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="Thesis"/>
+			<xs:enumeration value="Theses"/>
+			<xs:enumeration value="Dissertation"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

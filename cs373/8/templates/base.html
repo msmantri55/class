@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html lang="en-us">
+	<head>
+		{% spaceless %}
+			<meta charset="utf-8">
+			
+			<title>{% block title %}{{ title }}{% endblock %}</title>
+		{% endspaceless %}
+	</head>
+
+	<body>
+		{% spaceless %}
+			{% block body %}
+				{{ body }}
+			{% endblock %}
+		{% endspaceless %}
+	</body>
+</html>

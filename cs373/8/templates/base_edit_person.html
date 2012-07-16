@@ -1,0 +1,166 @@
+{% extends "base_edit.html" %}
+
+{% block title %}{{ person.name.first }} {{ person.name.last }} (Editing){% endblock %}
+
+{% block body %}{% spaceless %}
+<form action="" method="post">
+  <input type="hidden" name="kind" value="{{ person.kind }}">
+  <input type="hidden" name="key" value="{{ person.key }}">
+  
+  <fieldset>
+	<legend>{{ person.name.first }} {{ person.name.last }}</legend>
+	
+	<ul>
+		<li>
+			<label for="name.first">First name</label>
+			<input type="text" name="name.first" id="name.first" value="{{ person.name.first }}">
+		</li>
+		
+		<li>
+			<label for="name.middle">Middle name</label>
+			<input type="text" name="name.middle" id="name.middle" value="{% if person.name.middle %}{{ person.name.middle }}{% endif %}">
+		</li>
+		
+		<li>
+			<label for="name.last">Last name</label>
+			<input type="text" name="name.last" id="name.last" value="{{ person.name.last }}">
+		</li>
+		
+		<li>
+			<label for="name.suffix">Suffix</label>
+			<input type="text" name="name.suffix" id="name.suffix" value="{% if person.name.suffix %}{{ person.name.suffix }}{% endif %}">
+		</li>
+		
+		<li>
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" value="{{ person.username }}">
+		</li>
+		
+		{% if person.title %}
+			<li>
+				<label for="title">Title</label>
+				<select name="title" id="title">
+					{% for choice in Faculty.title.choices %}
+						<option value="{{ choice }}"{% ifequal choice person.title %} selected="selected"{% endifequal %}>{{ choice }}</option>
+					{% endfor %}
+				</select>
+			</li>
+		{% endif %}
+		
+		{% if person.status %}
+			<li>
+				<label for="status">Title</label>
+				<select name="status" id="status">
+					{% for choice in Student.status.choices %}
+						<option value="{{ choice }}"{% ifequal choice person.status %} selected="selected"{% endifequal %}>{{ choice }}</option>
+					{% endfor %}
+				</select>
+			</li>
+		{% endif %}
+		
+		<li>
+			<label>Email addresses</label>
+			<ul>
+				{% for email in person.emails %}
+					<li>
+						<input type="checkbox" name="email-{{ forloop.counter }}-toggle" checked="checked">
+						<input type="email" name="email-{{ forloop.counter }}" value="{{ email }}">
+					</li>
+				{% endfor %}
+				
+				<li>
+					<input type="checkbox" name="email-0-toggle">
+					<input type="email" name="email-0">
+				</li>
+			</ul>
+		</li>
+		
+		{% if websites %}
+			<li>
+				<label>Websites</label>
+				<ul>
+					{% for website in websites %}
+						<li>
+							<input type="checkbox" name="website-{{ forloop.counter }}-toggle" checked="checked">
+							<input type="text" name="website-{{ forloop.counter }}" value="{{ website.address }}">
+							<input type="hidden" name="website-{{ forloop.counter }}-group" value="{{ website.group.key }}">
+							{% for group in research_groups %}
+								{% ifequal group.key website.group.key %}
+									<span>{{ group.name }}</span>
+								{% endifequal %}
+							{% endfor %}
+						</li>
+					{% endfor %}
+					
+					<li>
+						<input type="checkbox" name="website-0-toggle">
+						<input type="text" name="website-0">
+						<select name="website-0-group">
+							{% for group in research_groups %}
+								<option value="{{ group.key }}">{{ group.name }}</option>
+							{% endfor %}
+						</select>
+					</li>
+				</ul>
+			</li>
+		{% endif %}
+		
+		{% if person.research_areas %}
+			<li>
+				<label>Research Areas</label>
+				<ul>
+					{% for research_area in person.research_areas %}
+						<li>
+							<input type="checkbox" name="research_area-{{ forloop.counter }}-toggle" checked="checked">
+							<select name="research_area-{{ forloop.counter }}">
+								{% for area in research_areas %}
+									<option value="{{ area.key }}"{% ifequal area.name research_area.name %} selected="selected"{% endifequal %}>{{ area.name }}</option>
+								{% endfor %}
+							</select>
+						</li>
+					{% endfor %}
+					
+					<li>
+						<input type="checkbox" name="research_area-0-toggle">
+						<select name="research_area-0">
+							{% for area in research_areas %}
+								<option value="{{ area.key }}">{{ area.name }}</option>
+							{% endfor %}
+						</select>
+					</li>
+				</ul>
+			</li>
+		{% endif %}
+		
+		{% if person.research_groups %}
+			<li>
+				<label>Research Groups</label>
+				<ul>
+					{% for research_group in person.research_groups %}
+						<li>
+							<input type="checkbox" name="research_group-{{ forloop.counter }}-toggle" checked="checked">
+							<select name="research_group-{{ forloop.counter }}">
+								{% for group in research_groups %}
+									<option value="{{ group.key }}"{% ifequal group.name research_group.name %} selected="selected"{% endifequal %}>{{ group.name }}</option>
+								{% endfor %}
+							</select>
+						</li>
+					{% endfor %}
+					
+					<li>
+						<input type="checkbox" name="research_group-0-toggle">
+						<select name="research_group-0">
+							{% for group in research_groups %}
+								<option value="{{ group.key }}">{{ group.name }}</option>
+							{% endfor %}
+						</select>
+					</li>
+				</ul>
+			</li>
+		{% endif %}
+	</ul>
+	
+	<input type="submit">
+  </fieldset>
+</form>
+{% endspaceless %}{% endblock %}

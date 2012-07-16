@@ -1,0 +1,490 @@
+<people>
+	<faculty>
+		<name>
+			<first_name>Vijaya</first_name>
+			<last_name>Ramachandran</last_name>
+		</name>
+		<username>vlr</username>
+		<email>vlr@cs.utexas.edu</email>
+		<email>another.email@cs.utexas.edu</email>
+
+		<website>
+			<url>http://userweb.cs.utexas.edu/~vlr/</url>
+			<group>Department of Computer Sciences</group>
+			<author>
+				<first_name>Vijaya</first_name>
+				<last_name>Ramachandran</last_name>
+			</author>
+			<author>
+				<first_name>Another</first_name>
+				<middle_name>(fake)</middle_name>
+				<last_name>Author</last_name>
+				<suffix>Jr</suffix>
+			</author>
+		</website>
+		<website>
+			<url>http://whatever.com</url>
+			<group>Department of Computer Sciences</group>
+			<author>
+				<first_name>Vijaya</first_name>
+				<last_name>Ramachandran</last_name>
+			</author>
+			<author>
+				<first_name>Another</first_name>
+				<middle_name>(fake)</middle_name>
+				<last_name>Author</last_name>
+				<suffix>Jr</suffix>
+			</author>
+		</website>
+
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4719554</number>
+		</phone_number>
+
+		<phone_number> 
+			<phone_t>fax</phone_t> 
+			<country_code>1</country_code> 
+			<area_code>512</area_code> 
+			<number>4718885</number>
+		</phone_number> 
+		<research_area>Theoretical computer science</research_area>
+		<research_area>Graph algorithms and data structures</research_area>
+		<research_area>Parallel Computation</research_area>
+		<research_group>Fake research group</research_group>
+		
+	
+		  <degree> 
+			<date_awarded>1983</date_awarded> 
+			<institution>Princeton University</institution> 
+			<degree_t>Doctoral Degree</degree_t> 
+			<specialization>Electrical Engineering</specialization> 
+		  </degree> 
+		  <degree> 
+			  <date_awarded>1984</date_awarded> 
+			  <institution>Bob Jones University</institution> 
+			  <degree_t>Doctoral Degree</degree_t> 
+			  <specialization>Electrical Engineering</specialization> 
+		  </degree> 
+		  <award> 
+			<name>National Science Foundation Grant CCF-0514876</name> 
+			<date_awarded>2005</date_awarded> 
+		  </award> 
+		  <award> 
+			<name>IBM Faculty Development Award</name> 
+			<date_awarded>1983</date_awarded> 
+		  </award> 
+		
+		  <office_hours>
+
+			  <event_type>Office Hours</event_type>
+			  <schedule>
+				   <start_time>10:30:00</start_time>
+				   <end_time>11:30:00</end_time>
+				   <day>Tuesday</day>
+		   <day>Thursday</day>
+
+				   <start_date>2010-01-19</start_date>
+				   <end_date>2010-05-07</end_date>
+			  </schedule>
+			  <location>
+				   <building>
+						<building_abbr>TAY</building_abbr>
+						<building_name>Taylor</building_name>
+
+				   </building>
+				   <floor>3</floor>
+				   <room>3.152</room>
+			  </location>
+		  </office_hours>
+		<!--
+		  <class>
+			   <unique_number>54265</unique_number>
+
+			   <name>Algorithms</name>
+			   <description>This course will cover the theoretical aspects of algorithm design and analysis.</description>
+			   <course_number>
+					<field_of_study>CS</field_of_study>
+					<short_number>357</short_number>
+			   </course_number>
+			   <semester>Spring</semester>
+
+			   <year>2010</year>
+			   <staff>
+					<person>
+						 <first_name>Vijaya</first_name>
+						 <last_name>Ramachandran</last_name>
+					</person>
+			   </staff>
+
+		   <staff>
+					<person>
+						 <first_name>Aibo</first_name>
+						 <last_name>Tian</last_name>
+					</person>
+			   </staff>
+			   <schedule>
+					<event_type>Meeting</event_type>
+
+					<schedule>
+						 <start_time>14:00:00</start_time>
+						 <end_time>15:30:00</end_time>
+						 <day>Tuesday</day>
+			 <day>Thursday</day>
+						 <start_date>2010-01-19</start_date>
+
+						 <end_date>2010-05-07</end_date>
+					</schedule>
+					<location>
+						<building>
+							 <building_abbr>WEL</building_abbr>
+							 <building_name>Welch</building_name>
+						</building>
+
+						<floor>2</floor>
+						<room>2.256</room>
+					</location>
+			   </schedule>
+		  </class>
+		-->
+		  <class>
+			   <unique_number>54945</unique_number>
+
+			   <name>Parallel Algorithms</name>
+			   <description>This is a graduate diversity course in a theory thread.</description>
+			   <course_number>
+					<field_of_study>CS</field_of_study>
+					<short_number>388P</short_number>
+			   </course_number>
+			   <semester>Fall</semester>
+
+			   <year>2009</year>
+			   <staff>
+					<person>
+						 <first_name>Vijaya</first_name>
+						 <last_name>Ramachandran</last_name>
+					</person>
+					<hours>
+
+			  <event_type>Office Hours</event_type>
+			  <schedule>
+				   <start_time>10:30:00</start_time>
+				   <end_time>11:30:00</end_time>
+				   <day>Tuesday</day>
+		   <day>Thursday</day>
+
+				   <start_date>2010-01-19</start_date>
+				   <end_date>2010-05-07</end_date>
+			  </schedule>
+			  <location>
+				   <building>
+						<building_abbr>TAY</building_abbr>
+						<building_name>Taylor</building_name>
+
+				   </building>
+				   <floor>3</floor>
+				   <room>3.152</room>
+			  </location>
+		  </hours>					
+			   </staff>
+
+		   <staff>
+					<person>
+						 <first_name>Thomas</first_name>
+						 <last_name>Finsterbusch</last_name>
+					</person>
+			   </staff>
+			   <schedule>
+					<event_type>Meeting</event_type>
+
+					<schedule>
+						 <start_time>15:30:00</start_time>
+						 <end_time>17:00:00</end_time>
+						 <day>Monday</day>
+			 <day>Wednesday</day>
+						 <start_date>2009-08-26</start_date>
+
+						 <end_date>2009-12-04</end_date>
+					</schedule>
+					<location>
+						<building>
+							 <building_abbr>WEL</building_abbr>
+							 <building_name>Welch</building_name>
+						</building>
+
+						<floor>2</floor>
+						<room>2.256</room>
+					</location>
+			   </schedule>
+		  </class>	  
+		
+		  <writing>
+			   <title>Cache-oblivious Dynamic Programming for Bioinformatics</title>
+			   <publish_info>
+
+					<publisher>IEEE</publisher>
+					<publish_date>2008-01-01</publish_date>
+					<article>
+						 <journal>IEEE/ACM Transactions on Computational Biology and Bioinformatics</journal>
+						 <edition>2008</edition>
+					</article>
+			   </publish_info>
+
+			   <writing>article</writing>
+			   <author>
+						 <first_name>Vijaya</first_name>
+						 <last_name>Ramachandran</last_name>
+			   </author>
+		   <author>
+						 <first_name>Rezaul</first_name>
+
+			 <middle_name>Alam</middle_name>
+						 <last_name>Chowdhury</last_name>
+			   </author>
+			   <author>
+						 <first_name>H</first_name>
+						 <last_name>Lee</last_name>
+			   </author>
+
+		  </writing>
+	<!--  
+	<writing>
+		
+			   <title>New randomized minimum spanning tree algorithms using exponentially fewer random bits</title>
+			   <publish_info>
+					<publisher>ACM</publisher>
+					<publish_date>2008-01-01</publish_date>
+					<article>
+
+						 <journal>ACM Transactions on Algorithms</journal>
+						 <edition>2008</edition>
+					</article>
+			   </publish_info>
+			   <writing>article</writing>
+			   <author>
+						 <first_name>Vijaya</first_name>
+
+						 <last_name>Ramachandran</last_name>
+			   </author>
+			   <author>
+						 <first_name>Seth</first_name>
+						 <last_name>Pettie</last_name>
+			   </author>
+		  </writing>
+-->
+		  <conference>
+			   <conference>
+					<date>2008-01-01</date>
+					<name>ACM Symposium on Parallelism in Algorithms and Architectures</name>
+					<conf_location>Munich, Germany</conf_location>
+			   </conference>
+			   <presentation_title>Cache-efficient dynamic programming algorithms for multicores</presentation_title>
+
+		  </conference>
+		<!--
+	  <conference>
+			   <conference>
+					<date>2008-01-01</date>
+					<name>International Symposium on Computer Architecture</name>
+					<conf_location>Beijing, China</conf_location>
+			   </conference>
+
+			   <presentation_title>Flexible hardware acceleration for instruction-grain program monitoring</presentation_title>
+		  </conference>
+		  <advisee>	  
+					<name>
+				<first_name>Rezaul</first_name>
+				<middle_name>Alam</middle_name>	 
+				<last_name>Chowdhury</last_name> 
+					</name>
+
+					<username>shaikat</username>
+					<email>shaikat@cs.utexas.edu</email>
+			<writing>
+					<title>Cache-efficient Algorithms and Data Structures: Theory and Experimental Evaluation</title>
+					<publish_info>
+						<publisher>University of Texas at Austin</publisher>
+							<publish_date>2007-01-01</publish_date>
+
+						</publish_info>
+					<writing>thesis</writing>
+			<author>
+					<first_name>Rezaul</first_name>
+					<middle_name>Alam</middle_name>	 
+					<last_name>Chowdhury</last_name>
+				</author>
+
+				</writing>
+					<status>PhD Student</status>
+			<advisor>
+			<name>
+						<first_name>Vijaya</first_name>
+						<last_name>Ramachandran</last_name>
+				</name>
+
+				<username>vlr</username>
+				<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+			</advisor>
+		  </advisee>
+	  <advisee>	  
+					<name>
+				<first_name>Daniel</first_name>
+
+				<last_name>Fernholz</last_name> 
+					</name>
+					<username>fernholz</username>
+					<email>fernholz@cs.utexas.edu</email>
+			<writing>
+					<title>Sparse Random Graphs: Methods, Structure, and Heuristics</title>
+					<publish_info>
+
+						<publisher>University of Texas at Austin</publisher>
+							<publish_date>2007-01-01</publish_date>
+						</publish_info>
+					<writing>thesis</writing>
+			<author>
+					<first_name>Daniel</first_name> 
+					<last_name>Fernholz</last_name>
+
+				</author>
+				</writing>
+					<status>PhD Student</status>
+			<advisor>
+			<name>
+						<first_name>Vijaya</first_name>
+						<last_name>Ramachandran</last_name>
+
+				</name>
+				<username>vlr</username>
+				<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+			</advisor>
+		  </advisee>
+	  <advisee>	  
+					<name>
+
+					  <first_name>Ganeshkumar</first_name>
+				  <last_name>Ganapathy</last_name>	
+					</name>
+					<email>ganeshkumarganapathy@yahoo.com</email>
+			<writing>
+					<title>Algorithms and Heuristics for Combinatorial Optimization in Phylogeny</title>
+					<publish_info>
+
+						<publisher>University of Texas at Austin</publisher>
+							<publish_date>2006-01-01</publish_date>
+						</publish_info>
+					<writing>thesis</writing>
+			<author>
+					<first_name>Ganeshkumar</first_name>
+					<last_name>Ganapathy</last_name> 
+				</author>
+
+				</writing>
+					<status>PhD Student</status>
+			<advisor>
+			<name>
+						<first_name>Vijaya</first_name>
+						<last_name>Ramachandran</last_name>
+				</name>
+
+				<username>vlr</username>
+				<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+			</advisor>
+		  </advisee>
+		-->
+	  <advisee>	  
+		<name>
+					  <first_name>Seth</first_name>
+
+				  <last_name>Pettie</last_name>	 
+					</name>
+					<email>sethpettie@yahoo.com</email>
+			<writing>
+					<title>On the Shortest Path and Minimum Spanning Tree Problems</title>
+					<publish_info>
+						<publisher>University of Texas at Austin</publisher>
+
+							<publish_date>2003-01-01</publish_date>
+						</publish_info>
+					<writing>thesis</writing>
+			<author>
+					<first_name>Seth</first_name>
+					<last_name>Pettie</last_name> 
+				</author>
+
+				</writing>
+					<status>PhD Student</status>
+			<advisor>
+			<name>
+						<first_name>Vijaya</first_name>
+						<last_name>Ramachandran</last_name>
+				</name>
+
+				<username>vlr</username>
+				<email>vlr@cs.utexas.edu</email>
+				<title>Professor</title>
+			</advisor>
+		  </advisee>
+<!--	  <advisee>	  
+					<name>
+					  <first_name>Tsan-sheng</first_name>
+
+				  <last_name>Hsu</last_name>  
+					</name>
+					<email>tsanshenghsu@yahoo.com</email>
+			<writing>
+					<title>Graph Augmentation and Related Problems: Theory and Practice</title>
+					<publish_info>
+						<publisher>University of Texas at Austin</publisher>
+
+							<publish_date>1993-01-01</publish_date>
+						</publish_info>
+					<writing>thesis</writing>
+			<author>
+					<first_name>Tsan-sheng</first_name>
+					<last_name>Hsu</last_name> 
+				</author>
+
+				</writing>
+					<status>PhD Student</status>
+			<advisor>
+			<name>
+						<first_name>Vijaya</first_name>
+						<last_name>Ramachandran</last_name>
+				</name>
+
+				<username>vlr</username>
+				<email>vlr@cs.utexas.edu</email>
+			<title>Professor</title>
+			</advisor>
+		  </advisee>
+		-->
+					  <office>
+			   <building>
+
+					<building_abbr>TAY</building_abbr>
+						 <building_name>Taylor</building_name>
+			   </building>
+			   <floor>3</floor>
+				<room>3.152</room>
+		  </office>
+	  
+		<title>Professor</title>
+	</faculty>
+	<student>
+		<name>
+			<first_name>thom</first_name>
+			<last_name>yorke</last_name> 
+		</name>
+		<username>kid_a</username>
+		<email>a@b.gov</email>
+		<email>another.email@someplace.edu</email>
+		<research_area>Parallel Computation</research_area>
+		<status>Post Doc</status>
+	</student>
+</people>

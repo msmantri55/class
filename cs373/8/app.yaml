@@ -1,0 +1,18 @@
+application: rlindsey373
+version: 8
+runtime: python
+api_version: 1
+
+handlers:
+- url: /login
+  script: Login.py
+- url: /test.*
+  script: gaeunit.py
+- url: /view.*
+  script: View.py
+- url: /import
+  script: Import.py
+- url: /export
+  script: Export.py
+- url: /.*
+  script: Index.py

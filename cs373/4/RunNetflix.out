@@ -1,0 +1,5 @@
+This file will be roughly 18 megabytes. To generate it, run
+
+	`python RunNetflix.py path_to_netflix_data`
+
+It will take about five minutes.

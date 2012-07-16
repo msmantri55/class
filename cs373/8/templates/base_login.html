@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+<form method="post">
+	<fieldset>
+		<legend>Login</legend>
+		
+		<select autofocus name="name">
+			<option selected value="admin">Administrator</option>
+			
+			<optgroup label="Faculty">
+				{% for person in faculty %}
+					<option value="{{ person.emails.0 }}">{{ person.name.first }} {{ person.name.last }}</option>
+				{% endfor %}
+			</optgroup>
+			
+			<optgroup label="Students">
+				{% for person in students %}
+					<option value="{{ person.emails.0 }}">{{ person.name.first }} {{ person.name.last }}</option>
+				{% endfor %}
+			</optgroup>
+		</select>
+		
+		<input type="submit">
+	</fieldset>
+</form>
+{% endblock %}

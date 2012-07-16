@@ -1,0 +1,1575 @@
+<?xml version="1.0"?>
+
+<!--
+
+Keeping track of the status of this data in
+
+http://etherpad.com/iCHp0SySNA
+
+-->
+
+<people>
+
+    <faculty>
+		<name>
+			<first_name>Lorenzo</first_name>
+			<last_name>Alvisi</last_name>
+		</name>
+		<username>lorenzo</username>
+		<email>lorenzo@cs.utexas.edu</email>
+       
+		<website>
+			<url>http://userweb.cs.utexas.edu/~lorenzo/</url>
+			<group></group>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</website>
+       
+		<phone_number>
+			<phone_t>work</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>4719792</number>
+		</phone_number>
+		<phone_number>
+			<phone_t>fax</phone_t>
+			<country_code>1</country_code>
+			<area_code>512</area_code>
+			<number>2327886</number>
+		</phone_number>
+       
+		<research_area>distributed computing</research_area>
+		<research_area>fault tolerance</research_area>
+       
+		<research_group>laboratory for advanced systems research</research_group>
+		
+		<degree>
+			<date_awarded>1987</date_awarded>
+			<institution>Università di Bologna, Italy</institution>
+			<degree_t>Laurea</degree_t>
+			<specialization>Physics</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1994</date_awarded>
+			<institution>Cornell</institution>
+			<degree_t>Master's Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		<degree>
+			<date_awarded>1996</date_awarded>
+			<institution>Cornell</institution>
+			<degree_t>Doctoral Degree</degree_t>
+			<specialization>Computer Science</specialization>
+		</degree>
+		
+		<award>
+			<name>Outstanding Graduate Adviser Award</name>
+			<date_awarded>2010</date_awarded>
+		</award>
+		<award>
+			<name>College of Natural Sciences Teaching Excellence Award</name>
+			<date_awarded>2009</date_awarded>
+		</award>
+		<award>
+			<name>Texas Exes Teaching Award for Outstanding Professor in the College of Natural Sciences</name>
+			<date_awarded>2008</date_awarded>
+		</award>
+		<award>
+			<name>IBM University Partnership Faculty Award</name>
+			<date_awarded>2000</date_awarded>
+		</award>
+		<award>
+			<name>NSF CAREER Award</name>
+			<date_awarded>1998</date_awarded>
+		</award>
+		<award>
+			<name>Outstanding Teaching Assistant Award, Department of Computer Science, Cornell University</name>
+			<date_awarded>1992</date_awarded>
+		</award>
+		
+		<office_hours>
+			<event_type>Office Hours</event_type>
+			<schedule>
+				<start_time>16:00:00</start_time>
+				<end_time>17:00:00</end_time>
+				<day>Tuesday</day>
+				<day>Thursday</day>
+				<start_date>2010-01-19</start_date>
+				<end_date>2010-05-06</end_date>
+			</schedule>
+			<location>
+				<building>
+					<building_abbr>ACES</building_abbr>
+					<building_name>Applied Computational Engineering and Sciences Building</building_name>
+				</building>
+				<floor>6</floor>
+				<room>6.244</room>
+			</location>
+		</office_hours>
+		
+		<class>
+			<unique_number>54375</unique_number>
+			<name>Distributed Computing</name>
+			<description>The course focuses on fundamentals. We will cover problems, models, algorithms, and impossibility results.</description>
+			<course_number>
+				<field_of_study>CS</field_of_study>
+				<short_number>380D</short_number>
+			</course_number>
+			<semester>Spring</semester>
+			<year>2010</year>
+			<staff>
+				<person>
+					<first_name>Lorenzo</first_name>
+					<last_name>Alvisi</last_name>
+				</person>
+			</staff>
+			<schedule>
+				<event_type>Meeting</event_type>
+				<schedule>
+					<start_time>17:00:00</start_time>
+					<end_time>18:30:00</end_time>
+					<day>Tuesday</day>
+					<day>Thursday</day>
+					<start_date>2010-01-19</start_date>
+					<end_date>2010-05-06</end_date>
+				</schedule>
+				<location>
+					<building>
+						<building_abbr>RLM</building_abbr>
+						<building_name>Robert Lee Moore Hall</building_name>
+					</building>
+					<floor>5</floor>
+					<room>5.126</room>
+				</location>
+			</schedule>
+		</class>
+		
+		<writing>
+			<title>Zyzzyva: Speculative Byzantine Fault Tolerance</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Ramakrishna</first_name>
+				<last_name>Kotla</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+			<author>
+				<first_name>Mike</first_name>
+				<last_name>Dahlin</last_name>
+			</author>
+			<author>
+				<first_name>Allen</first_name>
+				<last_name>Clement</last_name>
+			</author>
+			<author>
+				<first_name>Edmund</first_name>
+				<last_name>Wong</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Practical and Low-Overhead Masking of Failures of TCP-Based Servers</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Dmitrii</first_name>
+				<last_name>Zagorodnov</last_name>
+			</author>
+			<author>
+				<first_name>Keith</first_name>
+				<last_name>Marzullo</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+			<author>
+				<first_name>Thomas</first_name>
+				<last_name>Bressoud</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Fast Byzantine Consensus</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Jean</first_name>
+				<last_name>Martin</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Improving the Performance of Distributed Shared Memory with Speculation.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>NMichael</first_name>
+				<last_name>Kistler</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Scalable Causal Message Logging for Wide-Area Environments.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Karan</first_name>
+				<last_name>Bhatia</last_name>
+			</author>
+			<author>
+				<first_name>Keith</first_name>
+			<last_name>Marzullo</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Engineering Web Cache Consistency.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Jian</first_name>
+				<last_name>Yin</last_name>
+			</author>
+			<author>
+				<first_name>Mike</first_name>
+				<last_name>Dahlin</last_name>
+			</author>
+			<author>
+				<first_name>Arun</first_name>
+				<last_name>Iyengar</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>A Survey of Rollback-Recovery Protocols in Message-Passing Systems.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Mootaz</first_name>
+				<last_name>Elnozahy</last_name>
+			</author>
+			<author>
+				<first_name>Yi-Min</first_name>
+				<last_name>Yang</last_name>
+			</author>
+			<author>
+				<first_name>David</first_name>
+				<last_name>Johnson</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Tracking Causality in Causal Message Logging Protocols.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Karan</first_name>
+				<last_name>Bhatia</last_name>
+			</author>
+			<author>
+				<first_name>Keith</first_name>
+				<last_name>Marzullo</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Fault Detection in Byzantine Quorum Systems.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Dahlia</first_name>
+				<last_name>Malkhi</last_name>
+			</author>
+			<author>
+				<first_name>Evelyn</first_name>
+				<last_name>Pierce</last_name>
+			</author>
+			<author>
+				<first_name>Michael</first_name>
+				<last_name>Reiter</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>The Cost of Recovery in Message Logging Protocols.</title>
+			<writing>article</writing>
+			<author>
+				<first_name>Sriram</first_name>
+				<last_name>Rao</last_name>
+			</author>
+			<author>
+				<first_name>Harrick</first_name>
+				<last_name>Vin</last_name>
+			</author>
+			<author>
+				<first_name>Lorenzo</first_name>
+				<last_name>Alvisi</last_name>
+			</author>
+		</writing>
+		
+        <conference>
+            <conference>
+                <date>2009-11-03</date>
+                <name>The 11th International Symposium on Stabilization, Safety, and Security of Distributed Systems</name>
+                <conf_location>Lyon, France</conf_location>
+            </conference>
+            <presentation_title>Model Checking Coalition Nash Equilibria in MAD Distributed Systems</presentation_title>
+        </conference>		
+        <conference>
+            <conference>
+                <date>2009-10-11</date>
+                <name>the 22nd ACM Symposium on Operating Systems Principles</name>
+                <conf_location>Big Sky, MT</conf_location>
+            </conference>
+            <presentation_title>UpRight Cluster Services</presentation_title>
+        </conference>	
+        <conference>
+            <conference>
+                <date>2008-11-17</date>
+                <name>the 8th Conference on Formal Methods in Computer-Aided Desing</name>
+                <conf_location>Portland, OR</conf_location>
+            </conference>
+            <presentation_title>Model Checking Nash Equilibria in MAD Distributed Systems</presentation_title>
+        </conference>	
+        <conference>
+            <conference>
+                <date>2008-09-22</date>
+                <name>the 22nd International Symposium on Distributed Computing</name>
+                <conf_location>Arcachon, France</conf_location>
+            </conference>
+            <presentation_title>Matrix Signatures: From MACs to Digital Signatures in Distributed Systems</presentation_title>
+        </conference>	
+        <conference>
+            <conference>
+                <date>2008-06-24</date>
+                <name>the International Conference on Dependable Systems and Networks</name>
+                <conf_location>Anchorage, AK</conf_location>
+            </conference>
+            <presentation_title>BAR Primer</presentation_title>
+        </conference>
+        <conference>
+            <conference>
+                <date>2007-10-14</date>
+                <name>the 21th ACM Symposium on Operating Systems Principles</name>
+                <conf_location>Skamania Lodge, Stevenson, WA</conf_location>
+            </conference>
+            <presentation_title>Zyzzyva: Speculative Byzantine Fault Tolerant Replication</presentation_title>
+        </conference>
+        <conference>
+            <conference>
+                <date>2007-09-24</date>
+                <name>the 21th International Symposium on Distributed Computing</name>
+                <conf_location>Lemesos, Cyprus</conf_location>
+            </conference>
+            <presentation_title>Bounded Wait-Free Implementation of Optimally Resilient Byzantine Storage without (Unproven) Cryptographic Assumptions</presentation_title>
+        </conference>	
+        <conference>
+            <conference>
+                <date>2007-09-27</date>
+                <name>the 26th IEEE International Symposium on Reliable Distributed Systems</name>
+                <conf_location>Beijing, China</conf_location>
+            </conference>
+            <presentation_title>The Paxos Register</presentation_title>
+        </conference>		
+		
+		<advisee>
+			<name>
+				<first_name>Amitanand</first_name>
+				<last_name>Aiyer</last_name>
+			</name>
+			<username>anand</username>
+			<email>anand@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Allen</first_name>
+				<last_name>Clement</last_name>
+			</name>
+			<username>aclement</username>
+			<email>aclement@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Harry</first_name>
+				<last_name>Li</last_name>
+			</name>
+			<username>harry</username>
+			<email>harry@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		<advisee>
+			<name>
+				<first_name>Edmund</first_name>
+				<last_name>Wong</last_name>
+			</name>
+			<username>elwong</username>
+			<email>elwong@cs.utexas.edu</email>
+			<status>PhD Student</status>
+		</advisee>
+		
+		<office>
+			<building>
+				<building_abbr>ACES</building_abbr>
+				<building_name>Applied Computational Engineering and Sciences Building</building_name>
+			</building>
+			<floor>6</floor>
+			<room>6.244</room>
+		</office>
+		<title>Professor</title>
+	</faculty>
+   
+	<faculty>
+        <name>
+            <first_name>Chandrajit</first_name>
+            <last_name>Bajij</last_name>
+        </name>
+        <username>bajaj</username>
+        <email>bajaj@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~bajaj/</url>
+            <group></group>
+            <author>
+                <first_name>Chandrajit</first_name>
+                <last_name>Bajaj</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718870</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4710982</number>
+        </phone_number>
+        
+        <research_area>Computational Biology</research_area>
+        <research_area>Geometric Modeling</research_area>
+        <research_area>Image Processing</research_area>
+        <research_area>Computational Geometry</research_area>
+        <research_area>Computer Graphics</research_area>
+        <research_area>Compression</research_area>
+        <research_area>Mesh Generation</research_area>
+        <research_area>Scientific Computation</research_area>
+        <research_area>Visualization</research_area>
+        
+        <degree>
+            <date_awarded>1980</date_awarded>
+            <institution>Indian Institute of Technology, New Delhi</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Electrical Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1983</date_awarded>
+            <institution>Cornell</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1984</date_awarded>
+            <institution>Cornell</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        
+        <award>
+            <name>National Science Talent Scholarship</name>
+            <date_awarded>1975</date_awarded>
+        </award>
+        <award>
+            <name>Frame Technology Excellence in Publishing Award</name>
+            <date_awarded>1993</date_awarded>
+        </award>
+        <award>
+            <name>Purdue University, Provost's Research Center Initiation Award</name>
+            <date_awarded>1994</date_awarded>
+        </award>
+        <award>
+            <name>Association of Computing Machinery, Recognition of Service Award</name>
+            <date_awarded>2002</date_awarded>
+        </award>
+        
+        <class>
+            <unique_number>54255</unique_number>
+            <name>Introduction to Computer Graphics</name>
+            <description />
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>354</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Chandrajit</first_name>
+                    <last_name>Bajaj</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>11:00:00</start_time>
+                    <end_time>12:15:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>ACES</building_abbr>
+                        <building_name>Applied Computational Engineering and Sciences Building</building_name>
+                    </building>
+                    <floor>2</floor>
+                    <room>2.324A</room>
+                </location>
+            </schedule>
+        </class>
+        <class>
+            <unique_number>52425</unique_number>
+            <name>Physically Based Geometric Modeling</name>
+            <description />
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>395T</short_number>
+            </course_number>
+            <semester>Fall</semester>
+            <year>2002</year>
+            <staff>
+                <person>
+                    <first_name>Chandrajit</first_name>
+                    <last_name>Bajaj</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>15:00:00</start_time>
+                    <end_time>17:00:00</end_time>
+                    <day>Monday</day>
+                    <start_date>2002-08-28</start_date>
+                    <end_date>2002-12-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>ETC</building_abbr>
+                        <building_name>Engineering Teaching Center II</building_name>
+                    </building>
+                    <floor>2</floor>
+                    <room>2.132</room>
+                </location>
+            </schedule>
+        </class>
+        <class>
+            <unique_number>51830</unique_number>
+            <name>Introduction to Computer Graphics(Graduate)</name>
+            <description />
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>384</short_number>
+            </course_number>
+            <semester>Fall</semester>
+            <year>2001</year>
+            <staff>
+                <person>
+                    <first_name>Chandrajit</first_name>
+                    <last_name>Bajaj</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>16:00:00</start_time>
+                    <end_time>17:30:00</end_time>
+                    <day>Monday</day>
+                    <day>Wednesday</day>
+                    <start_date>2001-08-29</start_date>
+                    <end_date>2001-12-07</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>TAY</building_abbr>
+                        <building_name>Taylor Hall</building_name>
+                    </building>
+                    <floor>2</floor>
+                    <room>2.106</room>
+                </location>
+            </schedule>
+        </class>
+		
+		<writing>
+			<title>Algebraic Geometry and its Applications</title>
+			<writing>book</writing>
+			<author>
+				<first_name>Chandrajit</first_name>
+				<last_name>Bajaj</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Data Visualization Techniques</title>
+			<writing>book</writing>
+			<author>
+				<first_name>Chandrajit</first_name>
+				<last_name>Bajaj</last_name>
+			</author>
+		</writing>
+		<writing>
+			<title>Introduction to Implicit Surfaces</title>
+			<writing>book</writing>
+			<author>
+				<first_name>Chandrajit</first_name>
+				<last_name>Bajaj</last_name>
+			</author>
+			<author>
+				<first_name>Jules</first_name>
+				<last_name>Bloomenthal</last_name>
+			</author>
+			<author>
+				<first_name>Brian</first_name>
+				<last_name>Wyvill</last_name>
+			</author>
+			<author>
+				<first_name>Alyn</first_name>
+				<last_name>Rockwood</last_name>
+			</author>		
+		</writing>
+		<writing>
+			<title>Algebra, Arithmetic and Geometry with Applications</title>
+			<writing>book</writing>
+			<author>
+				<first_name>Chandrajit</first_name>
+				<last_name>Bajaj</last_name>
+			</author>
+			<author>
+				<first_name>Chris</first_name>
+				<last_name>Christensen</last_name>
+			</author>
+			<author>
+				<first_name>Ganesh</first_name>
+				<last_name>Sundaram</last_name>
+			</author>
+			<author>
+				<first_name>Avinash</first_name>
+				<last_name>Sathaye</last_name>
+			</author>		
+		</writing>		
+
+        <advisee>
+            <name>
+                <first_name>Albert</first_name>
+                <last_name>Chen</last_name>
+            </name>
+            <username>albertc</username>
+            <email>albertc@cs.utexas.edu</email>
+            <status>PhD Student</status>
+        </advisee>
+        
+        <advisee>
+            <name>
+                <first_name>Andrew</first_name>
+                <last_name>Gillette</last_name>
+            </name>
+            <username>agillette</username>
+            <email>agillette@cs.utexas.edu</email>
+            
+            <office_hours>
+                <event_type>Office Hours</event_type>
+                <schedule>
+                    <start_time>17:00:00</start_time>
+                    <end_time>18:00:00</end_time>
+                    <day>Monday</day>
+                    <day>Wednesday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>12</floor>
+                    <room>12.122</room>
+                </location>
+            </office_hours>
+            <office_hours>
+                <event_type>Office Hours</event_type>
+                <schedule>
+                    <start_time>15:00:00</start_time>
+                    <end_time>16:00:00</end_time>
+                    <day>Friday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>12</floor>
+                    <room>12.122</room>
+                </location>
+            </office_hours>
+            
+            <office>
+                <building>
+                    <building_abbr>RLM</building_abbr>
+                    <building_name>Robert Lee Moore Hall</building_name>
+                </building>
+                <floor>12</floor>
+                <room>12.122</room>
+            </office>
+            
+            <status>PhD Student</status>
+        </advisee>
+        
+        <office>
+            <building>
+                <building_abbr>ACES</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences Building</building_name>
+            </building>
+            <floor>2</floor>
+            <room>2.324A</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Dana</first_name>
+            <last_name>Ballard</last_name>
+        </name>
+        <username>dana</username>
+        <email>dana@cs.utexas.edu</email>
+        <website>
+            <url>http://userweb.cs.utexas.edu/~dana/</url>
+            <group></group>
+            <author>
+                <first_name>Dana</first_name>
+                <last_name>Ballard</last_name>
+            </author>
+        </website>
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719750</number>
+        </phone_number>
+        <research_area>computational theories of the brain</research_area>
+        <degree>
+            <date_awarded>1967</date_awarded>
+            <institution>Massachusetts Institute of Technology</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Aeronautics &amp; Astronautics</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1970</date_awarded>
+            <institution>Michigan</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Information &amp; Control Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1974</date_awarded>
+            <institution>University of California at Irvin</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Information Engineering</specialization>
+        </degree>
+		
+		<writing>
+			<title>Computer Vision</title>
+			<writing>book</writing>
+			<author>
+				<first_name>Dana</first_name>
+				<last_name>Ballard</last_name>
+			</author>
+			<author>
+				<first_name>Christopher</first_name>
+				<last_name>Brown</last_name>
+			</author>	
+		</writing>    
+
+        <advisee>
+            <name>
+                <first_name>Joseph</first_name>
+                <last_name>Cooper</last_name>
+            </name>
+            <username>jcooper</username>
+            <email>jcooper@cs.utexas.edu</email>
+           
+           <office_hours>
+                <event_type>Office Hours</event_type>
+                <schedule>
+                    <start_time>11:00:00</start_time>
+                    <end_time>12:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-01</start_date>
+                    <end_date>2010-05-15</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>ENS</building_abbr>
+                        <building_name>ENS</building_name>
+                    </building>
+                    <floor>1</floor>
+                    <room>1</room>
+                </location>
+            </office_hours>
+            
+            <office> 
+                <building>
+                    <building_abbr>TAY</building_abbr>
+                    <building_name>Taylor Hall</building_name>
+                </building>
+                <floor>1</floor>
+                <room>CS Graduate Lounge</room>
+            </office>
+            <status>PhD Student</status>
+        </advisee>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Warren</first_name>
+            <last_name>Hunt</last_name>
+        </name>
+        <username>hunt</username>
+        <email>hunt@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~hunt/</url>
+            <group />
+            <author>
+                <first_name>Warren</first_name>
+                <last_name>Hunt</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719748</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        
+        <class>
+            <unique_number>54805</unique_number>
+            <name>Computer Architecture</name>
+            <description></description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>352</short_number>
+            </course_number>
+            <semester>Fall</semester>
+            <year>2009</year>
+            <staff>
+                <person>
+                    <first_name>Warren</first_name>
+                    <last_name>Hunt</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>09:30:00</start_time>
+                    <end_time>11:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2009-08-01</start_date>
+                    <end_date>2009-12-31</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>UTC</building_abbr>
+                        <building_name>University Teaching Center</building_name>
+                    </building>
+                    <floor>3</floor>
+                    <room>3.112</room>
+                </location>
+            </schedule>
+        </class>
+        <class>
+            <unique_number>55009</unique_number>
+            <name>Industrial Formal Methods</name>
+            <description></description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>395T</short_number>
+            </course_number>
+            <semester>Fall</semester>
+            <year>2009</year>
+            <staff>
+               <person>
+                    <first_name>Warren</first_name>
+                    <last_name>Hunt</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>16:00:00</start_time>
+                    <end_time>19:00:00</end_time>
+                    <day>Tuesday</day>
+                    <start_date>2009-08-01</start_date>
+                    <end_date>2009-12-31</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>ACES</building_abbr>
+                        <building_name>Applied Computational  Engineering and Sciences Building</building_name>
+                    </building>
+                    <floor>5</floor>
+                    <room>5.336</room>
+                </location>
+            </schedule>
+        </class>
+        
+	<writing>
+		<title>Computer Aided Verification</title>
+		<writing>book</writing>
+		<author>
+			<first_name>Warren</first_name>
+			<last_name>Hunt</last_name>
+		</author>
+		<author>
+			<first_name>Fabio</first_name>
+			<last_name>Somenzi</last_name>
+		</author>
+	</writing>
+
+        <advisee>
+            <name>
+                <first_name>Alan</first_name>
+                <last_name>Hunt</last_name>
+            </name>
+            <username>adunn</username>
+            <email>adunn@cs.utexas.edu</email>
+            <status>PhD Student</status>
+        </advisee>
+        <advisee>
+            <name>
+                <first_name>Robert</first_name>
+                <last_name>Krug</last_name>
+            </name>
+            <username>rkrug</username>
+            <email>rkrug@cs.utexas.edu</email>
+            <status>PhD Student</status>
+        </advisee>
+        <advisee>
+            <name>
+                <first_name>Oswaldo</first_name>
+                <last_name>Olivo</last_name>
+            </name>
+            <username>olivo</username>
+            <email>olivo@cs.utexas.edu</email>
+            <status>PhD Student</status>
+        </advisee>
+        
+        <office> 
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>Taylor Hall</building_name>
+            </building>
+            <floor>2</floor>
+            <room>2.124</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Matt</first_name>
+            <last_name>Kaufmann</last_name>
+        </name>
+        <username>kaufmann</username>
+        <email>kaufmann@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~kaufmann/</url>
+            <group />
+            <author>
+                <first_name>Matt</first_name>
+                <last_name>Kaufmann</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719780</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        
+        <office>
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>Taylor Hall</building_name>
+            </building>
+            <floor>2</floor>
+            <room>2.124</room>
+        </office>
+		<title>Researcher</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Don</first_name>
+            <last_name>Batory</last_name>
+        </name>
+        <username>dsb</username>
+        <email>dsb@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~dsb/</url>
+            <group />
+            <author>
+                <first_name>Don</first_name>
+                <last_name>Batory</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719713</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        
+        <degree>
+            <date_awarded>1975</date_awarded>
+            <institution>Case Institute of Technology</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Computer Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1976</date_awarded>
+            <institution>Case Institute of Technology</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Computer Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1980</date_awarded>
+            <institution>University of Toronto</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        
+        <class>
+            <unique_number>54355</unique_number>
+            <name>Software Design</name>
+            <description>The course will include lectures on the following topics: Basic UML models and modeling, Categories, Refactorings, Object Oriented Design Patterns, Architectural Patterns, Incremental Design of Architectures, Service Oriented Architectures, and (if there is time) Software Product Lines. And of course, concepts from MDE which all of the above are seen as special cases.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>378</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Don</first_name>
+                    <last_name>Batory</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>11:00:00</start_time>
+                    <end_time>12:30:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>6</floor>
+                    <room>6.122</room>
+                </location>
+            </schedule>
+        </class>
+        
+        <office> 
+            <building>
+                <building_abbr>ACES</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences Building</building_name>
+            </building>
+            <floor>5</floor>
+            <room>5.252</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Stephen</first_name>
+            <last_name>Keckler</last_name>
+        </name>
+        <username>skeckler</username>
+        <email>skeckler@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~skeckler/</url>
+            <group />
+            <author>
+                <first_name>Stephen</first_name>
+                <last_name>Keckler</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719763</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>232</area_code>
+            <number>1413</number>
+        </phone_number>
+        
+        <office>
+            <building>
+                <building_abbr>ACES</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences</building_name>
+            </building>
+            <floor>3</floor>
+            <room>3.434</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+      
+    <faculty>
+        <name>
+            <first_name>Simon</first_name>
+            <last_name>Lam</last_name>
+        </name>
+        <username>lam</username>
+        <email>lam@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://www.cs.utexas.edu/people/faculty/meet_our_faculty/</url>
+            <group />
+            <author>
+                <first_name>Simon</first_name>
+                <last_name>Lam</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719531</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4718885</number>
+        </phone_number>
+        
+        <degree>
+            <date_awarded>1969</date_awarded>
+            <institution>Washington State University, Pullman</institution>
+            <degree_t>Bachelor's Degree</degree_t>
+            <specialization>Electrical Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1970</date_awarded>
+            <institution>University of California, Los Angeles</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Engineering</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1974</date_awarded>
+            <institution>University of California, Los Angeles</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Engineering</specialization>
+        </degree>
+        
+	<writing>
+		<title>Principles of Communication and Networking Protocols</title>
+		<writing>book</writing>
+		<author>
+			<first_name>Simon</first_name>
+			<last_name>Lam</last_name>
+		</author>
+	</writing>
+
+        <conference>
+            <conference>
+                <date>2008-10-19</date>
+                <name>The 16th IEEE International Conference on Network Protocols</name>
+                <conf_location>Orlando, FL</conf_location>
+            </conference>
+            <presentation_title>Efficient and Accurate Protocols for Distributed Delaunay Triangulation under Churn</presentation_title>
+        </conference>
+        <conference>
+            <conference>
+                <date>2008-09-25</date>
+                <name>International Conference on High Performance Computing and Communications </name>
+                <conf_location>Dalian, China</conf_location>
+            </conference>
+            <presentation_title>A Radius Geocast Routing Protocol</presentation_title>
+        </conference>
+
+        <office> 
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>Taylor Hall</building_name>
+            </building>
+            <floor>3</floor>
+            <room>3.112</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Inderjit</first_name>
+            <last_name>Dhillon</last_name>
+        </name>
+        <username>inderjit</username>
+        <email>inderjit@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~inderjit/</url>
+            <group />
+            <author>
+                <first_name>Inderjit</first_name>
+                <last_name>Dhillon</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719725</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>2328885</number>
+        </phone_number>
+        
+        <class>
+            <unique_number>54340</unique_number>
+            <name>Introduction to Data Mining</name>
+            <description />
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>378</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Inderjit</first_name>
+                    <last_name>Dhillon</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>09:30:00</start_time>
+                    <end_time>11:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>TAY</building_abbr>
+                        <building_name>Taylor Hall</building_name>
+                    </building>
+                    <floor>3</floor>
+                    <room>3.144</room>
+                </location>
+            </schedule>
+        </class>
+
+	<writing>
+		<title>ScaLAPACK Users' Guide</title>
+		<writing>book</writing>
+		<author>
+			<first_name>L.</first_name>
+			<last_name>Blackford</last_name>
+		</author>
+		<author>
+			<first_name>J.</first_name>
+			<last_name>Choi</last_name>
+		</author>
+		<author>
+			<first_name>A.</first_name>
+			<last_name>Cleary</last_name>
+		</author>
+		<author>
+			<first_name>J.</first_name>
+			<last_name>Demmel</last_name>
+		</author>
+		<author>
+			<first_name>Inderjit</first_name>
+			<last_name>Dhillon</last_name>
+		</author>
+	</writing>
+
+        <office>
+            <building>
+                <building_abbr>ACES</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences</building_name>
+            </building>
+            <floor>2</floor>
+            <room>2.332</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    
+    <faculty>
+        <name>
+            <first_name>Risto</first_name>
+            <last_name>Miikkulainen</last_name>
+        </name>
+        <username>risto</username>
+        <email>risto@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~risto/</url>
+            <group />
+            <author>
+                <first_name>Risto</first_name>
+                <last_name>Miikkulainen</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>4719571</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>512</area_code>
+            <number>2931168</number>
+        </phone_number>
+        
+        <degree>
+            <date_awarded>1986</date_awarded>
+            <institution>Helsinki University of Technology</institution>
+            <degree_t>Master's Degree</degree_t>
+            <specialization>Applied Mathematics</specialization>
+        </degree>
+        <degree>
+            <date_awarded>1990</date_awarded>
+            <institution>University of California, Los Angeles</institution>
+            <degree_t>Doctoral Degree</degree_t>
+            <specialization>Computer Science</specialization>
+        </degree>
+        
+        <class>
+            <unique_number>54318</unique_number>
+            <name>Computational Intelligence in Game Design I</name>
+            <description>Students will become familiar with next-generation AI techniques that may play a central role in the next generation of video games and learn hands-on about working with modern game engines. The students will work in teams toward original research projects aiming to improve the state of the  art of AI in games as well as to contribute to an active open source project.</description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>378</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Risto</first_name>
+                    <last_name>Miikkulainen</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>15:30:00</start_time>
+                    <end_time>17:00:00</end_time>
+                    <day>Tuesday</day>
+                    <day>Thursday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>5</floor>
+                    <room>5.124</room>
+                </location>
+            </schedule>
+        </class>
+        <class>
+            <unique_number>54975</unique_number>
+            <name>Neural Networks</name>
+            <description>  The main goals of the class are to (1) obtain an overview of current state of the art in the field, (2) carry out a substantial research project, and (3) get practice in research skills such as conducting a literature study, putting together a research and a conference talk, and writing a research paper. The course is organized so that selecting and completing a research project should be as easy as possible. </description>
+            <course_number>
+                <field_of_study>CS</field_of_study>
+                <short_number>394N</short_number>
+            </course_number>
+            <semester>Spring</semester>
+            <year>2010</year>
+            <staff>
+                <person>
+                    <first_name>Risto</first_name>
+                    <last_name>Miikkulainen</last_name>
+                </person>
+            </staff>
+            <schedule>
+                <event_type>Meeting</event_type>
+                <schedule>
+                    <start_time>16:00:00</start_time>
+                    <end_time>19:00:00</end_time>
+                    <day>Wednesday</day>
+                    <start_date>2010-01-19</start_date>
+                    <end_date>2010-05-06</end_date>
+                </schedule>
+                <location>
+                    <building>
+                        <building_abbr>RLM</building_abbr>
+                        <building_name>Robert Lee Moore Hall</building_name>
+                    </building>
+                    <floor>6</floor>
+                    <room>6.116</room>
+                </location>
+            </schedule>
+        </class>
+        
+        <office> 
+            <building>
+                <building_abbr>TAY</building_abbr>
+                <building_name>Taylor Hall</building_name>
+            </building>
+            <floor>4</floor>
+            <room>4.142A</room>
+        </office>
+		<title>Professor</title>
+    </faculty>
+    <faculty>
+        <name>
+            <first_name>Doug</first_name>
+            <last_name>Burger</last_name>
+        </name>
+        <username>dburger</username>
+        <email>dburger@cs.utexas.edu</email>
+        
+        <website>
+            <url>http://userweb.cs.utexas.edu/~dburger/</url>
+            <group />
+            <author>
+                <first_name>Doug</first_name>
+                <last_name>Burger</last_name>
+            </author>
+        </website>
+        
+        <phone_number>
+            <phone_t>work</phone_t>
+            <country_code>1</country_code>
+            <area_code>425</area_code>
+            <number>5381668</number>
+        </phone_number>
+        <phone_number>
+            <phone_t>fax</phone_t>
+            <country_code>1</country_code>
+            <area_code>425</area_code>
+            <number>9367329</number>
+        </phone_number>
+		
+	<writing>
+		<title>A Technology-Scalable Architecture for Fast Clocks and High ILP</title>
+		<writing>book</writing>
+		<author>
+			<first_name>Karthikeyan</first_name>
+			<last_name>Sankaralingam</last_name>
+		</author>
+		<author>
+			<first_name>Ramadass</first_name>
+			<last_name>Nagarajan</last_name>
+		</author>
+		<author>
+			<first_name>Doug</first_name>
+			<last_name>Burger</last_name>
+		</author>
+		<author>
+			<first_name>Stephen</first_name>
+			<last_name>Keckler</last_name>
+		</author>
+	</writing>
+	<writing>
+		<title>Exploration Geophysics of the Shallow Subsurface</title>
+		<writing>book</writing>
+		<author>
+			<first_name>Doug</first_name>
+			<last_name>Burger</last_name>
+		</author>
+		<author>
+			<first_name>Henry</first_name>
+			<last_name>Burger</last_name>
+		</author>
+	</writing>
+
+        <office>
+            <building>
+                <building_abbr>ACES</building_abbr>
+                <building_name>Applied Computational Engineering and Sciences</building_name>
+            </building>
+            <floor>3</floor>
+            <room>3.432</room>
+        </office>
+		<title>Researcher</title>
+    </faculty>
+</people>
+

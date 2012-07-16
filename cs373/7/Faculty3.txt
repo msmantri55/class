@@ -1,0 +1,78 @@
+-----
+Title
+-----
+
+Project #7: Faculty3
+
+--------------
+Google Project
+--------------
+
+Issues URL: http://code.google.com/p/cs373project7/issues/list
+Wiki   URL: http://code.google.com/p/cs373project7/w/list
+
+----------------------------
+For Each Member of the Group
+----------------------------
+
+Name: Ryan Lindsey
+EID: zafzo
+E-mail address: quixoft@gmail.com
+Predicted number of hours to complete: 15
+Actual    number of hours to complete: 30
+
+Name: John Barry
+EID: barryjo
+E-mail address: jb3003@gmail.com
+Predicted number of hours to complete: 30 minutes
+Actual    number of hours to complete: Sideways 8
+
+Name: Taylor Fausak
+EID: tdf268
+E-mail address: taylor@thursday.com
+Predicted number of hours to complete: 22
+Actual    number of hours to complete: jello
+
+Name: Kim Lee
+EID: kcl276
+E-mail address: kimmykimcheee@gmail.com
+Predicted number of hours to complete: 1038
+Actual    number of hours to complete: 1
+-----------------------
+My Rating of My Partner
+-----------------------
+
+...
+
+-------
+Ratings
+-------
+
+Excellent: Consistently went above and beyond - tutored partner, carried
+more than his/her fair share of the load.
+
+Very Good: Consistently did what he/she was supposed to do, very well
+prepared and cooperative.
+
+Satisfactory: Usually did what he/she was supposed to do, minimally
+prepared and cooperative.
+
+Marginal: Sometimes failed to show up, rarely prepared.
+
+Deficient: Often failed to show up, rarely prepared.
+
+Unsatisfactory: Consistently failed to show up, unprepared.
+
+Superficial: Practically no participation.
+
+No Show: No participation at all.
+
+-------------
+Collaboration
+-------------
+
+I attest to having written every line of code and I take full
+responsibility for the origin of all the code I turn in.
+
+In particular if any of the code was originally written in a previous
+semester I will so acknowledge in this document.

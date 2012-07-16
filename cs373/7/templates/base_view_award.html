@@ -1,0 +1,12 @@
+{% extends "base_view.html" %}
+
+{% block title %}{{ award.name }}{% endblock %}
+
+{% block body %}{% spaceless %}
+<dd>	
+	<dt>Award Name</dt>
+	<dd>{{ award.name }}</dd>
+	<dt>Award Year</dt>
+	<dd>{{ award.year }}</dd>
+</dd>
+{% endspaceless %}{% endblock %}

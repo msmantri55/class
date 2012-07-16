@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>  4. Netflix</title>
+	
+	<link rel="stylesheet" href="http://blogs.utexas.edu/swe/wp-content/themes/edublogs/style.css" type="text/css" media="screen" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://blogs.utexas.edu/swe/wp-content/themes/edublogs/ie7.css" media="screen" />
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://blogs.utexas.edu/swe/wp-content/themes/edublogs/ie6.css" media="screen" />
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Software Engineering RSS Feed" href="http://blogs.utexas.edu/swe/feed/" />
+	<link rel="pingback" href="http://blogs.utexas.edu/swe/xmlrpc.php" />
+
+	<link rel="alternate" type="application/rss+xml" title="Software Engineering &raquo; 4. Netflix Comments Feed" href="http://blogs.utexas.edu/swe/projects/netflix/feed/" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blogs.utexas.edu/swe/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blogs.utexas.edu/swe/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Software Engineering' href='http://blogs.utexas.edu/swe' />
+<link rel='up' title='Projects' href='http://blogs.utexas.edu/swe/projects/' />
+
+<script src="http://blogs.utexas.edu/swe/wp-content/mu-plugins/anarchy_media/anarchy_media_player.php?anarchy.js" type="text/javascript"></script>	<style type="text/css">
+	    /* <![CDATA[ */
+
+#wp-admin-bar { /* The left content */
+	    position: relative;
+	    z-index: 66;
+	    height: 28px; /* changed by dr mike */
+	    margin: 0;
+	    padding: 2px;
+	    background: #000000;
+	    border: 1px solid #666;
+			  border-right: none;
+	    border-bottom:1px solid #000000; /* added by dr mike */
+	    font:12px "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana; /* added by dr mike */
+	    color: #fff; /* changed by dr mike */
+	    clear: both;
+	    text-align: left;
+			  float: left;
+			  background:url('/wp-includes/images/adminbar.png') #000000 no-repeat 40% 0; /* added by dr mike */
+}
+
+#wp-admin-bar-right { /* The right content */
+	    position: relative;
+	    z-index: 66;
+	    height: 28px; /* changed by dr mike */
+	    margin: 0;
+	    padding: 2px;
+	    background: #000000;
+	    border: 1px solid #666;
+			  border-left: none;
+	    border-bottom:1px solid #000000; /* added by dr mike */
+	    font:12px "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana; /* added by dr mike */
+	    color: #fff; /* changed by dr mike */
+	    clear: both;
+	    text-align: right;
+			  float: right;
+			  background:url('/wp-includes/images/adminbar.png') #000000 no-repeat 100% 0; /* added by dr mike */
+}
+
+body {
+	    padding-top: 0px; /* this may cause problems */
+}
+
+	#wp-admin-bar { /* part of hack to make the bar show at the top of all templates */
+		position: absolute; /* IE fix thanks Chris */
+		top: 0;
+		left: 0;
+		width: 80%;
+	}
+	
+	#wp-admin-bar-right { /* part of hack to make the bar show at the top of all templates */
+		position: absolute; /* IE fix thanks Chris */
+		top: 0;
+		right: 0;
+		width: 20%;
+	}
+
+	#wp-admin-bar ul, #wp-admin-bar-right ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	#wp-admin-bar ul li, #wp-admin-bar-right ul li {
+		list-style-type: none;
+		display: inline;
+		margin: 0 10px;
+		padding: 0;
+		font:12px "Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana; /* added by dr mike */
+		color: #fff; /* changed by dr mike */
+	}
+
+	#wp-admin-bar ul li.login, #wp-admin-bar-right ul li.login { margin-right: 30px; }
+	#wp-admin-bar strong, #wp-admin-bar-right strong { font-weight: bold; }
+	#wp-admin-bar a, #wp-admin-bar-right a { color: #fff; }
+	#wp-admin-bar a:hover, #wp-admin-bar-right a:hover { color: #488cff; }
+
+	    /* ]]> */
+	    </style>
+	</head>
+<body class="custom">
+
+<div id="container">
+
+	<div id="masthead">
+		<h1><a href="http://blogs.utexas.edu/swe">Software Engineering</a></h1>
+		<h3>CS373: Spring 2010: 54300-05</h3>
+	</div>
+
+	<ul id="nav">
+				<li><a href="http://blogs.utexas.edu/swe">Home</a></li>
+		<li class="page_item page-item-2"><a href="http://blogs.utexas.edu/swe" title="About">About</a></li>
+<li class="page_item page-item-352"><a href="http://blogs.utexas.edu/swe/blogs/" title="Blogs">Blogs</a></li>
+<li class="page_item page-item-519"><a href="http://blogs.utexas.edu/swe/groups/" title="Groups">Groups</a></li>
+<li class="page_item page-item-417"><a href="http://blogs.utexas.edu/swe/lectures/" title="Lectures">Lectures</a></li>
+<li class="page_item page-item-354 current_page_ancestor current_page_parent"><a href="http://blogs.utexas.edu/swe/projects/" title="Projects">Projects</a></li>
+<li class="page_item page-item-359"><a href="http://blogs.utexas.edu/swe/schedule/" title="Schedule">Schedule</a></li>
+<li class="page_item page-item-521"><a href="http://blogs.utexas.edu/swe/syllabus/" title="Syllabus">Syllabus</a></li>
+	<!--	<li class="rss"><a href="http://feeds.feedburner.com/TheEdublogger">RSS</a></li> -->
+	</ul>
+	
+	<div id="header_img">
+		<img src="http://blogs.utexas.edu/swe/wp-content/themes/edublogs/images/header_1.jpg" width="970" height="140" alt="" />
+		</div>
+	<div id="content_box">
+	
+		<div id="l_sidebar">
+	<ul class="sidebar_list">
+		
+		
+		<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+		<ul>
+			<li class="page_item page-item-2"><a href="http://blogs.utexas.edu/swe" title="About">About</a></li>
+<li class="page_item page-item-352"><a href="http://blogs.utexas.edu/swe/blogs/" title="Blogs">Blogs</a></li>
+<li class="page_item page-item-519"><a href="http://blogs.utexas.edu/swe/groups/" title="Groups">Groups</a></li>
+<li class="page_item page-item-417"><a href="http://blogs.utexas.edu/swe/lectures/" title="Lectures">Lectures</a>
+<ul>
+	<li class="page_item page-item-419"><a href="http://blogs.utexas.edu/swe/lectures/history/" title="1. History">1. History</a></li>
+	<li class="page_item page-item-444"><a href="http://blogs.utexas.edu/swe/lectures/containers/" title="2. Containers">2. Containers</a></li>
+	<li class="page_item page-item-462"><a href="http://blogs.utexas.edu/swe/lectures/xp/" title="3. XP">3. XP</a></li>
+</ul>
+</li>
+<li class="page_item page-item-354 current_page_ancestor current_page_parent"><a href="http://blogs.utexas.edu/swe/projects/" title="Projects">Projects</a>
+<ul>
+	<li class="page_item page-item-356"><a href="http://blogs.utexas.edu/swe/projects/collatz/" title="1. Collatz">1. Collatz</a></li>
+	<li class="page_item page-item-435"><a href="http://blogs.utexas.edu/swe/projects/primes/" title="2. Primes">2. Primes</a></li>
+	<li class="page_item page-item-453"><a href="http://blogs.utexas.edu/swe/projects/voting/" title="3. Voting">3. Voting</a></li>
+	<li class="page_item page-item-487 current_page_item"><a href="http://blogs.utexas.edu/swe/projects/netflix/" title="4. Netflix">4. Netflix</a></li>
+	<li class="page_item page-item-531"><a href="http://blogs.utexas.edu/swe/projects/faculty1/" title="5. Faculty1">5. Faculty1</a></li>
+</ul>
+</li>
+<li class="page_item page-item-359"><a href="http://blogs.utexas.edu/swe/schedule/" title="Schedule">Schedule</a></li>
+<li class="page_item page-item-521"><a href="http://blogs.utexas.edu/swe/syllabus/" title="Syllabus">Syllabus</a>
+<ul>
+	<li class="page_item page-item-42"><a href="http://blogs.utexas.edu/swe/syllabus/evaluations/" title="Evaluations">Evaluations</a></li>
+	<li class="page_item page-item-361"><a href="http://blogs.utexas.edu/swe/syllabus/grading/" title="Grading">Grading</a></li>
+	<li class="page_item page-item-460"><a href="http://blogs.utexas.edu/swe/syllabus/topics/" title="Topics">Topics</a></li>
+</ul>
+</li>
+		</ul>
+		</li>
+	</ul>
+</div>	
+		<div id="content" class="pages">
+						
+			<h2>4. Netflix</h2>	
+			<div class="entry">		
+
+		
+				<p><p>Due: <b>Sun, 7 Mar, 11:59pm</b>, Python, Shruthi, cs373pj4.</p>
+<h3>Specification</h3>
+<hr />
+<p>Write a program to win the <a href="http://www.netflixprize.com/">Netflix Prize</a>.</p>
+<p>Ignore the <b>qualifying</b> data. It&#8217;s just here for explanation.</p>
+<p>Just use the <b>probe</b> data, and see if you can meet or beat their <b>RMSE</b> of <b>0.9474</b>.</p>
+<h3>Analysis</h3>
+<hr />
+<p>These are additional descriptions of the underlying math:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Mean_squared_error">Mean Squared Error</a></li>
+<li><a href="http://www.scientificblogging.com/random_walk/predicting_movie_ratings_math_won_netflix_prize">Predicting Movie Ratings</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Netflix_Prize">Wikipedia</a></li>
+<li><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/RMSE.c++.html">RMSE.c++</a></li>
+<li><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/RMSE.py.html">RMSE.py</a></li>
+</ul>
+<h3>Input</h3>
+<hr />
+<h4>Training Data:</h4>
+<ul>
+<li>17,770 movies</li>
+<li>480,189 customers</li>
+<li>about 100,000,000 ratings</li>
+<li>about 5,600 ratings per movie</li>
+<li>about 200 ratings per customer</li>
+</ul>
+<h4>Qualifying Data:</h4>
+<ul>
+<li>2,836,401 ratings, no customers from training data</li>
+</ul>
+<h4>Probe Data:</h4>
+<ul>
+<li>1,425,333 ratings, all customers from training data</li>
+</ul>
+<h4>Files:</h4>
+<table border="1" cellspacing="0">
+<tr>
+<td><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/README">README</a></td>
+</tr>
+</table>
+<p></p>
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="3"><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/movie_titles.txt">movie_titles.txt (582 KB)</a></td>
+</tr>
+<tr bgcolor="#dddddd">
+<th>movie_id</th>
+<th>movie_year</th>
+<th>movie_title</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>1 &#8211; 17,770</th>
+<th>1890 &#8211; 2005</th>
+<th></th>
+</tr>
+<tr>
+<td>2043</td>
+<td>1953</td>
+<td>Shane</td>
+</tr>
+<tr>
+<td>10851</td>
+<td>1948</td>
+<td>Red River</td>
+</tr>
+<tr>
+<td>16306</td>
+<td>1960</td>
+<td>Spartacus</td>
+</tr>
+<tr>
+<td align="center" colspan="3">&#8230;</td>
+</tr>
+<tr>
+<td align="center" colspan="3">17,770 records total</td>
+</tr>
+</table>
+<p></p>
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="3">training_set/ (2.1 GB)<br /><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/training_set/mv_0002043.txt">mv_0002043.txt (164 KB)</a><br />17,770 files total</td>
+</tr>
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+<th>rating</th>
+<th>rating_date</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>1 &#8211; 2,649,429<br />with gaps<br />480,189 total</th>
+<th>1 &#8211; 5</th>
+<th>Oct 1998 &#8211; Dec 2005<br />YYYY-MM-DD</th>
+</tr>
+<tr>
+<td colspan="3">2043:</td>
+</tr>
+<tr>
+<td align="center" colspan="3">&#8230;</td>
+</tr>
+<tr>
+<td>1417435</td>
+<td>3</td>
+<td>2005-12-14</td>
+</tr>
+<tr>
+<td align="center" colspan="3">&#8230;</td>
+</tr>
+<tr>
+<td>2312054</td>
+<td>1</td>
+<td>2004-12-21</td>
+</tr>
+<tr>
+<td align="center" colspan="3">&#8230;</td>
+</tr>
+<tr>
+<td>462685</td>
+<td>4</td>
+<td>2005-07-21</td>
+</tr>
+<tr>
+<td align="center" colspan="3">&#8230;</td>
+</tr>
+<tr>
+<td align="center" colspan="3">7,872 records total</td>
+</tr>
+</table>
+<p></p>
+<table border="1" cellspacing="0">
+<tr>
+<td align="center" colspan="2"><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/qualifying.txt">qualifying.txt (52.5 MB)</a></td>
+</tr>
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+<th>rating_date</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>1 &#8211; 2,649,429<br />with gaps<br />480,189 total</th>
+<th>Oct 1998 &#8211; Dec 2005<br />YYYY-MM-DD</th>
+</tr>
+<tr>
+<td align="center" colspan="2">&#8230;</td>
+</tr>
+<tr>
+<td colspan="2">2043:</td>
+</tr>
+<tr>
+<td>2012320</td>
+<td>2005-06-07</td>
+</tr>
+<tr>
+<td>436529</td>
+<td>2005-12-28</td>
+</tr>
+<tr>
+<td>843246</td>
+<td>2005-12-15</td>
+</tr>
+<tr>
+<td align="center" colspan="2">&#8230;</td>
+</tr>
+<tr>
+<td align="center" colspan="3">2,836,401 records total</td>
+</tr>
+</table>
+<p></p>
+<table border="1" cellspacing="0">
+<tr>
+<td align="center"><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/probe.txt">probe.txt (10.8 MB)</a><br />RMSE = 0.9474</td>
+</tr>
+<tr bgcolor="#dddddd">
+<th>customer_id</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>1 &#8211; 2,649,429<br />with gaps<br />480,189 total</th>
+</tr>
+<tr>
+<td align="center">&#8230;</td>
+</tr>
+<tr>
+<td>2043:</td>
+</tr>
+<tr>
+<td>1417435</td>
+</tr>
+<tr>
+<td>2312054</td>
+</tr>
+<tr>
+<td>462685</td>
+</tr>
+<tr>
+<td align="center">&#8230;</td>
+</tr>
+<tr>
+<td align="center">1,425,333 records total</td>
+</tr>
+</table>
+<h3>Output</h3>
+<hr />
+<h4>RMSE:</h4>
+<p>See if you can meet or beat their <b>0.9474</b>.</p>
+<h4>Files:</h4>
+<table border="1" cellspacing="0">
+<tr bgcolor="#dddddd">
+<th colspan="2">RunNetflix.out</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>rating</th>
+</tr>
+<tr bgcolor="#dddddd">
+<th>1.0 &#8211; 5.0</th>
+</tr>
+<tr>
+<td align="center">&#8230;</td>
+</tr>
+<tr>
+<td>2043:</td>
+</tr>
+<tr>
+<td>3.4</td>
+</tr>
+<tr>
+<td>4.1</td>
+</tr>
+<tr>
+<td>1.9</td>
+</tr>
+<tr>
+<td align="center">&#8230;</td>
+</tr>
+<tr>
+<td align="center">1,425,333 records total</td>
+</tr>
+</table>
+<h3>Issues</h3>
+<hr />
+<p>Add the following to <b>Google Project</b>&#8217;s issue tracker:</p>
+<table border="1" cellspacing="0">
+<tr bgcolor="#dddddd">
+<th></th>
+<th>Phase</th>
+<th>Description</th>
+</tr>
+<tr>
+<th bgcolor="#dddddd">1</th>
+<td rowspan="3">design</td>
+<td>Sketch out an algorithm. Write it on a <b>Wiki</b> page.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">2</th>
+<td>Sketch it out again with any <b>optimizations</b>. Write it on a <b>Wiki</b> page.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">3</th>
+<td>Sketch out all the interfaces.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">4</th>
+<td>source control</td>
+<td>Use a source control system (e.g. <b>Subversion</b>, <b>Git</b>, <b>Mercurial</b>) to manage your files.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">5</th>
+<td rowspan="3">testing</td>
+<td>Create a set of <b>unit</b> tests for each of the functions above. Use <b>Blackboard</b> to reach consensus on the <b>unit</b> tests.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">6</th>
+<td>Create a set of <b>acceptance</b> tests in <b>RunNetflix.out</b>. Again, use <b>Blackboard</b> to reach consensus on the <b>acceptance</b> tests.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">7</th>
+<td><b>C++ only:</b> Use <b>Valgrind</b> for all tests.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">8</th>
+<td rowspan="3">implentation</td>
+<td>Use <b>assert</b> to check <b>pre-conditions</b>, <b>post-conditions</b>, <b>argument validity</b>, <b>return-value validity</b>, and <b>invariants</b>.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">9</th>
+<td><b>C++ only:</b> Do <b>not</b> use <b>new</b>, <b>delete</b>, <b>malloc()</b> or <b>free()</b>. Use <b>STL</b> containers.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">10</th>
+<td>Worry about this <b>last</b>, but your program should run as <b>fast</b> as possible and use as <b>little</b> memory as possible.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">11</th>
+<td>bug tracking</td>
+<td>Use <b>Google Project&#8217;s</b> issues to track your bugs.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="3">12</th>
+<td rowspan="6">documentation</td>
+<td><b>C++ only:</b> Use <b>Doxygen</b> to document the <b>interfaces</b>.</td>
+</tr>
+<tr>
+<td><b>Java only:</b> Use <b>javdoc</b> to document the <b>interfaces</b>.</td>
+</tr>
+<tr>
+<td><b>Python only:</b> Use <b>pydoc</b> to document the <b>interfaces</b>.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">13</th>
+<td>Use <b>Google Project&#8217;s</b> wiki to document the implementation.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">14</th>
+<td>Use comments <b>only</b> if you need to explain the <b>why</b> of a particular implementation.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">15</th>
+<td>Choose a coding convention, and be consistent. Use good variable names. Write readable code with good indentation, blank lines, and blank spaces.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">16</th>
+<td>overview</td>
+<td>Fill out the overview.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">17</th>
+<td>submission</td>
+<td>Submit the content below.</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">18</th>
+<td>postings</td>
+<td>Post the content below.</td>
+</tr>
+</table>
+<h3>Submission</h3>
+<hr />
+<p>Submit the following:</p>
+<table border="1" cellspacing="0">
+<tr bgcolor="#dddddd">
+<th></th>
+<th>Points</th>
+<th>Description</th>
+<th>Files</th>
+<th>Location</th>
+</tr>
+<tr>
+<th bgcolor="#dddddd">1</th>
+<td rowspan="5">5 pts.</td>
+<td>partner rating</td>
+<td rowspan="3"></td>
+<td><a href="https://spreadsheets.google.com/viewform?formkey=dHpsd0pqd1dERmVSeUx5VDN2NkN2Umc6MA">Shruthi&#8217;s Form</a></td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">2</th>
+<td>issues and bugs</td>
+<td>Google Project Issues</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">3</th>
+<td>implementation</td>
+<td>Google Project Wiki</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">4</th>
+<td><b>acceptance</b> tests</td>
+<td>RMSE</td>
+<td>Blackboard: Final Results</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">5</th>
+<td>overview</td>
+<td><a href="http://www.cs.utexas.edu/users/downing/projects/netflix/Netflix.txt">Netflix.txt</a></td>
+<td rowspan="17">Turnin</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">6</th>
+<td>5 pts.</td>
+<td>interface</td>
+<td>html/*</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="3">7</th>
+<td rowspan="3">10 pts.</td>
+<td rowspan="3">functions</td>
+<td>Netflix.h</td>
+</tr>
+<tr>
+<td>Netflix.java</td>
+</tr>
+<tr>
+<td>Netflix.py</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="3">8</th>
+<td rowspan="3">10 pts.</td>
+<td rowspan="3">program</td>
+<td>RunNetflix.c++</td>
+</tr>
+<tr>
+<td>RunNetflix.java</td>
+</tr>
+<tr>
+<td>RunNetflix.py</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="2">9</th>
+<td rowspan="2">5 pts.</td>
+<td rowspan="2"><b>acceptance</b> tests</td>
+<td>RMSE</td>
+</tr>
+<tr>
+<td>RunNetflix.out</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="3">10</th>
+<td rowspan="6">10 pts.</td>
+<td rowspan="6"><b>unit</b> tests</td>
+<td>TestNetflix.c++</td>
+</tr>
+<tr>
+<td>TestNetflix.java</td>
+</tr>
+<tr>
+<td>TestNetflix.py</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd" rowspan="3">11</th>
+<td>TestNetflixC.out</td>
+</tr>
+<tr>
+<td>TestNetflixJ.out</td>
+</tr>
+<tr>
+<td>TestNetflixP.out</td>
+</tr>
+<tr>
+<th bgcolor="#dddddd">12</th>
+<td>5 pts.</td>
+<td>source control commits</td>
+<td>Netflix.log</td>
+</tr>
+</table>
+</p>
+							</div>
+						<div class="clear rule"></div>
+						
+						
+			
+		</div>
+		
+		<div id="sidebar">
+	<ul class="sidebar_list">
+
+		<li id="linkcat-158" class="widget widget_links"><h2 class="widgettitle">Links</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://astore.amazon.com/oopl/">Amazon Store</a></li>
+<li><a href="http://courses.utexas.edu/">Blackboard</a></li>
+<li><a href="http://epydoc.sourceforge.net/">Epydoc</a></li>
+<li><a href="http://www.extremeprogramming.org/">Extreme Programming</a></li>
+<li><a href="http://www.facebook.com/careers/puzzles.php">Facebook Puzzles</a></li>
+<li><a href="http://code.google.com/appengine/">Google App Engine</a></li>
+<li><a href="http://code.google.com/hosting/">Google Project Hosting</a></li>
+<li><a href="http://www.projectlocker.com/">Project Locker</a></li>
+<li><a href="http://www.cs.utexas.edu/users/ilevy/turnin.html">Turnin (Isaac)</a></li>
+<li><a href="http://www.cs.utexas.edu/users/shruthi/turnin.html">Turnin (Shruthi)</a></li>
+<li><a href="http://www.unfuddle.com/">Unfuddle</a></li>
+<li><a href="https://utlists.utexas.edu/sympa/info/cs373/">UT List</a></li>
+<li><a href="http://uva.onlinejudge.org/">UVa</a></li>
+<li><a href="http://www.uvatoolkit.com/">UVa Toolkit</a></li>
+<li><a href="http://www.xkcd.com/">XKCD</a></li>
+<li><a href="http://www.w3schools.com/schema/schema_elements_ref.asp">XML Schema Reference</a></li>
+<li><a href="http://tools.decisionsoft.com/schemaValidate/">XML Schema Validator</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-31" class="widget widget_links"><h2 class="widgettitle">UT</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.utacm.org/">ACM</a></li>
+<li><a href="http://www.utexas.edu/its/bevoware/">BevoWare</a></li>
+<li><a href="http://blogs.utexas.edu/">Blogs</a></li>
+<li><a href="https://utdirect.utexas.edu/diia/egb/">eGradebook</a></li>
+<li><a href="http://www.cs.utexas.edu/users/gwc/">Graduate Women in Computing</a></li>
+<li><a href="http://utlists.utexas.edu/">Lists</a></li>
+<li><a href="http://deanofstudents.utexas.edu/sald/studentorgs/vieworgs.php?org=4336">Software Engineering Club</a></li>
+<li><a href="http://deanofstudents.utexas.edu/sald/studentorgs/vieworgs.php?org=2622">SURGe</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-1373" class="widget widget_links"><h2 class="widgettitle">UTCS</h2>
+
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.cs.utexas.edu/users/ear/CodeOfConduct.html">Code of Conduct</a></li>
+<li><a href="http://www.cs.utexas.edu/facilities/accommodations/public_labs/">Labs</a></li>
+<li><a href="http://www.cs.utexas.edu/users/wics/">Women in CS</a></li>
+
+	</ul>
+</li>
+
+	</ul>
+</div>
+	</div>
+
+	<div id="footer">
+		<p>Design based on <a href="http://cutline.tubetorial.com/">Cutline</a> by <a href="http://www.tubetorial.com">Chris Pearson</a> and original header by <a href="http://flickr.com/photos/thomashawk/167076790/sizes/l/#cc_license">Thomas Hawk</a>. WPMU Theme pack by <a href="http://wpmudev.org">WPMU-DEV</a>.</p>
+		<div id="wp-admin-bar"><ul>
+	<li><a href="http://www.utexas.edu">UT Austin</a></li>
+</ul></div><div id="wp-admin-bar-right"><ul>
+	<li><a href="http://blogs.utexas.edu/">UT Blogs</a></li>
+	<li><a href="https://blogs.utexas.edu/swe/wp-login.php">Log in</a></li>
+</ul></div>	</div>
+</div>
+
+</body>
+</html>

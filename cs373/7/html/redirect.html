@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["EditPerson.EditPersonPage-c", "ViewPeople.ViewPeoplePage-c", "ViewPerson.ViewPersonPage-c", "Faculty3.ResearchGroup-c", "Faculty3.CourseNumber-c", "Faculty3.Presentation-c", "Faculty3.ResearchArea-c", "Faculty3.PhoneNumber-c", "Faculty3.PublishInfo-c", "Faculty3.StaffMember-c", "RunFaculty3.MainPage-c", "Faculty3.Conference-c", "Export.ExportPage-c", "Faculty3.Building-c", "Faculty3.Location-c", "Faculty3.Schedule-c", "Import.ImportPage-c", "_multiprocessing-m", "Faculty3.Article-c", "Faculty3.Faculty-c", "Faculty3.Student-c", "Faculty3.Website-c", "Faculty3.Writing-c", "Faculty3.Course-c", "Faculty3.Degree-c", "Faculty3.Office-c", "Faculty3.Person-c", "Faculty3.Award-c", "Faculty3.Event-c", "Faculty3.Name-c", "RunFaculty3-m", "EditPerson-m", "ViewPeople-m", "ViewPerson-m", "Faculty3-m", "Export-m", "Import-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>
