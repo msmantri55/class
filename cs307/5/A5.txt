@@ -1,0 +1,177 @@
+-- Student information for assignment 4 ----------------------------------------
+On our honor, Taylor Fausak and Ashley McKemie, this programming assignment is
+our own work.
+
+Student #1
+Name: Taylor Fausak
+EID: tdf268
+Email: tfausak@gmail.com
+TA: Vishvas
+Unique: 55435
+
+Student #2
+Name: Ashley McKemie
+EID: lam996
+Email: a.mckemie@mail.utexas.edu
+TA: Vishvas
+Unique: 55435
+
+-- Algorithm Analysis ----------------------------------------------------------
+1. T(N) = 3N + 4
+2. O(N) = N
+3. 3(N^2) (log base 2 of N) + 4(N^2) + 4N + 2
+4. (N^2) (log base 2 of N)
+5. N^(3/2)
+6. Yes. The sieve of Eratosthenes has a complexity of O((NlogN)(loglogN))
+7. 16 seconds
+8. 60 seconds 
+9. 20 seconds
+10. 25 minutes 
+11. 2 seconds
+12. 135 minutes
+13. 92.04 seconds
+
+-- SampleAlgorithms ------------------------------------------------------------
+method1:
+	T(N) = 3N + 3
+	Big O = O(N)
+	When N was 4000000, it took 0.008 seconds
+	When N was 8000000, it took 0.016 seconds
+	When N was 16000000, it took 0.033 seconds
+	When N was 32000000, it took 0.066 seconds
+	According to our Big O prediction, the time should double if N is
+	doubled, which it did.
+method2:
+	T(N) = 2N + 3
+	Big O = O(N)
+	When N was 5000000, it took 0.005 seconds
+	When N was 10000000, it took 0.010 seconds
+	When N was 20000000, it took 0.020 seconds
+	When N was 40000000, it took 0.041 seconds
+	According to our Big O prediction, the time should double if N is
+	doubled, which it did.
+method3:
+	T(N) = 3(N^2) + 4N + 3
+	Big O = O(N^2)
+	When N was 5000, it took 0.052 seconds
+	When N was 10000, it took 0.202 seconds
+	When N was 20000, it took 0.806 seconds
+	When N was 40000, it took 3.221 seconds
+	According to our Big O prediction, the time should quadruple if N is
+	doubled, which it did.
+method4:
+	T(N) = 6N + 5
+	Big O = O(N)
+	When N was 15000000, it took 0.007 seconds
+	When N was 30000000, it took 0.013 seconds
+	When N was 60000000, it took 0.025 seconds
+	When N was 120000000, it took 0.050 seconds
+	According to our Big O prediction, the time should double if N is
+	doubled, which it did.
+method5:
+	Big O = O(N^3)
+	When N was 120, it took 0.005 seconds
+	When N was 240, it took 0.038 seconds
+	When N was 480, it took 0.300 seconds
+	When N was 960, it took 2.405 seconds
+	According to our Big O predicition, the time should be multiplied by 2^3
+	when N is doubled, which it was. However, the times are not quite as
+	accurate as when the power was smaller (i.e., 2^2 or 2^1).
+method6:
+	Big O = O(N^2)
+	When N was 5000, it took 0.027 seconds
+	When N was 10000, it took 0.105 seconds
+	When N was 20000, it took 0.419 seconds
+	When N was 40000, it took 1.675 seconds
+	According to our Big O prediction, the time should quadruple if N is
+	doubled, which it did.
+method7:
+	Big O = O(N^2)
+	When N was 1000, it took 0.065 seconds
+	When N was 2000, it took 0.261 seconds
+	When N was 4000, it took 1.034 seconds
+	When N was 8000, it took 3.904 seconds
+	According to our Big O prediction, the time should quadruple if N is
+	doubled, which it did.
+method8:
+	Big O = O(N^3)
+	When N was 150, it took 0.008 seconds
+	When N was 300, it took 0.060 seconds
+	When N was 600, it took 0.465 seconds
+	When N was 1200, it took 3.667 seconds
+	According to our Big O predicition, the time should be multiplied by 2^3
+	when N is doubled, which it was. However, the times are not quite as
+	accurate as when the power was smaller (i.e., 2^2 or 2^1).
+method9:
+	Big O = O(log(N))
+	When N was 1x10^500, it took 0.005 seconds
+	When N was 2x10^500, it took 0.003 seconds
+	When N was 4x10^500, it took 0.002 seconds
+	When N was 8x10^500, it took 0.005 seconds
+	This doesn't match our Big O prediction because variance in the run time
+	is much larger than the difference between log(N) and log(2N) when N is
+	very large.
+method10:
+	Big O = O(Nlog(N))
+	When N was 200000, it took 0.008236 seconds
+	When N was 400000, it took 0.016859 seconds
+	When N was 800000, it took 0.033767 seconds
+	When N was 1600000, it took 0.068587 seconds
+	According to our Big O prediction, the time should slightly more than
+	double when N is doubled, which it did. (2Nlog(2N))/(Nlog(N)) ~= 2
+method11:
+	Big O = O(MNlog(N))
+	M is held constant at 100
+	When N was 1000, it took 0.022394 seconds
+	When N was 2000, it took 0.039513 seconds
+	When N was 4000, it took 0.079751 seconds
+	When N was 8000, it took 0.168174 seconds
+	According to our Big O prediction, the time should slightly more than
+	double when N is doubled, which it did. (2MNlog(2N))/(MNlog(N)) ~= 2
+
+-- processFiles ----------------------------------------------------------------
+1. "Some Personal Recollections of Dr. Janeway"
+	File size: 49 KB
+	Number of words: 8089
+	Number of unique words: 2486
+	Execution times:
+		Convert file to words: 0.01453 seconds
+		Add words to the end of ArrayList: 8.43E-4 seconds
+		Add words to the beginning of ArrayList: 0.038 seconds
+		Add words to TreeSet: 0.010691 seconds
+		Add words to HashSet: 0.001708 seconds
+	
+2. "The Prince"
+	File size: 306 KB
+	Number of words: 52636
+	Number of unique words: 8492
+	Execution times:
+		Convert file to words: 0.034731 seconds
+		Add words to the end of ArrayList: 0.001667 seconds
+		Add words to the beginning of ArrayList: 1.404467 seconds
+		Add words to TreeSet: 0.024087 seconds
+		Add words to HashSet: 0.008542 seconds
+
+3. "The Art of War"
+	File size: 888 KB
+	Number of words: 146522
+	Number of unique words: 15265
+	Execution times:
+		Convert file to words: 0.149244 seconds
+		Add words to the end of ArrayList: 0.005422 seconds
+		Add words to the beginning of ArrayList: 10.848116 seconds
+		Add words to TreeSet: 0.073288 seconds
+		Add words to HashSet: 0.024699 seconds
+
+-- Big O -----------------------------------------------------------------------
+Adding N words, one at a time, to the end of an ArrayList: O(sqrt(N))
+Adding N words, one at a time, to the end of an ArrayList: O(sqrt(N))
+Adding N words, one at a time, to the front of an ArrayList: O(N^2)
+Adding N words, one at a time, to a TreeSet: O(sqrt(N))
+Adding N words, one at a time, to a HashSet: O(N)
+
+The numMin method and the calls to it with various size lists support the
+argument that the average case would be log(N). In general, the values for
+number of minimums found are the same as log(N) for a list of size N. However,
+there are deviations from the expected values because of the random values
+placed in the array.

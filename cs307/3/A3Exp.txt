@@ -1,0 +1,16 @@
+Results:
+
+550x550 addition done 100 times in 1.21333 s (0.01213 s per)
+1100x1100 addition done 100 times in 4.99134 s (0.04991 s per)
+75x75 multiplication done 100 times in 1.08884 s (0.01088 s per)
+150x150 multiplication done 100 times in 8.59221 s (0.08592 s per)
+
+Questions:
+
+- If I doubled the Matrix dimensions again, I would expect experiment 1 to take about 20 seconds (0.2 seconds per calculation). This is because when the dimensions were doubled for the first time, the experiment took about 4 times as long to complete.
+
+- If I doubled the Matrix dimensions again, I would expect experiment 2 to take about 67 seconds (0.67 seconds per calculation). This is because when the dimensions were doubled for the first time, the experiment took about 8 times as long to complete.
+
+- For adding and subtracting Matrices, there could be one method with a boolean parameter that specifies addition. If the parameter is true, the Matrices are added. If it is false, they are subtracted.
+
+- The largest matrix I can make is 4075x4075 (exactly, 4076 runs out of memory). 4075x4075 is 16605625 elements and uses 66422500 bytes (about 63 MB). I think my program is given 64 MB of space to work with. There is some overhead for the program itself and for temporary variables.

@@ -1,0 +1,85 @@
+1. What is the T(N) of the following method?
+2. What is the Big O of the following method?
+
+public double total(double[] list)
+{	double tot = 0;
+	for(int i = 0; i < list.length; i++)
+	{	tot += list[i];
+	}
+	return total;
+}
+
+3. What is the T(N) of the following code segment? 
+4. What is the Big O of the following code segment? 
+
+for(int i = 0; i < N; i++)
+   for(int j = 0; j < N; j++)
+      for(int k = 1; k < N; k *=2)
+        method1(); //method1 is O(1)
+
+
+
+5. What is the Big O of the following method?
+
+Assume the ArrayList consturctor, the Math.sqrt, and the ArrayList add method
+are all O(1).
+
+/*
+ * pre: limit >= 2
+ */
+public static ArrayList<Integer> findPrimes(int limit)
+{   boolean numIsPrime = true;
+	int numToDivideBy = 2;
+	ArrayList<Integer> primes = new ArrayList<Integer>();
+	// ArrayList default constructor is O(1)
+
+	// go through all numbers
+	for(int num = 2; num < limit; num++)
+	{   numIsPrime = true;
+		numToDivideBy = 2;
+
+		double maxDivisor = Math.sqrt(num);
+		while( numToDivideBy <= maxDivisor )
+		{   assert numToDivideBy != 0 : numToDivideBy;
+			numIsPrime = ( num % numToDivideBy ) != 0;
+			numToDivideBy++;
+		}
+
+		if( numIsPrime )
+			primes.add(num); //ArrayList add is O(1)
+	}
+
+	return primes
+}
+
+6. Do you think the Big O of the given findPrimes method can be improved? If
+so, how?
+
+7. A program is O(N). It takes the program 8 seconds to complete when working
+with a data set of 100,000 items. (N = 100,000) What is the predicted time for
+the program to complete when working with a data set of 200,000 items?
+
+8. A program is O(N). It takes the program 12 seconds to complete when working
+with a data set of 1,000,000 items. What is the predicted time for the program
+to complete when working with a data set of 5,000,000 items?
+
+9. A program is O(N^2). It takes the program 5 seconds to complete when working
+with a data set of 10,000 items. (N = 10,000) What is the predicted time for the
+program to complete when working with a data set of 20,000 items?
+
+10. A program is O(N^2). It takes the program  1 minute to complete when working
+with a data set of 100,000 items. (N = 100,000) What is the predicted time for
+the program to complete when working with a data set of 500,000 items?
+
+11. A program is O(N^2). It takes the program 40 seconds to complete when
+working with a data set of 500,000 items. (N = 500,000) What is the predicted
+time for the program to complete when working with a data set of 25,000 items?
+
+12. A program is O(N^3). It takes the program 5 minutes to complete when working
+with a data set of 1,000,000 items. What is the predicted time for the program
+to complete when working with a data set of 3,000,000 items?
+
+13. A program is O(NlogN) (the log is base 2). It takes the program 10 seconds
+to complete when working with a data set of 1,000,000 items. What is the
+predicted time for the program to complete when working with a data set of
+8,000,000 items? log (base 2) of 1,000,000 ~= 20.
